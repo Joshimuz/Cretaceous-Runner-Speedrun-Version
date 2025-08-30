@@ -70,7 +70,7 @@ cars
 457,	caddy, 		caddy, 		car, 		GOLFCART, 	CADDY, 		null,	richfamily,	1,	0,	30123345,	-1, 0.5, 0.5,		-1
 458, 	solair, 	solair, 	car, 		SOLAIR, 	SOLAIR, 	null,	normal,		10, 	0,	0,		-1, 0.72, 0.72,		0
 459,	topfun,		topfun,		car,		TOPFUN,		TOPFUN,		van,	ignore,		1,	0,	0,		-1, 0.7, 0.7,		-1
-460, 	skimmer,	skimmer, 	plane,		SEAPLANE,	SKIMMER,	null,	ignore,		5,	0,	0
+460, 	skimmer,	skimmer, 	plane,		SEAPLANE,	SKIMMER,	null,	ignore,		5,	0,	0,		-1, 0.7, 0.7,		-1
 461,	pcj600,		pcj600,		bike,		BIKE,		PCJ600,		bikes,	motorbike,	10,	0,	0,		16, 0.67, 0.67,		-1
 462,	faggio,		faggio,		bike,		MOPED,		FAGGIO,		bikev,	moped,		10,	0,	0,		16, 0.464, 0.464,	-1
 463,	freeway,	freeway,	bike,		FREEWAY,	FREEWAY,	bikeh,	motorbike,	10,	0,	0,		23, 0.654, 0.654,	-1
