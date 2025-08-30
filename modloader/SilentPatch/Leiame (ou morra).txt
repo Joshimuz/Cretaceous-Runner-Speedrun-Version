@@ -1,0 +1,41 @@
+  __  __ _      __  __           _     
+ |  \/  (_)    |  \/  |         | | 2018
+ | \  / |___  _| \  / | ___   __| |___ 
+ | |\/| | \ \/ / |\/| |/ _ \ / _` / __|
+ | |  | | |>  <| |  | | (_) | (_| \__ \
+ |_|  |_|_/_/\_\_|  |_|\___/ \__,_|___/
+                                       
+
+=======   MixMods.com.br   ======= - Melhor visualizável no bloco de notas com fontes mono-espaçadas, como "Consolas".
+
+
+------- Instruções:
+
+Extraia os arquivos .asi e .ini para alguma pasta dentro do Mod Loader. Ou se preferir, para a pasta do seu GTA, ou pasta "Scripts".
+
+-- Download da última versão do Modloader: MixMods.com.br/2015/01/SA-Modloader.html
+
+
+
+ Dentro do .ini há várias informações e algumas coisas que você pode querer ativar/desativar.
+ Por padrão o Maverick vem com o blur nas hélices desativado, pois o original do jogo vem com texturas bugadas e não funciona, você pode reativar ele ou desativar algum outro heli que você tenha instalado usando o .ini.
+ Lista de todas as funções em português aqui: MixMods.com.br/2015/03/SilentPatch.html
+ Leia o "Readme (ORIGINAL).txt" se você quer instalar na versão Steam.
+
+
+
+Versão: v1.1 Build 29 (re-release hotfix 3)
+--------------------
+
+Autor: Silent
+
+Créditos:
+DK22Pac - correção das "luzes escuras", correção dos componentes dettachados, ajuda com shaders, suporte técnico
+NTAuthority - código de fases da lua, código de remoção de dependência DirectPlay, suporte técnico
+
+Pessoas que ajudaram a encontrar problemas, testar ou em geral apoiadoras:
+aap, Ash_735, Blackbird88, gamerzworld, iFarbod, Inadequate, LonesomeRider, mirh, Nick007J, Reyks, spaceeinstein, Tomasak
+
+
+====   MixMods.com.br         ====
+====   fb.com/FamiliaMixMods  ====

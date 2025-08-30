@@ -1,0 +1,64 @@
+const float4x4 projmat : register(c0);
+const float4 amb : register(c4);
+const float4 constdata[224] : register(c5);
+const float4 viewdata : register(c255);
+
+struct V_IN
+{
+	float4 pos : POSITION0;
+	float4 weight : BLENDWEIGHT;
+	uint4 index : BLENDINDICES;
+	float3 norm : NORMAL0;
+	float2 tex : TEXCOORD0;
+	float3 tan : TANGENT0;
+	float3 binorm : BINORMAL0;
+};
+
+struct V_OUT
+{
+	float4 pos : POSITION0;
+	float4 ambient : COLOR0;
+	float3 viewdir : COLOR1;
+	float2 tex : TEXCOORD0;
+	float3 norm : TEXCOORD1;
+	float3 tan : TEXCOORD2;
+	float3 binorm : TEXCOORD3;
+	float3 lightdir[4] : TEXCOORD4;
+};
+
+V_OUT main(V_IN In)
+{
+	V_OUT Out;
+
+	if (In.weight[0] != 0.0)
+	{
+		Out.pos = float4(0.0, 0.0, 0.0, 0.0);
+		Out.binorm = float3(0.0, 0.0, 0.0);
+		Out.norm = float3(0.0, 0.0, 0.0);
+		Out.tan = float3(0.0, 0.0, 0.0);
+		for (int i = 0; i < 4; i++)
+		{
+			Out.pos += float4(dot(In.pos, constdata[In.index[i] + viewdata.w - 5]), dot(In.pos, constdata[In.index[i] + viewdata.w - 4]), dot(In.pos, constdata[In.index[i] + viewdata.w - 3]), 1.0) * In.weight[i];
+			Out.binorm += float3(dot(In.norm, (float3)constdata[In.index[i] + viewdata.w - 5]), dot(In.norm, (float3)constdata[In.index[i] + viewdata.w - 4]), dot(In.norm, (float3)constdata[In.index[i] + viewdata.w - 3])) * In.weight[i];
+			Out.norm += float3(dot(In.tan, (float3)constdata[In.index[i] + viewdata.w - 5]), dot(In.tan, (float3)constdata[In.index[i] + viewdata.w - 4]), dot(In.tan, (float3)constdata[In.index[i] + viewdata.w - 3])) * In.weight[i];
+			Out.tan += float3(dot(In.binorm, (float3)constdata[In.index[i] + viewdata.w - 5]), dot(In.binorm, (float3)constdata[In.index[i] + viewdata.w - 4]), dot(In.binorm, (float3)constdata[In.index[i] + viewdata.w - 3])) * In.weight[i];
+		}
+	} else
+	{
+		Out.pos = float4(dot(In.pos, constdata[In.index[0] + viewdata.w - 5]), dot(In.pos, constdata[In.index[0] + viewdata.w - 4]), dot(In.pos, constdata[In.index[0] + viewdata.w - 3]), 1.0);
+		Out.binorm = float3(dot(In.norm, (float3)constdata[In.index[0] + viewdata.w - 5]), dot(In.norm, (float3)constdata[In.index[0] + viewdata.w - 4]), dot(In.norm, (float3)constdata[In.index[0] + viewdata.w - 3]));
+		Out.norm = float3(dot(In.tan, (float3)constdata[In.index[0] + viewdata.w - 5]), dot(In.tan, (float3)constdata[In.index[0] + viewdata.w - 4]), dot(In.tan, (float3)constdata[In.index[0] + viewdata.w - 3]));
+		Out.tan = float3(dot(In.binorm, (float3)constdata[In.index[0] + viewdata.w - 5]), dot(In.binorm, (float3)constdata[In.index[0] + viewdata.w - 4]), dot(In.binorm, (float3)constdata[In.index[0] + viewdata.w - 3]));
+	}
+	Out.pos.w = 1.0;
+	Out.viewdir = (float3)(Out.pos - viewdata) * 0.5 + 0.5;
+	Out.pos = mul(Out.pos, projmat);
+
+	Out.ambient = amb;
+	Out.tex = In.tex;
+	Out.lightdir[0] = normalize(constdata[0]);
+	Out.lightdir[1] = normalize(constdata[2]);
+	Out.lightdir[2] = normalize(constdata[4]);
+	Out.lightdir[3] = normalize(constdata[6]);
+	return Out;
+}

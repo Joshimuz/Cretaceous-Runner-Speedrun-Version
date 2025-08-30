@@ -1,0 +1,479 @@
+#Item Definition File created by MapEditor
+objs
+18413, qgras1, quebec, 299, 0
+18414, qgras2, quebec, 299, 0
+18415, qgras3, quebec, 299, 0
+18416, qgras4, quebec, 299, 0
+18417, qgras5, quebec, 299, 0
+18418, qgras6, quebec, 299, 0
+18419, qgras7, quebec, 299, 0
+18420, qgras8, quebec, 299, 0
+18421, qgras9, quebec, 299, 0
+18422, qgras10, quebec, 299, 0
+18423, qgras11, quebec, 299, 0
+18424, qgras12, quebec, 299, 0
+18425, qgras13, quebec, 299, 0
+18426, qgras14, quebec, 299, 0
+18427, qgras15, quebec, 299, 0
+18428, qgras16, quebec, 299, 0
+18429, qgras17, quebec, 299, 0
+18430, qgras18, quebec, 299, 0
+18431, qgras19, quebec, 299, 0
+18432, qgras20, quebec, 299, 0
+18433, qgras21, quebec, 299, 0
+18434, qgras22, quebec, 299, 0
+18435, qgras23, quebec, 299, 0
+18436, qgras24, quebec, 299, 0
+18437, qgras25, quebec, 299, 0
+18438, qgras26, quebec, 299, 0
+18439, qgras27, quebec, 299, 0
+18440, qgras28, quebec, 299, 0
+18441, qgras29, quebec, 299, 0
+18442, qgras30, quebec, 299, 0
+18443, qgras31, quebec, 299, 0
+18444, qgras32, quebec, 299, 0
+18445, qgras33, quebec, 299, 0
+18446, qgras35, quebec, 299, 0
+18447, qgras34, quebec, 299, 0
+18448, qgras36, quebec, 299, 0
+18449, qgras37, quebec, 299, 0
+18450, qgras38, quebec, 299, 0
+18451, qgras39, quebec, 299, 0
+18452, qgras40, quebec, 299, 0
+18453, qgras41, quebec, 299, 0
+18454, qgras42, quebec, 299, 0
+18455, qgras43, quebec, 299, 0
+18456, qgras44, quebec, 299, 0
+18457, qgras45, quebec, 299, 0
+18458, qgrou, quebec, 299, 0
+18459, qgrou2, quebec, 299, 0
+18460, qgrou3, quebec, 299, 0
+18461, qgras46, quebec, 299, 0
+18462, qgras47, quebec, 299, 0
+18463, qgras48, quebec, 299, 0
+18464, qgras49, quebec, 299, 0
+18465, qgras50, quebec, 299, 0
+18466, qgras51, quebec, 299, 0
+18467, qgras52, quebec, 299, 0
+18468, qbeach1, quebec, 299, 0
+18469, qgras53, quebec, 299, 0
+18470, qgras54, quebec, 299, 0
+18471, qgras55, quebec, 299, 0
+18472, qgras56, quebec, 299, 0
+18473, qgras57, quebec, 299, 0
+18474, qgras58, quebec, 299, 0
+18475, qgras59, quebec, 299, 0
+18476, qmou1, quebec, 299, 0
+18477, qmou2, quebec, 299, 0
+18478, qmou3, quebec, 299, 0
+18479, qmou4, quebec, 299, 0
+18480, qbeach2, quebec, 299, 0
+18481, qbeach3, quebec, 299, 0
+18482, qbeach4, quebec, 299, 0
+18483, qbeach5, quebec, 299, 0
+18484, qbeach6, quebec, 299, 0
+18485, qbeach7, quebec, 299, 0
+18486, qmou5, quebec, 299, 0
+18487, qmou6, quebec, 299, 0
+18488, qmou7, quebec, 299, 0
+18489, qmou8, quebec, 299, 0
+18490, qmou9, quebec, 299, 0
+18491, qmou10, quebec, 299, 0
+18492, qmou11, quebec, 299, 0
+18493, qmou12, quebec, 299, 0
+18494, qmou13, quebec, 299, 0
+18495, qmou14, quebec, 299, 0
+18496, qmou15, isla1, 299, 0
+18497, qmou16, isla1, 299, 0
+18498, qmou17, isla1, 299, 0
+18499, qmou18, isla1, 299, 0
+18500, qbeach8, quebec, 299, 0
+18501, qgras1lod, quebeclod, 2000, 0
+18502, qgras2lod, quebeclod, 2000, 0
+18503, qgras3lod, quebeclod, 2000, 0
+18504, qgras4lod, quebeclod, 2000, 0
+18505, qgras5lod, quebeclod, 2000, 0
+18506, qgras6lod, quebeclod, 2000, 0
+18507, qgras7lod, quebeclod, 2000, 0
+18508, qgras8lod, quebeclod, 2000, 0
+18509, qgras9lod, quebeclod, 2000, 0
+18510, qgras10lod, quebeclod, 2000, 0
+18511, qgras11lod, quebeclod, 2000, 0
+18512, qgras12lod, quebeclod, 2000, 0
+18513, qgras13lod, quebeclod, 2000, 0
+18514, qgras14lod, quebeclod, 2000, 0
+18515, qgras15lod, quebeclod, 2000, 0
+18516, qgras16lod, quebeclod, 2000, 0
+18517, qgras17lod, quebeclod, 2000, 0
+18518, qgras18lod, quebeclod, 2000, 0
+18519, qgras19lod, quebeclod, 2000, 0
+18520, qgras20lod, quebeclod, 2000, 0
+18521, qgras21lod, quebeclod, 2000, 0
+18522, qgras22lod, quebeclod, 2000, 0
+18523, qgras23lod, quebeclod, 2000, 0
+18524, qgras24lod, quebeclod, 2000, 0
+18525, qgras25lod, quebeclod, 2000, 0
+18526, qgras26lod, quebeclod, 2000, 0
+18527, qgras27lod, quebeclod, 2000, 0
+18528, qgras28lod, quebeclod, 2000, 0
+18529, qgras29lod, quebeclod, 2000, 0
+18530, qgras30lod, quebeclod, 2000, 0
+18531, qgras31lod, quebeclod, 2000, 0
+18532, qgras32lod, quebeclod, 2000, 0
+18533, qgras33lod, quebeclod, 2000, 0
+18534, qgras34lod, quebeclod, 2000, 0
+18535, qgras35lod, quebeclod, 2000, 0
+18536, qgras36lod, quebeclod, 2000, 0
+18537, qgras37lod, quebeclod, 2000, 0
+18538, qgras38lod, quebeclod, 2000, 0
+18539, qgras39lod, quebeclod, 2000, 0
+18540, qgras40lod, quebeclod, 2000, 0
+18541, qgras41lod, quebeclod, 2000, 0
+18542, qgras42lod, quebeclod, 2000, 0
+18543, qgras43lod, quebeclod, 2000, 0
+18544, qgras44lod, quebeclod, 2000, 0
+18545, qgras45lod, quebeclod, 2000, 0
+18546, qgras46lod, quebeclod, 2000, 0
+18547, qgras47lod, quebeclod, 2000, 0
+18548, qgras48lod, quebeclod, 2000, 0
+18549, qgras49lod, quebeclod, 2000, 0
+18550, qgras50lod, quebeclod, 2000, 0
+18551, qgras51lod, quebeclod, 2000, 0
+18552, qgras52lod, quebeclod, 2000, 0
+18553, qgras53lod, quebeclod, 2000, 0
+18554, qgras54lod, quebeclod, 2000, 0
+18555, qgras55lod, quebeclod, 2000, 0
+18556, qgras56lod, quebeclod, 2000, 0
+18557, qgras57lod, quebeclod, 2000, 0
+18558, qgras58lod, quebeclod, 2000, 0
+18559, qgras59lod, quebeclod, 2000, 0
+18560, qgroulod, quebeclod, 2000, 0
+18561, qgrou2lod, quebeclod, 2000, 0
+18562, qgrou3lod, quebeclod, 2000, 0
+18563, qmou1lod, quebeclod, 2000, 0
+18564, qmou2lod, quebeclod, 2000, 0
+18565, qmou3lod, quebeclod, 2000, 0
+18566, qmou4lod, quebeclod, 2000, 0
+18567, qmou5lod, quebeclod, 2000, 0
+18568, qmou6lod, quebeclod, 2000, 0
+18569, qmou7lod, quebeclod, 2000, 0
+18570, qmou8lod, quebeclod, 2000, 0
+18571, qmou9lod, quebeclod, 2000, 0
+18572, qmou10lod, quebeclod, 2000, 0
+18573, qmou11lod, quebeclod, 2000, 0
+18574, qmou12lod, quebeclod, 2000, 0
+18575, qmou13lod, quebeclod, 2000, 0
+18576, qmou14lod, quebeclod, 2000, 0
+18577, qmou15lod, isla1lod, 2000, 0
+18578, qmou16lod, isla1lod, 2000, 0
+18579, qmou17lod, isla1lod, 2000, 0
+18580, qmou18lod, isla1lod, 2000, 0
+18581, qbeach1lod, quebeclod, 2000, 0
+18582, qbeach2lod, quebeclod, 2000, 0
+18583, qbeach3lod, quebeclod, 2000, 0
+18584, qbeach4lod, quebeclod, 2000, 0
+18585, qbeach5lod, quebeclod, 2000, 0
+18586, qbeach6lod, quebeclod, 2000, 0
+18587, qbeach7lod, quebeclod, 2000, 0
+18588, qbeach8lod, quebeclod, 2000, 0
+18594, qbeach9, quebec, 299, 0
+18595, qbeach10, quebec, 299, 0
+18596, qbeach11, quebec, 299, 0
+18597, qbeach12, quebec, 299, 0
+18598, qbeach13, quebec, 299, 0
+18599, qbeach14, quebec, 299, 0
+18600, qbeach15, quebec, 299, 0
+18601, qbeach16, quebec, 299, 0
+18602, qbeach17, quebec, 299, 0
+18603, qbeach18, quebec, 299, 0
+18604, qbeach19, quebec, 299, 0
+18605, qbeach20, quebec, 299, 0
+18606, qbeach23, quebec, 299, 0
+18607, qbeach22, quebec, 299, 0
+18608, qbeach21, quebec, 299, 0
+18609, qgras60, quebec, 299, 0
+18610, qgras61, quebec, 299, 0
+18611, qgras62, quebec, 299, 0
+18612, qgras63, quebec, 299, 0
+18613, qgras64, quebec, 299, 0
+18614, qgras65, quebec, 299, 0
+18615, qgras66, quebec, 299, 0
+18616, qgras67, quebec, 299, 0
+18617, qgras68, quebec, 299, 0
+18618, qgras69, quebec, 299, 0
+18619, qgras70, quebec, 299, 0
+18620, qgras71, quebec, 299, 0
+18621, qgras72, quebec, 299, 0
+18622, qgras73, quebec, 299, 0
+18623, qgras74, quebec, 299, 0
+18624, qgras75, quebec, 299, 0
+18625, qgras76, quebec, 299, 0
+18626, qbeach9lod, quebeclod, 2000, 0
+18627, qbeach10lod, quebeclod, 2000, 0
+18628, qbeach11lod, quebeclod, 2000, 0
+18629, qbeach12lod, quebeclod, 2000, 0
+18630, qbeach13lod, quebeclod, 2000, 0
+18631, qbeach14lod, quebeclod, 2000, 0
+18632, qbeach15lod, quebeclod, 2000, 0
+18633, qbeach16lod, quebeclod, 2000, 0
+18634, qbeach17lod, quebeclod, 2000, 0
+18635, qbeach18lod, quebeclod, 2000, 0
+18636, qbeach19lod, quebeclod, 2000, 0
+18637, qbeach20lod, quebeclod, 2000, 0
+18638, qbeach21lod, quebeclod, 2000, 0
+18639, qbeach22lod, quebeclod, 2000, 0
+18640, qbeach23lod, quebeclod, 2000, 0
+18641, qgras60lod, quebeclod, 2000, 0
+18642, qgras61lod, quebeclod, 2000, 0
+18643, qgras62lod, quebeclod, 2000, 0
+18644, qgras63lod, quebeclod, 2000, 0
+18645, qgras64lod, quebeclod, 2000, 0
+18646, qgras65lod, quebeclod, 2000, 0
+18647, qgras66lod, quebeclod, 2000, 0
+18648, qgras67lod, quebeclod, 2000, 0
+18649, qgras68lod, quebeclod, 2000, 0
+18650, qgras69lod, quebeclod, 2000, 0
+18651, qgras70lod, quebeclod, 2000, 0
+18652, qgras71lod, quebeclod, 2000, 0
+18653, qgras72lod, quebeclod, 2000, 0
+18654, qgras73lod, quebeclod, 2000, 0
+18655, qgras74lod, quebeclod, 2000, 0
+18656, qgras75lod, quebeclod, 2000, 0
+18657, qgras76lod, quebeclod, 2000, 0
+18658, grassug, quebeclod, 2000, 0
+19581, alert1, alert, 299, 0
+19582, alert2, alert, 299, 0
+19583, alert1lod, alert, 2000, 0
+19584, alert2lod, alert, 2000, 0
+5000, archi1, isla1, 299, 0
+5001, archi2, isla1, 299, 0
+5002, archi3, isla1, 299, 0
+5003, archi4, quebec, 299, 0
+5004, archi5, quebec, 299, 0
+5005, archi6, quebec, 299, 0
+5006, archi6lod, quebeclod, 2500, 0
+5007, archi5lod, quebeclod, 2500, 0
+5008, archi4lod, quebeclod, 2500, 0
+5009, archi2lod, isla1lod, 2500, 0
+5010, archi1lod, isla1lod, 2500, 0
+end
+tobj
+end
+2dfx
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

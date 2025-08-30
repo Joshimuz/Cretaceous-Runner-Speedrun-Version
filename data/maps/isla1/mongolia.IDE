@@ -1,0 +1,581 @@
+#Item Definition File created by MapEditor
+objs
+17659, isla2_beach2, isla1, 200, 0
+17660, isla2_beach3, isla1, 200, 0
+17661, isla2_beach4, isla1, 200, 0
+17662, isla2_beach5, isla1, 200, 0
+17663, isla2_beach6, isla1, 299, 0
+17664, isla2_beach7, isla1, 299, 0
+17665, isla2_beach8, isla1, 299, 0
+17666, isla2_des1, isla1, 299, 0
+17667, isla2_des2, isla1, 299, 0
+17668, isla2_des3, isla1, 299, 0
+17669, isla2_des4, isla1, 299, 0
+17670, isla2_des5, isla1, 299, 0
+17671, isla2_des6, isla1, 299, 0
+17672, isla2_des7, isla1, 299, 0
+17673, isla2_des8, isla1, 299, 0
+17674, isla2_des9, isla1, 299, 0
+17675, isla2_des10, isla1, 299, 0
+17676, isla2_des11, isla1, 299, 0
+17677, isla2_des12, isla1, 299, 0
+17678, isla2_des13, isla1, 299, 0
+17679, isla2_des14, isla1, 299, 0
+17680, isla2_des15, isla1, 299, 0
+17681, isla2_des16, isla1, 299, 0
+17682, isla2_des17, isla1, 299, 0
+17683, isla2_des18, isla1, 299, 0
+17684, isla2_des19, isla1, 299, 0
+17685, isla2_des20, isla1, 299, 0
+17686, isla2_des21, isla1, 299, 0
+17687, isla2_des22, isla1, 299, 0
+17688, isla2_des23, isla1, 299, 0
+17689, isla2_des24, isla1, 299, 0
+17690, isla2_des25, isla1, 299, 0
+17691, isla2_for1, isla1, 299, 0
+17692, isla2_for2, isla1, 299, 0
+17693, isla2_for3, isla1, 299, 0
+17694, isla2_for4, isla1, 299, 0
+17695, isla2_for5, isla1, 299, 0
+17696, isla2_for6, isla1, 299, 0
+17697, isla2_for7, isla1, 299, 0
+17698, isla2_for8, isla1, 299, 0
+17699, isla2_for9, isla1, 299, 0
+17700, isla2_for10, isla1, 299, 0
+17701, isla2_for11, isla1, 299, 0
+17702, isla2_for12, isla1, 299, 0
+17703, isla2_for13, isla1, 299, 0
+17704, isla2_for14, isla1, 299, 0
+17705, isla2_for15, isla1, 299, 0
+17706, isla2_sand1, isla1, 299, 0
+17707, isla2_sand2, isla1, 299, 0
+17708, isla2_sand3, isla1, 299, 0
+17709, isla2_sand4, isla1, 299, 0
+17710, isla2_sand5, isla1, 299, 0
+17711, isla2_sand6, isla1, 299, 0
+17712, isla2_sand7, isla1, 299, 0
+17713, isla2_sand8, isla1, 299, 0
+17714, isla2_sand9, isla1, 299, 0
+17715, isla2_sand10, isla1, 299, 0
+17716, isla2_sand11, isla1, 299, 0
+17717, isla2_sand12, isla1, 299, 0
+17718, isla2_sand13, isla1, 299, 0
+17719, isla2_sand14, isla1, 299, 0
+17720, isla2_sand15, isla1, 299, 0
+17721, isla2_sand16, isla1, 299, 0
+17722, isla2_sand17, isla1, 299, 0
+17723, isla2_sand18, isla1, 299, 0
+17724, isla2_sand19, isla1, 299, 0
+17725, isla2_sand20, isla1, 299, 0
+17726, isla2_sand21, isla1, 299, 0
+17727, isla2_sand22, isla1, 299, 0
+17728, isla2_sand23, isla1, 299, 0
+17729, isla2_sand24, isla1, 299, 0
+17730, isla2_sand25, isla1, 299, 0
+17731, isla2_for16, isla1, 299, 0
+17732, isla2_for17, isla1, 299, 0
+17733, isla2_for18, isla1, 299, 0
+17734, isla2_for19, isla1, 299, 0
+17735, isla2_for20, isla1, 299, 0
+17736, isla2_for21, isla1, 299, 0
+17737, isla2_for22, isla1, 299, 0
+17738, isla2_for23, isla1, 299, 0
+17739, isla2_for24, isla1, 299, 0
+17740, isla2_for25, isla1, 299, 0
+17741, isla2_for26, isla1, 299, 0
+17742, isla2_for27, isla1, 299, 0
+17743, isla2_for28, isla1, 299, 0
+17744, isla2_for29, isla1, 299, 0
+17745, isla2_for30, isla1, 299, 0
+17746, isla2_for31, isla1, 299, 0
+17747, isla2_for32, isla1, 299, 0
+17748, isla2_for33, isla1, 299, 0
+17749, isla2_for34, isla1, 299, 0
+17750, isla2_for35, isla1, 299, 0
+17751, isla2_for36, isla1, 299, 0
+17752, isla2_for37, isla1, 299, 0
+17753, isla2_for38, isla1, 299, 0
+17754, isla2_for39, isla1, 299, 0
+17755, isla2_for40, isla1, 299, 0
+17756, isla2_for41, isla1, 299, 0
+17757, isla2_for42, isla1, 299, 0
+17758, isla2_des26, isla1, 299, 0
+17759, isla2_des27, isla1, 299, 0
+17760, isla2_des28, isla1, 299, 0
+17761, isla2_des29, isla1, 299, 0
+17762, isla2_des30, isla1, 299, 0
+17763, isla2_des31, isla1, 299, 0
+17764, isla2_des32, isla1, 299, 0
+17765, isla2_des33, isla1, 299, 0
+17766, isla2_des34, isla1, 299, 0
+17767, isla2_des35, isla1, 299, 0
+17768, isla2_des36, isla1, 299, 0
+17769, isla2_des37, isla1, 299, 0
+17770, isla2_des38, isla1, 299, 0
+17771, isla2_des39, isla1, 299, 0
+17772, isla2_des40, isla1, 299, 0
+17773, isla2_des41, isla1, 299, 0
+17774, isla2_des42, isla1, 299, 0
+17775, isla2_des43, isla1, 299, 0
+17776, isla2_des44, isla1, 299, 0
+17777, isla2_des45, isla1, 299, 0
+17778, isla2_des46, isla1, 299, 0
+17779, isla2_des47, isla1, 299, 0
+17780, isla2_des48, isla1, 299, 0
+17781, isla2_des49, isla1, 299, 0
+17782, isla2_mou1, isla1, 299, 0
+17783, isla2_mou2, isla1, 299, 0
+17784, isla2_mou3, isla1, 299, 0
+17785, isla2_mou4, isla1, 299, 0
+17786, isla2_mou5, isla1, 299, 0
+17787, isla2_mou6, isla1, 299, 0
+17788, isla2_mou7, isla1, 299, 0
+17789, isla2_beach9, isla1, 299, 0
+17790, isla2_beach10, isla1, 299, 0
+17791, isla2_beach11, isla1, 299, 0
+17792, isla2_beach12, isla1, 299, 0
+17793, isla2_beach13, isla1, 299, 0
+17794, isla2_beach14, isla1, 299, 0
+17795, isla2_beach15, isla1, 299, 0
+17796, isla2_beach16, isla1, 299, 0
+17797, isla2_beach17, isla1, 299, 0
+17798, isla2_beach18, isla1, 299, 0
+17799, isla2_beach19, isla1, 299, 0
+17800, isla2_beach20, isla1, 299, 0
+17801, isla2_beach21, isla1, 299, 0
+17802, isla2_beach22, isla1, 299, 0
+17803, isla2_beach23, isla1, 299, 0
+17804, isla2_beach24, isla1, 299, 0
+17805, isla2_beach25, isla1, 299, 0
+17806, isla2_beach26, isla1, 299, 0
+17807, isla2_beach27, isla1, 299, 0
+17808, isla2_beach28, isla1, 299, 0
+17809, isla2_beach29, isla1, 299, 0
+17810, isla2_beach30, isla1, 299, 0
+17811, isla2_beach31, isla1, 299, 0
+17812, isla2_beach32, isla1, 299, 0
+17813, isla2_beach33, isla1, 299, 0
+17814, isla2_beach34, isla1, 299, 0
+17815, isla2_beach35, isla1, 299, 0
+17816, isla2_beach36, isla1, 299, 0
+17817, isla2_beach37, isla1, 299, 0
+17818, isla2_beach38, isla1, 299, 0
+17819, isla2_beach39, isla1, 299, 0
+17820, isla2_beach40, isla1, 299, 0
+17821, isla2_beach41, isla1, 299, 0
+17822, isla2_beach42, isla1, 299, 0
+17823, isla2_beach43, isla1, 299, 0
+17824, isla2_mou8, isla1, 299, 0
+17825, isla2_mou9, isla1, 299, 0
+17826, isla2_mou10, isla1, 299, 0
+17827, isla2_mou11, isla1, 299, 0
+17828, isla2_mou12, isla1, 299, 0
+17829, isla2_beach1lod, isla2lod, 2000, 0
+17830, isla2_beach2lod, isla2lod, 2000, 0
+17831, isla2_beach3lod, isla2lod, 2000, 0
+17832, isla2_beach4lod, isla2lod, 2000, 0
+17833, isla2_beach5lod, isla2lod, 2000, 0
+17834, isla2_beach6lod, isla2lod, 2000, 0
+17835, isla2_beach7lod, isla2lod, 2000, 0
+17836, isla2_beach8lod, isla2lod, 2000, 0
+17837, isla2_beach9lod, isla2lod, 2000, 0
+17838, isla2_beach10lod, isla2lod, 2000, 0
+17839, isla2_beach11lod, isla2lod, 2000, 0
+17840, isla2_beach12lod, isla2lod, 2000, 0
+17841, isla2_beach13lod, isla2lod, 2000, 0
+17842, isla2_beach14lod, isla2lod, 2000, 0
+17843, isla2_beach15lod, isla2lod, 2000, 0
+17844, isla2_beach16lod, isla2lod, 2000, 0
+17845, isla2_beach17lod, isla2lod, 2000, 0
+17846, isla2_beach18lod, isla2lod, 2000, 0
+17847, isla2_beach19lod, isla2lod, 2000, 0
+17848, isla2_beach20lod, isla2lod, 2000, 0
+17849, isla2_beach21lod, isla2lod, 2000, 0
+17850, isla2_beach22lod, isla2lod, 2000, 0
+17851, isla2_beach23lod, isla2lod, 2000, 0
+17852, isla2_beach24lod, isla2lod, 2000, 0
+17853, isla2_beach25lod, isla2lod, 2000, 0
+17854, isla2_beach26lod, isla2lod, 2000, 0
+17855, isla2_beach27lod, isla2lod, 2000, 0
+17856, isla2_beach28lod, isla2lod, 2000, 0
+17857, isla2_beach29lod, isla2lod, 2000, 0
+17858, isla2_beach30lod, isla2lod, 2000, 0
+17859, isla2_beach31lod, isla2lod, 2000, 0
+17860, isla2_beach32lod, isla2lod, 2000, 0
+17861, isla2_beach33lod, isla2lod, 2000, 0
+17862, isla2_beach34lod, isla2lod, 2000, 0
+17863, isla2_beach35lod, isla2lod, 2000, 0
+17864, isla2_beach36lod, isla2lod, 2000, 0
+17865, isla2_beach37lod, isla2lod, 2000, 0
+17866, isla2_beach38lod, isla2lod, 2000, 0
+17867, isla2_beach39lod, isla2lod, 2000, 0
+17868, isla2_beach40lod, isla2lod, 2000, 0
+17869, isla2_beach41lod, isla2lod, 2000, 0
+17870, isla2_beach42lod, isla2lod, 2000, 0
+17871, isla2_beach43lod, isla2lod, 2000, 0
+17872, isla2_sand1lod, isla2lod, 2000, 0
+17873, isla2_sand2lod, isla2lod, 2000, 0
+17874, isla2_sand3lod, isla2lod, 2000, 0
+17875, isla2_sand4lod, isla2lod, 2000, 0
+17876, isla2_sand5lod, isla2lod, 2000, 0
+17877, isla2_sand6lod, isla2lod, 2000, 0
+17878, isla2_sand7lod, isla2lod, 2000, 0
+17879, isla2_sand8lod, isla2lod, 2000, 0
+17880, isla2_sand9lod, isla2lod, 2000, 0
+17881, isla2_sand10lod, isla2lod, 2000, 0
+17882, isla2_sand11lod, isla2lod, 2000, 0
+17883, isla2_sand12lod, isla2lod, 2000, 0
+17884, isla2_sand13lod, isla2lod, 2000, 0
+17885, isla2_sand14lod, isla2lod, 2000, 0
+17886, isla2_sand15lod, isla2lod, 2000, 0
+17887, isla2_sand16lod, isla2lod, 2000, 0
+17888, isla2_sand17lod, isla2lod, 2000, 0
+17889, isla2_sand18lod, isla2lod, 2000, 0
+17890, isla2_sand19lod, isla2lod, 2000, 0
+17891, isla2_sand20lod, isla2lod, 2000, 0
+17892, isla2_sand21lod, isla2lod, 2000, 0
+17893, isla2_sand22lod, isla2lod, 2000, 0
+17894, isla2_sand23lod, isla2lod, 2000, 0
+17895, isla2_sand24lod, isla2lod, 2000, 0
+17896, isla2_sand25lod, isla2lod, 2000, 0
+17897, isla2_des1lod, isla2lod, 2000, 0
+17898, isla2_des2lod, isla2lod, 2000, 0
+17899, isla2_des3lod, isla2lod, 2000, 0
+17900, isla2_des4lod, isla2lod, 2000, 0
+17901, isla2_des5lod, isla2lod, 2000, 0
+17902, isla2_des6lod, isla2lod, 2000, 0
+17903, isla2_des7lod, isla2lod, 2000, 0
+17904, isla2_des8lod, isla2lod, 2000, 0
+17905, isla2_des9lod, isla2lod, 2000, 0
+17906, isla2_des10lod, isla2lod, 2000, 0
+17907, isla2_des11lod, isla2lod, 2000, 0
+17908, isla2_des13lod, isla2lod, 2000, 0
+17909, isla2_des12lod, isla2lod, 2000, 0
+17910, isla2_des14lod, isla2lod, 2000, 0
+17911, isla2_des15lod, isla2lod, 2000, 0
+17912, isla2_des16lod, isla2lod, 2000, 0
+17913, isla2_des17lod, isla2lod, 2000, 0
+17914, isla2_des18lod, isla2lod, 2000, 0
+17915, isla2_des19lod, isla2lod, 2000, 0
+17916, isla2_des20lod, isla2lod, 2000, 0
+17917, isla2_des21lod, isla2lod, 2000, 0
+17918, isla2_des22lod, isla2lod, 2000, 0
+17919, isla2_des23lod, isla2lod, 2000, 0
+17920, isla2_des24lod, isla2lod, 2000, 0
+17921, isla2_des25lod, isla2lod, 2000, 0
+17922, isla2_des27lod, isla2lod, 2000, 0
+17923, isla2_des28lod, isla2lod, 2000, 0
+17924, isla2_des29lod, isla2lod, 2000, 0
+17925, isla2_des30lod, isla2lod, 2000, 0
+17926, isla2_des31lod, isla2lod, 2000, 0
+17927, isla2_des32lod, isla2lod, 2000, 0
+17928, isla2_des33lod, isla2lod, 2000, 0
+17929, isla2_des34lod, isla2lod, 2000, 0
+17930, isla2_des35lod, isla2lod, 2000, 0
+17931, isla2_des36lod, isla2lod, 2000, 0
+17932, isla2_des37lod, isla2lod, 2000, 0
+17933, isla2_des38lod, isla2lod, 2000, 0
+17934, isla2_des39lod, isla2lod, 2000, 0
+17935, isla2_des40lod, isla2lod, 2000, 0
+17936, isla2_des41lod, isla2lod, 2000, 0
+17937, isla2_des42lod, isla2lod, 2000, 0
+17938, isla2_des43lod, isla2lod, 2000, 0
+17939, isla2_des44lod, isla2lod, 2000, 0
+17940, isla2_des45lod, isla2lod, 2000, 0
+17941, isla2_des46lod, isla2lod, 2000, 0
+17942, isla2_des47lod, isla2lod, 2000, 0
+17943, isla2_des48lod, isla2lod, 2000, 0
+17944, isla2_des49lod, isla2lod, 2000, 0
+17945, isla2_mou1lod, isla2lod, 2000, 0
+17946, isla2_mou2lod, isla2lod, 2000, 0
+17947, isla2_mou3lod, isla2lod, 2000, 0
+17948, isla2_mou4lod, isla2lod, 2000, 0
+17949, isla2_mou5lod, isla2lod, 2000, 0
+17950, isla2_mou6lod, isla2lod, 2000, 0
+17951, isla2_mou7lod, isla2lod, 2000, 0
+17952, isla2_mou8lod, isla2lod, 2000, 0
+17953, isla2_mou9lod, isla2lod, 2000, 0
+17954, isla2_for1lod, isla2lod, 2000, 0
+17955, isla2_for2lod, isla2lod, 2000, 0
+17956, isla2_for3lod, isla2lod, 2000, 0
+17957, isla2_for4lod, isla2lod, 2000, 0
+17958, isla2_for5lod, isla2lod, 2000, 0
+17959, isla2_for7lod, isla2lod, 2000, 0
+17960, isla2_for8lod, isla2lod, 2000, 0
+17961, isla2_for9lod, isla2lod, 2000, 0
+17962, isla2_for10lod, isla2lod, 2000, 0
+17963, isla2_for11lod, isla2lod, 2000, 0
+17964, isla2_for12lod, isla2lod, 2000, 0
+17965, isla2_for13lod, isla2lod, 2000, 0
+17966, isla2_for14lod, isla2lod, 2000, 0
+17967, isla2_for15lod, isla2lod, 2000, 0
+17968, isla2_for16lod, isla2lod, 2000, 0
+17969, isla2_for17lod, isla2lod, 2000, 0
+17970, isla2_for18lod, isla2lod, 2000, 0
+17971, isla2_for19lod, isla2lod, 2000, 0
+17972, isla2_for20lod, isla2lod, 2000, 0
+17973, isla2_for21lod, isla2lod, 2000, 0
+17974, isla2_for22lod, isla2lod, 2000, 0
+17975, isla2_for23lod, isla2lod, 2000, 0
+17976, isla2_for24lod, isla2lod, 2000, 0
+17977, isla2_for25lod, isla2lod, 2000, 0
+17978, isla2_for26lod, isla2lod, 2000, 0
+17979, isla2_for27lod, isla2lod, 2000, 0
+17980, isla2_for28lod, isla2lod, 2000, 0
+17981, isla2_for29lod, isla2lod, 2000, 0
+17982, isla2_for30lod, isla2lod, 2000, 0
+17983, isla2_for31lod, isla2lod, 2000, 0
+17984, isla2_for32lod, isla2lod, 2000, 0
+17985, isla2_for33lod, isla2lod, 2000, 0
+17986, isla2_for34lod, isla2lod, 2000, 0
+17987, isla2_for35lod, isla2lod, 2000, 0
+17988, isla2_for36lod, isla2lod, 2000, 0
+17989, isla2_for37lod, isla2lod, 2000, 0
+17990, isla2_for38lod, isla2lod, 2000, 0
+17991, isla2_for39lod, isla2lod, 2000, 0
+17992, isla2_for40lod, isla2lod, 2000, 0
+17993, isla2_for41lod, isla2lod, 2000, 0
+17994, isla2_for42lod, isla2lod, 2000, 0
+17995, isla2_for6lod, isla2lod, 2000, 0
+17996, isla2_tree1, gta_proc_bush, 299, 0
+17997, isla2_tree2, gta_proc_bush, 299, 0
+17998, isla2_tree3, gtatreeshi9, 299, 4
+17999, isla2_tree4, isla2_tree2, 299, 4
+18000, isla2_tree4lod, isla2_tree2, 2000, 0
+18001, isla2_tree5, isla2_tree2, 299, 4
+18281, stone1, stone1, 299, 0
+18323, isla2_des26lod, isla2lod, 2000, 0
+18324, isla2_des50, isla1, 299, 0
+18325, isla2_des50lod, isla1, 2000, 0
+18327, isla2_tree7, isla2_tree7, 299, 4
+18328, isla2_tree8, vegtresshi9b, 299, 4
+19522, isla2_tree3lod, isla2_tree3lod, 2000, 4
+19523, isla2_tree9, isla2_tree7, 299, 4
+19825, bog2, bog2, 299, 4
+19953, monlog1, dynbarrels, 299, 0
+5011, hals1, isla1, 299, 0
+5012, hals2, isla1, 299, 0
+5013, hals3, isla1, 299, 0
+5014, hals4, isla1, 299, 0
+5015, hals1lod, isla2lod, 2500, 0
+5016, hals2lod, isla2lod, 2500, 0
+5017, hals3lod, isla2lod, 2500, 0
+5018, hals4lod, isla2lod, 2500, 0
+5019, hals5, isla1, 299, 0
+end
+tobj
+end
+2dfx
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

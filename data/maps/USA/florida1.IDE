@@ -1,0 +1,204 @@
+#Item Definition File created by MapEditor
+objs
+18830, flor1, usa2, 299, 0
+18831, flor2, usa2, 299, 0
+18832, flor3, usa2, 299, 0
+18833, flor4, usa2, 299, 0
+18834, flor5, usa2, 299, 0
+18835, flor6, usa2, 299, 0
+18836, flor7, usa2, 299, 0
+18837, flor8, usa2, 299, 0
+18838, flor9, usa2, 299, 0
+18839, flor10, usa2, 299, 0
+18840, flor11, usa2, 299, 0
+18841, flor12, usa2, 299, 0
+18842, flor13, usa2, 299, 0
+18843, flor14, usa2, 299, 0
+18844, flor15, usa2, 299, 0
+18845, flor16, usa2, 299, 0
+18846, flor17, usa2, 299, 0
+18847, flor18, usa2, 299, 0
+18848, flor19, usa2, 299, 0
+18849, flor20, usa2, 299, 0
+18850, flor21, usa2, 299, 0
+18851, flor22, usa2, 299, 0
+18852, flor23, usa2, 299, 0
+18853, flor24, usa2, 299, 0
+18854, flor25, usa2, 299, 0
+18855, flor26, usa2, 299, 0
+18856, flor27, usa2, 299, 0
+18857, flor28, usa2, 299, 0
+18858, flor29, usa2, 299, 0
+18859, flor30, usa2, 299, 0
+18860, flor31, usa2, 299, 0
+18861, flor32, usa2, 299, 0
+18862, flor33, usa2, 299, 0
+18863, flor34, usa2, 299, 0
+18864, flor35, usa2, 299, 0
+18865, flor36, usa2, 299, 0
+18866, flor37, usa2, 299, 0
+18867, flor38, usa2, 299, 0
+18868, flor39, usa2, 299, 0
+18869, flor40, usa2, 299, 0
+18870, flor41, usa2, 299, 0
+18871, flor42, usa2, 299, 0
+18872, flor43, usa2, 299, 0
+18873, flor44, usa2, 299, 0
+18874, flor45, usa2, 299, 0
+18875, flor46, usa2, 299, 0
+18876, flor47, usa2, 299, 0
+18891, flor1lod, usalod, 2000, 0
+18892, flor2lod, usalod, 2000, 0
+18893, flor3lod, usalod, 2000, 0
+18894, flor4lod, usalod, 2000, 0
+18895, flor5lod, usalod, 2000, 0
+18896, flor6lod, usalod, 2000, 0
+18897, flor7lod, usalod, 2000, 0
+18898, flor8lod, usalod, 2000, 0
+18899, flor9lod, usalod, 2000, 0
+18900, flor10lod, usalod, 2000, 0
+18901, flor11lod, usalod, 2000, 0
+18902, flor12lod, usalod, 2000, 0
+18903, flor13lod, usalod, 2000, 0
+18904, flor14lod, usalod, 2000, 0
+18905, flor15lod, usalod, 2000, 0
+18906, flor16lod, usalod, 2000, 0
+18907, flor17lod, usalod, 2000, 0
+18908, flor18lod, usalod, 2000, 0
+18909, flor19lod, usalod, 2000, 0
+18910, flor20lod, usalod, 2000, 0
+18911, flor21lod, usalod, 2000, 0
+18912, flor22lod, usalod, 2000, 0
+18913, flor23lod, usalod, 2000, 0
+18914, flor24lod, usalod, 2000, 0
+18915, flor25lod, usalod, 2000, 0
+18916, flor26lod, usalod, 2000, 0
+18917, flor27lod, usalod, 2000, 0
+18918, flor28lod, usalod, 2000, 0
+18919, flor29lod, usalod, 2000, 0
+18920, flor30lod, usalod, 2000, 0
+18921, flor31lod, usalod, 2000, 0
+18922, flor32lod, usalod, 2000, 0
+18923, flor33lod, usalod, 2000, 0
+18924, flor34lod, usalod, 2000, 0
+18925, flor35lod, usalod, 2000, 0
+18926, flor36lod, usalod, 2000, 0
+18927, flor37lod, usalod, 2000, 0
+18928, flor38lod, usalod, 2000, 0
+18929, flor39lod, usalod, 2000, 0
+18930, flor40lod, usalod, 2000, 0
+18931, flor41lod, usalod, 2000, 0
+18932, flor42lod, usalod, 2000, 0
+18933, flor43lod, usalod, 2000, 0
+18934, flor44lod, usalod, 2000, 0
+18935, flor45lod, usalod, 2000, 0
+18936, flor46lod, usalod, 2000, 0
+18937, flor47lod, usalod, 2000, 0
+19218, fltree1, fltree1, 299, 4
+19219, fltree2, fltree1, 299, 4
+19220, fltree3, fltree1, 299, 4
+19221, fltree4, fltree1, 299, 4
+19222, fltree5, fltree1, 299, 4
+19223, fltree6, fltree1, 299, 4
+19224, fltree7, fltree1, 299, 4
+19225, fltree8, fltree1, 350, 4
+19226, fltree9, fltree1, 350, 4
+19227, fltree7lod, fltree1lod, 2000, 4
+19495, flor48, usa2, 299, 0
+19496, flor49, usa2, 299, 0
+19497, flor50, usa2, 299, 0
+19498, flor51, usa2, 299, 0
+19499, flor52, usa2, 299, 0
+19500, flor53, usa2, 299, 0
+19501, flor54, usa2, 299, 0
+19502, flor55, usa2, 299, 0
+19503, flor56, usa2, 299, 0
+19504, flor48lod, usalod, 2000, 0
+19505, flor49lod, usalod, 2000, 0
+19506, flor50lod, usalod, 2000, 0
+19507, flor51lod, usalod, 2000, 0
+19508, flor52lod, usalod, 2000, 0
+19509, flor53lod, usalod, 2000, 0
+19510, flor54lod, usalod, 2000, 0
+19511, flor55lod, usalod, 2000, 0
+19512, flor56lod, usalod, 2000, 0
+19949, fltree10, fltree10, 299, 132
+end
+tobj
+end
+2dfx
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

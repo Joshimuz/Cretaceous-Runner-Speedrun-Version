@@ -1,0 +1,93 @@
+;
+; Alternative pallettes for carplate charsets.
+;
+; Palettes here are saved in PaintshopPro7's JASC-palette format (*.PAL)
+; (menu "Colors" -> "Save Palette...").
+; Paste only colors here - skip palette header (3 first lines of *.PAL file: "JASC-PAL 0100 16...", etc.).
+;
+;
+; 08/12/2003 - Andrzej:  - initial;
+;
+;
+;
+;
+;
+;
+;
+; 1. platecharset1.pal (16 colors) (SF) 
+;
+;JASC-PAL
+;0100
+;16
+173 181 181
+148 165 165
+90 115 140
+123 148 156
+107 123 148
+49 82 123
+8 41 99
+74 99 132
+41 74 115
+82 107 132
+115 140 148
+140 156 165
+16 57 107
+57 90 123
+24 66 107
+0 0 0
+;
+;
+;
+;
+; 2. platecharset2.pal (16 colors) (Vegas)
+;
+;JASC-PAL
+;0100
+;16
+173 181 181
+148 165 165
+90 115 140
+123 148 156
+107 123 148
+49 82 123
+8 41 99
+74 99 132
+41 74 115
+82 107 132
+115 140 148
+140 156 165
+16 57 107
+57 90 123
+24 66 107
+0 0 0
+;
+;
+;
+;
+;
+; 3. platecharset3.pal (16 colors) (LA)
+;
+;JASC-PAL
+;0100
+;16
+173 181 181
+148 165 165
+90 115 140
+123 148 156
+107 123 148
+49 82 123
+8 41 99
+74 99 132
+41 74 115
+82 107 132
+115 140 148
+140 156 165
+16 57 107
+57 90 123
+24 66 107
+0 0 0
+;
+;
+;
+;
+;the end

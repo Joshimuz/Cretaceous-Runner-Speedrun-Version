@@ -1,0 +1,58 @@
+#
+# Load IDEs first, then the models and after that the IPLs
+#
+
+IMG DATA\PATHS\CARREC.IMG
+
+#
+# Object types
+#
+IDE DATA\MAPS\generic\vegepart.IDE
+IDE DATA\MAPS\generic\barriers.IDE
+IDE DATA\MAPS\generic\dynamic.IDE
+IDE DATA\MAPS\generic\dynamic2.IDE
+IDE DATA\MAPS\generic\multiobj.IDE
+IDE DATA\MAPS\LA\LAe.IDE
+IDE DATA\MAPS\LA\LAe2.IDE
+IDE DATA\MAPS\LA\LAxref.IDE
+IDE DATA\MAPS\country\counxref.IDE
+IDE DATA\MAPS\interior\int_LA.IDE
+
+# interiors
+IDE DATA\MAPS\interior\props.IDE
+IDE DATA\MAPS\interior\props2.IDE
+
+# vehicle upgrade models
+IDE DATA\MAPS\veh_mods\veh_mods.IDE
+
+SPLASH loadsc2
+
+# have to load map.zon before any of the IPLs
+IPL DATA\MAP.ZON
+# IPL DATA\NAVIG.ZON
+IPL DATA\INFO.ZON
+
+#
+# Scene information
+#
+
+SPLASH loadsc3
+
+IPL DATA\MAPS\LA\LAe.IPL
+IPL DATA\MAPS\LA\LAe2.IPL
+# interiors
+IPL DATA\MAPS\interior\int_LA.IPL
+IPL DATA\MAPS\paths.ipl
+IPL DATA\MAPS\cull.ipl
+IPL DATA\MAPS\occluSF.ipl
+IPL DATA\MAPS\occluveg.ipl
+IPL DATA\MAPS\occluLA.ipl
+IPL DATA\MAPS\occluint.ipl
+
+
+#
+#  Interiors
+#
+SPLASH loadsc4
+
+

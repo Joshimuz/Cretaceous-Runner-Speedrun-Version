@@ -1,0 +1,324 @@
+#Item Definition File created by MapEditor
+objs
+19230, ocean1, ocean1, 299, 0
+19231, ocean2, ocean1, 299, 0
+19232, ocean3, ocean1, 299, 0
+19233, ocean4, ocean1, 299, 0
+19234, ocean5, ocean1, 299, 0
+19235, ocean6, ocean1, 299, 0
+19236, ocean7, ocean1, 299, 0
+19237, ocean8, ocean1, 299, 0
+19238, ocean9, ocean1, 299, 0
+19239, ocean10, ocean1, 299, 0
+19240, ocean11, ocean1, 299, 0
+19241, ocean12, ocean1, 299, 0
+19242, ocean13, ocean1, 299, 0
+19243, ocean14, ocean1, 299, 0
+19244, ocean15, ocean1, 299, 0
+19245, ocean16, ocean1, 299, 0
+19246, ocean17, ocean1, 299, 0
+19247, ocean18, ocean1, 299, 0
+19248, ocean19, ocean1, 299, 0
+19249, ocean20, ocean1, 299, 0
+19250, ocean21, ocean1, 299, 0
+19251, ocean22, ocean1, 299, 0
+19252, ocean23, ocean1, 299, 0
+19253, ocean24, ocean1, 299, 0
+19254, ocean25, ocean1, 299, 0
+19255, ocean26, ocean1, 299, 0
+19256, ocean27, ocean1, 299, 0
+19257, ocean28, ocean1, 299, 0
+19258, ocean29, ocean1, 299, 0
+19259, ocean30, ocean1, 299, 0
+19260, ocean31, ocean1, 299, 0
+19261, ocean32, ocean1, 299, 0
+19262, ocean33, ocean1, 299, 0
+19263, ocean34, ocean1, 299, 0
+19264, ocean35, ocean1, 299, 0
+19265, ocean36, ocean1, 299, 0
+19266, ocean37, ocean1, 299, 0
+19267, ocean38, ocean1, 299, 0
+19268, ocean39, ocean1, 299, 0
+19269, ocean40, ocean1, 299, 0
+19270, ocean41, ocean1, 299, 0
+19271, ocean42, ocean1, 299, 0
+19272, ocean43, ocean1, 299, 0
+19273, ocean44, ocean1, 299, 0
+19274, ocean45, ocean1, 299, 0
+19275, ocean46, ocean1, 299, 0
+19276, ocean47, ocean1, 299, 0
+19277, ocean48, ocean1, 299, 0
+19278, ocean49, ocean1, 299, 0
+19279, ocean50, ocean1, 299, 0
+19280, ocean51, ocean1, 299, 0
+19281, ocean52, ocean1, 299, 0
+19282, ocean53, ocean1, 299, 0
+19283, ocean54, ocean1, 299, 0
+19284, ocean55, ocean1, 299, 0
+19285, ocean56, ocean1, 299, 0
+19286, ocean57, ocean1, 299, 0
+19287, ocean58, ocean1, 299, 0
+19288, ocean59, ocean1, 299, 0
+19289, ocean60, ocean1, 299, 0
+19290, ocean61, ocean1, 299, 0
+19291, ocean62, ocean1, 299, 0
+19292, ocean63, ocean1, 299, 0
+19293, ocean64, ocean1, 299, 0
+19294, ocean65, ocean1, 299, 0
+19295, ocean66, ocean1, 299, 0
+19296, ocean67, ocean1, 299, 0
+19297, ocean68, ocean1, 299, 0
+19298, ocean69, ocean1, 299, 0
+19299, ocean70, ocean1, 299, 0
+19300, ocean71, ocean1, 299, 0
+19301, ocean72, ocean1, 299, 0
+19302, ocean73, ocean1, 299, 0
+19303, ocean74, ocean1, 299, 0
+19304, ocean75, ocean1, 299, 0
+19305, ocean76, ocean1, 299, 0
+19306, ocean77, ocean1, 299, 0
+19307, ocean78, ocean1, 299, 0
+19308, ocean79, ocean1, 299, 0
+19309, ocean80, ocean1, 299, 0
+19310, ocean81, ocean1, 299, 0
+19311, ocean82, ocean1, 299, 0
+19312, ocean83, ocean1, 299, 0
+19313, ocean84, ocean1, 299, 0
+19314, ocean85, ocean1, 299, 0
+19315, ocean86, ocean1, 299, 0
+19316, ocean87, ocean1, 299, 0
+19317, ocean88, ocean1, 299, 0
+19318, ocean89, ocean1, 299, 0
+19319, ocean90, ocean1, 299, 0
+19320, ocean91, ocean1, 299, 0
+19321, ocean92, ocean1, 299, 0
+19322, ocean93, ocean1, 299, 0
+19323, ocean94, ocean1, 299, 0
+19324, ocean95, ocean1, 299, 0
+19325, ocean96, ocean1, 299, 0
+19326, ocean97, ocean1, 299, 0
+19327, ocean98, ocean1, 299, 0
+19328, ocean99, ocean1, 299, 0
+19329, ocean100, ocean2, 299, 0
+19330, ocean101, ocean2, 299, 0
+19331, ocean1lod, oceanlod, 2000, 0
+19332, ocean2lod, oceanlod, 2000, 0
+19333, ocean3lod, oceanlod, 2000, 0
+19334, ocean4lod, oceanlod, 2000, 0
+19335, ocean5lod, oceanlod, 2000, 0
+19336, ocean6lod, oceanlod, 2000, 0
+19337, ocean7lod, oceanlod, 2000, 0
+19338, ocean8lod, oceanlod, 2000, 0
+19339, ocean9lod, oceanlod, 2000, 0
+19340, ocean10lod, oceanlod, 2000, 0
+19341, ocean11lod, oceanlod, 2000, 0
+19342, ocean12lod, oceanlod, 2000, 0
+19343, ocean13lod, oceanlod, 2000, 0
+19344, ocean14lod, oceanlod, 2000, 0
+19345, ocean15lod, oceanlod, 2000, 0
+19346, ocean16lod, oceanlod, 2000, 0
+19347, ocean17lod, oceanlod, 2000, 0
+19348, ocean18lod, oceanlod, 2000, 0
+19349, ocean19lod, oceanlod, 2000, 0
+19350, ocean20lod, oceanlod, 2000, 0
+19351, ocean21lod, oceanlod, 2000, 0
+19352, ocean22lod, oceanlod, 2000, 0
+19353, ocean23lod, oceanlod, 2000, 0
+19354, ocean24lod, oceanlod, 2000, 0
+19355, ocean25lod, oceanlod, 2000, 0
+19356, ocean26lod, oceanlod, 2000, 0
+19357, ocean27lod, oceanlod, 2000, 0
+19358, ocean28lod, oceanlod, 2000, 0
+19359, ocean29lod, oceanlod, 2000, 0
+19360, ocean30lod, oceanlod, 2000, 0
+19361, ocean31lod, oceanlod, 2000, 0
+19362, ocean32lod, oceanlod, 2000, 0
+19363, ocean33lod, oceanlod, 2000, 0
+19364, ocean34lod, oceanlod, 2000, 0
+19365, ocean35lod, oceanlod, 2000, 0
+19366, ocean36lod, oceanlod, 2000, 0
+19367, ocean37lod, oceanlod, 2000, 0
+19368, ocean38lod, oceanlod, 2000, 0
+19369, ocean39lod, oceanlod, 2000, 0
+19370, ocean40lod, oceanlod, 2000, 0
+19371, ocean41lod, oceanlod, 2000, 0
+19372, ocean42lod, oceanlod, 2000, 0
+19373, ocean43lod, oceanlod, 2000, 0
+19374, ocean44lod, oceanlod, 2000, 0
+19375, ocean45lod, oceanlod, 2000, 0
+19376, ocean46lod, oceanlod, 2000, 0
+19377, ocean47lod, oceanlod, 2000, 0
+19378, ocean48lod, oceanlod, 2000, 0
+19379, ocean49lod, oceanlod, 2000, 0
+19380, ocean50lod, oceanlod, 2000, 0
+19381, ocean51lod, oceanlod, 2000, 0
+19382, ocean52lod, oceanlod, 2000, 0
+19383, ocean53lod, oceanlod, 2000, 0
+19384, ocean54lod, oceanlod, 2000, 0
+19385, ocean55lod, oceanlod, 2000, 0
+19386, ocean56lod, oceanlod, 2000, 0
+19387, ocean57lod, oceanlod, 2000, 0
+19388, ocean58lod, oceanlod, 2000, 0
+19389, ocean59lod, oceanlod, 2000, 0
+19390, ocean60lod, oceanlod, 2000, 0
+19391, ocean61lod, oceanlod, 2000, 0
+19392, ocean62lod, oceanlod, 2000, 0
+19393, ocean63lod, oceanlod, 2000, 0
+19394, ocean64lod, oceanlod, 2000, 0
+19395, ocean65lod, oceanlod, 2000, 0
+19396, ocean66lod, oceanlod, 2000, 0
+19397, ocean67lod, oceanlod, 2000, 0
+19398, ocean68lod, oceanlod, 2000, 0
+19399, ocean69lod, oceanlod, 2000, 0
+19400, ocean70lod, oceanlod, 2000, 0
+19401, ocean71lod, oceanlod, 2000, 0
+19402, ocean72lod, oceanlod, 2000, 0
+19403, ocean73lod, oceanlod, 2000, 0
+19404, ocean74lod, oceanlod, 2000, 0
+19405, ocean75lod, oceanlod, 2000, 0
+19406, ocean76lod, oceanlod, 2000, 0
+19407, ocean77lod, oceanlod, 2000, 0
+19408, ocean78lod, oceanlod, 2000, 0
+19409, ocean79lod, oceanlod, 2000, 0
+19410, ocean80lod, oceanlod, 2000, 0
+19411, ocean81lod, oceanlod, 2000, 0
+19412, ocean82lod, oceanlod, 2000, 0
+19413, ocean83lod, oceanlod, 2000, 0
+19414, ocean84lod, oceanlod, 2000, 0
+19415, ocean85lod, oceanlod, 2000, 0
+19416, ocean86lod, oceanlod, 2000, 0
+19417, ocean87lod, oceanlod, 2000, 0
+19418, ocean88lod, oceanlod, 2000, 0
+19419, ocean89lod, oceanlod, 2000, 0
+19420, ocean90lod, oceanlod, 2000, 0
+19421, ocean91lod, oceanlod, 2000, 0
+19422, ocean92lod, oceanlod, 2000, 0
+19423, ocean93lod, oceanlod, 2000, 0
+19424, ocean94lod, oceanlod, 2000, 0
+19425, ocean95lod, oceanlod, 2000, 0
+19426, ocean96lod, oceanlod, 2000, 0
+19427, ocean97lod, oceanlod, 2000, 0
+19428, ocean98lod, oceanlod, 2000, 0
+19429, ocean99lod, oceanlod, 2000, 0
+19430, ocean100lod, oceanlod, 2000, 0
+19431, ocean101lod, oceanlod, 2000, 0
+19450, ocean102, ocean2, 299, 0
+19451, ocean103, ocean2, 299, 0
+19452, ocean102lod, oceanlod, 2000, 0
+19453, ocean103lod, oceanlod, 2000, 0
+19454, ocean104, ocean2, 299, 0
+19455, ocean105, ocean2, 299, 0
+19456, ocean106, ocean2, 299, 0
+19457, ocean107, ocean2, 299, 0
+19458, ocean108, ocean1, 299, 0
+19459, ocean109, ocean1, 299, 0
+19460, ocean110, ocean1, 299, 0
+19461, ocean111, ocean1, 299, 0
+19462, ocean112, ocean1, 299, 0
+19463, ocean113, ocean1, 299, 0
+19464, ocean114, ocean2, 299, 0
+19465, ocean115, ocean2, 299, 0
+19466, ocean116, ocean1, 299, 0
+19467, ocean117, ocean2, 299, 0
+19468, ocean118, ocean2, 299, 0
+19469, ocean119, ocean2, 299, 0
+19470, ocean120, ocean2, 299, 0
+19471, ocean121, ocean2, 299, 0
+19472, ocean104lod, oceanlod, 2000, 0
+19473, ocean105lod, oceanlod, 2000, 0
+19474, ocean106lod, oceanlod, 2000, 0
+19475, ocean107lod, oceanlod, 2000, 0
+19476, ocean108lod, oceanlod, 2000, 0
+19477, ocean109lod, oceanlod, 2000, 0
+19478, ocean110lod, oceanlod, 2000, 0
+19479, ocean111lod, oceanlod, 2000, 0
+19480, ocean112lod, oceanlod, 2000, 0
+19481, ocean113lod, oceanlod, 2000, 0
+19482, ocean114lod, oceanlod, 2000, 0
+19483, ocean115lod, oceanlod, 2000, 0
+19484, ocean116lod, oceanlod, 2000, 0
+19485, ocean117lod, oceanlod, 2000, 0
+19486, ocean118lod, oceanlod, 2000, 0
+19487, ocean119lod, oceanlod, 2000, 0
+19488, ocean120lod, oceanlod, 2000, 0
+19489, ocean121lod, oceanlod, 2000, 0
+19490, ocean122lod, oceanlod, 2000, 0
+19491, ocean123lod, oceanlod, 2000, 0
+19492, ocean124lod, oceanlod, 2000, 0
+end
+tobj
+end
+2dfx
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

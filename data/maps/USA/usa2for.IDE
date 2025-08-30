@@ -1,0 +1,87 @@
+#Item Definition File created by MapEditor
+objs
+18680, usfir1, usafir1, 299, 0
+18681, usfir2, usafir2, 290, 4
+18682, usfir4, usafir2, 299, 4
+18683, usfir5, usafir2, 299, 4
+19117, sm_fir_copse1lod, usafir1lod, 2000, 132
+19118, sm_fir_copse2lod, usafir1lod, 2000, 132
+19119, veg_largefurs04lod, usafir1lod, 2000, 132
+19120, usfirdead, usafir1, 299, 4
+19121, usfirdead2, usafir1, 299, 132
+19122, usfirdeadlod, usafir1lod, 2000, 132
+19123, usfirdead2lod, usafir1lod, 2000, 132
+19124, ustree1, ustree1, 299, 4
+19125, ustree2, ustree1, 299, 4
+19126, ustree3, ustree1, 299, 4
+19142, ustree4, gtatreesh, 299, 4
+19210, usbush1, usbush, 350, 4
+19211, usbush2, usbush, 350, 4
+19212, usbush3, usbush, 350, 4
+19213, usbush4, usbush, 350, 4
+19214, usbush5, usbush, 350, 4
+19215, usbush6, usbush, 350, 4
+19216, usbush7, usbush, 350, 4
+19217, usbush8, usbush, 350, 4
+19228, montree1, usafir1, 299, 4
+19229, montree1lod, usafir1lod, 2000, 4
+19513, calpalm1, calpalm1, 299, 4
+19514, calpalm1lod, calpalm1, 2000, 4
+19952, easter, usa1, 299, 0
+end
+tobj
+end
+2dfx
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

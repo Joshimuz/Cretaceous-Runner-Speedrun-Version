@@ -1,0 +1,692 @@
+#Item Definition File created by MapEditor
+objs
+18659, usgras1, usa1, 299, 0
+18660, usgras2, usa1, 299, 0
+18661, usgras3, usa1, 299, 0
+18662, usgras4, usa1, 299, 0
+18663, usgras5, usa1, 299, 0
+18664, usgras6, usa1, 299, 0
+18665, usgras7, usa1, 299, 0
+18666, usgras8, usa1, 299, 0
+18667, usgras9, usa1, 299, 0
+18668, usgras10, usa1, 299, 0
+18669, usgras11, usa1, 299, 0
+18670, usgras12, usa1, 299, 0
+18671, usgras13, usa1, 299, 0
+18672, usgras14, usa1, 299, 0
+18673, usgras15, usa1, 299, 0
+18674, usgras16, usa1, 299, 0
+18675, usgras17, usa1, 299, 0
+18676, usgras18, usa1, 299, 0
+18677, usgras19, usa1, 299, 0
+18678, usgras20, usa1, 299, 0
+18679, usgras21, usa1, 299, 0
+18684, usgras22, usa1, 299, 0
+18685, usgras23, usa1, 299, 0
+18686, usgras24, usa1, 299, 0
+18687, usgras25, usa1, 299, 0
+18688, usgras26, usa1, 299, 0
+18689, usgras27, usa1, 299, 0
+18690, usgras28, usa1, 299, 0
+18691, usgras29, usa1, 299, 0
+18692, usgras30, usa1, 299, 0
+18693, usgras31, usa1, 299, 0
+18694, usgras32, usa1, 299, 0
+18695, usgras33, usa1, 299, 0
+18696, usgras34, usa1, 299, 0
+18697, usgras35, usa1, 299, 0
+18698, usgras36, usa1, 299, 0
+18699, usgras37, usa1, 299, 0
+18700, usdes1, usa1, 299, 0
+18701, usdes2, usa1, 299, 0
+18702, usdes3, usa1, 299, 0
+18703, usdes4, usa1, 299, 0
+18704, usdes5, usa1, 299, 0
+18705, usdes6, usa1, 299, 0
+18706, usdes7, usa1, 299, 0
+18707, usdes8, usa1, 299, 0
+18708, usdes9, usa1, 299, 0
+18709, usdes10, usa1, 299, 0
+18710, usdes11, usa1, 299, 0
+18711, usdes12, usa1, 299, 0
+18712, usdes13, usa1, 299, 0
+18713, usdes14, usa1, 299, 0
+18714, usdes15, usa1, 299, 0
+18715, usdes16, usa1, 299, 0
+18716, usdes17, usa1, 299, 0
+18717, usdes18, usa1, 299, 0
+18718, usdes19, usa1, 299, 0
+18719, usdes20, usa1, 299, 0
+18720, usdes21, usa1, 299, 0
+18721, usdes22, usa1, 299, 0
+18722, usdes23, usa1, 299, 0
+18723, usdes24, usa1, 299, 0
+18724, usdes25, usa1, 299, 0
+18725, usdes26, usa1, 299, 0
+18726, usdes27, usa1, 299, 0
+18727, usdes28, usa1, 299, 0
+18728, usdes29, usa1, 299, 0
+18729, usdes30, usa1, 299, 0
+18730, usdes31, usa1, 299, 0
+18731, usdes32, usa1, 299, 0
+18732, usdes33, usa1, 299, 0
+18733, usdes34, usa1, 299, 0
+18734, usdes35, usa1, 299, 0
+18735, usdes36, usa1, 299, 0
+18736, usdes37, usa1, 299, 0
+18737, usdes38, usa1, 299, 0
+18738, usdes39, usa1, 299, 0
+18739, usdes40, usa1, 299, 0
+18740, usdes41, usa1, 299, 0
+18741, usdes42, usa1, 299, 0
+18742, usdes43, usa1, 299, 0
+18743, usdes44, usa1, 299, 0
+18744, usdes45, usa1, 299, 0
+18745, usdes46, usa1, 299, 0
+18746, usdes47, usa1, 299, 0
+18747, usdes48, usa1, 299, 0
+18748, usdes49, usa1, 299, 0
+18749, usdes50, usa1, 299, 0
+18750, usdes51, usa1, 299, 0
+18751, usdes52, usa1, 299, 0
+18752, usdes53, usa1, 299, 0
+18753, usdes54, usa1, 299, 0
+18754, usdes55, usa1, 299, 0
+18755, usdes56, usa1, 299, 0
+18756, usdes57, usa1, 299, 0
+18757, usdes58, usa1, 299, 0
+18758, usdes59, usa1, 299, 0
+18759, usdes60, usa1, 299, 0
+18760, usdes61, usa1, 299, 0
+18761, usdes62, usa1, 299, 0
+18762, usdes63, usa1, 299, 0
+18763, usdes64, usa1, 299, 0
+18764, usdes65, usa1, 299, 0
+18765, usdes66, usa1, 299, 0
+18766, usdes67, usa1, 299, 0
+18767, usdes68, usa1, 299, 0
+18768, usdes69, usa1, 299, 0
+18769, usdes70, usa1, 299, 0
+18770, usdes71, usa1, 299, 0
+18771, usdes72, usa1, 299, 0
+18772, usdes73, usa1, 299, 0
+18773, usdes74, usa1, 299, 0
+18774, usdes75, usa1, 299, 0
+18775, usdes76, usa1, 299, 0
+18776, usdes77, usa1, 299, 0
+18777, usdes78, usa1, 299, 0
+18778, usdes79, usa1, 299, 0
+18779, usdes80, usa1, 299, 0
+18780, usdes81, usa1, 299, 0
+18781, usdes82, usa1, 299, 0
+18782, usdes83, usa1, 299, 0
+18783, usdes84, usa1, 299, 0
+18784, usdes85, usa1, 299, 0
+18785, usdes86, usa1, 299, 0
+18786, usdes87, usa1, 299, 0
+18787, usdes88, usa1, 299, 0
+18788, usdes89, usa2, 299, 0
+18789, usdes90, usa2, 299, 0
+18790, usdes91, usa2, 299, 0
+18791, usdes92, usa2, 299, 0
+18792, usdes93, usa2, 299, 0
+18793, usdes94, usa2, 299, 0
+18794, usdes95, usa2, 299, 0
+18795, usdes96, usa2, 299, 0
+18796, usdes97, usa2, 299, 0
+18797, usdes98, usa2, 299, 0
+18798, usdes99, usa2, 299, 0
+18799, usdes100, usa2, 299, 0
+18800, usdes101, usa2, 299, 0
+18801, usdes102, usa2, 299, 0
+18802, usdes103, usa2, 299, 0
+18803, usdes104, usa2, 299, 0
+18804, usdes105, usa2, 299, 0
+18805, usdes106, usa2, 299, 0
+18806, usdes107, usa2, 299, 0
+18807, usdes108, usa2, 299, 0
+18808, usdes109, usa2, 299, 0
+18809, usdes110, usa2, 299, 0
+18810, usdes111, usa2, 299, 0
+18811, usdes112, usa2, 299, 0
+18812, usdes113, usa2, 299, 0
+18813, usdes114, usa2, 299, 0
+18814, usdes115, usa2, 299, 0
+18815, usdes116, usa2, 299, 0
+18816, usdes117, usa2, 299, 0
+18817, usdes118, usa2, 299, 0
+18818, usdes119, usa2, 299, 0
+18819, usdes120, usa2, 299, 0
+18820, usdes121, usa2, 299, 0
+18821, usdes122, usa2, 299, 0
+18822, usdes123, usa2, 299, 0
+18823, usdes124, usa2, 299, 0
+18824, usdes125, usa2, 299, 0
+18825, usdes126, usa1, 299, 0
+18826, usdes127, usa1, 299, 0
+18827, usdes128, usa2, 299, 0
+18828, usdes129, usa2, 299, 0
+18829, usdes130, usa2, 299, 0
+18877, usgras38, usa1, 299, 0
+18878, usgras39, usa1, 299, 0
+18879, usgras40, usa1, 299, 0
+18880, usgras41, usa1, 299, 0
+18881, usgras42, usa1, 299, 0
+18882, usmou1, usa1, 299, 0
+18883, usmou2, usa1, 299, 0
+18884, usmou3, usa1, 299, 0
+18885, usmou4, usa1, 299, 0
+18886, usgras43, usa1, 299, 0
+18887, usgras44, usa1, 299, 0
+18888, usgras45, usa1, 299, 0
+18889, usgras46, usa1, 299, 0
+18890, usgras47, usa1, 299, 0
+18938, usmou1lod, usalod, 2000, 0
+18939, usmou3lod, usalod, 2000, 0
+18940, usmou2lod, usalod, 2000, 0
+18941, usgras1lod, usalod, 2000, 0
+18942, usgras2lod, usalod, 2000, 0
+18943, usgras3lod, usalod, 2000, 0
+18944, usgras4lod, usalod, 2000, 0
+18945, usgras5lod, usalod, 2000, 0
+18946, usgras6lod, usalod, 2000, 0
+18947, usgras7lod, usalod, 2000, 0
+18948, usgras8lod, usalod, 2000, 0
+18949, usgras9lod, usalod, 2000, 0
+18950, usgras10lod, usalod, 2000, 0
+18951, usgras11lod, usalod, 2000, 0
+18952, usgras12lod, usalod, 2000, 0
+18953, usgras13lod, usalod, 2000, 0
+18954, usgras14lod, usalod, 2000, 0
+18955, usgras15lod, usalod, 2000, 0
+18956, usgras16lod, usalod, 2000, 0
+18957, usgras17lod, usalod, 2000, 0
+18958, usgras18lod, usalod, 2000, 0
+18959, usgras19lod, usalod, 2000, 0
+18960, usgras20lod, usalod, 2000, 0
+18961, usgras21lod, usalod, 2000, 0
+18962, usgras22lod, usalod, 2000, 0
+18963, usgras23lod, usalod, 2000, 0
+18964, usgras24lod, usalod, 2000, 0
+18965, usgras25lod, usalod, 2000, 0
+18966, usgras26lod, usalod, 2000, 0
+18967, usgras27lod, usalod, 2000, 0
+18968, usgras28lod, usalod, 2000, 0
+18969, usgras29lod, usalod, 2000, 0
+18970, usgras30lod, usalod, 2000, 0
+18971, usgras31lod, usalod, 2000, 0
+18972, usgras32lod, usalod, 2000, 0
+18973, usgras33lod, usalod, 2000, 0
+18974, usgras34lod, usalod, 2000, 0
+18975, usgras35lod, usalod, 2000, 0
+18976, usgras36lod, usalod, 2000, 0
+18977, usgras37lod, usalod, 2000, 0
+18978, usgras38lod, usalod, 2000, 0
+18979, usgras39lod, usalod, 2000, 0
+18980, usgras40lod, usalod, 2000, 0
+18981, usgras41lod, usalod, 2000, 0
+18982, usgras42lod, usalod, 2000, 0
+18983, usgras43lod, usalod, 2000, 0
+18984, usgras44lod, usalod, 2000, 0
+18985, usgras45lod, usalod, 2000, 0
+18986, usgras46lod, usalod, 2000, 0
+18987, usgras47lod, usalod, 2000, 0
+18988, usdes1lod, usalod, 2000, 0
+18989, usdes2lod, usalod, 2000, 0
+18990, usdes3lod, usalod, 2000, 0
+18991, usdes4lod, usalod, 2000, 0
+18992, usdes5lod, usalod, 2000, 0
+18993, usdes6lod, usalod, 2000, 0
+18994, usdes7lod, usalod, 2000, 0
+18995, usdes8lod, usalod, 2000, 0
+18996, usdes9lod, usalod, 2000, 0
+18997, usdes10lod, usalod, 2000, 0
+18998, usdes11lod, usalod, 2000, 0
+18999, usdes12lod, usalod, 2000, 0
+19000, usdes13lod, usalod, 2000, 0
+19001, usdes14lod, usalod, 2000, 0
+19002, usdes15lod, nevadalod, 2000, 0
+19003, usdes16lod, usalod, 2000, 0
+19004, usdes17lod, nevadalod, 2000, 0
+19005, usdes18lod, nevadalod, 2000, 0
+19006, usdes19lod, nevadalod, 2000, 0
+19007, usdes20lod, usalod, 2000, 0
+19008, usdes21lod, usalod, 2000, 0
+19010, usdes23lod, usalod, 2000, 0
+19011, usdes24lod, usalod, 2000, 0
+19012, usdes25lod, usalod, 2000, 0
+19013, usdes26lod, usalod, 2000, 0
+19014, usdes27lod, usalod, 2000, 0
+19015, usdes28lod, usalod, 2000, 0
+19016, usdes29lod, usalod, 2000, 0
+19017, usdes30lod, usalod, 2000, 0
+19018, usdes31lod, usalod, 2000, 0
+19019, usdes32lod, usalod, 2000, 0
+19020, usdes33lod, usalod, 2000, 0
+19021, usdes34lod, usalod, 2000, 0
+19022, usdes35lod, usalod, 2000, 0
+19023, usdes36lod, usalod, 2000, 0
+19024, usdes37lod, usalod, 2000, 0
+19025, usdes38lod, usalod, 2000, 0
+19026, usdes39lod, usalod, 2000, 0
+19027, usdes40lod, usalod, 2000, 0
+19028, usdes41lod, usalod, 2000, 0
+19029, usdes42lod, usalod, 2000, 0
+19030, usdes43lod, usalod, 2000, 0
+19031, usdes44lod, usalod, 2000, 0
+19032, usdes45lod, usalod, 2000, 0
+19033, usdes46lod, usalod, 2000, 0
+19034, usdes47lod, usalod, 2000, 0
+19035, usdes48lod, usalod, 2000, 0
+19036, usdes49lod, usalod, 2000, 0
+19037, usdes50lod, usalod, 2000, 0
+19038, usdes51lod, usalod, 2000, 0
+19039, usdes52lod, usalod, 2000, 0
+19040, usdes53lod, usalod, 2000, 0
+19041, usdes54lod, usalod, 2000, 0
+19042, usdes55lod, usalod, 2000, 0
+19043, usdes56lod, usalod, 2000, 0
+19044, usdes57lod, usalod, 2000, 0
+19045, usdes58lod, usalod, 2000, 0
+19046, usdes59lod, usalod, 2000, 0
+19047, usdes60lod, usalod, 2000, 0
+19048, usdes61lod, usalod, 2000, 0
+19049, usdes62lod, usalod, 2000, 0
+19050, usdes63lod, usalod, 2000, 0
+19051, usdes64lod, usalod, 2000, 0
+19052, usdes65lod, usalod, 2000, 0
+19053, usdes66lod, usalod, 2000, 0
+19054, usdes67lod, usalod, 2000, 0
+19055, usdes68lod, usalod, 2000, 0
+19056, usdes69lod, usalod, 2000, 0
+19057, usdes70lod, usalod, 2000, 0
+19058, usdes71lod, usalod, 2000, 0
+19059, usdes72lod, usalod, 2000, 0
+19060, usdes73lod, usalod, 2000, 0
+19061, usdes74lod, usalod, 2000, 0
+19062, usdes75lod, usalod, 2000, 0
+19063, usdes76lod, usalod, 2000, 0
+19064, usdes77lod, usalod, 2000, 0
+19065, usdes78lod, usalod, 2000, 0
+19066, usdes79lod, usalod, 2000, 0
+19067, usdes80lod, usalod, 2000, 0
+19068, usdes82lod, usalod, 2000, 0
+19069, usdes83lod, usalod, 2000, 0
+19070, usdes84lod, usalod, 2000, 0
+19071, usdes85lod, usalod, 2000, 0
+19072, usdes86lod, usalod, 2000, 0
+19073, usdes87lod, usalod, 2000, 0
+19074, usdes88lod, usalod, 2000, 0
+19075, usdes89lod, usalod, 2000, 0
+19076, usdes90lod, usalod, 2000, 0
+19077, usdes91lod, usalod, 2000, 0
+19078, usdes92lod, usalod, 2000, 0
+19079, usdes93lod, usalod, 2000, 0
+19080, usdes94lod, usalod, 2000, 0
+19081, usdes95lod, usalod, 2000, 0
+19082, usdes96lod, usalod, 2000, 0
+19083, usdes97lod, usalod, 2000, 0
+19084, usdes98lod, usalod, 2000, 0
+19085, usdes99lod, usalod, 2000, 0
+19086, usdes100lod, usalod, 2000, 0
+19087, usdes101lod, usalod, 2000, 0
+19088, usdes102lod, usalod, 2000, 0
+19089, usdes103lod, usalod, 2000, 0
+19090, usdes104lod, usalod, 2000, 0
+19091, usdes105lod, usalod, 2000, 0
+19092, usdes106lod, usalod, 2000, 0
+19093, usdes107lod, usalod, 2000, 0
+19094, usdes108lod, usalod, 2000, 0
+19095, usdes109lod, usalod, 2000, 0
+19096, usdes110lod, usalod, 2000, 0
+19097, usdes111lod, usalod, 2000, 0
+19098, usdes112lod, usalod, 2000, 0
+19099, usdes113lod, usalod, 2000, 0
+19100, usdes114lod, usalod, 2000, 0
+19101, usdes115lod, usalod, 2000, 0
+19102, usdes116lod, usalod, 2000, 0
+19103, usdes117lod, usalod, 2000, 0
+19104, usdes118lod, usalod, 2000, 0
+19105, usdes119lod, usalod, 2000, 0
+19106, usdes120lod, usalod, 2000, 0
+19107, usdes121lod, usalod, 2000, 0
+19108, usdes122lod, usalod, 2000, 0
+19109, usdes123lod, usalod, 2000, 0
+19110, usdes124lod, usalod, 2000, 0
+19111, usdes125lod, usalod, 2000, 0
+19112, usdes126lod, usalod, 2000, 0
+19113, usdes127lod, usalod, 2000, 0
+19114, usdes128lod, usalod, 2000, 0
+19115, usdes129lod, usalod, 2000, 0
+19116, usdes130lod, usalod, 2000, 0
+19152, canbeach1, canbeach, 299, 0
+19153, canbeach2, canbeach, 299, 0
+19154, canbeach3, canbeach, 299, 0
+19155, canbeach4, canbeach, 299, 0
+19156, canbeach5, canbeach, 299, 0
+19157, canbeach6, canbeach, 299, 0
+19158, canbeach7, canbeach, 299, 0
+19159, canbeach8, canbeach, 299, 0
+19160, canbeach9, canbeach, 299, 0
+19161, canbeach10, canbeach, 299, 0
+19162, canbeach11, canbeach, 299, 0
+19163, canbeach1lod, canbeach, 2000, 0
+19164, canbeach2lod, canbeach, 2000, 0
+19165, canbeach3lod, canbeach, 2000, 0
+19166, canbeach4lod, canbeach, 2000, 0
+19167, canbeach5lod, canbeach, 2000, 0
+19168, canbeach6lod, canbeach, 2000, 0
+19169, canbeach7lod, canbeach, 2000, 0
+19170, canbeach8lod, canbeach, 2000, 0
+19171, canbeach9lod, canbeach, 2000, 0
+19172, canbeach10lod, canbeach, 2000, 0
+19173, canbeach11lod, canbeach, 2000, 0
+19208, busstop, busstop, 299, 0
+19515, usmou5, usa1, 299, 0
+19516, usmou5lod, usalod, 2000, 0
+19517, usstone1, usstone, 150, 0
+19518, usstone2, usstone, 299, 0
+19519, usstone3, usstone, 150, 0
+19520, usstone4, usstone, 299, 0
+19521, usstone5, usstone, 150, 0
+19823, usmou6, usa1, 299, 0
+19827, usdes131, usa1, 299, 0
+19828, usdes131lod, usalod, 2000, 0
+19829, usdes132, usa1, 299, 0
+19830, usdes133, usa1, 299, 0
+19831, usdes132lod, usalod, 2000, 0
+19832, usdes133lod, usalod, 2000, 0
+19833, usdes134, USA1, 299, 0
+19834, usdes134lod, usalod, 2000, 0
+19835, usdes22lod, usalod, 2000, 0
+19836, usdes135, usa1, 299, 0
+19837, usdes135lod, usalod, 2000, 0
+19838, usdes136, usa1, 299, 0
+19839, usdes137, usa1, 299, 0
+19840, usdes136lod, usalod, 2000, 0
+19841, usdes137lod, usalod, 2000, 0
+19842, usdes138, usa1, 299, 0
+19843, usdes139, usa1, 299, 0
+19844, usdes140, usa1, 299, 0
+19845, usdes138lod, usalod, 2000, 0
+19846, usdes139lod, usalod, 2000, 0
+19847, usdes140lod, usalod, 2000, 0
+19852, usdes141, usa1, 299, 0
+19853, usdes141lod, usalod, 2000, 0
+19854, cave14, uscave, 299, 0
+19855, cave15, uscave, 299, 0
+19856, cave16, uscave, 299, 0
+19857, cave17, uscave, 299, 0
+19858, cave18, uscave, 299, 0
+19859, cave18lod, uscave, 2000, 0
+19943, cave19, uscave, 299, 0
+19950, nyc1, nyc, 299, 0
+end
+tobj
+19951, nyc2, nyc, 2000, 0, 10, 12
+19209, buspandus, busstop, 299, 0, 9, 10
+end
+2dfx
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

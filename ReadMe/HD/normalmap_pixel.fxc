@@ -1,0 +1,44 @@
+const float3 lightcol[4] : register(c0);
+const float4 setting : register(c14);
+
+sampler sTex : register(s0);
+sampler sNorm : register(s2);
+
+struct P_IN
+{
+	float4 pos : POSITION0;
+	float3 ambient : COLOR0;
+	float3 viewdir : COLOR1;
+	float2 tex : TEXCOORD0;
+	float3 norm : TEXCOORD1;
+	float3 tan : TEXCOORD2;
+	float3 binorm : TEXCOORD3;
+	float3 lightdir[4] : TEXCOORD4;
+};
+
+float4 main(P_IN In) : COLOR0
+{
+	float4 norm = tex2D(sNorm, In.tex);
+	norm.xy = norm.xy * 2.0 - 1.0;
+	norm.w = norm.w * setting.y + 1.0;
+#ifdef HL_LQ
+	float3 para = normalize(In.norm) * norm.x + normalize(In.tan) * norm.y + normalize(In.binorm);
+#else
+	float3 para = normalize(In.norm) * norm.x + normalize(In.tan) * norm.y + normalize(In.binorm) * sqrt(1.0 - dot(norm.xy, norm.xy));
+#endif
+	float3 diff = In.ambient;
+	float3 spec = 0.0;
+	for (int i = 0; i < LIGHTS; i++)
+	{
+		float dotd = dot(In.lightdir[i], -para);
+#ifdef HL_LQ
+		diff += (dotd * 0.5 + 0.5) * lightcol[i];
+#else
+		float diffd = dotd * 0.5 + 0.5;
+		diff += diffd * diffd * lightcol[i];
+#endif
+		spec += pow(max(dotd, 0.0), norm.w) * lightcol[i];
+	}
+	float fresnel = dot(normalize(In.viewdir * 2.0 - 1.0), -para) - 1.0;
+	return tex2D(sTex, In.tex) * float4(diff + spec * norm.z * setting.x * (fresnel * fresnel * setting.w + setting.z), 1.0);
+}

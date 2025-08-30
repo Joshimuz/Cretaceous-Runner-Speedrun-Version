@@ -1,0 +1,14 @@
+; Title		:	Surface.dat
+; Author	:	Richard Jobling
+; Date		:	14/02/00
+;
+;	Currently WheelBase is the surface used for the tyres
+;
+;               Rubber          Hard           Road             Loose        Sand       Wet
+;
+Rubber          6.0
+Hard            5.6             5.0
+Road            5.5             5.0            6.0
+Loose           5.2             5.5            5.0              5.0
+Sand			5.0             5.0            5.0              5.0          5.0
+Wet             5.8             5.0            5.0              5.0          5.0        5.5

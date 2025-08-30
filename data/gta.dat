@@ -1,0 +1,447 @@
+#
+# Load IDEs first, then the models and after that the IPLs
+#
+
+IMG MODELS\cr.IMG
+#IMG DATA\PATHS\CARREC.IMG
+#IMG DATA\SCRIPT\SCRIPT.IMG
+#IMG MODELS\CUTSCENE.IMG
+
+#SPLASH loadsc2
+
+#
+# Object types
+#
+IDE DATA\MAPS\country\special26.IDE
+IDE DATA\MAPS\country\special25.IDE
+IDE DATA\MAPS\isla1\special24.IDE
+IDE DATA\MAPS\isla1\special23.IDE
+IDE DATA\MAPS\isla1\special22.IDE
+IDE DATA\MAPS\isla1\special21.IDE
+IDE DATA\MAPS\isla1\special20.IDE
+IDE DATA\MAPS\isla1\special19.IDE
+IDE DATA\MAPS\isla1\special18.IDE
+IDE DATA\MAPS\isla1\special17.IDE
+IDE DATA\MAPS\isla1\special16.IDE
+IDE DATA\MAPS\isla1\special14.IDE
+IDE DATA\MAPS\isla1\special14.IDE
+IDE DATA\MAPS\isla1\special13.IDE
+IDE DATA\MAPS\isla1\special12.IDE
+IDE DATA\MAPS\isla1\special11.IDE
+IDE DATA\MAPS\isla1\special10.IDE
+IDE DATA\MAPS\isla1\special9.IDE
+IDE DATA\MAPS\isla1\special8.IDE
+IDE DATA\MAPS\isla1\special7.IDE
+IDE DATA\MAPS\isla1\special6.IDE
+IDE DATA\MAPS\isla1\special5.IDE
+IDE DATA\MAPS\isla1\special4.IDE
+IDE DATA\MAPS\isla1\special3.IDE
+IDE DATA\MAPS\isla1\special2.IDE
+IDE DATA\MAPS\interior\china.IDE
+IDE DATA\MAPS\isla1\special1.IDE
+IDE DATA\MAPS\country\toronto.IDE
+IDE DATA\MAPS\isla1\ocean.IDE
+IDE DATA\MAPS\quebec\newfound.IDE
+IDE DATA\MAPS\isla1\canadaforest3.IDE
+IDE DATA\MAPS\usa\florida1.IDE
+IDE DATA\MAPS\usa\usa2for.IDE
+IDE DATA\MAPS\usa\usa1.IDE
+IDE DATA\MAPS\quebec\quebec3for.IDE
+IDE DATA\MAPS\quebec\quebec2for.IDE
+IDE DATA\MAPS\quebec\quebec1.IDE
+IDE DATA\MAPS\isla1\canadahills.IDE
+IDE DATA\MAPS\forest\canadaforest2.IDE
+IDE DATA\MAPS\isla1\canadaforest1.IDE
+IDE DATA\MAPS\isla1\greenland.IDE
+IDE DATA\MAPS\isla1\mongolia.IDE
+IDE DATA\MAPS\isla1\canada2.IDE
+IDE DATA\MAPS\isla1\canada1.IDE
+IDE DATA\MAPS\generic\vegepart.IDE
+IDE DATA\MAPS\generic\barriers.IDE
+IDE DATA\MAPS\generic\dynamic.IDE
+IDE DATA\MAPS\generic\dynamic2.IDE
+IDE DATA\MAPS\generic\multiobj.IDE
+IDE DATA\MAPS\generic\procobj.IDE
+#IDE DATA\MAPS\LA\LAn.IDE
+#IDE DATA\MAPS\LA\LAn2.IDE
+#IDE DATA\MAPS\LA\LAs.IDE
+#IDE DATA\MAPS\LA\LAs2.IDE
+#IDE DATA\MAPS\LA\LAe.IDE
+#IDE DATA\MAPS\LA\LAe2.IDE
+#IDE DATA\MAPS\LA\LAw2.IDE
+#IDE DATA\MAPS\LA\LAw.IDE
+#IDE DATA\MAPS\LA\LAwn.IDE
+#IDE DATA\MAPS\LA\LAhills.IDE
+#IDE DATA\MAPS\LA\LAxref.IDE
+#IDE DATA\MAPS\SF\SFn.IDE
+#IDE DATA\MAPS\SF\SFs.IDE
+#IDE DATA\MAPS\SF\SFse.IDE
+#IDE DATA\MAPS\SF\SFe.IDE
+#IDE DATA\MAPS\SF\SFw.IDE
+#IDE DATA\MAPS\SF\SFxref.IDE
+#IDE DATA\MAPS\vegas\vegasN.IDE
+#IDE DATA\MAPS\vegas\vegasS.IDE
+#IDE DATA\MAPS\vegas\vegasE.IDE
+#IDE DATA\MAPS\vegas\vegasW.IDE
+#IDE DATA\MAPS\vegas\vegaxref.IDE
+#IDE DATA\MAPS\country\countryN.IDE
+IDE DATA\MAPS\country\countN2.IDE
+#IDE DATA\MAPS\country\countryS.IDE
+#IDE DATA\MAPS\country\countryE.IDE
+#IDE DATA\MAPS\country\countryW.IDE
+#IDE DATA\MAPS\country\counxref.IDE
+#IDE DATA\MAPS\interior\int_LA.IDE
+#IDE DATA\MAPS\interior\int_SF.IDE
+#IDE DATA\MAPS\interior\int_veg.IDE
+#IDE DATA\MAPS\interior\int_cont.IDE
+#IDE DATA\MAPS\leveldes\levelmap.IDE
+IDE DATA\MAPS\leveldes\levelxre.IDE
+#IDE DATA\MAPS\interior\gen_int1.IDE
+#IDE DATA\MAPS\interior\gen_int2.IDE
+#IDE DATA\MAPS\interior\gen_intb.IDE
+#IDE DATA\MAPS\interior\gen_int3.IDE
+#IDE DATA\MAPS\interior\gen_int4.IDE
+#IDE DATA\MAPS\interior\gen_int5.IDE
+#IDE DATA\MAPS\interior\savehous.IDE
+#IDE DATA\MAPS\interior\stadint.IDE
+IDE DATA\MAPS\leveldes\seabed.IDE
+
+# interiors
+#IDE DATA\MAPS\interior\props.IDE
+#IDE DATA\MAPS\interior\props2.IDE
+#IDE DATA\MAPS\interior\propext.IDE
+
+# vehicle upgrade models
+IDE DATA\MAPS\veh_mods\veh_mods.IDE
+
+# txd parents
+IDE DATA\TXDCUT.IDE
+
+# have to load map.zon before any of the IPLs
+IPL DATA\MAP.ZON
+# IPL DATA\NAVIG.ZON
+IPL DATA\INFO.ZON
+
+#
+# Scene information
+#
+
+#SPLASH loadsc2
+
+IPL DATA\MAPS\special\special32.IPL
+IPL DATA\MAPS\special\special31.IPL
+IPL DATA\MAPS\special\special30.IPL
+IPL DATA\MAPS\special\special29.IPL
+IPL DATA\MAPS\special\special27.IPL
+IPL DATA\MAPS\special\special26.IPL
+IPL DATA\MAPS\special\special25.IPL
+IPL DATA\MAPS\special\special24.IPL
+IPL DATA\MAPS\special\special23.IPL
+IPL DATA\MAPS\special\special22.IPL
+IPL DATA\MAPS\special\special21.IPL
+IPL DATA\MAPS\special\special20.IPL
+IPL DATA\MAPS\special\special19.IPL
+IPL DATA\MAPS\special\special18.IPL
+IPL DATA\MAPS\special\special17.IPL
+IPL DATA\MAPS\special\special16.IPL
+IPL DATA\MAPS\special\special15.IPL
+IPL DATA\MAPS\special\special14.IPL
+IPL DATA\MAPS\special\special13.IPL
+IPL DATA\MAPS\special\special12.IPL
+IPL DATA\MAPS\special\special11.IPL
+IPL DATA\MAPS\special\special10.IPL
+IPL DATA\MAPS\special\special9.IPL
+IPL DATA\MAPS\special\special8.IPL
+IPL DATA\MAPS\special\special7.IPL
+IPL DATA\MAPS\special\special6.IPL
+IPL DATA\MAPS\special\special5.IPL
+IPL DATA\MAPS\special\special4.IPL
+IPL DATA\MAPS\special\special3.IPL
+IPL DATA\MAPS\special\special2.IPL
+IPL DATA\MAPS\special\special1.IPL
+IPL DATA\MAPS\special\toronto.IPL
+IPL DATA\MAPS\interior\china.IPL
+IPL DATA\MAPS\isla1\ocean.IPL
+IPL DATA\MAPS\quebec\newfound.IPL
+IPL DATA\MAPS\isla1\canadaforest3.IPL
+IPL DATA\MAPS\usa\florida1.IPL
+IPL DATA\MAPS\usa\usa2for.IPL
+IPL DATA\MAPS\usa\usa1.IPL
+IPL DATA\MAPS\quebec\quebec3for.IPL
+IPL DATA\MAPS\quebec\quebec2for.IPL
+IPL DATA\MAPS\quebec\quebec1.IPL
+IPL DATA\MAPS\isla1\canadahills.IPL
+IPL DATA\MAPS\forest\canadaforest2.IPL
+IPL DATA\MAPS\isla1\canadaforest1.IPL
+IPL DATA\MAPS\isla1\greenland.IPL
+IPL DATA\MAPS\isla1\mongolia.IPL
+IPL DATA\MAPS\isla1\canada2.IPL
+IPL DATA\MAPS\isla1\canada1.IPL
+#IPL DATA\MAPS\LA\LAn.IPL
+#IPL DATA\MAPS\LA\LAn2.IPL
+#IPL DATA\MAPS\LA\LAs.IPL
+#IPL DATA\MAPS\LA\LAs2.IPL
+#IPL DATA\MAPS\LA\LAe.IPL
+#IPL DATA\MAPS\LA\LAe2.IPL
+#IPL DATA\MAPS\LA\LAw.IPL
+#IPL DATA\MAPS\LA\LAwn.IPL
+#IPL DATA\MAPS\LA\LAw2.IPL
+#IPL DATA\MAPS\LA\LAhills.IPL
+#IPL DATA\MAPS\SF\SFn.IPL
+#IPL DATA\MAPS\SF\SFs.IPL
+#IPL DATA\MAPS\SF\SFse.IPL
+#IPL DATA\MAPS\SF\SFe.IPL
+#IPL DATA\MAPS\SF\SFw.IPL
+#IPL DATA\MAPS\vegas\vegasN.IPL
+#IPL DATA\MAPS\vegas\vegasS.IPL
+#IPL DATA\MAPS\vegas\vegasE.IPL
+#IPL DATA\MAPS\vegas\vegasW.IPL
+#IPL DATA\MAPS\country\countryN.IPL
+#IPL DATA\MAPS\country\countN2.IPL
+#IPL DATA\MAPS\country\countrys.IPL
+#IPL DATA\MAPS\country\countryE.IPL
+#IPL DATA\MAPS\country\countryW.IPL
+
+# interiors
+#IPL DATA\MAPS\interior\int_LA.IPL
+#IPL DATA\MAPS\interior\int_SF.IPL
+#IPL DATA\MAPS\interior\int_veg.IPL
+#IPL DATA\MAPS\interior\int_cont.IPL
+#IPL DATA\MAPS\interior\gen_int1.IPL
+#IPL DATA\MAPS\interior\gen_int2.IPL
+#IPL DATA\MAPS\interior\gen_intb.IPL
+#IPL DATA\MAPS\interior\gen_int3.IPL
+#IPL DATA\MAPS\interior\gen_int4.IPL
+#IPL DATA\MAPS\interior\gen_int5.IPL
+#IPL DATA\MAPS\interior\stadint.IPL
+#IPL DATA\MAPS\interior\savehous.IPL
+
+# level design
+#IPL DATA\MAPS\leveldes\levelmap.IPL
+#IPL DATA\MAPS\leveldes\seabed.IPL
+#IPL DATA\MAPS\paths.ipl
+#IPL DATA\MAPS\paths2.ipl
+#IPL DATA\MAPS\paths3.ipl
+#IPL DATA\MAPS\paths4.ipl
+#IPL DATA\MAPS\paths5.ipl
+#IPL DATA\MAPS\cull.ipl
+#IPL DATA\MAPS\tunnels.ipl
+#IPL DATA\MAPS\occluSF.ipl
+#IPL DATA\MAPS\occluveg.ipl
+#IPL DATA\MAPS\occluLA.ipl
+#IPL DATA\MAPS\occluint.ipl
+#IPL DATA\MAPS\audiozon.ipl
+
+#
+#  Interiors
+#
+#SPLASH loadsc4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

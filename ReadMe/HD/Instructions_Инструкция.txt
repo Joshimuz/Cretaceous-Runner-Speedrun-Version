@@ -1,0 +1,9 @@
+Все файлы (Инструкцию не обязательно) и папку Source копировать в корневую папку с игрой. 
+Старые файлы заменить.
+Графика основана на GTA SA DirectX 1.2
+
+____________________
+
+
+All files (except this one) and Source folder move to the root folder with replace of old files.
+GTA SA DirectX 1.2 graphics.

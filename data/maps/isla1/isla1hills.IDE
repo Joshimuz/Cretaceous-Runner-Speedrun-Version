@@ -1,0 +1,140 @@
+#Item Definition File created by MapEditor
+objs
+18358, hill01, hill01, 299, 0
+18359, hill02, hill01, 299, 128
+18360, hill03, hill01, 299, 128
+18361, hill04, hill01, 200, 128
+18362, hill05, hill01, 299, 0
+18363, hill06, hill01, 299, 0
+18364, hill07, hill01, 299, 128
+18365, hill08, hill01, 200, 128
+18366, hill09, hill01, 299, 128
+18367, hill01lod, hill01lod, 2000, 0
+18368, hill02lod, hill01lod, 2000, 0
+18369, hill03lod, hill01lod, 2000, 0
+18370, hill04lod, hill01lod, 2000, 0
+18371, hill05lod, hill01lod, 2000, 0
+18372, hill06lod, hill01lod, 2000, 0
+18373, hill07lod, hill01lod, 2000, 0
+18374, hill08lod, hill01lod, 2000, 0
+18375, hill09lod, hill01lod, 2000, 0
+18376, hill10, hill01, 299, 0
+18377, hill11, hill01, 299, 0
+18378, hill12, hill01, 299, 0
+18379, hill13, hill01, 299, 0
+18380, hill14, hill01, 299, 0
+18381, hill15, hill01, 299, 0
+18382, hill16, hill01, 299, 0
+18383, hill17, hill01, 299, 0
+18384, hill18, hill01, 299, 0
+18385, hill11lod, hill01lod, 2000, 0
+18386, hill12lod, hill01lod, 2000, 0
+18387, hill13lod, hill01lod, 2000, 0
+18388, hill14lod, hill01lod, 2000, 0
+18389, hill15lod, hill01lod, 2000, 0
+18390, hill16lod, hill01lod, 2000, 0
+18391, hill17lod, hill01lod, 2000, 0
+18392, hill18lod, hill01lod, 2000, 0
+18393, water, water, 2000, 133
+18394, hill19, hill01, 299, 0
+18395, hill19lod, hill01lod, 2000, 0
+18396, canfir1lod, canfir1lod, 2000, 4
+18397, canstone1, hill01, 299, 0
+18398, canstone2, hill01, 200, 0
+18399, cave1, cave, 299, 4
+18400, cave2, cave, 299, 0
+18401, cave3, cave, 299, 4
+18402, cave4, cave, 299, 4
+18403, cave5, cave, 299, 4
+18406, cave7, cave, 299, 4
+18407, cave8, cave, 299, 0
+18408, cave9, cave, 299, 0
+18409, cave10, cave, 299, 0
+18410, cave11, cave, 299, 0
+18411, cave12, cave, 299, 0
+18412, cave13, cave, 350, 4
+end
+tobj
+end
+2dfx
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

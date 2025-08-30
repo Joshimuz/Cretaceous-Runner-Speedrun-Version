@@ -1,0 +1,146 @@
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ENBSeries effect file
+// http://enbdev.com
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//THIS IS HLSL FILE FORMAT FOR EXECUTING ADDITIONAL
+//POST PROCESSING EFFECTS. MAKE THE COPY BEFORE CHANGING IT!
+
+//WARNING! This is new standart file, compatible with ENBSeries 0.101 or better
+
+
+
+float	EVignetteAmount=2.9;
+float	EVignetteCurve=1.5;
+float	EVignetteRadius=0.8; //doubled for a little optimization
+float3	EVignetteColor=float3(0.0, 0.0, 0.0); //black
+
+
+
+//+++++++++++++++++++++++++++++
+//external parameters, do not modify
+//+++++++++++++++++++++++++++++
+//keyboard controlled temporary variables (in some versions exists in the config file). Press and hold key 1,2,3...8 together with PageUp or PageDown to modify. By default all set to 1.0
+float4	tempF1; //0,1,2,3
+float4	tempF2; //5,6,7,8
+float4	tempF3; //9,0
+//x=generic timer in range 0..1, period of 16777216 ms (4.6 hours), w=frame time elapsed (in seconds)
+float4	Timer;
+//x=Width, y=1/Width, z=ScreenScaleY, w=1/ScreenScaleY
+float4	ScreenSize;
+
+
+
+//textures
+texture2D texColor;
+texture2D texDepth;
+texture2D texNoise;
+
+sampler2D SamplerColor = sampler_state
+{
+	Texture   = <texColor>;
+	MinFilter = LINEAR;
+	MagFilter = LINEAR;
+	MipFilter = NONE;//NONE;
+	AddressU  = Clamp;
+	AddressV  = Clamp;
+	SRGBTexture=FALSE;
+	MaxMipLevel=0;
+	MipMapLodBias=0;
+};
+
+sampler2D SamplerDepth = sampler_state
+{
+	Texture   = <texDepth>;
+	MinFilter = POINT;
+	MagFilter = POINT;
+	MipFilter = NONE;
+	AddressU  = Clamp;
+	AddressV  = Clamp;
+	SRGBTexture=FALSE;
+	MaxMipLevel=0;
+	MipMapLodBias=0;
+};
+
+sampler2D SamplerNoise = sampler_state
+{
+	Texture   = <texNoise>;
+	MinFilter = POINT;
+	MagFilter = POINT;
+	MipFilter = NONE;//NONE;
+	AddressU  = Wrap;
+	AddressV  = Wrap;
+	SRGBTexture=FALSE;
+	MaxMipLevel=0;
+	MipMapLodBias=0;
+};
+
+
+struct VS_OUTPUT_POST
+{
+	float4 vpos  : POSITION;
+	float2 txcoord : TEXCOORD0;
+};
+
+struct VS_INPUT_POST
+{
+	float3 pos  : POSITION;
+	float2 txcoord : TEXCOORD0;
+};
+
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+VS_OUTPUT_POST VS_PostProcess(VS_INPUT_POST IN)
+{
+	VS_OUTPUT_POST OUT;
+
+	float4 pos=float4(IN.pos.x,IN.pos.y,IN.pos.z,1.0);
+
+	OUT.vpos=pos;
+	OUT.txcoord.xy=IN.txcoord.xy;
+
+	return OUT;
+}
+
+
+
+float4 PS_Process(VS_OUTPUT_POST IN, float2 vPos : VPOS) : COLOR
+{
+	float4	res;
+	float3	origcolor=tex2D(SamplerColor, IN.txcoord.xy);
+
+	float2	uv=(IN.txcoord.xy-0.5)*EVignetteRadius;
+	float	vignette=saturate(dot(uv.xy, uv.xy));
+	vignette=pow(vignette, EVignetteCurve);
+	res.xyz=lerp(origcolor.xyz, EVignetteColor, vignette*EVignetteAmount);
+
+	res.w=1.0;
+	return res;
+}
+
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+technique PostProcess
+{
+	pass P0
+	{
+
+		VertexShader = compile vs_3_0 VS_PostProcess();
+		PixelShader  = compile ps_3_0 PS_Process();
+
+		DitherEnable=FALSE;
+		ZEnable=FALSE;
+		CullMode=NONE;
+		ALPHATESTENABLE=FALSE;
+		SEPARATEALPHABLENDENABLE=FALSE;
+		AlphaBlendEnable=FALSE;
+		StencilEnable=FALSE;
+		FogEnable=FALSE;
+		SRGBWRITEENABLE=FALSE;
+	}
+}

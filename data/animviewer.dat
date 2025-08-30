@@ -1,0 +1,62 @@
+#
+# Object types
+#
+IDE DATA\MAPS\generic\vegepart.IDE
+IDE DATA\MAPS\generic\barriers.IDE
+IDE DATA\MAPS\generic\dynamic.IDE
+IDE DATA\MAPS\generic\dynamic2.IDE
+IDE DATA\MAPS\generic\multiobj.IDE
+IDE DATA\MAPS\generic\procobj.IDE
+IDE DATA\MAPS\LA\LAn.IDE
+IDE DATA\MAPS\LA\LAn2.IDE
+IDE DATA\MAPS\LA\LAs.IDE
+IDE DATA\MAPS\LA\LAs2.IDE
+IDE DATA\MAPS\LA\LAe.IDE
+IDE DATA\MAPS\LA\LAe2.IDE
+IDE DATA\MAPS\LA\LAw2.IDE
+IDE DATA\MAPS\LA\LAw.IDE
+IDE DATA\MAPS\LA\LAwn.IDE
+IDE DATA\MAPS\LA\LAhills.IDE
+IDE DATA\MAPS\LA\LAxref.IDE
+IDE DATA\MAPS\SF\SFn.IDE
+IDE DATA\MAPS\SF\SFs.IDE
+IDE DATA\MAPS\SF\SFse.IDE
+IDE DATA\MAPS\SF\SFe.IDE
+IDE DATA\MAPS\SF\SFw.IDE
+IDE DATA\MAPS\SF\SFxref.IDE
+IDE DATA\MAPS\vegas\vegasN.IDE
+IDE DATA\MAPS\vegas\vegasS.IDE
+IDE DATA\MAPS\vegas\vegasE.IDE
+IDE DATA\MAPS\vegas\vegasW.IDE
+IDE DATA\MAPS\vegas\vegaxref.IDE
+IDE DATA\MAPS\country\countryN.IDE
+IDE DATA\MAPS\country\countN2.IDE
+IDE DATA\MAPS\country\countryS.IDE
+IDE DATA\MAPS\country\countryE.IDE
+IDE DATA\MAPS\country\countryW.IDE
+IDE DATA\MAPS\country\counxref.IDE
+IDE DATA\MAPS\interior\int_LA.IDE
+IDE DATA\MAPS\interior\int_SF.IDE
+IDE DATA\MAPS\interior\int_veg.IDE
+IDE DATA\MAPS\interior\int_cont.IDE
+IDE DATA\MAPS\leveldes\levelmap.IDE
+IDE DATA\MAPS\leveldes\levelxre.IDE
+IDE DATA\MAPS\interior\gen_int1.IDE
+IDE DATA\MAPS\interior\gen_int2.IDE
+IDE DATA\MAPS\interior\gen_intb.IDE
+IDE DATA\MAPS\interior\gen_int3.IDE
+IDE DATA\MAPS\interior\gen_int4.IDE
+IDE DATA\MAPS\interior\gen_int5.IDE
+IDE DATA\MAPS\interior\savehous.IDE
+IDE DATA\MAPS\interior\stadint.IDE
+IDE DATA\MAPS\leveldes\seabed.IDE
+
+# interiors
+IDE DATA\MAPS\interior\props.IDE
+IDE DATA\MAPS\interior\props2.IDE
+IDE DATA\MAPS\interior\propext.IDE
+
+# vehicle upgrade models
+IDE DATA\MAPS\veh_mods\veh_mods.IDE
+
+

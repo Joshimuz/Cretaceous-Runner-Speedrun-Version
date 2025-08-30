@@ -1,0 +1,267 @@
+#Item Definition File created by MapEditor
+objs
+19585, spec13, spec, 29, 0
+19586, spec14, spec, 29, 0
+19587, spec15, spec, 29, 0
+19588, spec16, spec, 29, 0
+19589, spec17, spec, 29, 0
+19590, spec18, spec, 29, 0
+19591, spec19, spec, 29, 0
+19592, spec20, spec, 29, 0
+19593, spec21, spec, 29, 0
+19594, spec22, spec, 29, 0
+19595, spec23, spec, 29, 0
+19596, spec24, spec, 29, 0
+19597, spec25, spec, 29, 0
+19598, spec26, spec, 29, 0
+19599, spec27, spec, 29, 0
+19600, spec28, spec, 29, 0
+19601, spec29, spec, 29, 0
+19602, spec30, spec, 29, 0
+19603, spec31, spec, 29, 0
+19604, spec32, spec, 29, 0
+19605, spec33, spec, 29, 0
+19606, spec34, spec, 29, 0
+19607, spec35, spec, 29, 0
+19608, spec36, spec, 29, 0
+19609, spec37, spec, 29, 0
+19610, spec38, spec, 29, 0
+19611, spec39, spec, 29, 0
+19612, spec40, spec, 29, 0
+19613, spec41, spec, 29, 0
+19614, spec42, spec, 29, 0
+19615, spec43, spec, 29, 0
+19616, spec44, spec, 29, 0
+19617, spec45, spec, 29, 0
+19618, spec46, spec, 29, 0
+19619, spec47, spec, 29, 0
+19620, spec48, spec, 29, 0
+19621, spec49, spec, 29, 0
+19622, spec50, spec, 29, 0
+19623, spec51, spec, 29, 0
+19624, spec52, spec, 29, 0
+19625, spec53, spec, 29, 0
+19626, spec54, spec, 29, 0
+19627, spec55, spec, 29, 0
+19628, spec56, spec, 29, 0
+19629, spec57, spec, 29, 0
+19630, spec58, spec, 29, 0
+19631, spec59, spec, 29, 0
+19632, spec60, spec, 29, 0
+19633, spec61, spec, 29, 0
+19634, spec62, spec, 29, 0
+19635, spec63, spec, 29, 0
+19636, spec64, spec, 29, 0
+19637, spec65, spec, 29, 0
+19638, spec66, spec, 29, 0
+19639, spec67, spec, 29, 0
+19640, spec68, spec, 29, 0
+19641, spec69, spec, 29, 0
+19642, spec70, spec, 29, 0
+19643, spec71, spec, 29, 0
+19644, spec72, spec, 29, 0
+19645, spec73, spec, 29, 0
+19646, spec74, spec, 29, 0
+19647, spec75, spec, 29, 0
+19648, spec76, spec, 29, 0
+19649, spec77, spec, 29, 0
+19650, spec78, spec, 29, 0
+19651, spec79, spec, 29, 0
+19652, spec80, spec, 29, 0
+19653, spec81, spec, 29, 0
+19654, spec82, spec, 29, 0
+19655, spec83, spec, 29, 0
+19656, spec84, spec, 29, 0
+19657, spec85, spec, 29, 0
+19658, spec86, spec, 29, 0
+19659, spec87, spec, 29, 0
+19660, spec88, spec, 29, 0
+19661, spec89, spec, 29, 0
+19662, spec90, spec, 29, 0
+19663, spec91, spec, 29, 0
+19664, spec92, spec, 29, 0
+19665, spec93, spec, 29, 0
+19666, spec94, spec, 29, 0
+19667, spec95, spec, 29, 0
+19668, spec96, spec, 29, 0
+19669, spec97, spec, 29, 0
+19670, spec98, spec, 29, 0
+19671, spec99, spec, 29, 0
+19672, spec100, spec, 29, 0
+19673, spec101, spec, 29, 0
+19674, spec102, spec, 29, 0
+19675, spec103, spec, 29, 0
+19676, spec104, spec, 29, 0
+19677, spec105, spec, 29, 0
+19678, spec106, spec, 29, 0
+19679, spec107, spec, 29, 0
+19680, spec108, spec, 29, 0
+19681, spec109, spec, 29, 0
+19682, spec110, spec, 29, 0
+19683, spec111, spec, 29, 0
+19684, spec112, spec, 29, 0
+19685, spec113, spec, 29, 0
+19686, spec114, spec, 29, 0
+19687, spec115, spec, 29, 0
+19688, spec116, spec, 29, 0
+19689, spec117, spec, 29, 0
+19690, spec118, spec, 29, 0
+19691, spec119, spec, 29, 0
+19692, spec120, spec, 29, 0
+19693, spec121, spec, 29, 0
+19694, spec122, spec, 29, 0
+19695, spec123, spec, 29, 0
+19696, spec124, spec, 29, 0
+19697, spec125, spec, 29, 0
+19698, spec126, spec, 29, 0
+19699, spec127, spec, 29, 0
+19700, spec128, spec, 29, 0
+19701, spec129, spec, 29, 0
+19702, spec130, spec, 29, 0
+19703, spec131, spec, 29, 0
+19704, spec132, spec, 29, 0
+19705, spec133, spec, 29, 0
+19706, spec134, spec, 29, 0
+19707, spec135, spec, 29, 0
+19708, spec136, spec, 29, 0
+19709, spec137, spec, 29, 0
+19710, spec138, spec, 29, 0
+19711, spec139, spec, 29, 0
+19712, spec140, spec, 29, 0
+19713, spec141, spec, 29, 0
+19714, spec142, spec, 29, 0
+19715, spec143, spec, 29, 0
+19716, spec144, spec, 29, 0
+19717, spec145, spec, 29, 0
+19718, spec146, spec, 29, 0
+19719, spec147, spec, 29, 0
+19720, spec148, spec, 29, 0
+19721, spec149, spec, 29, 0
+19722, spec150, spec, 29, 0
+19723, spec151, spec, 29, 0
+19724, spec152, spec, 29, 0
+19725, spec153, spec, 29, 0
+19726, spec154, spec, 29, 0
+19727, spec155, spec, 29, 0
+19728, spec156, spec, 29, 0
+19729, spec157, spec, 29, 0
+19730, spec158, spec, 29, 0
+19731, spec159, spec, 29, 0
+19732, spec160, spec, 29, 0
+19733, spec161, spec, 29, 0
+19734, spec162, spec, 29, 0
+19735, spec163, spec, 29, 0
+19736, spec164, spec, 29, 0
+19737, spec165, spec, 29, 0
+19738, spec166, spec, 29, 0
+19739, spec167, spec, 29, 0
+19740, spec168, spec, 29, 0
+19741, spec169, spec, 29, 0
+19742, spec170, spec, 29, 0
+19743, spec171, spec, 29, 0
+19744, spec172, spec, 29, 0
+19745, spec173, spec, 29, 0
+19746, spec174, spec, 29, 0
+19747, spec175, spec, 29, 0
+19748, spec176, spec, 29, 0
+19749, spec177, spec, 29, 0
+19750, spec178, spec, 29, 0
+19751, spec179, spec, 29, 0
+19752, spec180, spec, 29, 0
+19753, spec181, spec, 29, 0
+19754, spec182, spec, 29, 0
+19755, spec183, spec, 29, 0
+19756, spec184, spec, 29, 0
+19757, spec185, spec, 29, 0
+19758, spec186, spec, 29, 0
+19759, spec187, spec, 29, 0
+19760, spec188, spec, 29, 0
+19761, spec189, spec, 29, 0
+19762, spec190, spec, 29, 0
+19763, spec191, spec, 29, 0
+19764, spec192, spec, 29, 0
+19765, spec193, spec, 29, 0
+19766, spec194, spec, 29, 0
+19767, spec195, spec, 29, 0
+19768, spec196, spec, 29, 0
+19769, spec197, spec, 29, 0
+19770, spec198, spec, 29, 0
+19771, spec199, spec, 29, 0
+19772, spec200, spec, 29, 0
+19773, spec201, spec, 29, 0
+19774, spec202, spec, 29, 0
+19775, spec203, spec, 29, 0
+19776, spec204, spec, 29, 0
+19777, spec205, spec, 29, 0
+19778, spec206, spec, 29, 0
+19779, spec207, spec, 29, 0
+19780, spec208, spec, 29, 0
+19781, spec209, spec, 29, 0
+19782, spec210, spec, 29, 0
+19783, spec211, spec, 29, 0
+19784, spec212, spec, 29, 0
+19785, spec213, spec, 29, 0
+19786, spec214, spec, 29, 0
+19787, spec215, spec, 29, 0
+19788, spec216, spec, 29, 0
+19789, spec217, spec, 29, 0
+19790, spec218, spec, 29, 0
+19791, spec219, spec, 29, 0
+19792, spec220, spec, 29, 0
+19793, spec221, spec, 29, 0
+19794, spec222, spec, 29, 0
+19795, spec223, spec, 29, 0
+19796, spec224, spec, 29, 0
+19797, spec225, spec, 29, 0
+19798, spec226, spec, 29, 0
+19799, spec227, spec, 29, 0
+19800, spec228, spec, 29, 0
+19801, spec229, spec, 29, 0
+19802, spec230, spec, 29, 0
+19803, spec231, spec, 29, 0
+19804, spec232, spec, 29, 0
+19805, spec233, spec, 29, 0
+19806, spec234, spec, 29, 0
+19807, spec235, spec, 29, 0
+19808, spec236, spec, 29, 0
+19809, spec237, spec, 29, 0
+19810, spec238, spec, 29, 0
+19811, spec239, spec, 29, 0
+19812, spec240, spec, 29, 0
+19813, spec241, spec, 29, 0
+19814, spec242, spec, 29, 0
+19815, spec243, spec, 29, 0
+19816, spec244, spec, 29, 0
+19817, spec245, spec, 29, 0
+19818, spec246, spec, 29, 0
+19819, spec247, spec, 29, 0
+19820, spec248, spec, 29, 0
+19821, spec249, spec, 29, 0
+19822, spec250, spec, 29, 0
+end
+tobj
+end
+2dfx
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

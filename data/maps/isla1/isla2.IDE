@@ -1,0 +1,575 @@
+#Item Definition File created by MapEditor
+objs
+17035, isla1_for129, isla1, 299, 0
+17037, isla1_for130, isla1, 299, 0
+17038, isla1_beach34, isla1, 299, 0
+17039, isla1_for131, isla1, 299, 0
+17040, isla1_for132, isla1, 299, 0
+17041, isla1_for133, isla1, 299, 0
+17042, isla1_for134, isla1, 299, 0
+17043, isla1_for135, isla1, 299, 0
+17044, isla1_for136, isla1, 299, 0
+17045, isla1_for137, isla1, 299, 0
+17046, isla1_for138, isla1, 299, 0
+17047, isla1_for139, isla1, 299, 0
+17048, isla1_gras69, isla1, 299, 0
+17049, isla1_gras70, isla1, 299, 0
+17050, isla1_gras71, isla1, 299, 0
+17051, isla1_gras72, isla1, 299, 0
+17052, isla1_gras73, isla1, 299, 0
+17053, isla1_gras74, isla1, 299, 0
+17054, isla1_gras75, isla1, 299, 0
+17055, isla1_gras76, isla1, 299, 0
+17056, isla1_gras77, isla1, 299, 0
+17057, isla1_gras78, isla1, 299, 0
+17070, isla1_beach35, isla1, 299, 0
+17071, isla1_beach36, isla1, 299, 0
+17072, isla1_beach37, isla1, 299, 0
+17073, isla1_beach38, isla1, 299, 0
+17074, isla1_gras79, isla1, 299, 0
+17075, isla1_gras80, isla1, 299, 0
+17076, isla1_gras81, isla1, 299, 0
+17077, isla1_gras83, isla1, 299, 0
+17078, isla1_gras82, isla1, 299, 0
+17079, isla1_gras84, isla1, 299, 0
+17080, isla1_gras85, isla1, 299, 0
+17081, isla1_gras86, isla1, 299, 0
+17082, isla1_gras87, isla1, 299, 0
+17083, isla1_gras88, isla1, 299, 0
+17084, isla1_gras89, isla1, 299, 0
+17085, isla1_gras90, isla1, 299, 0
+17086, isla1_gras91, isla1, 299, 0
+17087, isla1_gras92, isla1, 299, 0
+17088, isla1_gras93, isla1, 299, 0
+17089, isla1_gras94, isla1, 299, 0
+17090, isla1_gras95, isla1, 299, 0
+17091, isla1_gras96, isla1, 299, 0
+17092, isla1_gras97, isla1, 299, 0
+17093, isla1_gras98, isla1, 299, 0
+17094, isla1_gras99, isla1, 299, 0
+17095, isla1_gras100, isla1, 299, 0
+17096, isla1_gras101, isla1, 299, 0
+17097, isla1_gras102, isla1, 299, 0
+17098, isla1_beach39, isla1, 299, 0
+17099, isla1_beach40, isla1, 299, 0
+17100, isla1_beach41, isla1, 299, 0
+17101, isla1_beach42, isla1, 299, 0
+17102, isla1_gras103, isla1, 299, 0
+17103, isla1_gras104, isla1, 299, 0
+17104, isla1_gras105, isla1, 299, 0
+17105, isla1_gras106, isla1, 299, 0
+17106, isla1_gras107, isla1, 299, 0
+17107, isla1_gras108, isla1, 299, 0
+17108, isla1_gras109, isla1, 299, 0
+17109, isla1_gras110, isla1, 299, 0
+17110, isla1_gras111, isla1, 299, 0
+17111, isla1_gras112, isla1, 299, 0
+17112, isla1_gras113, isla1, 299, 0
+17113, isla1_gras114, isla1, 299, 0
+17114, isla1_gras115, isla1, 299, 0
+17115, isla1_gras116, isla1, 299, 0
+17116, isla1_gras117, isla1, 299, 0
+17117, isla1_gras118, isla1, 299, 0
+17118, isla1_gras119, isla1, 299, 0
+17119, isla1_gras120, isla1, 299, 0
+17120, isla1_gras121, isla1, 299, 0
+17121, isla1_gras122, isla1, 299, 0
+17122, isla1_gras123, isla1, 299, 0
+17123, isla1_beach43, isla1, 299, 0
+17124, isla1_beach44, isla1, 299, 0
+17125, isla1_beach45, isla1, 299, 0
+17126, isla1_beach46, isla1, 299, 0
+17127, isla1_beach47, isla1, 299, 0
+17128, isla1_beach48, isla1, 299, 0
+17129, isla1_gras124, isla1, 299, 0
+17130, isla1_gras125, isla1, 299, 0
+17131, isla1_gras126, isla1, 299, 0
+17132, isla1_gras127, isla1, 299, 0
+17133, isla1_gras128, isla1, 299, 0
+17134, isla1_gras129, isla1, 299, 0
+17135, isla1_gras130, isla1, 299, 0
+17136, isla1_gras131, isla1, 299, 0
+17137, isla1_gras132, isla1, 299, 0
+17138, isla1_for140, isla1, 299, 0
+17139, isla1_beach49, isla1, 299, 0
+17140, isla1_beach50, isla1, 299, 0
+17141, isla1_for141, isla1, 299, 0
+17142, isla1_for142, isla1, 299, 0
+17143, isla1_for143, isla1, 299, 0
+17144, isla1_for144, isla1, 299, 0
+17145, isla1_for145, isla1, 299, 0
+17146, isla1_for146, isla1, 299, 0
+17147, isla1_for147, isla1, 299, 0
+17148, isla1_for148, isla1, 299, 0
+17149, isla1_for149, isla1, 299, 0
+17150, isla1_for150, isla1, 299, 0
+17151, isla1_for151, isla1, 299, 0
+17152, isla1_for152, isla1, 299, 0
+17153, isla1_for153, isla1, 299, 0
+17154, isla1_for154, isla1, 299, 0
+17155, isla1_for155, isla1, 299, 0
+17156, isla1_for156, isla1, 299, 0
+17157, isla1_for157, isla1, 299, 0
+17158, isla1_for158, isla1, 299, 0
+17159, isla1_for159, isla1, 299, 0
+17160, isla1_for160, isla1, 299, 0
+17161, isla1_beach51, isla1, 299, 0
+17162, isla1_beach52, isla1, 299, 0
+17163, isla1_beach53, isla1, 299, 0
+17164, isla1_beach54, isla1, 299, 0
+17165, isla1_for161, isla1, 299, 0
+17166, isla1_for162, isla1, 299, 0
+17167, isla1_for163, isla1, 299, 0
+17168, isla1_for164, isla1, 299, 0
+17169, isla1_for165, isla1, 299, 0
+17170, isla1_for166, isla1, 299, 0
+17171, isla1_for167, isla1, 299, 0
+17172, isla1_for168, isla1, 299, 0
+17173, isla1_for169, isla1, 299, 0
+17174, isla1_for170, isla1, 299, 0
+17176, isla1_for171, isla1, 299, 0
+17177, isla1_for172, isla1, 299, 0
+17178, isla1_for173, isla1, 299, 0
+17179, isla1_for174, isla1, 299, 0
+17180, isla1_for175, isla1, 299, 0
+17181, isla1_for176, isla1, 299, 0
+17182, isla1_for177, isla1, 299, 0
+17183, isla1_for178, isla1, 299, 0
+17184, isla1_for179, isla1, 299, 0
+17185, isla1_for180, isla1, 299, 0
+17186, isla1_for181, isla1, 299, 0
+17187, isla1_for182, isla1, 299, 0
+17189, isla1_for183, isla1, 299, 0
+17190, isla1_for184, isla1, 299, 0
+17191, isla1_for185, isla1, 299, 0
+17192, isla1_for186, isla1, 299, 0
+17193, isla1_for187, isla1, 299, 0
+17194, isla1_for188, isla1, 299, 0
+17195, isla1_for189, isla1, 299, 0
+17196, isla1_for190, isla1, 299, 0
+17197, isla1_for191, isla1, 299, 0
+17198, isla1_for192, isla1, 299, 0
+17199, isla1_for193, isla1, 299, 0
+17200, isla1_gras135, isla1, 299, 0
+17201, isla1_gras136, isla1, 299, 0
+17202, isla1_gras137, isla1, 299, 0
+17203, isla1_for194, isla1, 299, 0
+17204, isla1_for195, isla1, 299, 0
+17205, isla1_for196, isla1, 299, 0
+17206, isla1_for197, isla1, 299, 0
+17207, isla1_for198, isla1, 299, 0
+17208, isla1_for199, isla1, 299, 0
+17209, isla1_for200, isla1, 299, 0
+17210, isla1_for201, isla1, 299, 0
+17211, isla1_for202, isla1, 299, 0
+17212, isla1_for203, isla1, 299, 0
+17213, isla1_for204, isla1, 299, 0
+17214, isla1_for205, isla1, 299, 0
+17215, isla1_for206, isla1, 299, 0
+17216, isla1_for207, isla1, 299, 0
+17217, isla1_for208, isla1, 299, 0
+17302, isla1_gras69lod, isla1lod, 2000, 0
+17303, isla1_gras70lod, isla1lod, 2000, 0
+17304, isla1_gras71lod, isla1lod, 2000, 0
+17305, isla1_gras72lod, isla1lod, 2000, 0
+17306, isla1_gras73lod, isla1lod, 2000, 0
+17307, isla1_gras74lod, isla1lod, 2000, 0
+17308, isla1_gras75lod, isla1lod, 2000, 0
+17309, isla1_gras76lod, isla1lod, 2000, 0
+17310, isla1_gras77lod, isla1lod, 2000, 0
+17311, isla1_gras78lod, isla1lod, 2000, 0
+17312, isla1_gras79lod, isla1lod, 2000, 0
+17313, isla1_gras80lod, isla1lod, 2000, 0
+17314, isla1_gras81lod, isla1lod, 2000, 0
+17315, isla1_gras82lod, isla1lod, 2000, 0
+17316, isla1_gras83lod, isla1lod, 2000, 0
+17317, isla1_gras84lod, isla1lod, 2000, 0
+17318, isla1_gras85lod, isla1lod, 2000, 0
+17319, isla1_gras86lod, isla1lod, 2000, 0
+17320, isla1_gras87lod, isla1lod, 2000, 0
+17321, isla1_gras88lod, isla1lod, 2000, 0
+17322, isla1_gras89lod, isla1lod, 2000, 0
+17323, isla1_gras90lod, isla1lod, 2000, 0
+17324, isla1_gras91lod, isla1lod, 2000, 0
+17325, isla1_gras92lod, isla1lod, 2000, 0
+17326, isla1_gras93lod, isla1lod, 2000, 0
+17327, isla1_gras94lod, isla1lod, 2000, 0
+17328, isla1_gras95lod, isla1lod, 2000, 0
+17329, isla1_gras96lod, isla1lod, 2000, 0
+17330, isla1_gras97lod, isla1lod, 2000, 0
+17331, isla1_gras99lod, isla1lod, 2000, 0
+17332, isla1_gras98lod, isla1lod, 2000, 0
+17333, isla1_gras100lod, isla1lod, 2000, 0
+17334, isla1_gras101lod, isla1lod, 2000, 0
+17335, isla1_gras102lod, isla1lod, 2000, 0
+17336, isla1_gras103lod, isla1lod, 2000, 0
+17337, isla1_gras104lod, isla1lod, 2000, 0
+17338, isla1_gras105lod, isla1lod, 2000, 0
+17339, isla1_gras106lod, isla1lod, 2000, 0
+17340, isla1_gras107lod, isla1lod, 2000, 0
+17341, isla1_gras108lod, isla1lod, 2000, 0
+17342, isla1_gras109lod, isla1lod, 2000, 0
+17343, isla1_gras110lod, isla1lod, 2000, 0
+17344, isla1_gras111lod, isla1lod, 2000, 0
+17345, isla1_gras112lod, isla1lod, 2000, 0
+17346, isla1_gras113lod, isla1lod, 2000, 0
+17347, isla1_gras114lod, isla1lod, 2000, 0
+17348, isla1_gras115lod, isla1lod, 2000, 0
+17349, isla1_gras116lod, isla1lod, 2000, 0
+17350, isla1_gras117lod, isla1lod, 2000, 0
+17351, isla1_gras118lod, isla1lod, 2000, 0
+17352, isla1_gras119lod, isla1lod, 2000, 0
+17353, isla1_gras120lod, isla1lod, 2000, 0
+17354, isla1_gras121lod, isla1lod, 2000, 0
+17355, isla1_gras122lod, isla1lod, 2000, 0
+17356, isla1_gras123lod, isla1lod, 2000, 0
+17357, isla1_gras124lod, isla1lod, 2000, 0
+17358, isla1_gras125lod, isla1lod, 2000, 0
+17359, isla1_gras126lod, isla1lod, 2000, 0
+17360, isla1_gras127lod, isla1lod, 2000, 0
+17361, isla1_gras128lod, isla1lod, 2000, 0
+17362, isla1_gras129lod, isla1lod, 2000, 0
+17363, isla1_gras130lod, isla1lod, 2000, 0
+17364, isla1_gras131lod, isla1lod, 2000, 0
+17365, isla1_gras132lod, isla1lod, 2000, 0
+17376, isla1_gras135lod, isla1lod, 2000, 0
+17377, isla1_gras136lod, isla1lod, 2000, 0
+17378, isla1_gras137lod, isla1lod, 2001, 0
+17412, isla1_beach34lod, isla1lod, 2000, 0
+17413, isla1_beach35lod, isla1lod, 2000, 0
+17414, isla1_beach36lod, isla1lod, 2000, 0
+17415, isla1_beach37lod, isla1lod, 2000, 0
+17416, isla1_beach38lod, isla1lod, 2000, 0
+17417, isla1_beach39lod, isla1lod, 2000, 0
+17418, isla1_beach40lod, isla1lod, 2000, 0
+17419, isla1_beach41lod, isla1lod, 2000, 0
+17420, isla1_beach42lod, isla1lod, 2000, 0
+17421, isla1_beach43lod, isla1lod, 2000, 0
+17422, isla1_beach44lod, isla1lod, 2000, 0
+17423, isla1_beach45lod, isla1lod, 2000, 0
+17424, isla1_beach46lod, isla1lod, 2000, 0
+17425, isla1_beach47lod, isla1lod, 2000, 0
+17426, isla1_beach48lod, isla1lod, 2000, 0
+17427, isla1_beach49lod, isla1lod, 2000, 0
+17428, isla1_beach50lod, isla1lod, 2000, 0
+17429, isla1_beach51lod, isla1lod, 2000, 0
+17430, isla1_beach52lod, isla1lod, 2000, 0
+17431, isla1_beach53lod, isla1lod, 2000, 0
+17432, isla1_beach54lod, isla1lod, 2000, 0
+17561, isla1_for129lod, isla1lod, 2000, 0
+17562, isla1_for130lod, isla1lod, 2000, 0
+17563, isla1_for131lod, isla1lod, 2000, 0
+17564, isla1_for132lod, isla1lod, 2000, 0
+17565, isla1_for133lod, isla1lod, 2000, 0
+17566, isla1_for134lod, isla1lod, 2000, 0
+17567, isla1_for135lod, isla1lod, 2000, 0
+17568, isla1_for137lod, isla1lod, 2000, 0
+17569, isla1_for136lod, isla1lod, 2000, 0
+17570, isla1_for138lod, isla1lod, 2000, 0
+17571, isla1_for139lod, isla1lod, 2000, 0
+17572, isla1_for140lod, isla1lod, 2000, 0
+17573, isla1_for141lod, isla1lod, 2000, 0
+17574, isla1_for142lod, isla1lod, 2000, 0
+17575, isla1_for143lod, isla1lod, 2000, 0
+17576, isla1_for144lod, isla1lod, 2000, 0
+17577, isla1_for145lod, isla1lod, 2000, 0
+17578, isla1_for146lod, isla1lod, 2000, 0
+17579, isla1_for147lod, isla1lod, 2000, 0
+17580, isla1_for148lod, isla1lod, 2000, 0
+17581, isla1_for149lod, isla1lod, 2000, 0
+17582, isla1_for150lod, isla1lod, 2000, 0
+17583, isla1_for151lod, isla1lod, 2000, 0
+17584, isla1_for152lod, isla1lod, 2000, 0
+17585, isla1_for153lod, isla1lod, 2000, 0
+17586, isla1_for154lod, isla1lod, 2000, 0
+17587, isla1_for155lod, isla1lod, 2000, 0
+17588, isla1_for156lod, isla1lod, 2000, 0
+17589, isla1_for157lod, isla1lod, 2000, 0
+17590, isla1_for158lod, isla1lod, 2000, 0
+17591, isla1_for159lod, isla1lod, 2000, 0
+17592, isla1_for160lod, isla1lod, 2000, 0
+17593, isla1_for161lod, isla1lod, 2000, 0
+17594, isla1_for162lod, isla1lod, 2000, 0
+17595, isla1_for163lod, isla1lod, 2000, 0
+17596, isla1_for164lod, isla1lod, 2000, 0
+17597, isla1_for165lod, isla1lod, 2000, 0
+17598, isla1_for166lod, isla1lod, 2000, 0
+17599, isla1_for167lod, isla1lod, 2000, 0
+17600, isla1_for168lod, isla1lod, 2000, 0
+17601, isla1_for169lod, isla1lod, 2000, 0
+17602, isla1_for170lod, isla1lod, 2000, 0
+17603, isla1_for171lod, isla1lod, 2000, 0
+17604, isla1_for172lod, isla1lod, 2000, 0
+17605, isla1_for173lod, isla1lod, 2000, 0
+17606, isla1_for174lod, isla1lod, 2000, 0
+17607, isla1_for175lod, isla1lod, 2000, 0
+17608, isla1_for176lod, isla1lod, 2000, 0
+17609, isla1_for177lod, isla1lod, 2000, 0
+17610, isla1_for178lod, isla1lod, 2000, 0
+17611, isla1_for179lod, isla1lod, 2000, 0
+17612, isla1_for180lod, isla1lod, 2000, 0
+17613, isla1_for181lod, isla1lod, 2000, 0
+17614, isla1_for182lod, isla1lod, 2000, 0
+17615, isla1_for183lod, isla1lod, 2000, 0
+17616, isla1_for184lod, isla1lod, 2000, 0
+17617, isla1_for185lod, isla1lod, 2000, 0
+17618, isla1_for186lod, isla1lod, 2000, 0
+17619, isla1_for187lod, isla1lod, 2000, 0
+17620, isla1_for188lod, isla1lod, 2000, 0
+17621, isla1_for189lod, isla1lod, 2000, 0
+17622, isla1_for190lod, isla1lod, 2000, 0
+17623, isla1_for191lod, isla1lod, 2000, 0
+17624, isla1_for192lod, isla1lod, 2000, 0
+17625, isla1_for193lod, isla1lod, 2000, 0
+17626, isla1_for194lod, isla1lod, 2000, 0
+17627, isla1_for195lod, isla1lod, 2000, 0
+17628, isla1_for196lod, isla1lod, 2000, 0
+17629, isla1_for197lod, isla1lod, 2000, 0
+17630, isla1_for198lod, isla1lod, 2000, 0
+17631, isla1_for199lod, isla1lod, 2000, 0
+17632, isla1_for200lod, isla1lod, 2000, 0
+17633, isla1_for201lod, isla1lod, 2000, 0
+17634, isla1_for202lod, isla1lod, 2000, 0
+17635, isla1_for203lod, isla1lod, 2000, 0
+17636, isla1_for204lod, isla1lod, 2000, 0
+17637, isla1_for205lod, isla1lod, 2000, 0
+17638, isla1_for206lod, isla1lod, 2000, 0
+17639, isla1_for207lod, isla1lod, 2000, 0
+17640, isla1_for208lod, isla1lod, 2000, 0
+17641, isla1_mou13, isla1, 299, 0
+17642, isla1_mou14, isla1, 299, 0
+17643, isla1_mou15, isla1, 299, 0
+17644, isla1_mou16, isla1, 299, 0
+17645, isla1_gras146, isla1, 299, 0
+17646, isla1_mou13lod, isla1lod, 2000, 0
+17647, isla1_mou14lod, isla1lod, 2000, 0
+17648, isla1_mou15lod, isla1lod, 2000, 0
+17649, isla1_mou16lod, isla1lod, 2000, 0
+17651, isla1_holm1, isla1, 299, 0
+17652, isla1_brevno2, gta_tree_pine, 299, 0
+17654, isla1_mou17, isla1, 299, 0
+17655, isla1_mou17lod, isla1lod, 2000, 0
+17656, raptor2, wmypizz, 299, 0
+17657, raptor1, bmyst, 299, 0
+18315, isla1_tree18, isla1_tree18, 299, 4
+18316, isla1_tree19, gta_tree_pine, 299, 4
+18317, isla1_tree20, isla1_tree20, 299, 4
+18318, isla1_treeslod, isla1_treeslod, 2000, 4
+18319, micro, micro, 100, 4
+18320, isla1_tree21, gtatreesh04, 299, 4
+18322, isla1_tree15lod, isla1_tree15lod, 2000, 4
+18326, bereza1, bereza1, 299, 4
+18332, isla1_tree8lod, isla1_tree15lod, 2000, 4
+19146, isla1_treeslod2, isla1_treeslod, 2000, 4
+end
+tobj
+18321, ogopogo, gta_tree_pine, 2000, 0, 1, 2
+end
+2dfx
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
