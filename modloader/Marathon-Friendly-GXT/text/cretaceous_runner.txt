@@ -1,0 +1,1751 @@
+[CLAW_1]
+You have collected all the claws! Stamina and muscle - upgraded. You've got update your respect and progress. Visit also Barcass Island, there are some weapons for you.
+
+[CRC_0264DD80]
+Till sunlight
+
+[CRC_0754536C]
+~g~Game engine~s~~n~Renderware
+
+[CRC_1094EA1F]
+~g~Special thanks~s~~n~Artyom Lichachevsky, Ulyana Nozhenko, Nikita Kuprienko, Roman Sytnik, Yyry Novikov, Yan Fraughton
+
+[CRC_141996AD]
+The show is begins.
+
+[CRC_18E0CC03]
+~r~ You were found. Next time try to don't shine you ass!
+
+[CRC_1922A634]
+~g~Story by~s~~n~Makar Semenov
+
+[CRC_1B64186D]
+Find records taken by survellance cameras.
+
+[CRC_1C09DC74]
+You have 10 minutes before the portal will close.
+
+[CRC_1E4F622D]
+~g~Artists~s~~n~Karina Alenicheva, Tatyana Shumilina, Arthur Wesley
+
+[CRC_2706E196]
+Broke The Eggs!
+
+[CRC_29498E43]
+"One of those pricks can use fire! I'm afraid of fire!"
+
+[CRC_42C28459]
+Find all the members of your family!
+
+[CRC_4697E5A3]
+"You have lost, Skilar?"
+
+[CRC_5001D100]
+Welcome to Greyhills!
+
+[CRC_5D93C281]
+Warn your family that you will absent for a time.
+
+[CRC_6793DA89]
+~g~Special thanks~s~~n~Alexander Sobolev, Anna Dunchenko, Shukhrat Murtuzaliev, Slava Dosaev, Dmitry Dudarenko, Dmitry Korobkov, Roman Taraskin
+
+[CRC_694852BB]
+~g~Head developer~s~~n~Makar Semenov
+
+[CRC_6DC52E09]
+Swim to Alarm Volcano.
+
+[CRC_6E2596A2]
+~g~Script~s~~n~Makar Semenov, Alex Safonov, "Shaggy"
+
+[CRC_705363FA]
+~g~Testers~s~~n~Sultan Kamaldinov, Anna Isaeva, Alexander Sobolev, Karina Alenicheva, Kirill Fadeev
+
+[CRC_73F187C7]
+Jump down!
+
+[CRC_74DE1F48]
+Moving on!
+
+[CRC_773EA7E3]
+The project is an independent and non-profit creative development. All materials belongs to their owners. ~g~vk.com/dromeo~s~
+
+[CRC_802BF78E]
+~g~Game emblems, covers~s~~n~Karina Alenicheva, Daniil Klevanov
+
+[CRC_87463397]
+~g~Folliage artists~s~~n~Andrey Kolleychik, Nikita "Flame" Dobrov
+
+[CRC_9E5D02D6]
+The ~b~Cretaceous Runner~s~ game developed by DromeoLand Entertainment (Dromeolandia) in 2013.
+
+[CRC_A94F0FE8]
+~r~The Dromies are dead!
+
+[CRC_B9627435]
+Press Enter and W to swim
+
+[CRC_BE0FB02C]
+Run!
+
+[CRC_C863C995]
+The Crocodiles
+
+[CRC_C8D7B52C]
+Don't lose Amarhaan!
+
+[CRC_CDCD3A64]
+Test text
+
+[CRC_D03017FF]
+You can visit the map and place a marker by RBM in place you want to swim.
+
+[CRC_D42C1AFD]
+Press the desired button when the arrow will be in the circle
+
+[CRC_DFC3E791]
+Welcome to Cantera!
+
+[CRC_E95A3240]
+~b~Cretaceous Runner 1.2 HD~s~ patch is released in 2016.
+
+[CRC_F0410301]
+~g~Graphics Adjuster~s~~n~Boris Vorontsov
+
+[CRC_F72CC718]
+~g~Music~s~~n~Philip Glass
+
+[MISS_00]
+~b~Introduction
+
+[MISS_01]
+~b~Home  and  Native  land
+
+[MISS_03]
+~b~Cantera
+
+[MISS_11]
+Welcome to the Dromaeosaurus family! This is your home!
+
+[MISS_12]
+You can sleep here and save your progress made in the game.
+
+[MISS_13]
+Now look out the land. Use mouse to turn view and press W to walk.
+
+[MISS_14]
+Follow the checkpoint. It placed as the yellow mark in the radar at left-down corner of the screen
+
+[MISS_15]
+Go to the next point
+
+[MISS_16]
+Keep going!
+
+[MISS_17]
+Now come back home!
+
+[MISS_18]
+Now you need some food. Follow your parents all the way to the lake.
+
+[MISS_19]
+Press W and Alt to walk slowly. Hold Space yo run.
+
+[MISS_20]
+This is Cantera - your homeland.
+
+[MISS_21]
+You should live here all your lifeline, you can find here many interesting things and missions. All this country belongs to Dromaeosaurus family.
+
+[MISS_22]
+But don't feel safety here. Your enemys are Troodons and Tyrannosaurus. Other dinosaurs of Cantera explore youself.
+
+[MISS_23]
+Go to your parents.
+
+[MISS_24]
+Green mark above dinosaur means about a good creature, you must save and don't kill it.
+
+[MISS_25]
+You can press RBM near a dinosaur and see it's health. Green triangle talks about good health. But if it red, the dinosaur can die or you can easily kill him.
+
+[MISS_26]
+Your health you can see at the top of the screen. If red line is long, your health is fine. If it short, you need something to eat to make your health better.
+
+[MISS_27]
+Don't forget about difference - green triangle - the health, and green mark, walking up-down - the dinosaur status. If it is red, this dinosaur is your enemy.
+
+[MISS_28]
+Let's take a little tour. You are at Antonio Field now.
+
+[MISS_29]
+Your home is at Alfred Forest. Left side you can see Terrene-Top mountain. Don't walk up that mountain - it's dangerous for your life.
+
+[MISS_30]
+Behind the mountain there are Beauty Condition, the west part of Cantera.
+
+[MISS_31]
+Right on your way - East Cantera Valley and Chalice River inside it.
+
+[MISS_32]
+The storm is coming. Come back home to Alfred Forest.
+
+[MISS_33]
+Now you can save your game.
+
+[MISS_34]
+~b~Childhood
+
+[MISS_35]
+You grew up. It.s time to practice run, swim and jump.
+
+[MISS_36]
+Press W and Space to run fast.
+
+[MISS_37]
+Press W and click Space many times to reach maximal speed. But you can't run fast too long.
+
+[MISS_38]
+Also you can use A, D, and S to walk different directions.
+
+[MISS_39]
+Press Left Shift to jump.
+
+[MISS_40]
+Try to swim.
+
+[MISS_41]
+Jump into mark.
+
+[MISS_42]
+Come back to your family.
+
+[MISS_43]
+If you see a square at the radar, your target is at one height with you. If there are a triangle witn corner upside - the aim is higher than you. A corner down - lower.
+
+[MISS_44]
+~b~Catch  me  who  can
+
+[MISS_45]
+Catch and kill one of driosaurus!
+
+[MISS_46]
+To beat dinosaur, press LBM. Also use LBM to eat your prey.
+
+[MISS_47]
+~b~Surprise  dangerous
+
+[MISS_48]
+Kill the Troodons!
+
+[MISS_49]
+~b~NAFTA  rewriting...
+
+[MISS_50]
+Run away!
+
+[MISS_51]
+There are a cave... You can cover there.
+
+[MISS_52]
+Ooohhh... It's just...
+
+[MISS_53]
+...a begining...
+
+[MISS_54]
+You need to find somebody. Follow the mark at radar.
+
+[MISS_55]
+"Hey, what's the matter?"
+
+[MISS_56]
+"E-e-ehh..."
+
+[MISS_57]
+"Hey..."
+
+[MISS_58]
+"I-i-i..."
+
+[MISS_59]
+"Hey, what do you need?"
+
+[MISS_60]
+"I-i-i... need... home... family..."
+
+[MISS_61]
+"Well, I don't know, who you are... Hey, listen, come to me! I know one family!"
+
+[MISS_62]
+"By the way, my name is Flame!"
+
+[MISS_63]
+"I-i-i'm... Hawkins. I'm Skilar Hawkins..."
+
+[MISS_64]
+"Hey, sorry, but I don't know Hawk family. Where are you from?"
+
+[MISS_65]
+"I'm... I'm canterian... from Alfred Forest."
+
+[MISS_66]
+"Alfred Forest? I live in Lostland, did you heard about it?"
+
+[MISS_67]
+"N-no... Lostlsnd? What did you lose there? A-a-a mobile phone, when you leave a subway train?"
+
+[MISS_68]
+"Hey, take your jokes some place else!"
+
+[MISS_69]
+"Okay, here's Monewort. Members of Fraughton family are somewhere in this forest."
+
+[MISS_70]
+"Thanks... I'll try to work here something out..."
+
+[MISS_71]
+"Hey, get up! But now I need to go. Bye!"
+
+[MISS_72]
+"So, what about yourself? How did you get here?"
+
+[MISS_73]
+"W-well... my family was killed..."
+
+[MISS_74]
+"Oh, sorry..."
+
+[MISS_75]
+"The Tyrannosaurus! I've run away and..."
+
+[MISS_76]
+"Oh gosh..."
+
+[MISS_77]
+"Yea..."
+
+[MISS_78]
+"Hey, keep up! Is not the worst place in the world!"
+
+[MISS_79]
+"Other Dromaeo family will help you! They lives in that forest!"
+
+[MISS_80]
+"Will help... with my home task for school?"
+
+[MISS_81]
+"Hey, I've told you!"
+
+[MISS_82]
+"Excuse me. I've never been at school."
+
+[MISS_83]
+"And?.. You'll better come to Cungun lake. A beautiful place. You can meet a Kamarasaurus there."
+
+[MISS_84]
+"Are they dangerous?"
+
+[MISS_85]
+"Hey, not much like you."
+
+[MISS_86]
+"What are you talking about?"
+
+[MISS_87]
+"Hey, my name is not Hey!"
+
+[MISS_88]
+"Okay, Hawk! Skilar."
+
+[MISS_89]
+~b~Save  the  Life
+
+[MISS_90]
+"...and what can I do? Well, you can live here, but what's after?"
+
+[MISS_91]
+"I don't know... The time will show me a way."
+
+[MISS_92]
+"Can you save the nest? We'll go to the lake!"
+
+[MISS_93]
+"Okay, all you need."
+
+[MISS_94]
+"Thanks. But beware of Troodons, they live in that side of Mavis river."
+
+[MISS_95]
+"Thanks to you..."
+
+[MISS_96]
+Troodon stole an egg. Catch him!
+
+[MISS_97]
+Bring egg back to the nest.
+
+[MISS_98]
+~b~Life's  beach
+
+[MISS_99]
+"Everything is cool!"
+
+[MIS_100]
+"Yes, it's cold times going on..."
+
+[MIS_101]
+"No, I'm talking about other!"
+
+[MIS_102]
+"About what?"
+
+[MIS_103]
+"Look at our children! Ain't it so good?"
+
+[MIS_104]
+"Yes, of course! But the colors are strange a bit..."
+
+[MIS_105]
+The dangerous!
+
+[MIS_106]
+"Thank you, Skilar!"
+
+[MIS_107]
+"Well... Everything you want..."
+
+[MIS_108]
+"Hope to see you soon!'
+
+[MIS_109]
+~b~6-year  War
+
+[MIS_110]
+"...she's gone!"
+
+[MIS_111]
+"What? Who? Where?"
+
+[MIS_112]
+"My Hodry! She's just gone!"
+
+[MIS_113]
+"O-oh..."
+
+[MIS_114]
+"What? Do anything!!"
+
+[MIS_115]
+Go to Lostland. Maybe Flame knows anything.
+
+[MIS_116]
+"Hi! What's the shine is it?"
+
+[MIS_117]
+"Hey, it's the New Flame's Flame! Warm and beautiful..."
+
+[MIS_118]
+"Okay, I need help. One Dromeosaurus... I don't know where... Can you help me find it?"
+
+[MIS_119]
+"Well... I don't know... But I've heart once, that Troodons take dinosaurs at Alarm Volcano. It's the norhtest island of Cantera. And there are only one way - water."
+
+[MIS_121]
+Don't walk the Quancele ground! Beware of Troodons!
+
+[MIS_122]
+Swim to Alarm Volcano.
+
+[MIS_123]
+"Oh, Skilar, thank you!"
+
+[MIS_124]
+"Tell me that in the mainland. Now we must to get out of here!"
+
+[MIS_125]
+"Thank you very much, Mr. Hawkins! You're so brave Dromaeosaurus!"
+
+[MIS_126]
+"Thanks again!"
+
+[MIS_127]
+~b~Street  Fighting
+
+[MIS_128]
+"And now is our move, raptors! Kill 'em all!"
+
+[MIS_131]
+Come back to Monewort.
+
+[MIS_132]
+You can press G to call raptors, or H to stop them.
+
+[MIS_133]
+~b~July  1st
+
+[MIS_134]
+Remember the difference between Dromaeosaurus.
+
+[MIS_135]
+Female has long feathers at legs to lay eggs.
+
+[MIS_136]
+Male members hasn't them.
+
+[MIS_137]
+"Stop!Stop!!"
+
+[MIS_138]
+"What else?"
+
+[MIS_139]
+"Come today to the east of Saint Mavis River! We'll sign the Peace! Do you agree?"
+
+[MIS_140]
+Go to the meeting.
+
+[MIS_141]
+Wait other dinosaurs
+
+[MIS_142]
+"Oh, what's that?"
+
+[MIS_143]
+~b~Grey  Hills
+
+[MIS_144]
+Find a way to the mainland.
+
+[MIS_145]
+Press LBM to drawn under water. Use Space to swim under it.
+
+[MIS_146]
+"Oh, my head..."
+
+[MIS_147]
+"And I need to cross THIS?"
+
+[MIS_148]
+~b~Candyland
+
+[MIS_149]
+"Hello... I need help..."
+
+[MIS_150]
+"With what?"
+
+[MIS_151]
+"I... I don't remember... It was a storm?"
+
+[MIS_152]
+"Okay, let's walk a bit, it's cold now, maybe you'll remember."
+
+[MIS_153]
+"We're the last raptors in this land. How did you get here?"
+
+[MIS_154]
+"I don't know, it was a hudge wave. I'm from Cantera."
+
+[MIS_155]
+"Cantera is a warm place. Oh, like our Greyhills many years ago."
+
+[MIS_156]
+"What's matter with your country?"
+
+[MIS_157]
+"It was called Greenhills. A volcano at the top of the island was a warmer. Now it's dead... And the land was renamed to Greyhills."
+
+[MIS_158]
+"Maybe I'll help you somehow... A have a friend, the flamer.."
+
+[MIS_159]
+"No, we need a chimerical stones to wake up the volcano. And you need a log."
+
+[MIS_160]
+"For what?"
+
+[MIS_161]
+"To swim away."
+
+[MIS_162]
+"Oh, yes."
+
+[MIS_163]
+"It's a funny place at some view. Try snowboarding once."
+
+[MIS_164]
+"Okay. And where I can find a log?"
+
+[MIS_165]
+"We'll tell you. And now we'll go to the fishing. See you soon."
+
+[MIS_166]
+~b~Snowboarding
+
+[MIS_167]
+Press F or Enter to use snowboard
+
+[MIS_168]
+Use W to run, A and D - to turn. Press Space to stop your board.
+
+[MIS_169]
+Hold left Cltr to prepare jump. Release button to jump.
+
+[MIS_170]
+Press W many times to reach maximal speed.
+
+[MIS_171]
+You can control snowboard at the flight using arrow keys.
+
+[MIS_172]
+~b~The  Alchemist
+
+[MIS_173]
+"Collect all the meteors - chimerical stones, fallen this week."
+
+[MIS_174]
+Bring stones to raptors.
+
+[MIS_175]
+"Good job, my friend!"
+
+[MIS_176]
+~b~Fishing
+
+[MIS_177]
+"Do you want to eat? We can catch some fish."
+
+[MIS_178]
+"I want to Cantera."
+
+[MIS_179]
+"Well, and I want a cottege in Miami! It's impossible. Tomorrow we'll find a log and..."
+
+[MIS_180]
+"Oh no, NO!!"
+
+[MIS_181]
+"Oh, sorry..."
+
+[MIS_182]
+"I hate this country! I'll run away with you! Come to find a log"
+
+[MIS_183]
+"Not now! Leave me alone!"
+
+[MIS_184]
+~b~The  Great  Escape
+
+[MIS_185]
+"Here's your boat! Push it into water and come back to me."
+
+[MIS_186]
+"Thank you for help. Maybe I'll try to wake up the volcano? We have the stones!"
+
+[MIS_187]
+"Okay, here you are. Drop them to volcano."
+
+[MIS_188]
+Everything gonna explode here! Take snowboard and run to the log!
+
+[MIS_189]
+~b~Nowhere  to  run
+
+[MIS_190]
+Press LBM to drop stones.
+
+[MIS_191]
+~b~Dayargolia
+
+[MIS_192]
+Eat the protoceratopses!
+
+[MIS_193]
+"Good work, guy! I like it!"
+
+[MIS_194]
+"Come tomorrow to our forest, we'll find a work for you!"
+
+[MIS_195]
+~b~Oviciraptors
+
+[MIS_196]
+"Oviraptors stole our eggs! Go with my friend and stole a pair of their! I'll be wait here."
+
+[MIS_197]
+Bring egg to the forest.
+
+[MIS_198]
+Take another egg.
+
+[MIS_199]
+~b~Amarhaan
+
+[MIS_200]
+"This is Amarhaan, the head of Dayargolia."
+
+[MIS_201]
+"Hello, stranger. To take you to our land, I need to see your power. Are you ready?"
+
+[MIS_202]
+Cross the desert
+
+[MIS_203]
+"Now try to fight me!"
+
+[MIS_204]
+"You're a strong guy! I invite you to us!"
+
+[MIS_205]
+~b~Egg  Stiffs
+
+[MIS_206]
+"Now a new task for you. We don't like Oviraptors. Show me the same!"
+
+[MIS_207]
+~b~The  Tarbos
+
+[MIS_208]
+It's a Tarbosaurus! Find a way to kill him!
+
+[MIS_209]
+Wait while Tarbosaurus will be near you and walk down. He can't swim.
+
+[MIS_210]
+~b~Weaponwood
+
+[MIS_211]
+"Look, it's a wooden stick. Take it and try to use."
+
+[MIS_212]
+Use mouse wheel to select weapon - stick or your teeth.
+
+[MIS_213]
+Come back to Amarhaan.
+
+[MIS_214]
+"Not bad! Come to me tomorrow, we'll go to hunt! And visit Halszkaan Cliffs, there needs your help."
+
+[MIS_215]
+~b~Cretaceous  Running
+
+[MIS_216]
+Kill the Uranosaurus!
+
+[MIS_217]
+To make raptors attack a dinosaur, hold RBM to see the health of prey, and then press LBM to give attack command.
+
+[MIS_218]
+~b~Dayarhell
+
+[MIS_219]
+"...and I swim here on the log. I'm from Cantera and I need to come back!"
+
+[MIS_220]
+"Cantera? Where is it?"
+
+[MIS_221]
+"Where the grass is green, the sky is blue..."
+
+[MIS_222]
+"I know Microraptors from Chepei, they can fly and see everything. You need to ask them."
+
+[MIS_223]
+"Amarhaan! Oviraptors coming here! A lot of velociraptors!"
+
+[MIS_224]
+"Okay, gather all raptors you know and come back to me! The show will be here soon!"
+
+[MIS_225]
+"Yea, a good fight! The win is mine!"
+
+[MIS_226]
+"Eh?.. Aa, oh, of course! An what's about that... Microraptors?"
+
+[MIS_227]
+"You can find them in south from Veil-Gol, closer to Chepei."
+
+[MIS_350]
+~b~Coming  Home
+
+[MIS_351]
+"...and now you can swim away! Rememder - to the west and norther a bit."
+
+[MIS_352]
+"Oh, thank you! Hope to see you any time, anywhere..."
+
+[MIS_353]
+"Good luck!"
+
+[MIS_354]
+Press Left Shift to get up on the shark and Enter to use it.
+
+[MIS_355]
+Don't late. Get to Cantera before night coming to see the coast.
+
+[MIS_357]
+"Damn! This is not Cantera..."
+
+[MIS_358]
+~b~The Crocodiles
+
+[MIS_359]
+"Hello! I've lose the road and get here... Where's Cantera?"
+
+[MIS_360]
+"Do you want to work?"
+
+[MIS_361]
+"Eh?"
+
+[MIS_362]
+"Canterian XD"
+
+[MIS_363]
+"Where I am?"
+
+[MIS_364]
+"Montus State, Cubited Trees Country."
+
+[MIS_365]
+"Oh no, thank you!"
+
+[MIS_366]
+"Do you want to find a way to Cantera? Then work a bit!"
+
+[MIS_367]
+"Okay, what should I do?"
+
+[MIS_368]
+"Kill that Ankilosaurus. It's difficult, so lure him into the river, so he can't out even in a coffin!"
+
+[MIS_370]
+~b~Welcome  to  the  Ghetto
+
+[MIS_371]
+"What do you need this time?"
+
+[MIS_372]
+"Use this stones to kill a Hadrosaurus. It's very easy as throw trash to the rubbish bin."
+
+[MIS_373]
+~b~Death  from  the  Sky
+
+[MIS_374]
+"Take position on a palm. We will bring a Hardosaurus, you'll jump down and kill it."
+
+[MIS_375]
+Wait the Hadrosaurus
+
+[MIS_376]
+~b~Revenge
+
+[MIS_377]
+" A Tyrannosaurus have crashed our nest! And we need a tyrannosaurus egg! Get it for us."
+
+[MIS_378]
+"What?? You're crazy? A tyrannosaurus egg? NO-O-O!!"
+
+[MIS_379]
+"Yes! It's the last task and you'll get your Cantera!"
+
+[MIS_380]
+Find the nest.
+
+[MIS_381]
+Tyrannosaurus don't see you. Stole an egg and push it to Montus state.
+
+[MIS_382]
+~b~Frontier  guard
+
+[MIS_383]
+"And where's that Cantera you want show me?"
+
+[MIS_384]
+"I.. I really don't know..."
+
+[MIS_385]
+"What? What the hell?!"
+
+[MIS_386]
+"Ahah, it's a joke! Just look over there!"
+
+[MIS_387]
+"It's Cantera..."
+
+[MIS_388]
+Find Monewort Dromaeosaurus.
+
+[MIS_389]
+"Oh, Skilar, is it you?"
+
+[MIS_390]
+"Yes, I'm at home! Hodry, how're you? What's new in Cantera?"
+
+[MIS_391]
+...a year later...
+
+[MIS_392]
+~b~Back  to  Alfred
+
+[MIS_393]
+"It was my nest..."
+
+[MIS_394]
+"Like to my one!"
+
+[MIS_395]
+"To use it again, we need to repair it. I'll bring some branches."
+
+[MIS_396]
+Collect materials and bring to the nest.
+
+[MIS_397]
+~b~I  wanna  bite
+
+[MIS_398]
+"I'm hungry a bit..."
+
+[MIS_399]
+"Okay, wait here, I'll find something to eat."
+
+[MIS_400]
+Kill a Driosaurus
+
+[MIS_401]
+Lead your wife to the body
+
+[MIS_402]
+"Oh, Thank you!"
+
+[MIS_403]
+~b~Density  Post
+
+[MIS_404]
+A meteor has fallen in Montus state. Look what's going on there.
+
+[MIS_405]
+"Hey, wassup?"
+
+[MIS_406]
+"What's that was? Are you okay? Do you need help?"
+
+[MIS_407]
+"Yes, we need it. Collect all shards of big stone that scattered in the state."
+
+[MIS_408]
+"For what?"
+
+[MIS_409]
+"We NEED it!"
+
+[MIS_410]
+~b~Future  depends  on  You
+
+[MIS_411]
+"I've collect that stones you need..."
+
+[MIS_412]
+"Good. And now... You must save the World!"
+
+[MIS_413]
+"Eh?.. Screw you! I have my own business! I have a wife."
+
+[MIS_414]
+"Do you want to revenge that Tyrannosaurus? Only you can save the good side of this World!"
+
+[MIS_415]
+"I'm not Bruse Willis!! I'm Skilar Hawkins!"
+
+[MIS_416]
+"Do you want to see the Future? The Cantera after us? Skyscrapers, Planes, Parks..."
+
+[MIS_417]
+"It is interesting, but..."
+
+[MIS_418]
+"So, we can see the Future. But we can't fix it. The stone fallen this night was magic... With chimerical compisition. We can open portal to the 2015 year."
+
+[MIS_419]
+"And what's there?"
+
+[MIS_420]
+"A businessman, living in Liberty City, arrives City of Terrene. He find Tyrannosaurus DNA and with Canterian sponsors he want to revive Tyrannosaurus. Kill him!"
+
+[MIS_422]
+Don't use teeth. Don't leave any marks that you was there, find a weapon.
+
+[MIS_423]
+Kill the businessman!
+
+[MIS_424]
+Take the DNA.
+
+[MIS_426]
+Destroy the car and come back.
+
+[MIS_427]
+Uzing Micro-UZI hold RBM to take target and press LBM to fire. To selest weapon, use mouse scrool or Q/E.
+
+[MIS_428]
+Put the DNA into the car.
+
+[MIS_429]
+~b~Progenesis
+
+[MIS_430]
+"I'll find something to eat for our children."
+
+[MIS_431]
+Save the nest.
+
+[MIS_432]
+It's a Stegosaurus!
+
+[MIS_433]
+~b~The  Promenade
+
+[MIS_434]
+Show your family Cantera and it's provinces.
+
+[MIS_435]
+~b~Like  a  First  Time
+
+[MIS_436]
+~b~Evil  Return
+
+[MIS_437]
+"Oh Gosh! What's was here?..."
+
+[MIS_438]
+"Oh, Skilar! It was a Tyrannosaurus! Oh..."
+
+[MIS_439]
+"No! We can't live so! I'm gonna kill them all!"
+
+[MIS_440]
+Go to Terrene-Top mountain. Use there a Pterosaurus to look out the Tyrannosaurus land.
+
+[MIS_441]
+They Live in Tierra-Robada canyon. Now you can get out of here.
+
+[MIS_442]
+Hold down W to fly fast or S to decrease speed. You can press V to change camera type.
+
+[MIS_443]
+~b~Exploration
+
+[MIS_444]
+Now learn the path system in Tierra-Robada.
+
+[MIS_445]
+You need the highest place in Canyon to watch it good.
+
+[MIS_446]
+It's the heart of Tierra-Robada.
+
+[MIS_447]
+~b~More  than  Business
+
+[MIS_448]
+"Hey, Flame, how did you get there?"
+
+[MIS_449]
+"I've come here to take some fire. But can't out!"
+
+[MIS_450]
+"Wait here, don't go away... Oh! I'll bring something!"
+
+[MIS_451]
+Find a liana, until Flame fry!
+
+[MIS_452]
+"Thank you!"
+
+[MIS_453]
+"I'll drop you to your home, maybe you'll get any else."
+
+[MIS_454]
+"Hey... a good idea."
+
+[MIS_455]
+~b~Grilled  Chicken
+
+[MIS_456]
+Use torch to fry Driosaurus.
+
+[MIS_457]
+~b~The  new  Government
+
+[MIS_458]
+In fight with Tyrannosaurus you need many raptors. Gather them near by Tierra-Robada.
+
+[MIS_460]
+~b~Freedom
+
+[MIS_461]
+"Okay, raptors, it's our move now!"
+
+[MIS_462]
+"Hi!"
+
+[MIS_463]
+"What are you doing here?"
+
+[MIS_464]
+"I've come to help you with this problem."
+
+[MIS_465]
+"Hey, and you... you..?"
+
+[MIS_466]
+"Sorry, I've swim away when the earthquake began..."
+
+[MIS_467]
+"Eh? No, I've run away after wake up a volcano..."
+
+[MIS_468]
+"Oh..."
+
+[MIS_469]
+"So, we are Dromaeosauridae! Tyrannosaurus is our enemy!"
+
+[MIS_470]
+"We're weakemed, can't fight any more."
+
+[MIS_471]
+"But another Tyrannosaurus is anywhere here."
+
+[MIS_472]
+"Do you have any ideas?"
+
+[MIS_473]
+"Yes, I have. Run away!"
+
+[MIS_474]
+"Take cover on the Canyon."
+
+[MIS_475]
+Lure Tyrannosaurus to this place.
+
+[MIS_476]
+"Evacuate everybody to Cantera!"
+
+[MIS_477]
+"Hey, Skilar, we can fry them! In that cave there are a gas!"
+
+[MIS_478]
+Burn up the cave gas.
+
+[MIS_479]
+Run away!
+
+[MIS_480]
+"Skilar, what are you doing? It's so dangerous!"
+
+[MIS_481]
+"No-no, my dear! I've made this country free! Now nothing doubt us!"
+
+[MIS_482]
+"Oh!"
+
+[MIS_483]
+"Go and find something to eat..."
+
+[MIS_484]
+~b~Fireman
+
+[MIS_485]
+"Hi! Today I've teach you to burn up fire. Take this sticks."
+
+[MIS_486]
+Use N and H keys to move sticks
+
+[MIS_487]
+You've got it!
+
+[MIS_490]
+The End
+
+[MIS_500]
+~b~Flying  school
+
+[MIS_501]
+This is flightable Microraptor. You can control him.
+
+[MIS_502]
+Use Up and Down arrows to reach corona.
+
+[MIS_503]
+At left side of radar you can see your height meter.
+
+[MIS_504]
+Press Right arrow and turn to the next corona.
+
+[MIS_505]
+Fly to the next checkpoint.
+
+[MIS_506]
+Turn left to the last corona.
+
+[MIS_507]
+~b~Chepei
+
+[MIS_508]
+Now you need to ask other Microraptors how to get to Cantera. Fly to Chepei.
+
+[MIS_509]
+~b~Other  land
+
+[MIS_510]
+"So, what's there?"
+
+[MIS_511]
+"They say the way to Cantera - to the West from Dayargolia and norther a bit."
+
+[MIS_512]
+"Okay, fly and check it!"
+
+[MIS_513]
+Bring a branch from Cantera.
+
+[MIS_514]
+Come back and bring it to Skilar.
+
+[MIS_601]
+~r~The Dromies are dead!
+
+[MIS_602]
+~b~The Prankster
+
+[MIS_603]
+Catch the prankster!
+
+[MIS_604]
+"Got him, boys!"
+
+[MIS_605]
+~r~ Well... Maybe next time
+
+[MIS_606]
+~r~ Hodry's dead!
+
+[MIS_607]
+~r~What are you doing, shithead?
+
+[MIS_608]
+~b~Hello, North!
+
+[MIS_609]
+It's the Northern Troodons! They are hungry and very dangerous!
+
+[MIS_610]
+~r~Too slow, fat ass!
+
+[MIS_611]
+Don't lose Amarhaan!
+
+[MIS_612]
+~b~The terrible claw
+
+[MIS_613]
+"You fight like a girl!"
+
+[MIS_614]
+"Look at yourself, fool!"
+
+[MIS_615]
+"Did you look at me? Why you don't use claws on your legs? Okay, I can teach you some moves!"
+
+[MIS_616]
+"Hold RBM when you see your enemy, and press Enter to attack it by your leg."
+
+[MIS_617]
+"Ninja-style! Try it at that Oviraptor!"
+
+[MIS_618]
+~r~Amarhaan is dead! We didn't agree on this!
+
+[MIS_619]
+Find any Microraptors.
+
+[MIS_620]
+"Comrades, can you help me to find a way?"
+
+[MIS_621]
+"You've killed the Tarbosaurus! You're stronger than it seems!"
+
+[MIS_622]
+"But Oviraptors encroach on our nests again! It's time to show them who's boss here!"
+
+[MIS_623]
+You're out of stones! Go to Deinonychus and take some.
+
+[MIS_624]
+Don't come too close!
+
+[MIS_626]
+~r~ You were found. Next time try to don't shine you ass!
+
+[MIS_630]
+~r~You think you're carnivore?
+
+[MIS_631]
+~r~Your babies are dead!
+
+[MIS_632]
+~r~Flame is dead! Shame on you!
+
+[MIS_633]
+~r~You've crashed!
+
+[MIS_634]
+~r~Your bird is wet.
+
+[MIS_635]
+~b~King of the Rock
+
+[MIS_636]
+"Hey, guys, what do you need this time, eh?"
+
+[MIS_637]
+"You work good, friend! Now it's real time to dethrone tyrants!"
+
+[MIS_638]
+"No! I had no plan! And not enough forces! I can't do it now!"
+
+[MIS_639]
+"Now you just have no choice! Your Hodry is in our claws, so move on, if you don't want her back broken!"
+
+[MIS_640]
+"Hey, give a cry, girl!"
+
+[MIS_641]
+"Skila-a-ar!!"
+
+[MIS_642]
+Save Hodry! Find a way on the rock.
+
+[MIS_643]
+"What are you doing here, fool? Hey, he conceived something!"
+
+[MIS_644]
+"Hodry, are you OK?"
+
+[MIS_645]
+"Yes, thank you! Damn crocodiles...!"
+
+[MIS_646]
+"Holy shit!"
+
+[MIS_657]
+"Wait up, smartass!"
+
+[MIS_658]
+Catch him!
+
+[MIS_659]
+Hold the position! ~g~4...
+
+[MIS_660]
+Hold the position! ~g~3...
+
+[MIS_661]
+Hold the position! ~g~2...
+
+[MIS_662]
+Hold the position! ~g~1...
+
+[MIS_663]
+~r~You lose the triator!
+
+[MIS_664]
+"Surprise, motherfucker!"
+
+[MIS_665]
+You can hold down N to ~g~save~s~ him!
+
+[MIS_666]
+"We're doing our common business! We must kill the tyrants!"
+
+[MIS_667]
+"First - just I doing our common business!"
+
+[MIS_668]
+"Second - kill tyrants to make kings another tyrants? Never!"
+
+[MIS_669]
+"And never! Never touch my family, naked ass!"
+
+[MIS_670]
+"Okay, gimme your hand!"
+
+[MIS_671]
+"Now go away, I don't wanna see you, ever!"
+
+[MIS_672]
+~r~ Get ready for some pain!
+
+[MIS_675]
+Kill guards and turn off the survellance cameras.
+
+[MIS_676]
+Cameras are off. Take position on the hangar.
+
+[MIS_677]
+It's the businessman that you need. Don't kill him now, first you need to find the tyrannosaurus DNA.
+
+[MIS_678]
+Follow the car! Don't lose them and don't come too close!
+
+[MIS_679]
+Tower entrance is heavily guarded. Find another way!
+
+[MIS_680]
+Power source is turned off, tower is blocked, but fire elevator is still working, use it.
+
+[MIS_681]
+Use piece of sheating to plan back to airport!
+
+[MIS_682]
+~r~You lose the trace!
+
+[MIS_683]
+~b~Feathers is a sign of skill
+
+[MIS_684]
+You're an adult Dromaeosaurus now.
+
+[MIS_685]
+You need some food. Attack a Pachycephalosaurus!
+
+[MIS_686]
+~b~New opportunities
+
+[MIS_690]
+~b~Cold wind
+
+[MIS_691]
+We're going to fishing now! Who will come last - first goes into cold water!
+
+[MIS_692]
+Get ready...
+
+[MIS_693]
+~r~3...
+
+[MIS_694]
+~r~2...
+
+[MIS_695]
+~y~1...
+
+[MIS_696]
+~g~Go!~s~ Ahaha!
+
+[MIS_697]
+~g~You win!
+
+[MIS_698]
+~r~Looser!
+
+[MIS_699]
+~b~Dangerous waters
+
+[MIS_700]
+~b~In the dream
+
+[MIS_701]
+"Skilar! My baby!"
+
+[MIS_702]
+"Come with us! Now we'll never part!"
+
+[MIS_703]
+"No, Skilar! You'll see them, but later!"
+
+[MIS_704]
+"Now you need to get out of here, I'll help you!"
+
+[MIS_705]
+"Swim to me, Skilar!"
+
+[MIS_706]
+"Swim, swim to the coast!"
+
+[MIS_707]
+"My chick! At last we're together!"
+
+[MIS_708]
+"Hodry saved me! She's alive!"
+
+[MIS_710]
+It's an ~r~Ichtyosaurus~s~! He easily can eat you, try to save yourself!
+
+[MIS_711]
+Come back to the ~g~log~s~!
+
+[MIS_712]
+Press ~k~~PED_LOOKBEHIND~ to look behind!
+
+[MIS_750]
+~b~Mating dance
+
+[MIS_751]
+Use arrow keys to perform the dance.
+
+[MIS_752]
+Press the desired button when the arrow will be in the circle.
+
+[MIS_753]
+Score 1500 points to impress the female.
+
+[MIS_754]
+~r~Practice more, lameduck-henpecker!
+
+[MIS_755]
+~g~She's yours!
+
+[MIS_756]
+~n~ ~n~ ~n~ "Look at my feathers!"
+
+[MIS_757]
+~n~ ~n~ ~n~ "It's a nice day to dance!"
+
+[MIS_758]
+~n~ ~n~ ~n~ "The credit for the nest we don't need?"
+
+[MIS_759]
+~n~ ~n~ ~n~ "Shit!"
+
+[MIS_760]
+~n~ ~n~ ~n~ "I just didn't get sleep enough"
+
+[MIS_761]
+~n~ ~n~ ~n~ "It's harder than I thought!"
+
+[MIS_762]
+~n~ ~n~ ~n~ "I'm just warming up!"
+
+[MIS_763]
+~n~ ~n~ ~n~ "In the training I was able to"
+
+[MIS_764]
+~n~ ~n~ ~n~ "My legs don't obey!"
+
+[MIS_765]
+~n~ ~n~ ~n~ "Maybe there is another way?"
+
+[MIS_768]
+~n~ ~n~ ~n~ "What's wrong with me?"
+
+[MIS_800]
+Stamina - Upgraded
+
+[MIS_801]
+Your Health is reached maximum!
+
+[MIS_802]
+Muscle - Upgraded
+
+[MIS_810]
+You can visit the map and place a marker by RBM in place you want to fly.
+
+[MIS_811]
+Slow down to the groud to exit the Pterosaurus.
+
+[MIS_812]
+You can hunt free, or just travel. Also you can always come back to your home.
+
+[MIS_814]
+~r~You've broke the eggs!
+
+[MIS_900]
+Congratulations! You've finished the game! Free mode is available now.
+
+[MIS_990]
+Land carefully!
+
+[MI_1000]
+~b~The Great Cause
+
+[MI_1001]
+Get down! Press C and don't stand up.
+
+[MI_1002]
+Troodons are guarding their head. Carefully walk behind them to reach the head.
+
+[MI_1003]
+"What..?"
+
+[MI_1004]
+"Sure nothing..."
+
+[MI_1005]
+"Alarm! Intruder!"
+
+[MI_1006]
+"Smell something? Like a Dromaeosaurus..."
+
+[MI_1007]
+"Forget it, we're in Cantera, everything here stinks like them! Tomorrow we'll erode this smell!"
+
+[MI_1008]
+"What's that?"
+
+[MI_1009]
+"Seems like wind..."
+
+[MI_1010]
+"Who is there?"
+
+[MI_1011]
+"It seems was imagined.."
+
+[MI_1012]
+" Did you heard about crazy raptor, he done some things..."
+
+[MI_1013]
+"Of course, he pushed my friend of the cliff! By hit in the back!"
+
+[MI_1014]
+"Damn, can't wait for killing him!"
+
+[MI_1016]
+"Don't worry, all of them are cowards! Sure, they eavesdropes us somewhere again!"
+
+[MI_1017]
+"One of those pricks can use fire! I'm afraid of fire!"
+
+[MI_1018]
+It's the Head of Troodons. Kill him silently, while noone see you.
+
+[MI_1019]
+"If you'll see something feathered, scream "Alarm!", understand?"
+
+[MI_1020]
+"Okay, okay..."
+
+[MI_1021]
+Now come back the same way
+
+[MI_1022]
+Head is running away!
+
+[MI_1023]
+~r~He screwed you up! Now you can't get him!
+
+[MI_1024]
+Lose the Troodons!
+
+[MI_1026]
+"Skilar, we've got a problem! The head of troodons are gathering an army at the fields!"
+
+[MI_1027]
+"What? We must stop them!"
+
+[MI_1028]
+"It's too much of them, we haven't so much power!"
+
+[MI_1029]
+"I've got an idea..."
+
+[MI_1030]
+"Hey, go on..."
+
+[MI_1031]
+"If I'll carefully kill the head, soldiers can't fight without him!"
+
+[MI_1032]
+"I'll come with you!"
+
+[MI_1033]
+"No, it's one raptor job!"
+
+[MI_1034]
+"Skilar, you understand, that we'll all die, if you couldn't?.."
+
+[MI_1035]
+"Damn, looks like someone have been eaten..."
+
+[MI_1040]
+~b~Quieter than water
+
+[MI_1041]
+"Hi, now I'll show you how you can use your claws in silent style!"
+
+[MI_1042]
+"And little Hodry will watch, she must learn too."
+
+[MI_1043]
+"See that Drio? Kill him silently!"
+
+[MI_1044]
+Use mouse scroll or Q/E to select claws.
+
+[MI_1045]
+Press C to crouch.
+
+[MI_1046]
+The sun is bliding your prey. Come close behind.
+
+[MI_1047]
+Press RBM to hold target. When you'll get ready for jump, press LBM.
+
+[MI_1048]
+"See? Easy! Now we can rest, while Troodons are calmed down. See ya!"
+
+[MI_1049]
+~b~The Big Brother
+
+[MI_1050]
+"I think Troodons now will settle down..."
+
+[MI_1051]
+"Sure they'll come back to north and we'll not see them again!"
+
+[MI_1052]
+"Quiet times begins..."
+
+[MI_1053]
+"You've killed my brother! But before I'll take the throne, I'll get rid of the little problem!"
+
+[MI_1055]
+Use arrow keys to fight one-on-one. Press the desired button when the arrow will be in the circle.
+
+[MI_1060]
+The cool mission was planned, but we didn't make it
+
+[MI_1100]
+~b~Water patrol
+
+[MI_1101]
+"Well, hello, Big traveller! We're heard about you good things and need you help. We can teach you something for that!"
+
+[MI_1102]
+"We're - the most waterfowl raptors. And we can teach you some swimming experience. But we must walk to land to nest"
+
+[MI_1103]
+"And egg stiffs, settled at our islands, reduce our population! Please, help to get rid of them!"
+
+[MI_1105]
+"They live somewhere in the cliffs, search there!"
+
+[MI_1106]
+Find the egg stiff's lair
+
+[MI_1107]
+Get out of the cave
+
+[MI_1108]
+Lung capacity +
+
+[MI_1109]
+~g~Now you can hold your breath much longer!
+
+[MI_1110]
+"Look, there in our country lost the feathers of the Great Ancestors. They will give you an infinite run, if you'll collect them!"
+
+[RUN_001]
+Infinite run acchieved!
