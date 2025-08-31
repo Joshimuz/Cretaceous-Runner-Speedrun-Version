@@ -1,1 +1,3 @@
 *.log
+/cleo/cleo_saves
+cleo/Teleport_to_marker.cs3

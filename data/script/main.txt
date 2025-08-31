@@ -12043,6 +12043,19 @@ wait 4000
 print_now 'MIS_124' {time} 6000 {flag} 1 // "Tell me that in the mainland. Now we must to get out of here!"
 task_play_anim $PLAYER_ACTOR {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 2000
 wait 6000
+do_fade 2000 {direction} Fade.Out
+wait 2000
+set_player_control $PLAYER_CHAR {state} False
+set_char_coordinates $PLAYER_ACTOR {x} -1911.4871 {y} 228.0232 {z} 23.1
+set_char_heading $PLAYER_ACTOR {heading} 180
+set_char_coordinates $DROMEO_10_3 {x} -1916.4871 {y} 228.0232 {z} 23.1
+set_char_heading $DROMEO_10_3 {heading} 180
+wait 1000
+set_camera_behind_player 
+do_fade 2000 {direction} Fade.In
+wait 2000
+set_player_control $PLAYER_CHAR {state} True
+print_now 'SRV_001' {time} 3000 {flag} 1 // "Wow that was such a long Journey."
 $RADAR_MISS_10_HOME = add_sprite_blip_for_coord -1921.4871 {y} 428.0232 {z} 35.0 {sprite} RadarSprite.Airyard
 $RADAR_SPHERE_10_HOME = add_sphere -1921.4871 {y} 428.0232 {z} 35.0 {radius} 1.5
 goto @MISSION10_2672
