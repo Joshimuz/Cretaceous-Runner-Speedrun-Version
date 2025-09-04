@@ -1,0 +1,21 @@
+{$CLEO}
+{$USE CLEO}
+
+int $PASSED_MISSIONS
+Alloc($PASSED_MISSIONS, 5297)
+
+if not Fs.DoesFileExist("modloader/Passed Missions Changer/config.ini")
+then
+    IniFile.WriteInt(0, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed Missions")
+else
+    int missionValue = IniFile.ReadInt("modloader/Passed Missions Changer/config.ini", "Missions", "Passed Missions")
+    
+    if not missionValue == 0
+    then
+        while $PASSED_MISSIONS == 0
+            $PASSED_MISSIONS = missionValue
+        end
+    end
+end
+
+terminate_this_script
