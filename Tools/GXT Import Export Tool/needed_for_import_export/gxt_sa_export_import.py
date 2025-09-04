@@ -238,11 +238,11 @@ def import_gxt(txt_file: str, gxt_file: str, name_to_crc: Dict[str, int]) -> Non
             
             # Build TKEY block
             tkey_block = b"TKEY" + struct.pack("<I", len(entries) * 8)
+            # Sort entries by CRC32
+            entries_sorted = sorted(entries, key=lambda x: x[0])  # x[0] is crc
             tdat_entries = []
             tdat_data = b""
-            
-            # Build TDAT data in entry order
-            for crc, text in entries:
+            for crc, text in entries_sorted:
                 off = len(tdat_data)
                 enc = text.encode("cp1252") + b"\0"
                 tdat_data += enc
@@ -268,8 +268,7 @@ def import_gxt(txt_file: str, gxt_file: str, name_to_crc: Dict[str, int]) -> Non
         # Write all subtable data at once
         out.seek(0, 2)
         out.write(subtable_data)
-
-    logging.debug(f"Imported GXT file size: {out.tell()} bytes")
+        logging.debug(f"Imported GXT file size: {out.tell()} bytes")
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description="GXT editor for GTA San Andreas")
