@@ -1473,7 +1473,7 @@ if and
   $ONMISSION == 0
   $PASSED_MISSIONS == 0
 goto_if_false @START0
-add_hospital_restart -1207.408 {y} -862.5986 {z} 13.6354 {heading} 259.0 {citiesPassed} 0
+override_next_restart -1207.408 {y} -862.5986 {z} 13.6354 {heading} 259.0
 $ONMISSION = 1
 load_and_launch_mission_internal 0
 terminate_this_script 
@@ -1491,7 +1491,7 @@ activate_save_menu
 $WIDE = 1
 do_fade 2000 {direction} Fade.In
 wait 50
-add_hospital_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0 {citiesPassed} 0
+override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -1531,7 +1531,7 @@ activate_save_menu
 $WIDE = 1
 do_fade 2000 {direction} Fade.In
 wait 50
-add_hospital_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0 {citiesPassed} 0
+override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -1601,7 +1601,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_1_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart -2319.5271 {y} -724.2954 {z} 6.4713 {heading} 6.0 {citiesPassed} 0
+override_next_restart -2319.5271 {y} -724.2954 {z} 6.4713 {heading} 6.0
 $RADAR_MISS_5_1_1 = add_sprite_blip_for_contact_point -2404.9529 {y} -756.9393 {z} 24.3892 {sprite} RadarSprite.Qmark
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
@@ -1684,7 +1684,7 @@ goto_if_false @Noname_2_11
 set_player_model $PLAYER_CHAR {modelId} 155
 set_camera_behind_player 
 wait 50
-add_hospital_restart -2319.5271 {y} -724.2954 {z} 6.4713 {heading} 6.0 {citiesPassed} 0
+override_next_restart -2319.5271 {y} -724.2954 {z} 6.4713 {heading} 6.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -1754,7 +1754,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_3_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart -1903.024 {y} 330.411 {z} 35.0 {heading} 172.0 {citiesPassed} 0
+override_next_restart -1903.024 {y} 330.411 {z} 35.0 {heading} 172.0
 $RADAR_MISS_8_1 = add_sprite_blip_for_contact_point -1886.8521 {y} 340.4308 {z} 35.0 {sprite} RadarSprite.Qmark
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
@@ -1834,7 +1834,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_4_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart -1903.024 {y} 330.411 {z} 35.0 {heading} 172.0 {citiesPassed} 0
+override_next_restart -1903.024 {y} 330.411 {z} 35.0 {heading} 172.0
 $RADAR_MISS_9_1 = add_sprite_blip_for_contact_point -1886.8521 {y} 340.4308 {z} 35.0 {sprite} RadarSprite.Airyard
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
@@ -1914,7 +1914,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_5_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart -1903.024 {y} 330.411 {z} 35.0 {heading} 172.0 {citiesPassed} 0
+override_next_restart -1903.024 {y} 330.411 {z} 35.0 {heading} 172.0
 $RADAR_MISS_9_1_1 = add_sprite_blip_for_contact_point -1886.8521 {y} 340.4308 {z} 35.0 {sprite} RadarSprite.Airyard
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
@@ -1994,7 +1994,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_6_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart -1903.024 {y} 330.411 {z} 35.0 {heading} 172.0 {citiesPassed} 0
+override_next_restart -1903.024 {y} 330.411 {z} 35.0 {heading} 172.0
 $RADAR_MISS_10_1 = add_sprite_blip_for_contact_point -1886.8521 {y} 340.4308 {z} 35.0 {sprite} RadarSprite.Airyard
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
@@ -2074,7 +2074,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_7_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart -1903.024 {y} 330.411 {z} 35.0 {heading} 172.0 {citiesPassed} 0
+override_next_restart -1903.024 {y} 330.411 {z} 35.0 {heading} 172.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -2152,7 +2152,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @START11_0_187
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart -1903.024 {y} 330.411 {z} 35.0 {heading} 172.0 {citiesPassed} 0
+override_next_restart -1903.024 {y} 330.411 {z} 35.0 {heading} 172.0
 $RADAR_MISS_11_0_1 = add_sprite_blip_for_contact_point -1918.175 {y} 334.6621 {z} 35.0886 {sprite} RadarSprite.Airyard
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
@@ -2230,7 +2230,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @START11_1_187
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart -1903.024 {y} 330.411 {z} 35.0 {heading} 172.0 {citiesPassed} 0
+override_next_restart -1903.024 {y} 330.411 {z} 35.0 {heading} 172.0
 $RADAR_MISS_11_1_1 = add_sprite_blip_for_contact_point -1918.175 {y} 334.6621 {z} 35.0886 {sprite} RadarSprite.Airyard
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
@@ -2306,7 +2306,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @START11_2_187
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart -1903.024 {y} 330.411 {z} 35.0 {heading} 172.0 {citiesPassed} 0
+override_next_restart -1903.024 {y} 330.411 {z} 35.0 {heading} 172.0
 $RADAR_MISS_11_2_1 = add_sprite_blip_for_contact_point -1918.175 {y} 334.6621 {z} 35.0886 {sprite} RadarSprite.Airyard
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
@@ -2384,7 +2384,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @START12_179
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart -1903.024 {y} 330.411 {z} 35.0 {heading} 172.0 {citiesPassed} 0
+override_next_restart -1903.024 {y} 330.411 {z} 35.0 {heading} 172.0
 $RADAR_MISS_12_1 = add_sprite_blip_for_contact_point -1886.8521 {y} 340.4308 {z} 35.0 {sprite} RadarSprite.Airyard
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
@@ -2445,7 +2445,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_8_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart 709.0579 {y} 2658.5139 {z} 6.1637 {heading} 250.0 {citiesPassed} 0
+override_next_restart 709.0579 {y} 2658.5139 {z} 6.1637 {heading} 250.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -2495,7 +2495,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_9_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart 709.0579 {y} 2658.5139 {z} 6.1637 {heading} 250.0 {citiesPassed} 0
+override_next_restart 709.0579 {y} 2658.5139 {z} 6.1637 {heading} 250.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -2565,7 +2565,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_10_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart 2165.533 {y} 2111.2791 {z} 85.0 {heading} 176.0 {citiesPassed} 0
+override_next_restart 2165.533 {y} 2111.2791 {z} 85.0 {heading} 176.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -2646,7 +2646,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_11_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart 2165.533 {y} 2111.2791 {z} 85.0 {heading} 176.0 {citiesPassed} 0
+override_next_restart 2165.533 {y} 2111.2791 {z} 85.0 {heading} 176.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -2727,7 +2727,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_12_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart 2165.533 {y} 2111.2791 {z} 85.0 {heading} 176.0 {citiesPassed} 0
+override_next_restart 2165.533 {y} 2111.2791 {z} 85.0 {heading} 176.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -2808,7 +2808,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_13_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart 2165.533 {y} 2111.2791 {z} 85.0 {heading} 176.0 {citiesPassed} 0
+override_next_restart 2165.533 {y} 2111.2791 {z} 85.0 {heading} 176.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -2889,7 +2889,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_14_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart 2165.533 {y} 2111.2791 {z} 85.0 {heading} 176.0 {citiesPassed} 0
+override_next_restart 2165.533 {y} 2111.2791 {z} 85.0 {heading} 176.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -2970,7 +2970,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_15_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart 2165.533 {y} 2111.2791 {z} 85.0 {heading} 176.0 {citiesPassed} 0
+override_next_restart 2165.533 {y} 2111.2791 {z} 85.0 {heading} 176.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -3051,7 +3051,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_16_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart 2165.533 {y} 2111.2791 {z} 85.0 {heading} 176.0 {citiesPassed} 0
+override_next_restart 2165.533 {y} 2111.2791 {z} 85.0 {heading} 176.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -3131,7 +3131,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_17_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart 2165.533 {y} 2111.2791 {z} 85.0 {heading} 176.0 {citiesPassed} 0
+override_next_restart 2165.533 {y} 2111.2791 {z} 85.0 {heading} 176.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -3260,7 +3260,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_19_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart 2018.827 {y} -1115.787 {z} 0.8219 {heading} 251.0 {citiesPassed} 0
+override_next_restart 2018.827 {y} -1115.787 {z} 0.8219 {heading} 251.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -3332,7 +3332,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_20_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart 2018.827 {y} -1115.787 {z} 0.8219 {heading} 251.0 {citiesPassed} 0
+override_next_restart 2018.827 {y} -1115.787 {z} 0.8219 {heading} 251.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -3412,7 +3412,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_21_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0 {citiesPassed} 0
+override_next_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -3492,7 +3492,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_22_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0 {citiesPassed} 0
+override_next_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -3572,7 +3572,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_23_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0 {citiesPassed} 0
+override_next_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -3652,7 +3652,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_24_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0 {citiesPassed} 0
+override_next_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -3728,7 +3728,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @START24_2_187
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0 {citiesPassed} 0
+override_next_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -3808,7 +3808,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_25_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0 {citiesPassed} 0
+override_next_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -3963,7 +3963,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_26_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0 {citiesPassed} 0
+override_next_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -4043,7 +4043,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_27_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0 {citiesPassed} 0
+override_next_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -4125,7 +4125,7 @@ goto_if_false @Noname_28_11
 set_player_model $PLAYER_CHAR {modelId} 155
 
 :Noname_28_39
-add_hospital_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0 {citiesPassed} 0
+override_next_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -4205,7 +4205,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_29_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0 {citiesPassed} 0
+override_next_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -4287,7 +4287,7 @@ goto_if_false @Noname_30_11
 set_player_model $PLAYER_CHAR {modelId} 155
 
 :Noname_30_39
-add_hospital_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0 {citiesPassed} 0
+override_next_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -4369,7 +4369,7 @@ goto_if_false @Noname_31_11
 set_player_model $PLAYER_CHAR {modelId} 155
 
 :Noname_31_39
-add_hospital_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0 {citiesPassed} 0
+override_next_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -4450,7 +4450,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_32_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart -155.6889 {y} -2278.595 {z} 4.4411 {heading} 55.0 {citiesPassed} 0
+override_next_restart -155.6889 {y} -2278.595 {z} 4.4411 {heading} 55.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -4520,7 +4520,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_33_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart -2079.5029 {y} -1463.64 {z} 14.0 {heading} 55.0 {citiesPassed} 0
+override_next_restart -2079.5029 {y} -1463.64 {z} 14.0 {heading} 55.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -4601,7 +4601,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_34_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart -2079.5029 {y} -1463.64 {z} 14.0 {heading} 55.0 {citiesPassed} 0
+override_next_restart -2079.5029 {y} -1463.64 {z} 14.0 {heading} 55.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -4683,7 +4683,7 @@ goto_if_false @Noname_35_11
 set_player_model $PLAYER_CHAR {modelId} 155
 
 :Noname_35_39
-add_hospital_restart -2079.5029 {y} -1463.64 {z} 14.0 {heading} 55.0 {citiesPassed} 0
+override_next_restart -2079.5029 {y} -1463.64 {z} 14.0 {heading} 55.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -4763,7 +4763,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_36_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart -2079.5029 {y} -1463.64 {z} 14.0 {heading} 55.0 {citiesPassed} 0
+override_next_restart -2079.5029 {y} -1463.64 {z} 14.0 {heading} 55.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -4843,7 +4843,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_37_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0 {citiesPassed} 0
+override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -4923,7 +4923,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_38_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0 {citiesPassed} 0
+override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -5003,7 +5003,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_39_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0 {citiesPassed} 0
+override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -5083,7 +5083,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_40_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0 {citiesPassed} 0
+override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -5163,7 +5163,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_41_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0 {citiesPassed} 0
+override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -5243,7 +5243,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_42_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0 {citiesPassed} 0
+override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -5323,8 +5323,8 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_43_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0 {citiesPassed} 0
-add_hospital_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0 {citiesPassed} 0
+override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
+override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -5404,7 +5404,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_44_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0 {citiesPassed} 0
+override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -5484,7 +5484,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_45_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0 {citiesPassed} 0
+override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -5564,7 +5564,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_46_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0 {citiesPassed} 0
+override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -5644,7 +5644,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_47_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0 {citiesPassed} 0
+override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -5724,7 +5724,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_48_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0 {citiesPassed} 0
+override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -5804,7 +5804,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_49_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0 {citiesPassed} 0
+override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -5884,7 +5884,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_50_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0 {citiesPassed} 0
+override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -5964,7 +5964,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_51_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0 {citiesPassed} 0
+override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -6046,7 +6046,7 @@ goto_if_false @Noname_52_11
 set_player_model $PLAYER_CHAR {modelId} 155
 
 :Noname_52_39
-add_hospital_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0 {citiesPassed} 0
+override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
@@ -6221,7 +6221,7 @@ if
   has_model_loaded #WMYPIZZ
 goto_if_false @Noname_53_11
 set_player_model $PLAYER_CHAR {modelId} 155
-add_hospital_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0 {citiesPassed} 0
+override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
 switch_audio_zone "CHILD" {state} False
 switch_audio_zone "OPORT" {state} False
 switch_audio_zone "SAVEL" {state} False
