@@ -9107,6 +9107,36 @@ change_blip_colour $FMAR {color} BlipColor.Green
 wait 8000
 print_now 'MISS_19' {time} 6000 {flag} 1 // Press W and Alt to walk slowly. Hold Space yo run.
 
+:MISSION_FIX
+wait 0
+if
+  locate_char_any_means_2d $MOTHER {x} -933.8073 {y} -806.0117 {xRadius} 5.0 {yRadius} 5.0 {drawSphere} False
+goto_if_false @MISSION_FIX
+  
+task_stand_still $MOTHER {time} -1
+  
+// Check if any follower got stuck and teleport them if they are
+if not locate_char_any_means_2d $FATHER {x} -933.8073 {y} -806.0117 {xRadius} 150.0 {yRadius} 150.0 {drawSphere} False
+then
+  set_char_coordinates $FATHER {x} -977.8535 {y} -827.8632 {z} 13.9696
+end
+
+if not locate_char_any_means_2d $BRO1 {x} -933.8073 {y} -806.0117 {xRadius} 150.0 {yRadius} 150.0 {drawSphere} False
+then
+  set_char_coordinates $BRO1 {x} -971.1887 {y} -834.5587 {z} 13.8710
+end
+
+if not locate_char_any_means_2d $BRO2 {x} -933.8073 {y} -806.0117 {xRadius} 150.0 {yRadius} 150.0 {drawSphere} False
+then
+  set_char_coordinates $BRO2 {x} -963.2772 {y} -840.0804 {z} 13.9108
+end
+
+if not locate_char_any_means_2d $BRO3 {x} -933.8073 {y} -806.0117 {xRadius} 150.0 {yRadius} 150.0 {drawSphere} False
+then
+  set_char_coordinates $BRO3 {x} -963.5823 {y} -822.6049 {z} 13.9370
+end
+
+
 :MISSION_1841
 wait 0
 if and
@@ -9115,7 +9145,7 @@ if and
   locate_char_any_means_2d $BRO1 {x} -933.8073 {y} -806.0117 {xRadius} 10.0 {yRadius} 10.0 {drawSphere} False
   locate_char_any_means_2d $BRO2 {x} -933.8073 {y} -806.0117 {xRadius} 10.0 {yRadius} 10.0 {drawSphere} False
   locate_char_any_means_2d $BRO3 {x} -933.8073 {y} -806.0117 {xRadius} 10.0 {yRadius} 10.0 {drawSphere} False
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -933.8073 {y} -806.0117 {xRadius} 6.0 {yRadius} 6.0 {drawSphere} False
+  locate_char_any_means_2d $PLAYER_ACTOR {x} -933.8073 {y} -806.0117 {xRadius} 10.0 {yRadius} 10.0 {drawSphere} False
 goto_if_false @MISSION_1841
 wait 0
 switch_widescreen True
