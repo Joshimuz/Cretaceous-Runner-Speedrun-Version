@@ -21913,6 +21913,20 @@ goto @MISSION35_1015
 :MISSION35_1015
 wait 0
 if and
+    IS_BUTTON_PRESSED 0 {padID} 15
+    not IS_CHAR_HOLDING_OBJECT $PLAYER_ACTOR {object} $EGG1
+goto_if_false @MISSION35_SRV_1
+TASK_COMPLEX_PICKUP_OBJECT $PLAYER_ACTOR {object} $EGG1
+wait 500
+:MISSION35_SRV_1
+if and
+    IS_BUTTON_PRESSED 0 {padID} 15
+    IS_CHAR_HOLDING_OBJECT $PLAYER_ACTOR {object} $EGG1
+goto_if_false @MISSION35_SRV_2
+DROP_OBJECT $PLAYER_ACTOR 1
+wait 500
+:MISSION35_SRV_2
+if and
   not is_char_dead $PLAYER_ACTOR
   not is_char_dead $DROMEO_35_1
   not is_char_dead $DROMEO_35_2
@@ -21928,6 +21942,7 @@ if and
   locate_char_any_means_2d $PLAYER_ACTOR {x} -2106.9309 {y} -1564.004 {xRadius} 2.0 {yRadius} 2.0 {drawSphere} False
 goto_if_false @MISSION35_1015
 wait 0
+DROP_OBJECT $PLAYER_ACTOR 1
 remove_blip $RADAR_MISS_35_2
 remove_blip $EGG1MARK
 remove_sphere $RADAR_SPHERE_35_2
