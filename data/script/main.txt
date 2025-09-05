@@ -7896,7 +7896,7 @@ goto_if_false @BEAT2_73
 wait 100
 $BEAT2 = create_char PedType.CivMale {modelId} #MALE01 {x} -2250.031 {y} -856.5674 {z} 4.974
 set_char_heading $BEAT2 {heading} 294.0
-$BEAT3 = create_char PedType.CivMale {modelId} #MALE01 {x} -1794.0791 {y} -842.2501 {z} 4.96
+$BEAT3 = create_char PedType.CivMale {modelId} #MALE01 {x} -2194.0791 {y} -842.2501 {z} 4.96
 set_char_heading $BEAT3 {heading} 95.0
 task_kill_char_on_foot $BEAT2 {target} $BEAT3
 task_kill_char_on_foot $BEAT3 {target} $BEAT2
@@ -7956,7 +7956,7 @@ if and
   not does_char_exist $TREX2
   $PASSED_MISSIONS <> 55
   $PASSED_MISSIONS <> 56
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -2011.478 {y} -1764.199 {xRadius} 150.0 {yRadius} 150.0 {drawSphere} False
+  locate_char_any_means_2d $PLAYER_ACTOR {x} -2011.478 {y} -2164.199 {xRadius} 150.0 {yRadius} 150.0 {drawSphere} False
 goto_if_false @TREX2
 wait 0
 request_model #VWMYBOX
@@ -9261,6 +9261,7 @@ wait 13300
 
 :MISSION_SRV_CSSKIP_1
 skip_cutscene_end
+CAMERA_RESET_NEW_SCRIPTABLES
 set_player_control $PLAYER_CHAR {state} True
 switch_widescreen False
 $WIDE = 0
@@ -21216,6 +21217,7 @@ force_weather_now WeatherType.ExtraSunnyLa
 release_weather 
 set_time_of_day 7 {minutes} 0
 do_fade 2000 {direction} Fade.In
+skip_cutscene_start_internal @MISSION32_SRV_CSSKIP_1
 switch_widescreen True
 $WIDE = 1
 set_player_control $PLAYER_CHAR {state} False
@@ -21302,6 +21304,9 @@ wait 6000
 do_fade 2000 {direction} Fade.Out
 wait 2000
 wait 0
+:MISSION32_SRV_CSSKIP_1
+skip_cutscene_end
+CAMERA_RESET_NEW_SCRIPTABLES
 request_animation "GANGS"
 request_animation "BF_INJECTION"
 request_model #DWMYLC1
@@ -21327,7 +21332,7 @@ $DROMEO_32_1 = create_char PedType.CivMale {modelId} #HMYCR {x} -2254.2781 {y} -
 set_char_heading $DROMEO_32_1 {heading} 269.0
 $DROMEO_32_2 = create_char PedType.CivMale {modelId} #OMOST {x} -2253.6001 {y} -1589.458 {z} 4.1
 set_char_heading $DROMEO_32_2 {heading} 277.0
-$ANKILO_32_1 = create_char PedType.CivMale {modelId} #DWMYLC1 {x} -2164.095 {y} -1629.502 {z} 8.2
+$ANKILO_32_1 = create_char PedType.CivMale {modelId} #DWMYLC1 {x} -1764.095 {y} -1629.502 {z} 8.2
 set_char_heading $ANKILO_32_1 {heading} 82.0
 set_char_health $ANKILO_32_1 {health} 5000
 set_fixed_camera_position -2240.1101 {y} -1458.079 {z} 18.7717 {upVecOffsetX} 0.0 {upVecOffsetY} 0.0 {upVecOffsetZ} 0.0
@@ -21392,7 +21397,7 @@ if and
 goto_if_false @MISSION32_3107
 wait 0
 if 
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -2164.095 {y} -1629.502 {xRadius} 20.0 {yRadius} 20.0 {drawSphere} False
+  locate_char_any_means_2d $PLAYER_ACTOR {x} -1764.095 {y} -1629.502 {xRadius} 20.0 {yRadius} 20.0 {drawSphere} False
 goto_if_false @MISSION32_2499
 wait 0
 $RADAR_MISS_32_2 = add_blip_for_coord -1672.597 {y} -1661.137 {z} 8.6764
