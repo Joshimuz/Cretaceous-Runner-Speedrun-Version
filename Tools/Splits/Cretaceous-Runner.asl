@@ -171,26 +171,16 @@ split {
     // Only forward movement matters
     if (curr <= prev) return false;
 
-    // Get the current active split index from LiveSplit
-    int currentSplitIndex = timer.CurrentSplitIndex + 1;
-    if (currentSplitIndex < 0 || currentSplitIndex >= timer.Run.Count) return false;
+    if (curr == 32) return false; // Weird 32nd mission which is just a cutscene without a name
 
-    if(currentSplitIndex > 31) currentSplitIndex++;
-
-    // Check if we've already split for this mission
-    if (vars.seenSplits.Contains(currentSplitIndex)) {
-        return false; // Already split for this mission, don't split again
-    }
+    if (vars.seenSplits.Contains(curr)) return false; // Already split for this mission, don't split again
 
     // Check if this mission is enabled in settings
-    string settingId = "ms_" + currentSplitIndex;
+    string settingId = "ms_" + curr;
     if (!settings[settingId]) return false;
     
-    // Only split if the current PASSED_MISSIONS matches the expected mission number
-    if (curr != currentSplitIndex) return false;
-    
     // Mark this split as completed to prevent duplicate splits
-    vars.seenSplits.Add(currentSplitIndex);
+    vars.seenSplits.Add(curr);
     
     return true;
 }

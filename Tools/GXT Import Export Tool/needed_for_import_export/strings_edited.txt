@@ -1,4 +1,5 @@
 [MAIN]
+SRV_001="Wow that was such a long journey."
 FEP_STA=~g~Stats
 CUT74=STEAL_4
 FEC_MSL=LMB
