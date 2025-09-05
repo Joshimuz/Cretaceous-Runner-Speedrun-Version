@@ -9234,6 +9234,7 @@ goto @MISSION_2767
 
 :MISSION_2767
 force_weather_now WeatherType.ExtraSunnySf
+skip_cutscene_start_internal @MISSION_SRV_CSSKIP_1
 set_player_control $PLAYER_CHAR {state} False
 wait 0
 switch_widescreen True
@@ -9257,6 +9258,9 @@ camera_set_vector_track -1131.043 {fromY} 289.054 {fromZ} 0.4 {toX} -765.3524 {t
 wait 0
 print_now 'MISS_22' {time} 13000 {flag} 1 // But don't feel safety here. Your enemys are Troodons and Tyrannosaurus. Other dinosaurs of Cantera explore youself.
 wait 13300
+
+:MISSION_SRV_CSSKIP_1
+skip_cutscene_end
 set_player_control $PLAYER_CHAR {state} True
 switch_widescreen False
 $WIDE = 0
