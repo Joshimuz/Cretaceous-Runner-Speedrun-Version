@@ -25336,21 +25336,22 @@ if and
   has_model_loaded #GREEN_GLOOP
 goto_if_false @MISSION40_236
 wait 0
-set_fixed_camera_position -2134.3059 {y} -1446.793 {z} 16.5378 {upVecOffsetX} 0.0 {upVecOffsetY} 0.0 {upVecOffsetZ} 0.0
-point_camera_at_point -2132.2 {y} -1449.672 {z} 16.4091 {switchStyle} SwitchType.JumpCut
-do_fade 2000 {direction} Fade.In
-print_with_number_big 'MIS_410' {num} 0 {duration} 5000 {style} TextStyle.Middle // ~b~Future  depends  on  You
-wait 5000
-do_fade 2000 {direction} Fade.Out
-wait 2000
-camera_set_vector_move -1885.275 {fromY} -1384.9351 {fromZ} 12.1802 {toX} -1873.823 {toY} -1389.887 {toZ} 9.1802 {time} 57700 {ease} 2
-camera_set_vector_track -1886.8311 {fromY} -1394.828 {fromZ} 9.1802 {toX} -1884.8311 {toY} -1394.828 {toZ} 9.1802 {time} 57700 {ease} 2
 $DROMEO_40_1 = create_char PedType.CivMale {modelId} #HMYCR {x} -1881.828 {y} -1394.5291 {z} 8.5
 set_char_heading $DROMEO_40_1 {heading} 36.0
 $DROMEO_40_2 = create_char PedType.CivMale {modelId} #OMOST {x} -1882.984 {y} -1394.759 {z} 8.5
 set_char_heading $DROMEO_40_2 {heading} 33.0
 set_char_coordinates $PLAYER_ACTOR {x} -1886.408 {y} -1390.48 {z} 8.5
 set_char_heading $PLAYER_ACTOR {heading} 226.9178
+set_fixed_camera_position -2134.3059 {y} -1446.793 {z} 16.5378 {upVecOffsetX} 0.0 {upVecOffsetY} 0.0 {upVecOffsetZ} 0.0
+point_camera_at_point -2132.2 {y} -1449.672 {z} 16.4091 {switchStyle} SwitchType.JumpCut
+do_fade 2000 {direction} Fade.In
+print_with_number_big 'MIS_410' {num} 0 {duration} 5000 {style} TextStyle.Middle // ~b~Future  depends  on  You
+skip_cutscene_start_internal @MISSION40_SRV_CSSKIP_1
+wait 5000
+do_fade 2000 {direction} Fade.Out
+wait 2000
+camera_set_vector_move -1885.275 {fromY} -1384.9351 {fromZ} 12.1802 {toX} -1873.823 {toY} -1389.887 {toZ} 9.1802 {time} 57700 {ease} 2
+camera_set_vector_track -1886.8311 {fromY} -1394.828 {fromZ} 9.1802 {toX} -1884.8311 {toY} -1394.828 {toZ} 9.1802 {time} 57700 {ease} 2
 do_fade 2000 {direction} Fade.In
 wait 1000
 print_now 'MIS_411' {time} 4000 {flag} 1 // "I've collect that stones you need..."
@@ -25383,6 +25384,10 @@ wait 2500
 print_now 'MIS_420' {time} 9000 {flag} 1 // "A businessman, living in Liberty City, arrives City of Terrene. He find Tyrannosaurus DNA and with Canterian sponsors he want to revive Tyrannosaurus. Kill him!"
 task_play_anim $DROMEO_40_1 {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 9000
 wait 9000
+
+:MISSION40_SRV_CSSKIP_1
+skip_cutscene_end
+CAMERA_RESET_NEW_SCRIPTABLES
 switch_widescreen False
 $WIDE = 0
 set_player_control $PLAYER_CHAR {state} True
