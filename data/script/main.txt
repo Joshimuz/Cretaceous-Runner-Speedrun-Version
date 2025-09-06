@@ -30408,20 +30408,34 @@ task_hand_gesture $DROMEO_50_2 {target} $PLAYER_ACTOR
 print_now 'MIS_473' {time} 3000 {flag} 1 // "Yes, I have. Run away!"
 task_play_anim $PLAYER_ACTOR {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 3000
 wait 3000
-task_go_to_object $DROMEO_50_1 {object} $OBJ1 {time} -1 {radius} 10.0
-task_go_to_object $DROMEO_50_2 {object} $OBJ1 {time} -1 {radius} 10.0
-task_go_to_object $DROMEO_50_3 {object} $OBJ1 {time} -1 {radius} 10.0
-task_go_to_object $DROMEO_50_4 {object} $OBJ1 {time} -1 {radius} 10.0
-task_go_to_object $DROMEO_50_5 {object} $OBJ1 {time} -1 {radius} 10.0
-task_go_to_object $DROMEO_50_6 {object} $OBJ1 {time} -1 {radius} 10.0
-task_go_to_object $DROMEO_50_7 {object} $OBJ1 {time} -1 {radius} 10.0
-task_go_to_object $DROMEO_50_8 {object} $OBJ1 {time} -1 {radius} 10.0
-task_go_to_object $DROMEO_50_9 {object} $OBJ1 {time} -1 {radius} 10.0
-task_go_to_object $DROMEO_50_10 {object} $OBJ1 {time} -1 {radius} 10.0
-task_go_to_object $DROMEO_50_11 {object} $OBJ1 {time} -1 {radius} 10.0
-task_go_to_object $DROMEO_50_12 {object} $OBJ1 {time} -1 {radius} 10.0
-task_go_to_object $DROMEO_50_15 {object} $OBJ1 {time} -1 {radius} 10.0
-task_go_to_object $DROMEO_50_16 {object} $OBJ1 {time} -1 {radius} 10.0
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_1 {x} -2235.5659 {y} -1899.301 {z} 60.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_2 {x} -2235.5659 {y} -1899.301 {z} 60.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_3 {x} -2235.5659 {y} -1899.301 {z} 60.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_4 {x} -2235.5659 {y} -1899.301 {z} 60.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_5 {x} -2235.5659 {y} -1899.301 {z} 60.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_6 {x} -2235.5659 {y} -1899.301 {z} 60.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_7 {x} -2235.5659 {y} -1899.301 {z} 60.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_8 {x} -2235.5659 {y} -1899.301 {z} 60.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_9 {x} -2235.5659 {y} -1899.301 {z} 60.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_10 {x} -2235.5659 {y} -1899.301 {z} 60.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_11 {x} -2235.5659 {y} -1899.301 {z} 60.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_12 {x} -2235.5659 {y} -1899.301 {z} 60.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_15 {x} -2235.5659 {y} -1899.301 {z} 60.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_16 {x} -2235.5659 {y} -1899.301 {z} 60.0 {mode} 7 {time} -1
+//task_go_to_object $DROMEO_50_1 {object} $OBJ1 {time} -1 {radius} 10.0
+//task_go_to_object $DROMEO_50_2 {object} $OBJ1 {time} -1 {radius} 10.0
+//task_go_to_object $DROMEO_50_3 {object} $OBJ1 {time} -1 {radius} 10.0
+//task_go_to_object $DROMEO_50_4 {object} $OBJ1 {time} -1 {radius} 10.0
+//task_go_to_object $DROMEO_50_5 {object} $OBJ1 {time} -1 {radius} 10.0
+//task_go_to_object $DROMEO_50_6 {object} $OBJ1 {time} -1 {radius} 10.0
+//task_go_to_object $DROMEO_50_7 {object} $OBJ1 {time} -1 {radius} 10.0
+//task_go_to_object $DROMEO_50_8 {object} $OBJ1 {time} -1 {radius} 10.0
+//task_go_to_object $DROMEO_50_9 {object} $OBJ1 {time} -1 {radius} 10.0
+//task_go_to_object $DROMEO_50_10 {object} $OBJ1 {time} -1 {radius} 10.0
+//task_go_to_object $DROMEO_50_11 {object} $OBJ1 {time} -1 {radius} 10.0
+//task_go_to_object $DROMEO_50_12 {object} $OBJ1 {time} -1 {radius} 10.0
+//task_go_to_object $DROMEO_50_15 {object} $OBJ1 {time} -1 {radius} 10.0
+//task_go_to_object $DROMEO_50_16 {object} $OBJ1 {time} -1 {radius} 10.0
 wait 1500
 print_now 'MIS_474' {time} 3000 {flag} 1 // "Take cover on the Canyon."
 task_play_anim $PLAYER_ACTOR {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 3000
@@ -30480,20 +30494,34 @@ clear_char_tasks $DROMEO_50_11
 clear_char_tasks $DROMEO_50_12
 clear_char_tasks $DROMEO_50_15
 clear_char_tasks $DROMEO_50_16
-task_go_to_object $DROMEO_50_1 {object} $OBJ2 {time} -1 {radius} 9.0
-task_go_to_object $DROMEO_50_2 {object} $OBJ2 {time} -1 {radius} 9.0
-task_go_to_object $DROMEO_50_3 {object} $OBJ2 {time} -1 {radius} 9.0
-task_go_to_object $DROMEO_50_4 {object} $OBJ2 {time} -1 {radius} 9.0
-task_go_to_object $DROMEO_50_5 {object} $OBJ2 {time} -1 {radius} 9.0
-task_go_to_object $DROMEO_50_6 {object} $OBJ2 {time} -1 {radius} 9.0
-task_go_to_object $DROMEO_50_7 {object} $OBJ2 {time} -1 {radius} 9.0
-task_go_to_object $DROMEO_50_8 {object} $OBJ2 {time} -1 {radius} 9.0
-task_go_to_object $DROMEO_50_9 {object} $OBJ2 {time} -1 {radius} 9.0
-task_go_to_object $DROMEO_50_10 {object} $OBJ2 {time} -1 {radius} 9.0
-task_go_to_object $DROMEO_50_11 {object} $OBJ2 {time} -1 {radius} 9.0
-task_go_to_object $DROMEO_50_12 {object} $OBJ2 {time} -1 {radius} 9.0
-task_go_to_object $DROMEO_50_15 {object} $OBJ2 {time} -1 {radius} 9.0
-task_go_to_object $DROMEO_50_16 {object} $OBJ2 {time} -1 {radius} 9.0
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_1 {x} -2290.1279 {y} -1963.97 {z} 65.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_2 {x} -2290.1279 {y} -1963.97 {z} 65.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_3 {x} -2290.1279 {y} -1963.97 {z} 65.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_4 {x} -2290.1279 {y} -1963.97 {z} 65.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_5 {x} -2290.1279 {y} -1963.97 {z} 65.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_6 {x} -2290.1279 {y} -1963.97 {z} 65.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_7 {x} -2290.1279 {y} -1963.97 {z} 65.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_8 {x} -2290.1279 {y} -1963.97 {z} 65.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_9 {x} -2290.1279 {y} -1963.97 {z} 65.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_10 {x} -2290.1279 {y} -1963.97 {z} 65.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_11 {x} -2290.1279 {y} -1963.97 {z} 65.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_12 {x} -2290.1279 {y} -1963.97 {z} 65.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_15 {x} -2290.1279 {y} -1963.97 {z} 65.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_16 {x} -2290.1279 {y} -1963.97 {z} 65.0 {mode} 7 {time} -1
+//task_go_to_object $DROMEO_50_1 {object} $OBJ2 {time} -1 {radius} 9.0
+//task_go_to_object $DROMEO_50_2 {object} $OBJ2 {time} -1 {radius} 9.0
+//task_go_to_object $DROMEO_50_3 {object} $OBJ2 {time} -1 {radius} 9.0
+//task_go_to_object $DROMEO_50_4 {object} $OBJ2 {time} -1 {radius} 9.0
+//task_go_to_object $DROMEO_50_5 {object} $OBJ2 {time} -1 {radius} 9.0
+//task_go_to_object $DROMEO_50_6 {object} $OBJ2 {time} -1 {radius} 9.0
+//task_go_to_object $DROMEO_50_7 {object} $OBJ2 {time} -1 {radius} 9.0
+//task_go_to_object $DROMEO_50_8 {object} $OBJ2 {time} -1 {radius} 9.0
+//task_go_to_object $DROMEO_50_9 {object} $OBJ2 {time} -1 {radius} 9.0
+//task_go_to_object $DROMEO_50_10 {object} $OBJ2 {time} -1 {radius} 9.0
+//task_go_to_object $DROMEO_50_11 {object} $OBJ2 {time} -1 {radius} 9.0
+//task_go_to_object $DROMEO_50_12 {object} $OBJ2 {time} -1 {radius} 9.0
+//task_go_to_object $DROMEO_50_15 {object} $OBJ2 {time} -1 {radius} 9.0
+//task_go_to_object $DROMEO_50_16 {object} $OBJ2 {time} -1 {radius} 9.0
 goto @MISSION50_5538
 
 :MISSION50_5538
@@ -30530,20 +30558,34 @@ if and
   locate_char_any_means_2d $DROMEO_50_16 {x} -2290.1279 {y} -1963.97 {xRadius} 10.0 {yRadius} 10.0 {drawSphere} False
 goto_if_false @MISSION50_5800
 wait 0
-task_go_to_object $DROMEO_50_1 {object} $OBJ3 {time} -1 {radius} 9.0
-task_go_to_object $DROMEO_50_2 {object} $OBJ3 {time} -1 {radius} 9.0
-task_go_to_object $DROMEO_50_3 {object} $OBJ3 {time} -1 {radius} 9.0
-task_go_to_object $DROMEO_50_4 {object} $OBJ3 {time} -1 {radius} 9.0
-task_go_to_object $DROMEO_50_5 {object} $OBJ3 {time} -1 {radius} 9.0
-task_go_to_object $DROMEO_50_6 {object} $OBJ3 {time} -1 {radius} 9.0
-task_go_to_object $DROMEO_50_7 {object} $OBJ3 {time} -1 {radius} 9.0
-task_go_to_object $DROMEO_50_8 {object} $OBJ3 {time} -1 {radius} 9.0
-task_go_to_object $DROMEO_50_9 {object} $OBJ3 {time} -1 {radius} 9.0
-task_go_to_object $DROMEO_50_10 {object} $OBJ3 {time} -1 {radius} 9.0
-task_go_to_object $DROMEO_50_11 {object} $OBJ3 {time} -1 {radius} 9.0
-task_go_to_object $DROMEO_50_12 {object} $OBJ3 {time} -1 {radius} 9.0
-task_go_to_object $DROMEO_50_15 {object} $OBJ3 {time} -1 {radius} 9.0
-task_go_to_object $DROMEO_50_16 {object} $OBJ3 {time} -1 {radius} 9.0
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_1 {x} -2279.8711 {y} -2027.224 {z} 57.4049 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_2 {x} -2279.8711 {y} -2027.224 {z} 57.4049 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_3 {x} -2279.8711 {y} -2027.224 {z} 57.4049 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_4 {x} -2279.8711 {y} -2027.224 {z} 57.4049 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_5 {x} -2279.8711 {y} -2027.224 {z} 57.4049 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_6 {x} -2279.8711 {y} -2027.224 {z} 57.4049 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_7 {x} -2279.8711 {y} -2027.224 {z} 57.4049 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_8 {x} -2279.8711 {y} -2027.224 {z} 57.4049 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_9 {x} -2279.8711 {y} -2027.224 {z} 57.4049 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_10 {x} -2279.8711 {y} -2027.224 {z} 57.4049 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_11 {x} -2279.8711 {y} -2027.224 {z} 57.4049 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_12 {x} -2279.8711 {y} -2027.224 {z} 57.4049 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_15 {x} -2279.8711 {y} -2027.224 {z} 57.4049 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_16 {x} -2279.8711 {y} -2027.224 {z} 57.4049 {mode} 7 {time} -1
+//task_go_to_object $DROMEO_50_1 {object} $OBJ3 {time} -1 {radius} 9.0
+//task_go_to_object $DROMEO_50_2 {object} $OBJ3 {time} -1 {radius} 9.0
+//task_go_to_object $DROMEO_50_3 {object} $OBJ3 {time} -1 {radius} 9.0
+//task_go_to_object $DROMEO_50_4 {object} $OBJ3 {time} -1 {radius} 9.0
+//task_go_to_object $DROMEO_50_5 {object} $OBJ3 {time} -1 {radius} 9.0
+//task_go_to_object $DROMEO_50_6 {object} $OBJ3 {time} -1 {radius} 9.0
+//task_go_to_object $DROMEO_50_7 {object} $OBJ3 {time} -1 {radius} 9.0
+//task_go_to_object $DROMEO_50_8 {object} $OBJ3 {time} -1 {radius} 9.0
+//task_go_to_object $DROMEO_50_9 {object} $OBJ3 {time} -1 {radius} 9.0
+//task_go_to_object $DROMEO_50_10 {object} $OBJ3 {time} -1 {radius} 9.0
+//task_go_to_object $DROMEO_50_11 {object} $OBJ3 {time} -1 {radius} 9.0
+//task_go_to_object $DROMEO_50_12 {object} $OBJ3 {time} -1 {radius} 9.0
+//task_go_to_object $DROMEO_50_15 {object} $OBJ3 {time} -1 {radius} 9.0
+//task_go_to_object $DROMEO_50_16 {object} $OBJ3 {time} -1 {radius} 9.0
 goto @MISSION50_6218
 
 :MISSION50_6218
@@ -30580,20 +30622,34 @@ if and
   locate_char_any_means_2d $DROMEO_50_16 {x} -2279.8711 {y} -2027.224 {xRadius} 10.0 {yRadius} 10.0 {drawSphere} False
 goto_if_false @MISSION50_6480
 wait 0
-task_go_to_object $DROMEO_50_1 {object} $OBJ4 {time} -1 {radius} 4.0
-task_go_to_object $DROMEO_50_2 {object} $OBJ4 {time} -1 {radius} 4.0
-task_go_to_object $DROMEO_50_3 {object} $OBJ4 {time} -1 {radius} 4.0
-task_go_to_object $DROMEO_50_4 {object} $OBJ4 {time} -1 {radius} 4.0
-task_go_to_object $DROMEO_50_5 {object} $OBJ4 {time} -1 {radius} 4.0
-task_go_to_object $DROMEO_50_6 {object} $OBJ4 {time} -1 {radius} 4.0
-task_go_to_object $DROMEO_50_7 {object} $OBJ4 {time} -1 {radius} 4.0
-task_go_to_object $DROMEO_50_8 {object} $OBJ4 {time} -1 {radius} 4.0
-task_go_to_object $DROMEO_50_9 {object} $OBJ4 {time} -1 {radius} 4.0
-task_go_to_object $DROMEO_50_10 {object} $OBJ4 {time} -1 {radius} 4.0
-task_go_to_object $DROMEO_50_11 {object} $OBJ4 {time} -1 {radius} 4.0
-task_go_to_object $DROMEO_50_12 {object} $OBJ4 {time} -1 {radius} 4.0
-task_go_to_object $DROMEO_50_15 {object} $OBJ4 {time} -1 {radius} 4.0
-task_go_to_object $DROMEO_50_16 {object} $OBJ4 {time} -1 {radius} 4.0
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_1 {x} -2239.9221 {y} -2058.2061 {z} 79.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_2 {x} -2239.9221 {y} -2058.2061 {z} 79.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_3 {x} -2239.9221 {y} -2058.2061 {z} 79.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_4 {x} -2239.9221 {y} -2058.2061 {z} 79.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_5 {x} -2239.9221 {y} -2058.2061 {z} 79.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_6 {x} -2239.9221 {y} -2058.2061 {z} 79.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_7 {x} -2239.9221 {y} -2058.2061 {z} 79.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_8 {x} -2239.9221 {y} -2058.2061 {z} 79.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_9 {x} -2239.9221 {y} -2058.2061 {z} 79.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_10 {x} -2239.9221 {y} -2058.2061 {z} 79.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_11 {x} -2239.9221 {y} -2058.2061 {z} 79.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_12 {x} -2239.9221 {y} -2058.2061 {z} 79.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_15 {x} -2239.9221 {y} -2058.2061 {z} 79.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_16 {x} -2239.9221 {y} -2058.2061 {z} 79.0 {mode} 7 {time} -1
+//task_go_to_object $DROMEO_50_1 {object} $OBJ4 {time} -1 {radius} 4.0
+//task_go_to_object $DROMEO_50_2 {object} $OBJ4 {time} -1 {radius} 4.0
+//task_go_to_object $DROMEO_50_3 {object} $OBJ4 {time} -1 {radius} 4.0
+//task_go_to_object $DROMEO_50_4 {object} $OBJ4 {time} -1 {radius} 4.0
+//task_go_to_object $DROMEO_50_5 {object} $OBJ4 {time} -1 {radius} 4.0
+//task_go_to_object $DROMEO_50_6 {object} $OBJ4 {time} -1 {radius} 4.0
+//task_go_to_object $DROMEO_50_7 {object} $OBJ4 {time} -1 {radius} 4.0
+//task_go_to_object $DROMEO_50_8 {object} $OBJ4 {time} -1 {radius} 4.0
+//task_go_to_object $DROMEO_50_9 {object} $OBJ4 {time} -1 {radius} 4.0
+//task_go_to_object $DROMEO_50_10 {object} $OBJ4 {time} -1 {radius} 4.0
+//task_go_to_object $DROMEO_50_11 {object} $OBJ4 {time} -1 {radius} 4.0
+//task_go_to_object $DROMEO_50_12 {object} $OBJ4 {time} -1 {radius} 4.0
+//task_go_to_object $DROMEO_50_15 {object} $OBJ4 {time} -1 {radius} 4.0
+//task_go_to_object $DROMEO_50_16 {object} $OBJ4 {time} -1 {radius} 4.0
 goto @MISSION50_6898
 
 :MISSION50_6898
@@ -30603,14 +30659,14 @@ if
 goto_if_false @MISSION50_12417
 wait 0
 if and
-  locate_char_any_means_2d $DROMEO_50_1 {x} -2239.9221 {y} -2058.2061 {xRadius} 4.1 {yRadius} 4.1 {drawSphere} False
-  locate_char_any_means_2d $DROMEO_50_2 {x} -2239.9221 {y} -2058.2061 {xRadius} 4.1 {yRadius} 4.1 {drawSphere} False
-  locate_char_any_means_2d $DROMEO_50_3 {x} -2239.9221 {y} -2058.2061 {xRadius} 4.1 {yRadius} 4.1 {drawSphere} False
-  locate_char_any_means_2d $DROMEO_50_4 {x} -2239.9221 {y} -2058.2061 {xRadius} 4.1 {yRadius} 4.1 {drawSphere} False
-  locate_char_any_means_2d $DROMEO_50_5 {x} -2239.9221 {y} -2058.2061 {xRadius} 4.1 {yRadius} 4.1 {drawSphere} False
-  locate_char_any_means_2d $DROMEO_50_6 {x} -2239.9221 {y} -2058.2061 {xRadius} 4.1 {yRadius} 4.1 {drawSphere} False
-  locate_char_any_means_2d $DROMEO_50_7 {x} -2239.9221 {y} -2058.2061 {xRadius} 4.1 {yRadius} 4.1 {drawSphere} False
-  locate_char_any_means_2d $DROMEO_50_15 {x} -2239.9221 {y} -2058.2061 {xRadius} 4.1 {yRadius} 4.1 {drawSphere} False
+  locate_char_any_means_2d $DROMEO_50_1 {x} -2239.9221 {y} -2058.2061 {xRadius} 5.1 {yRadius} 5.1 {drawSphere} False
+  locate_char_any_means_2d $DROMEO_50_2 {x} -2239.9221 {y} -2058.2061 {xRadius} 5.1 {yRadius} 5.1 {drawSphere} False
+  locate_char_any_means_2d $DROMEO_50_3 {x} -2239.9221 {y} -2058.2061 {xRadius} 5.1 {yRadius} 5.1 {drawSphere} False
+  locate_char_any_means_2d $DROMEO_50_4 {x} -2239.9221 {y} -2058.2061 {xRadius} 5.1 {yRadius} 5.1 {drawSphere} False
+  locate_char_any_means_2d $DROMEO_50_5 {x} -2239.9221 {y} -2058.2061 {xRadius} 5.1 {yRadius} 5.1 {drawSphere} False
+  locate_char_any_means_2d $DROMEO_50_6 {x} -2239.9221 {y} -2058.2061 {xRadius} 5.1 {yRadius} 5.1 {drawSphere} False
+  locate_char_any_means_2d $DROMEO_50_7 {x} -2239.9221 {y} -2058.2061 {xRadius} 5.1 {yRadius} 5.1 {drawSphere} False
+  locate_char_any_means_2d $DROMEO_50_15 {x} -2239.9221 {y} -2058.2061 {xRadius} 5.1 {yRadius} 5.1 {drawSphere} False
 goto_if_false @MISSION50_6898
 wait 0
 goto @MISSION50_7160
@@ -30622,28 +30678,42 @@ if
 goto_if_false @MISSION50_12417
 wait 0
 if and
-  locate_char_any_means_2d $DROMEO_50_8 {x} -2239.9221 {y} -2058.2061 {xRadius} 4.1 {yRadius} 4.1 {drawSphere} False
-  locate_char_any_means_2d $DROMEO_50_9 {x} -2239.9221 {y} -2058.2061 {xRadius} 4.1 {yRadius} 4.1 {drawSphere} False
-  locate_char_any_means_2d $DROMEO_50_10 {x} -2239.9221 {y} -2058.2061 {xRadius} 4.1 {yRadius} 4.1 {drawSphere} False
-  locate_char_any_means_2d $DROMEO_50_11 {x} -2239.9221 {y} -2058.2061 {xRadius} 4.1 {yRadius} 4.1 {drawSphere} False
-  locate_char_any_means_2d $DROMEO_50_12 {x} -2239.9221 {y} -2058.2061 {xRadius} 4.1 {yRadius} 4.1 {drawSphere} False
-  locate_char_any_means_2d $DROMEO_50_16 {x} -2239.9221 {y} -2058.2061 {xRadius} 4.1 {yRadius} 4.1 {drawSphere} False
+  locate_char_any_means_2d $DROMEO_50_8 {x} -2239.9221 {y} -2058.2061 {xRadius} 5.1 {yRadius} 5.1 {drawSphere} False
+  locate_char_any_means_2d $DROMEO_50_9 {x} -2239.9221 {y} -2058.2061 {xRadius} 5.1 {yRadius} 5.1 {drawSphere} False
+  locate_char_any_means_2d $DROMEO_50_10 {x} -2239.9221 {y} -2058.2061 {xRadius} 5.1 {yRadius} 5.1 {drawSphere} False
+  locate_char_any_means_2d $DROMEO_50_11 {x} -2239.9221 {y} -2058.2061 {xRadius} 5.1 {yRadius} 5.1 {drawSphere} False
+  locate_char_any_means_2d $DROMEO_50_12 {x} -2239.9221 {y} -2058.2061 {xRadius} 5.1 {yRadius} 5.1 {drawSphere} False
+  locate_char_any_means_2d $DROMEO_50_16 {x} -2239.9221 {y} -2058.2061 {xRadius} 5.1 {yRadius} 5.1 {drawSphere} False
 goto_if_false @MISSION50_7160
 wait 0
-task_go_to_object $DROMEO_50_1 {object} $OBJ5 {time} -1 {radius} 10.0
-task_go_to_object $DROMEO_50_2 {object} $OBJ5 {time} -1 {radius} 10.0
-task_go_to_object $DROMEO_50_3 {object} $OBJ5 {time} -1 {radius} 10.0
-task_go_to_object $DROMEO_50_4 {object} $OBJ5 {time} -1 {radius} 10.0
-task_go_to_object $DROMEO_50_5 {object} $OBJ5 {time} -1 {radius} 10.0
-task_go_to_object $DROMEO_50_6 {object} $OBJ5 {time} -1 {radius} 10.0
-task_go_to_object $DROMEO_50_7 {object} $OBJ5 {time} -1 {radius} 10.0
-task_go_to_object $DROMEO_50_8 {object} $OBJ5 {time} -1 {radius} 10.0
-task_go_to_object $DROMEO_50_9 {object} $OBJ5 {time} -1 {radius} 10.0
-task_go_to_object $DROMEO_50_10 {object} $OBJ5 {time} -1 {radius} 10.0
-task_go_to_object $DROMEO_50_11 {object} $OBJ5 {time} -1 {radius} 10.0
-task_go_to_object $DROMEO_50_12 {object} $OBJ5 {time} -1 {radius} 10.0
-task_go_to_object $DROMEO_50_15 {object} $OBJ5 {time} -1 {radius} 10.0
-task_go_to_object $DROMEO_50_16 {object} $OBJ5 {time} -1 {radius} 10.0
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_1 {x} -2184.5569 {y} -2009.613 {z} 107.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_2 {x} -2184.5569 {y} -2009.613 {z} 107.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_3 {x} -2184.5569 {y} -2009.613 {z} 107.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_4 {x} -2184.5569 {y} -2009.613 {z} 107.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_5 {x} -2184.5569 {y} -2009.613 {z} 107.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_6 {x} -2184.5569 {y} -2009.613 {z} 107.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_7 {x} -2184.5569 {y} -2009.613 {z} 107.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_8 {x} -2184.5569 {y} -2009.613 {z} 107.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_9 {x} -2184.5569 {y} -2009.613 {z} 107.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_10 {x} -2184.5569 {y} -2009.613 {z} 107.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_11 {x} -2184.5569 {y} -2009.613 {z} 107.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_12 {x} -2184.5569 {y} -2009.613 {z} 107.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_15 {x} -2184.5569 {y} -2009.613 {z} 107.0 {mode} 7 {time} -1
+TASK_GO_STRAIGHT_TO_COORD $DROMEO_50_16 {x} -2184.5569 {y} -2009.613 {z} 107.0 {mode} 7 {time} -1
+//task_go_to_object $DROMEO_50_1 {object} $OBJ5 {time} -1 {radius} 10.0
+//task_go_to_object $DROMEO_50_2 {object} $OBJ5 {time} -1 {radius} 10.0
+//task_go_to_object $DROMEO_50_3 {object} $OBJ5 {time} -1 {radius} 10.0
+//task_go_to_object $DROMEO_50_4 {object} $OBJ5 {time} -1 {radius} 10.0
+//task_go_to_object $DROMEO_50_5 {object} $OBJ5 {time} -1 {radius} 10.0
+//task_go_to_object $DROMEO_50_6 {object} $OBJ5 {time} -1 {radius} 10.0
+//task_go_to_object $DROMEO_50_7 {object} $OBJ5 {time} -1 {radius} 10.0
+//task_go_to_object $DROMEO_50_8 {object} $OBJ5 {time} -1 {radius} 10.0
+//task_go_to_object $DROMEO_50_9 {object} $OBJ5 {time} -1 {radius} 10.0
+//task_go_to_object $DROMEO_50_10 {object} $OBJ5 {time} -1 {radius} 10.0
+//task_go_to_object $DROMEO_50_11 {object} $OBJ5 {time} -1 {radius} 10.0
+//task_go_to_object $DROMEO_50_12 {object} $OBJ5 {time} -1 {radius} 10.0
+//task_go_to_object $DROMEO_50_15 {object} $OBJ5 {time} -1 {radius} 10.0
+//task_go_to_object $DROMEO_50_16 {object} $OBJ5 {time} -1 {radius} 10.0
 goto @MISSION50_7578
 
 :MISSION50_7578
