@@ -1470,24 +1470,24 @@ goto @MAIN_961
 script_name 'START0'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 0
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 0
 goto_if_false @START0
 override_next_restart -1207.408 {y} -862.5986 {z} 13.6354 {heading} 259.0
 $ONMISSION = 1
 load_and_launch_mission_internal 0
-terminate_this_script 
+terminate_this_script
 
 :START4
 script_name 'START4'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 1
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 1
 goto_if_false @START4
 do_fade 0 {direction} Fade.Out
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
 do_fade 2000 {direction} Fade.In
 wait 50
@@ -1516,18 +1516,18 @@ switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $ONMISSION = 1
 load_and_launch_mission_internal 1
-terminate_this_script 
+terminate_this_script
 
 :START5
 script_name 'START5'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 2
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 2
 goto_if_false @START5
 do_fade 0 {direction} Fade.Out
 wait 100
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
 do_fade 2000 {direction} Fade.In
 wait 50
@@ -1556,49 +1556,36 @@ switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $ONMISSION = 1
 load_and_launch_mission_internal 2
-terminate_this_script 
+terminate_this_script
 
 :START5_1
 script_name 'START5_1'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 3
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 3
 goto_if_false @START5_1
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START5_1_61
-
-:START5_1_61
-wait 0
-$ICONSAVE5_1 = add_sprite_blip_for_coord -2325.613 {y} -696.3745 {z} 5.8491 {sprite} RadarSprite.SaveGame
-$SAVE5_1 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -2325.613 {y} -696.3745 {z} 5.8491
-goto @START5_1_118
-
-:START5_1_118
-wait 0
-if 
-  has_pickup_been_collected $SAVE5_1
-goto_if_false @START5_1_118
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE5_1
-remove_pickup $SAVE5_1
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+request_collision {x} -2404.9529 {y} -756.9393
+load_all_models_now
+float $groundZ = get_ground_z_for_3d_coord {x} -2404.9529 {y} -756.9393 {z} 1000.0
+set_char_coordinates $PLAYER_ACTOR {x} -2404.9529 {y} -756.9393 {z} $groundZ
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_1 
-terminate_this_script 
+start_new_script @Noname_1
+terminate_this_script
 
 :Noname_1
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_1_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_1_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart -2319.5271 {y} -724.2954 {z} 6.4713 {heading} 6.0
@@ -1625,64 +1612,47 @@ switch_audio_zone "EXPLOR" {state} False
 switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_1_346
 
 :Noname_1_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -2404.9529 {y} -756.9393 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} -2404.9529 {y} -756.9393 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_1_346
 remove_blip $RADAR_MISS_5_1_1
 $WIDE = 0
 $ONMISSION = 1
 load_and_launch_mission_internal 3
-terminate_this_script 
+terminate_this_script
 
 :START7
 script_name 'START7'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 4
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 4
 goto_if_false @START7
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START7_53
-
-:START7_53
-wait 0
-$ICONSAVE5 = add_sprite_blip_for_coord -2328.8569 {y} -688.943 {z} 5.3659 {sprite} RadarSprite.SaveGame
-$SAVE5 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -2328.8569 {y} -688.9437 {z} 5.3659
-goto @START7_110
-
-:START7_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE5
-goto_if_false @START7_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE5
-remove_pickup $SAVE5
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_2 
-terminate_this_script 
+start_new_script @Noname_2
+terminate_this_script
 
 :Noname_2
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_2_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_2_11
 set_player_model $PLAYER_CHAR {modelId} 155
-set_camera_behind_player 
+set_camera_behind_player
 wait 50
 override_next_restart -2319.5271 {y} -724.2954 {z} 6.4713 {heading} 6.0
 switch_audio_zone "CHILD" {state} False
@@ -1709,49 +1679,36 @@ switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $ONMISSION = 1
 load_and_launch_mission_internal 4
-terminate_this_script 
+terminate_this_script
 
 :START8
 script_name 'START8'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 5
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 5
 goto_if_false @START8
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START8_53
-
-:START8_53
-wait 0
-$ICONSAVE7 = add_sprite_blip_for_coord -2129.1389 {y} 213.9114 {z} 15.5 {sprite} RadarSprite.SaveGame
-$SAVE7 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -2129.1389 {y} 213.9114 {z} 15.5
-goto @START8_110
-
-:START8_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE7
-goto_if_false @START8_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE7
-remove_pickup $SAVE7
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+request_collision {x} -1886.8521 {y} 340.4308
+load_all_models_now
+float $groundZ = get_ground_z_for_3d_coord {x} -1886.8521 {y} 340.4308 {z} 1000.0
+set_char_coordinates $PLAYER_ACTOR {x} -1886.8521 {y} 340.4308 {z} $groundZ
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_3 
-terminate_this_script 
+start_new_script @Noname_3
+terminate_this_script
 
 :Noname_3
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_3_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_3_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart -1903.024 {y} 330.411 {z} 35.0 {heading} 172.0
@@ -1778,60 +1735,47 @@ switch_audio_zone "EXPLOR" {state} False
 switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_3_346
 
 :Noname_3_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -1886.8521 {y} 340.4308 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} -1886.8521 {y} 340.4308 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_3_346
 remove_blip $RADAR_MISS_8_1
 $ONMISSION = 1
 load_and_launch_mission_internal 5
-terminate_this_script 
+terminate_this_script
 
 :START9
 script_name 'START9'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 6
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 6
 goto_if_false @START9
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START9_53
-
-:START9_53
-wait 0
-$ICONSAVE9 = add_sprite_blip_for_coord -1882.631 {y} 361.2268 {z} 35.0 {sprite} RadarSprite.SaveGame
-$SAVE9 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -1882.631 {y} 361.2268 {z} 35.0
-goto @START9_110
-
-:START9_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE9
-goto_if_false @START9_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE9
-remove_pickup $SAVE9
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+request_collision {x} -1886.8521 {y} 340.4308
+load_all_models_now
+float $groundZ = get_ground_z_for_3d_coord {x} -1886.8521 {y} 340.4308 {z} 1000.0
+set_char_coordinates $PLAYER_ACTOR {x} -1886.8521 {y} 340.4308 {z} $groundZ
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_4 
-terminate_this_script 
+start_new_script @Noname_4
+terminate_this_script
 
 :Noname_4
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_4_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_4_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart -1903.024 {y} 330.411 {z} 35.0 {heading} 172.0
@@ -1858,60 +1802,47 @@ switch_audio_zone "EXPLOR" {state} False
 switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_4_346
 
 :Noname_4_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -1886.8521 {y} 340.4308 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} -1886.8521 {y} 340.4308 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_4_346
 remove_blip $RADAR_MISS_9_1
 $ONMISSION = 1
 load_and_launch_mission_internal 6
-terminate_this_script 
+terminate_this_script
 
 :START9_1
 script_name 'START9_1'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 7
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 7
 goto_if_false @START9_1
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START9_1_61
-
-:START9_1_61
-wait 0
-$ICONSAVE9_1 = add_sprite_blip_for_coord -1882.631 {y} 361.2268 {z} 35.0 {sprite} RadarSprite.SaveGame
-$SAVE9_1 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -1882.631 {y} 361.2268 {z} 35.0
-goto @START9_1_118
-
-:START9_1_118
-wait 0
-if 
-  has_pickup_been_collected $SAVE9_1
-goto_if_false @START9_1_118
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE9_1
-remove_pickup $SAVE9_1
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+request_collision {x} -1886.8521 {y} 340.4308
+load_all_models_now
+float $groundZ = get_ground_z_for_3d_coord {x} -1886.8521 {y} 340.4308 {z} 1000.0
+set_char_coordinates $PLAYER_ACTOR {x} -1886.8521 {y} 340.4308 {z} $groundZ
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_5 
-terminate_this_script 
+start_new_script @Noname_5
+terminate_this_script
 
 :Noname_5
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_5_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_5_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart -1903.024 {y} 330.411 {z} 35.0 {heading} 172.0
@@ -1938,60 +1869,47 @@ switch_audio_zone "EXPLOR" {state} False
 switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_5_346
 
 :Noname_5_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -1886.8521 {y} 340.4308 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} -1886.8521 {y} 340.4308 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_5_346
 remove_blip $RADAR_MISS_9_1_1
 $ONMISSION = 1
 load_and_launch_mission_internal 7
-terminate_this_script 
+terminate_this_script
 
 :START10
 script_name 'START10'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 8
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 8
 goto_if_false @START10
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START10_53
-
-:START10_53
-wait 0
-$ICONSAVE10 = add_sprite_blip_for_coord -1882.631 {y} 361.2268 {z} 35.0 {sprite} RadarSprite.SaveGame
-$SAVE10 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -1882.631 {y} 361.2268 {z} 35.0
-goto @START10_110
-
-:START10_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE10
-goto_if_false @START10_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE10
-remove_pickup $SAVE10
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+request_collision {x} -1886.8521 {y} 340.4308
+load_all_models_now
+float $groundZ = get_ground_z_for_3d_coord {x} -1886.8521 {y} 340.4308 {z} 1000.0
+set_char_coordinates $PLAYER_ACTOR {x} -1886.8521 {y} 340.4308 {z} $groundZ
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_6 
-terminate_this_script 
+start_new_script @Noname_6
+terminate_this_script
 
 :Noname_6
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_6_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_6_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart -1903.024 {y} 330.411 {z} 35.0 {heading} 172.0
@@ -2018,60 +1936,44 @@ switch_audio_zone "EXPLOR" {state} False
 switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_6_346
 
 :Noname_6_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -1886.8521 {y} 340.4308 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} -1886.8521 {y} 340.4308 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_6_346
 remove_blip $RADAR_MISS_10_1
 $ONMISSION = 1
 load_and_launch_mission_internal 8
-terminate_this_script 
+terminate_this_script
 
 :START11
 script_name 'START11'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 9
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 9
 goto_if_false @START11
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START11_53
-
-:START11_53
-wait 0
-$ICONSAVE11 = add_sprite_blip_for_coord -1882.631 {y} 361.2268 {z} 35.0 {sprite} RadarSprite.SaveGame
-$SAVE11 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -1882.631 {y} 361.2268 {z} 35.0
-goto @START11_110
-
-:START11_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE11
-goto_if_false @START11_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE11
-remove_pickup $SAVE11
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR -1994.041 {y} 617.3242 {z} 13.2151
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_7 
-terminate_this_script 
+start_new_script @Noname_7
+terminate_this_script
 
 :Noname_7
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_7_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_7_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart -1903.024 {y} 330.411 {z} 35.0 {heading} 172.0
@@ -2098,58 +2000,42 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_11_1 = add_sprite_blip_for_contact_point -1994.041 {y} 617.3242 {z} 13.2151 {sprite} RadarSprite.Airyard
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_7_346
 
 :Noname_7_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -1994.041 {y} 617.3242 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} -1994.041 {y} 617.3242 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_7_346
 remove_blip $RADAR_MISS_11_1
 $ONMISSION = 1
 load_and_launch_mission_internal 9
-terminate_this_script 
+terminate_this_script
 
 :START11_0
 script_name 'START11_0'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 10
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 10
 goto_if_false @START11_0
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START11_0_61
-
-:START11_0_61
-wait 0
-$ICONSAVE11_0 = add_sprite_blip_for_coord -1882.631 {y} 361.2268 {z} 35.0 {sprite} RadarSprite.SaveGame
-$SAVE11_0 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -1882.631 {y} 361.2268 {z} 35.0
-goto @START11_0_118
-
-:START11_0_118
-wait 0
-if 
-  has_pickup_been_collected $SAVE11_0
-goto_if_false @START11_0_118
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE11_0
-remove_pickup $SAVE11_0
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} -1918.175 {y} 334.6621 {z} 35.0886
 do_fade 2000 {direction} Fade.In
 
 :START11_0_176
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :START11_0_187
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @START11_0_187
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart -1903.024 {y} 330.411 {z} 35.0 {heading} 172.0
@@ -2176,58 +2062,42 @@ switch_audio_zone "EXPLOR" {state} False
 switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @START11_0_522
 
 :START11_0_522
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -1918.175 {y} 334.6621 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} -1918.175 {y} 334.6621 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @START11_0_522
 remove_blip $RADAR_MISS_11_0_1
 $ONMISSION = 1
 load_and_launch_mission_internal 10
-terminate_this_script 
+terminate_this_script
 
 :START11_1
 script_name 'START11_1'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 11
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 11
 goto_if_false @START11_1
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START11_1_61
-
-:START11_1_61
-wait 0
-$ICONSAVE11_1 = add_sprite_blip_for_coord -1882.631 {y} 361.2268 {z} 35.0 {sprite} RadarSprite.SaveGame
-$SAVE11_1 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -1882.631 {y} 361.2268 {z} 35.0
-goto @START11_1_118
-
-:START11_1_118
-wait 0
-if 
-  has_pickup_been_collected $SAVE11_1
-goto_if_false @START11_1_118
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE11_1
-remove_pickup $SAVE11_1
 wait 500
-activate_save_menu 
+activate_save_menu
+set_char_coordinates $PLAYER_ACTOR {x} -1918.175 {y} 334.6621 {z} 35.0886
 $WIDE = 1
 do_fade 2000 {direction} Fade.In
 
 :START11_1_176
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :START11_1_187
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @START11_1_187
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart -1903.024 {y} 330.411 {z} 35.0 {heading} 172.0
@@ -2254,56 +2124,40 @@ switch_audio_zone "EXPLOR" {state} False
 switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @START11_1_522
 
 :START11_1_522
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -1918.175 {y} 334.6621 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} -1918.175 {y} 334.6621 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @START11_1_522
 remove_blip $RADAR_MISS_11_1_1
 $ONMISSION = 1
 load_and_launch_mission_internal 11
-terminate_this_script 
+terminate_this_script
 
 :START11_2
 script_name 'START11_2'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 12
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 12
 goto_if_false @START11_2
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START11_2_61
-
-:START11_2_61
-wait 0
-$ICONSAVE11_2 = add_sprite_blip_for_coord -1882.631 {y} 361.2268 {z} 35.0 {sprite} RadarSprite.SaveGame
-$SAVE11_2 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -1882.631 {y} 361.2268 {z} 35.0
-goto @START11_2_118
-
-:START11_2_118
-wait 0
-if 
-  has_pickup_been_collected $SAVE11_2
-goto_if_false @START11_2_118
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE11_2
-remove_pickup $SAVE11_2
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} -1918.175 {y} 334.6621 {z} 35.0886
 do_fade 2000 {direction} Fade.In
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :START11_2_187
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @START11_2_187
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart -1903.024 {y} 330.411 {z} 35.0 {heading} 172.0
@@ -2330,58 +2184,42 @@ switch_audio_zone "EXPLOR" {state} False
 switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @START11_2_522
 
 :START11_2_522
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -1918.175 {y} 334.6621 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} -1918.175 {y} 334.6621 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @START11_2_522
 remove_blip $RADAR_MISS_11_2_1
 $ONMISSION = 1
 load_and_launch_mission_internal 12
-terminate_this_script 
+terminate_this_script
 
 :START12
 script_name 'START12'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 13
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 13
 goto_if_false @START12
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START12_53
-
-:START12_53
-wait 0
-$ICONSAVE12 = add_sprite_blip_for_coord -1882.631 {y} 361.2268 {z} 35.0 {sprite} RadarSprite.SaveGame
-$SAVE12 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -1882.631 {y} 361.2268 {z} 35.0
-goto @START12_110
-
-:START12_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE12
-goto_if_false @START12_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE12
-remove_pickup $SAVE12
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} -1886.8521 {y} 340.4308 {z} 35.0
 do_fade 2000 {direction} Fade.In
 
 :START12_168
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :START12_179
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @START12_179
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart -1903.024 {y} 330.411 {z} 35.0 {heading} 172.0
@@ -2408,41 +2246,41 @@ switch_audio_zone "EXPLOR" {state} False
 switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @START12_514
 
 :START12_514
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -1886.8521 {y} 340.4308 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} -1886.8521 {y} 340.4308 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @START12_514
 remove_blip $RADAR_MISS_12_1
 $ONMISSION = 1
 load_and_launch_mission_internal 13
-terminate_this_script 
+terminate_this_script
 
 :START13
 script_name 'START13'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 14
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 14
 goto_if_false @START13
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_8 
-terminate_this_script 
+start_new_script @Noname_8
+terminate_this_script
 
 :Noname_8
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_8_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_8_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart 709.0579 {y} 2658.5139 {z} 6.1637 {heading} 250.0
@@ -2470,29 +2308,29 @@ switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $ONMISSION = 1
 load_and_launch_mission_internal 14
-terminate_this_script 
+terminate_this_script
 
 :START13_1
 script_name 'START13_1'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 15
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 15
 goto_if_false @START13_1
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
-start_new_script @Noname_9 
-terminate_this_script 
+start_new_script @Noname_9
+terminate_this_script
 
 :Noname_9
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_9_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_9_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart 709.0579 {y} 2658.5139 {z} 6.1637 {heading} 250.0
@@ -2520,49 +2358,33 @@ switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $ONMISSION = 1
 load_and_launch_mission_internal 15
-terminate_this_script 
+terminate_this_script
 
 :START14
 script_name 'START14'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 16
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 16
 goto_if_false @START14
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START14_53
-
-:START14_53
-wait 0
-$ICONSAVE14 = add_sprite_blip_for_coord 2175.1089 {y} 2110.957 {z} 85.5707 {sprite} RadarSprite.SaveGame
-$SAVE14 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} 2175.1089 {y} 2110.957 {z} 85.5707
-goto @START14_110
-
-:START14_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE14
-goto_if_false @START14_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE14
-remove_pickup $SAVE14
 wait 500
-activate_save_menu 
+activate_save_menu
+set_char_coordinates $PLAYER_ACTOR {x} 2186.325 {y} 2084.061 {z} 80.711
 $WIDE = 1
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_10 
-terminate_this_script 
+start_new_script @Noname_10
+terminate_this_script
 
 :Noname_10
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_10_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_10_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart 2165.533 {y} 2111.2791 {z} 85.0 {heading} 176.0
@@ -2588,62 +2410,46 @@ switch_audio_zone "EXPLOR" {state} False
 switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
-set_camera_behind_player 
+set_camera_behind_player
 $RADAR_MISS_14_1 = add_sprite_blip_for_contact_point 2186.325 {y} 2084.061 {z} 80.711 {sprite} RadarSprite.BigSmoke
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_10_348
 
 :Noname_10_348
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} 2186.325 {y} 2084.061 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} 2186.325 {y} 2084.061 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_10_348
 remove_blip $RADAR_MISS_14_1
 $ONMISSION = 1
 load_and_launch_mission_internal 16
-terminate_this_script 
+terminate_this_script
 
 :START15
 script_name 'START15'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 17
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 17
 goto_if_false @START15
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START15_53
-
-:START15_53
-wait 0
-$ICONSAVE15 = add_sprite_blip_for_coord 2175.1089 {y} 2110.957 {z} 85.5707 {sprite} RadarSprite.SaveGame
-$SAVE15 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} 2175.1089 {y} 2110.957 {z} 85.5707
-goto @START15_110
-
-:START15_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE15
-goto_if_false @START15_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE15
-remove_pickup $SAVE15
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} 2573.1931 {y} 2544.5979 {z} 266.4124
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_11 
-terminate_this_script 
+start_new_script @Noname_11
+terminate_this_script
 
 :Noname_11
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_11_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_11_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart 2165.533 {y} 2111.2791 {z} 85.0 {heading} 176.0
@@ -2669,62 +2475,46 @@ switch_audio_zone "EXPLOR" {state} False
 switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
-set_camera_behind_player 
+set_camera_behind_player
 $RADAR_MISS_14_1 = add_sprite_blip_for_contact_point 2573.1931 {y} 2544.5979 {z} 266.4124 {sprite} RadarSprite.BigSmoke
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_11_348
 
 :Noname_11_348
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} 2573.1931 {y} 2544.5979 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} 2573.1931 {y} 2544.5979 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_11_348
 remove_blip $RADAR_MISS_14_1
 $ONMISSION = 1
 load_and_launch_mission_internal 17
-terminate_this_script 
+terminate_this_script
 
 :START16
 script_name 'START16'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 18
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 18
 goto_if_false @START16
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START16_53
-
-:START16_53
-wait 0
-$ICONSAVE16 = add_sprite_blip_for_coord 2175.1089 {y} 2110.957 {z} 85.5707 {sprite} RadarSprite.SaveGame
-$SAVE16 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} 2175.1089 {y} 2110.957 {z} 85.5707
-goto @START16_110
-
-:START16_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE16
-goto_if_false @START16_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE16
-remove_pickup $SAVE16
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} 2188.1831 {y} 2082.1389 {z} 80.3644
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_12 
-terminate_this_script 
+start_new_script @Noname_12
+terminate_this_script
 
 :Noname_12
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_12_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_12_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart 2165.533 {y} 2111.2791 {z} 85.0 {heading} 176.0
@@ -2750,62 +2540,46 @@ switch_audio_zone "EXPLOR" {state} False
 switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
-set_camera_behind_player 
+set_camera_behind_player
 $RADAR_MISS_16_1 = add_sprite_blip_for_contact_point 2188.1831 {y} 2082.1389 {z} 80.3644 {sprite} RadarSprite.BigSmoke
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_12_348
 
 :Noname_12_348
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} 2188.1831 {y} 2082.1389 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} 2188.1831 {y} 2082.1389 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_12_348
 remove_blip $RADAR_MISS_16_1
 $ONMISSION = 1
 load_and_launch_mission_internal 18
-terminate_this_script 
+terminate_this_script
 
 :START16_1
 script_name 'START16_1'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 19
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 19
 goto_if_false @START16_1
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START16_1_61
-
-:START16_1_61
-wait 0
-$ICONSAVE16_1 = add_sprite_blip_for_coord 2175.1089 {y} 2110.957 {z} 85.5707 {sprite} RadarSprite.SaveGame
-$SAVE16_1 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} 2175.1089 {y} 2110.957 {z} 85.5707
-goto @START16_1_118
-
-:START16_1_118
-wait 0
-if 
-  has_pickup_been_collected $SAVE16_1
-goto_if_false @START16_1_118
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE16_1
-remove_pickup $SAVE16_1
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} 2188.1831 {y} 2082.1389 {z} 80.3644
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_13 
-terminate_this_script 
+start_new_script @Noname_13
+terminate_this_script
 
 :Noname_13
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_13_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_13_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart 2165.533 {y} 2111.2791 {z} 85.0 {heading} 176.0
@@ -2831,62 +2605,46 @@ switch_audio_zone "EXPLOR" {state} False
 switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
-set_camera_behind_player 
+set_camera_behind_player
 $RADAR_MISS_16_1_1 = add_sprite_blip_for_contact_point 2188.1831 {y} 2082.1389 {z} 80.3644 {sprite} RadarSprite.BigSmoke
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_13_348
 
 :Noname_13_348
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} 2188.1831 {y} 2082.1389 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} 2188.1831 {y} 2082.1389 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_13_348
 remove_blip $RADAR_MISS_16_1_1
 $ONMISSION = 1
 load_and_launch_mission_internal 19
-terminate_this_script 
+terminate_this_script
 
 :START16_2
 script_name 'START16_2'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 20
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 20
 goto_if_false @START16_2
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START16_2_61
-
-:START16_2_61
-wait 0
-$ICONSAVE16_2 = add_sprite_blip_for_coord 2175.1089 {y} 2110.957 {z} 85.5707 {sprite} RadarSprite.SaveGame
-$SAVE16_2 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} 2175.1089 {y} 2110.957 {z} 85.5707
-goto @START16_2_118
-
-:START16_2_118
-wait 0
-if 
-  has_pickup_been_collected $SAVE16_2
-goto_if_false @START16_2_118
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE16_2
-remove_pickup $SAVE16_2
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} 2188.1831 {y} 2082.1389 {z} 80.3644
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_14 
-terminate_this_script 
+start_new_script @Noname_14
+terminate_this_script
 
 :Noname_14
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_14_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_14_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart 2165.533 {y} 2111.2791 {z} 85.0 {heading} 176.0
@@ -2912,62 +2670,46 @@ switch_audio_zone "EXPLOR" {state} False
 switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
-set_camera_behind_player 
+set_camera_behind_player
 $RADAR_MISS_16_2_1 = add_sprite_blip_for_contact_point 2188.1831 {y} 2082.1389 {z} 80.3644 {sprite} RadarSprite.BigSmoke
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_14_348
 
 :Noname_14_348
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} 2188.1831 {y} 2082.1389 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} 2188.1831 {y} 2082.1389 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_14_348
 remove_blip $RADAR_MISS_16_2_1
 $ONMISSION = 1
 load_and_launch_mission_internal 20
-terminate_this_script 
+terminate_this_script
 
 :START17
 script_name 'START17'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 21
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 21
 goto_if_false @START17
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START17_53
-
-:START17_53
-wait 0
-$ICONSAVE17 = add_sprite_blip_for_coord 2084.043 {y} 1334.207 {z} 9.0936 {sprite} RadarSprite.SaveGame
-$SAVE17 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} 2084.043 {y} 1334.207 {z} 9.0936
-goto @START17_110
-
-:START17_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE17
-goto_if_false @START17_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE17
-remove_pickup $SAVE17
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} 2068.907 {y} 1349.297 {z} 9.2304
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_15 
-terminate_this_script 
+start_new_script @Noname_15
+terminate_this_script
 
 :Noname_15
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_15_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_15_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart 2165.533 {y} 2111.2791 {z} 85.0 {heading} 176.0
@@ -2993,62 +2735,46 @@ switch_audio_zone "EXPLOR" {state} False
 switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
-set_camera_behind_player 
+set_camera_behind_player
 $RADAR_MISS_17_1 = add_sprite_blip_for_contact_point 2068.907 {y} 1349.297 {z} 9.2304 {sprite} RadarSprite.BigSmoke
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_15_348
 
 :Noname_15_348
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} 2068.907 {y} 1349.297 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} 2068.907 {y} 1349.297 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_15_348
 remove_blip $RADAR_MISS_17_1
 $ONMISSION = 1
 load_and_launch_mission_internal 21
-terminate_this_script 
+terminate_this_script
 
 :START18
 script_name 'START18'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 22
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 22
 goto_if_false @START18
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START18_53
-
-:START18_53
-wait 0
-$ICONSAVE18 = add_sprite_blip_for_coord 2175.1089 {y} 2110.957 {z} 85.5707 {sprite} RadarSprite.SaveGame
-$SAVE18 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} 2175.1089 {y} 2110.957 {z} 85.5707
-goto @START18_110
-
-:START18_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE18
-goto_if_false @START18_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE18
-remove_pickup $SAVE18
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} 2186.325 {y} 2084.061 {z} 80.711
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_16 
-terminate_this_script 
+start_new_script @Noname_16
+terminate_this_script
 
 :Noname_16
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_16_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_16_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart 2165.533 {y} 2111.2791 {z} 85.0 {heading} 176.0
@@ -3075,60 +2801,44 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_18_1 = add_sprite_blip_for_contact_point 2186.325 {y} 2084.061 {z} 80.711 {sprite} RadarSprite.BigSmoke
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_16_346
 
 :Noname_16_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} 2186.325 {y} 2084.061 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} 2186.325 {y} 2084.061 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_16_346
 remove_blip $RADAR_MISS_18_1
 $ONMISSION = 1
 load_and_launch_mission_internal 22
-terminate_this_script 
+terminate_this_script
 
 :START19
 script_name 'START19'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 23
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 23
 goto_if_false @START19
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START19_53
-
-:START19_53
-wait 0
-$ICONSAVE19 = add_sprite_blip_for_coord 2175.1089 {y} 2110.957 {z} 85.5707 {sprite} RadarSprite.SaveGame
-$SAVE19 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} 2175.1089 {y} 2110.957 {z} 85.5707
-goto @START19_110
-
-:START19_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE19
-goto_if_false @START19_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE19
-remove_pickup $SAVE19
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} 2186.325 {y} 2084.061 {z} 80.711
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_17 
-terminate_this_script 
+start_new_script @Noname_17
+terminate_this_script
 
 :Noname_17
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_17_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_17_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart 2165.533 {y} 2111.2791 {z} 85.0 {heading} 176.0
@@ -3155,41 +2865,41 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_19_1 = add_sprite_blip_for_contact_point 2186.325 {y} 2084.061 {z} 80.711 {sprite} RadarSprite.BigSmoke
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_17_346
 
 :Noname_17_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} 2186.325 {y} 2084.061 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} 2186.325 {y} 2084.061 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_17_346
 remove_blip $RADAR_MISS_19_1
 $ONMISSION = 1
 load_and_launch_mission_internal 23
-terminate_this_script 
+terminate_this_script
 
 :START19_1
 script_name 'START19_1'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 24
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 24
 goto_if_false @START19_1
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_18 
-terminate_this_script 
+start_new_script @Noname_18
+terminate_this_script
 
 :Noname_18
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_18_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_18_11
 set_player_model $PLAYER_CHAR {modelId} 155
 switch_audio_zone "CHILD" {state} False
@@ -3215,49 +2925,32 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $ONMISSION = 1
 load_and_launch_mission_internal 24
-terminate_this_script 
+terminate_this_script
 
 :START20
 script_name 'START20'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 25
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 25
 goto_if_false @START20
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START20_53
-
-:START20_53
-wait 0
-$ICONSAVE20 = add_sprite_blip_for_coord 2023.095 {y} -1116.689 {z} 1.2705 {sprite} RadarSprite.SaveGame
-$SAVE20 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} 2023.095 {y} -1116.689 {z} 1.2705
-goto @START20_110
-
-:START20_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE20
-goto_if_false @START20_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE20
-remove_pickup $SAVE20
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_19 
-terminate_this_script 
+start_new_script @Noname_19
+terminate_this_script
 
 :Noname_19
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_19_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_19_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart 2018.827 {y} -1115.787 {z} 0.8219 {heading} 251.0
@@ -3283,53 +2976,37 @@ switch_audio_zone "EXPLOR" {state} False
 switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 $ONMISSION = 1
 load_and_launch_mission_internal 25
-terminate_this_script 
+terminate_this_script
 
 :START21
 script_name 'START21'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 26
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 26
 goto_if_false @START21
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START21_53
-
-:START21_53
-wait 0
-$ICONSAVE21 = add_sprite_blip_for_coord 1965.024 {y} -2689.7371 {z} 4.98 {sprite} RadarSprite.SaveGame
-$SAVE21 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} 1965.024 {y} -2689.7371 {z} 4.98
-goto @START21_110
-
-:START21_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE21
-goto_if_false @START21_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE21
-remove_pickup $SAVE21
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} 2570.0129 {y} -2330.7839 {z} 19.3299
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_20 
-terminate_this_script 
+start_new_script @Noname_20
+terminate_this_script
 
 :Noname_20
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_20_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_20_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart 2018.827 {y} -1115.787 {z} 0.8219 {heading} 251.0
@@ -3356,60 +3033,44 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_21_1 = add_sprite_blip_for_contact_point 2570.0129 {y} -2330.7839 {z} 19.3299 {sprite} RadarSprite.Ammugun
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_20_346
 
 :Noname_20_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} 2570.0129 {y} -2330.7839 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} 2570.0129 {y} -2330.7839 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_20_346
 remove_blip $RADAR_MISS_21_1
 $ONMISSION = 1
 load_and_launch_mission_internal 26
-terminate_this_script 
+terminate_this_script
 
 :START22
 script_name 'START22'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 27
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 27
 goto_if_false @START22
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START22_53
-
-:START22_53
-wait 0
-$ICONSAVE22 = add_sprite_blip_for_coord 2524.6909 {y} -2386.064 {z} 19.389 {sprite} RadarSprite.SaveGame
-$SAVE22 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} 2524.6909 {y} -2386.064 {z} 19.389
-goto @START22_110
-
-:START22_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE22
-goto_if_false @START22_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE22
-remove_pickup $SAVE22
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} 2522.6909 {y} -2389.064 {z} 19.389
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_21 
-terminate_this_script 
+start_new_script @Noname_21
+terminate_this_script
 
 :Noname_21
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_21_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_21_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0
@@ -3436,60 +3097,44 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_22_1 = add_sprite_blip_for_contact_point 2522.6909 {y} -2389.064 {z} 19.389 {sprite} RadarSprite.Ammugun
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_21_346
 
 :Noname_21_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} 2522.6909 {y} -2389.064 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} 2522.6909 {y} -2389.064 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_21_346
 remove_blip $RADAR_MISS_22_1
 $ONMISSION = 1
 load_and_launch_mission_internal 27
-terminate_this_script 
+terminate_this_script
 
 :START23
 script_name 'START23'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 28
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 28
 goto_if_false @START23
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START23_53
-
-:START23_53
-wait 0
-$ICONSAVE23 = add_sprite_blip_for_coord 2524.6909 {y} -2386.064 {z} 19.389 {sprite} RadarSprite.SaveGame
-$SAVE23 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} 2524.6909 {y} -2386.064 {z} 19.389
-goto @START23_110
-
-:START23_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE23
-goto_if_false @START23_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE23
-remove_pickup $SAVE23
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} 2522.6909 {y} -2386.064 {z} 19.389
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_22 
-terminate_this_script 
+start_new_script @Noname_22
+terminate_this_script
 
 :Noname_22
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_22_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_22_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0
@@ -3516,60 +3161,44 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_23_1 = add_sprite_blip_for_contact_point 2522.6909 {y} -2386.064 {z} 19.389 {sprite} RadarSprite.Ammugun
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_22_346
 
 :Noname_22_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} 2522.6909 {y} -2386.064 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} 2522.6909 {y} -2386.064 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_22_346
 remove_blip $RADAR_MISS_23_1
 $ONMISSION = 1
 load_and_launch_mission_internal 28
-terminate_this_script 
+terminate_this_script
 
 :START24
 script_name 'START24'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 29
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 29
 goto_if_false @START24
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START24_53
-
-:START24_53
-wait 0
-$ICONSAVE24 = add_sprite_blip_for_coord 2524.6909 {y} -2386.064 {z} 19.389 {sprite} RadarSprite.SaveGame
-$SAVE24 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} 2524.6909 {y} -2386.064 {z} 19.389
-goto @START24_110
-
-:START24_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE24
-goto_if_false @START24_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE24
-remove_pickup $SAVE24
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} 2522.6909 {y} -2386.064 {z} 19.389
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_23 
-terminate_this_script 
+start_new_script @Noname_23
+terminate_this_script
 
 :Noname_23
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_23_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_23_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0
@@ -3596,60 +3225,44 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_24_1 = add_sprite_blip_for_contact_point 2522.6909 {y} -2386.064 {z} 19.389 {sprite} RadarSprite.Ammugun
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_23_346
 
 :Noname_23_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} 2522.6909 {y} -2386.064 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} 2522.6909 {y} -2386.064 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_23_346
 remove_blip $RADAR_MISS_24_1
 $ONMISSION = 1
 load_and_launch_mission_internal 29
-terminate_this_script 
+terminate_this_script
 
 :START24_1
 script_name 'START24_1'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 30
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 30
 goto_if_false @START24_1
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START24_1_61
-
-:START24_1_61
-wait 0
-$ICONSAVE24_1 = add_sprite_blip_for_coord 2524.6909 {y} -2386.064 {z} 19.389 {sprite} RadarSprite.SaveGame
-$SAVE24_1 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} 2524.6909 {y} -2386.064 {z} 19.389
-goto @START24_1_118
-
-:START24_1_118
-wait 0
-if 
-  has_pickup_been_collected $SAVE24_1
-goto_if_false @START24_1_118
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE24_1
-remove_pickup $SAVE24_1
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} 2522.6909 {y} -2386.064 {z} 19.389
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_24 
-terminate_this_script 
+start_new_script @Noname_24
+terminate_this_script
 
 :Noname_24
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_24_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_24_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0
@@ -3676,56 +3289,40 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_24_1_1 = add_sprite_blip_for_contact_point 2522.6909 {y} -2386.064 {z} 19.389 {sprite} RadarSprite.Ammugun
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_24_346
 
 :Noname_24_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} 2522.6909 {y} -2386.064 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} 2522.6909 {y} -2386.064 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_24_346
 remove_blip $RADAR_MISS_24_1_1
 $ONMISSION = 1
 load_and_launch_mission_internal 30
-terminate_this_script 
+terminate_this_script
 
 :START24_2
 script_name 'START24_2'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 31
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 31
 goto_if_false @START24_2
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START24_2_61
-
-:START24_2_61
-wait 0
-$ICONSAVE24_2 = add_sprite_blip_for_coord 2524.6909 {y} -2386.064 {z} 19.389 {sprite} RadarSprite.SaveGame
-$SAVE24_2 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} 2524.6909 {y} -2386.064 {z} 19.389
-goto @START24_2_118
-
-:START24_2_118
-wait 0
-if 
-  has_pickup_been_collected $SAVE24_2
-goto_if_false @START24_2_118
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE24_2
-remove_pickup $SAVE24_2
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} 2522.6909 {y} -2386.064 {z} 19.389
 do_fade 2000 {direction} Fade.In
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :START24_2_187
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @START24_2_187
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0
@@ -3752,60 +3349,44 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_24_2_1 = add_sprite_blip_for_contact_point 2522.6909 {y} -2386.064 {z} 19.389 {sprite} RadarSprite.Ammugun
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @START24_2_522
 
 :START24_2_522
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} 2522.6909 {y} -2386.064 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} 2522.6909 {y} -2386.064 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @START24_2_522
 remove_blip $RADAR_MISS_24_2_1
 $ONMISSION = 1
 load_and_launch_mission_internal 31
-terminate_this_script 
+terminate_this_script
 
 :START25
 script_name 'START25'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 32
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 32
 goto_if_false @START25
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START25_53
-
-:START25_53
-wait 0
-$ICON25 = add_sprite_blip_for_coord 2524.6909 {y} -2386.064 {z} 19.389 {sprite} RadarSprite.SaveGame
-$SAV25 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} 2524.6909 {y} -2386.064 {z} 19.389
-goto @START25_110
-
-:START25_110
-wait 0
-if 
-  has_pickup_been_collected $SAV25
-goto_if_false @START25_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICON25
-remove_pickup $SAV25
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} 2522.6909 {y} -2386.064 {z} 19.389
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_25 
-terminate_this_script 
+start_new_script @Noname_25
+terminate_this_script
 
 :Noname_25
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_25_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_25_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0
@@ -3832,56 +3413,40 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_25_1 = add_sprite_blip_for_contact_point 2522.6909 {y} -2386.064 {z} 19.389 {sprite} RadarSprite.Ammugun
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_25_346
 
 :Noname_25_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} 2522.6909 {y} -2386.064 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} 2522.6909 {y} -2386.064 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_25_346
 remove_blip $RADAR_MISS_25_1
 $ONMISSION = 1
 load_and_launch_mission_internal 32
-terminate_this_script 
+terminate_this_script
 
 :START25_1
 script_name 'START25_1'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 33
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 33
 goto_if_false @START25_1
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START25_1_61
-
-:START25_1_61
-wait 0
-$ICONSAVE25_1 = add_sprite_blip_for_coord 2524.6909 {y} -2386.064 {z} 19.389 {sprite} RadarSprite.SaveGame
-$SAVE25_1 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} 2524.6909 {y} -2386.064 {z} 19.389
-goto @START25_1_118
-
-:START25_1_118
-wait 0
-if 
-  has_pickup_been_collected $SAVE25_1
-goto_if_false @START25_1_118
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE25_1
-remove_pickup $SAVE25_1
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} 1736.7271 {y} -2381.1011 {z} 3.5798
 do_fade 2000 {direction} Fade.In
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :START25_1_187
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @START25_1_187
 set_player_model $PLAYER_CHAR {modelId} 155
 $RADAR_MISS_25_1_1 = add_sprite_blip_for_contact_point 1736.7271 {y} -2381.1011 {z} 3.5798 {sprite} RadarSprite.Qmark
@@ -3907,60 +3472,44 @@ switch_audio_zone "EXPLOR" {state} False
 switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @START25_1_498
 
 :START25_1_498
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} 1736.7271 {y} -2381.1011 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} 1736.7271 {y} -2381.1011 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @START25_1_498
 remove_blip $RADAR_MISS_25_1_1
 $ONMISSION = 1
 load_and_launch_mission_internal 33
-terminate_this_script 
+terminate_this_script
 
 :START26
 script_name 'START26'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 34
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 34
 goto_if_false @START26
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START26_53
-
-:START26_53
-wait 0
-$ICONSAVE26 = add_sprite_blip_for_coord 1930.827 {y} -2706.782 {z} 4.98 {sprite} RadarSprite.SaveGame
-$SAVE26 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} 1930.827 {y} -2706.782 {z} 4.98
-goto @START26_110
-
-:START26_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE26
-goto_if_false @START26_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE26
-remove_pickup $SAVE26
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} 2267.083 {y} -2785.8931 {z} 8.3032
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_26 
-terminate_this_script 
+start_new_script @Noname_26
+terminate_this_script
 
 :Noname_26
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_26_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_26_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0
@@ -3987,60 +3536,44 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_26_1 = add_sprite_blip_for_contact_point 2267.083 {y} -2785.8931 {z} 8.3032 {sprite} RadarSprite.Ammugun
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_26_346
 
 :Noname_26_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} 2267.083 {y} -2785.8931 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} 2267.083 {y} -2785.8931 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_26_346
 remove_blip $RADAR_MISS_26_1
 $ONMISSION = 1
 load_and_launch_mission_internal 34
-terminate_this_script 
+terminate_this_script
 
 :START27
 script_name 'START27'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 35
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 35
 goto_if_false @START27
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START27_53
-
-:START27_53
-wait 0
-$ICON27 = add_sprite_blip_for_coord 2524.6909 {y} -2386.064 {z} 19.389 {sprite} RadarSprite.SaveGame
-$SAV27 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} 2524.6909 {y} -2386.064 {z} 19.389
-goto @START27_110
-
-:START27_110
-wait 0
-if 
-  has_pickup_been_collected $SAV27
-goto_if_false @START27_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICON27
-remove_pickup $SAV27
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} 2522.6909 {y} -2386.064 {z} 19.389
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_27 
-terminate_this_script 
+start_new_script @Noname_27
+terminate_this_script
 
 :Noname_27
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_27_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_27_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0
@@ -4067,60 +3600,44 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_27_1 = add_sprite_blip_for_contact_point 2522.6909 {y} -2386.064 {z} 19.389 {sprite} RadarSprite.Ammugun
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_27_346
 
 :Noname_27_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} 2522.6909 {y} -2386.064 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} 2522.6909 {y} -2386.064 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_27_346
 remove_blip $RADAR_MISS_27_1
 $ONMISSION = 1
 load_and_launch_mission_internal 35
-terminate_this_script 
+terminate_this_script
 
 :START28
 script_name 'START28'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 36
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 36
 goto_if_false @START28
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START28_53
-
-:START28_53
-wait 0
-$ICONSAVE28 = add_sprite_blip_for_coord 2524.6909 {y} -2386.064 {z} 19.389 {sprite} RadarSprite.SaveGame
-$SAVE28 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} 2524.6909 {y} -2386.064 {z} 19.389
-goto @START28_110
-
-:START28_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE28
-goto_if_false @START28_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE28
-remove_pickup $SAVE28
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} 2263.3201 {y} -2787.564 {z} 9.0
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_28 
-terminate_this_script 
+start_new_script @Noname_28
+terminate_this_script
 
 :Noname_28
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_28_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_28_11
 set_player_model $PLAYER_CHAR {modelId} 155
 
@@ -4149,60 +3666,44 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_28_1 = add_sprite_blip_for_contact_point 2263.3201 {y} -2787.564 {z} 9.0 {sprite} RadarSprite.BoatYard
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_28_346
 
 :Noname_28_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} 2263.3201 {y} -2787.564 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} 2263.3201 {y} -2787.564 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_28_346
 remove_blip $RADAR_MISS_28_1
 $ONMISSION = 1
 load_and_launch_mission_internal 36
-terminate_this_script 
+terminate_this_script
 
 :START29
 script_name 'START29'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 37
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 37
 goto_if_false @START29
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START29_53
-
-:START29_53
-wait 0
-$ICONSAVE29 = add_sprite_blip_for_coord 2260.0061 {y} -2796.5181 {z} 8.1124 {sprite} RadarSprite.SaveGame
-$SAVE29 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} 2260.0061 {y} -2796.5181 {z} 8.1124
-goto @START29_110
-
-:START29_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE29
-goto_if_false @START29_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE29
-remove_pickup $SAVE29
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} 2263.3201 {y} -2787.564 {z} 9.0
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_29 
-terminate_this_script 
+start_new_script @Noname_29
+terminate_this_script
 
 :Noname_29
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_29_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_29_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart 2599.8479 {y} -2573.9431 {z} 14.3 {heading} 81.0
@@ -4229,60 +3730,44 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_29_1 = add_sprite_blip_for_contact_point 2263.3201 {y} -2787.564 {z} 9.0 {sprite} RadarSprite.BoatYard
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_29_346
 
 :Noname_29_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} 2263.3201 {y} -2787.564 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} 2263.3201 {y} -2787.564 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_29_346
 remove_blip $RADAR_MISS_29_1
 $ONMISSION = 1
 load_and_launch_mission_internal 37
-terminate_this_script 
+terminate_this_script
 
 :START30
 script_name 'START30'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 38
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 38
 goto_if_false @START30
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START30_53
-
-:START30_53
-wait 0
-$ICONSAVE30 = add_sprite_blip_for_coord 2260.0061 {y} -2796.5181 {z} 8.1124 {sprite} RadarSprite.SaveGame
-$SAVE30 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} 2260.0061 {y} -2796.5181 {z} 8.1124
-goto @START30_110
-
-:START30_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE30
-goto_if_false @START30_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE30
-remove_pickup $SAVE30
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} 2263.3201 {y} -2787.564 {z} 9.0
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_30 
-terminate_this_script 
+start_new_script @Noname_30
+terminate_this_script
 
 :Noname_30
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_30_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_30_11
 set_player_model $PLAYER_CHAR {modelId} 155
 
@@ -4311,60 +3796,44 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_30_1 = add_sprite_blip_for_contact_point 2263.3201 {y} -2787.564 {z} 9.0 {sprite} RadarSprite.BoatYard
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_30_346
 
 :Noname_30_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} 2263.3201 {y} -2787.564 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} 2263.3201 {y} -2787.564 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_30_346
 remove_blip $RADAR_MISS_30_1
 $ONMISSION = 1
 load_and_launch_mission_internal 38
-terminate_this_script 
+terminate_this_script
 
 :START31
 script_name 'START31'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 39
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 39
 goto_if_false @START31
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START31_53
-
-:START31_53
-wait 0
-$ICONSAVE31 = add_sprite_blip_for_coord 2260.0061 {y} -2796.5181 {z} 8.1124 {sprite} RadarSprite.SaveGame
-$SAVE31 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} 2260.0061 {y} -2796.5181 {z} 8.1124
-goto @START31_110
-
-:START31_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE31
-goto_if_false @START31_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE31
-remove_pickup $SAVE31
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} 1972.332 {y} -2669.6211 {z} 4.98
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_31 
-terminate_this_script 
+start_new_script @Noname_31
+terminate_this_script
 
 :Noname_31
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_31_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_31_11
 set_player_model $PLAYER_CHAR {modelId} 155
 
@@ -4392,62 +3861,45 @@ switch_audio_zone "EXPLOR" {state} False
 switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
-set_camera_behind_player 
+set_camera_behind_player
 $RADAR_MISS_31_1 = add_sprite_blip_for_contact_point 1972.332 {y} -2669.6211 {z} 4.98 {sprite} RadarSprite.GangY
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_31_348
 
 :Noname_31_348
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} 1972.332 {y} -2669.6211 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} 1972.332 {y} -2669.6211 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_31_348
 remove_blip $RADAR_MISS_31_1
 $ONMISSION = 1
 load_and_launch_mission_internal 39
-terminate_this_script 
+terminate_this_script
 
 :START32
 script_name 'START32'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 40
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 40
 goto_if_false @START32
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START32_53
-
-:START32_53
-wait 0
-$ICONSAVE32 = add_sprite_blip_for_coord -156.2404 {y} -2234.488 {z} 4.475 {sprite} RadarSprite.SaveGame
-$SAVE32 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -156.2404 {y} -2234.488 {z} 4.475
-goto @START32_110
-
-:START32_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE32
-goto_if_false @START32_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE32
-remove_pickup $SAVE32
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_32 
-terminate_this_script 
+start_new_script @Noname_32
+terminate_this_script
 
 :Noname_32
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_32_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_32_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart -155.6889 {y} -2278.595 {z} 4.4411 {heading} 55.0
@@ -4475,49 +3927,33 @@ switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $ONMISSION = 1
 load_and_launch_mission_internal 40
-terminate_this_script 
+terminate_this_script
 
 :START33
 script_name 'START33'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 41
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 41
 goto_if_false @START33
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START33_53
-
-:START33_53
-wait 0
-$ICONSAVE33 = add_sprite_blip_for_coord -2806.261 {y} -1964.9091 {z} 9.9345 {sprite} RadarSprite.SaveGame
-$SAVE33 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -2806.261 {y} -1964.9091 {z} 9.9345
-goto @START33_110
-
-:START33_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE33
-goto_if_false @START33_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE33
-remove_pickup $SAVE33
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} -2793.9351 {y} -2018.24 {z} 9.9345
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_33 
-terminate_this_script 
+start_new_script @Noname_33
+terminate_this_script
 
 :Noname_33
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_33_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_33_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart -2079.5029 {y} -1463.64 {z} 14.0 {heading} 55.0
@@ -4544,61 +3980,45 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_33_1 = add_sprite_blip_for_contact_point -2793.9351 {y} -2018.24 {z} 9.9345 {sprite} RadarSprite.GangN
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_33_346
 
 :Noname_33_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -2793.9351 {y} -2018.24 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} -2793.9351 {y} -2018.24 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_33_346
 remove_blip $RADAR_MISS_33_1
 $ONMISSION = 1
 load_and_launch_mission_internal 41
-terminate_this_script 
+terminate_this_script
 
 :START34
 script_name 'START34'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 42
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 42
 goto_if_false @START34
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START34_53
-
-:START34_53
-wait 0
-$ICONSAVE34 = add_sprite_blip_for_coord -2806.261 {y} -1964.9091 {z} 9.9345 {sprite} RadarSprite.SaveGame
-$SAVE34 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -2806.261 {y} -1964.9091 {z} 9.9345
-goto @START34_110
-
-:START34_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE34
-goto_if_false @START34_110
 do_fade 500 {direction} Fade.Out
 $PLAY35 = 0
-remove_blip $ICONSAVE34
-remove_pickup $SAVE34
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} -2793.9351 {y} -2018.24 {z} 9.9345
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_34 
-terminate_this_script 
+start_new_script @Noname_34
+terminate_this_script
 
 :Noname_34
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_34_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_34_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart -2079.5029 {y} -1463.64 {z} 14.0 {heading} 55.0
@@ -4625,60 +4045,44 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_34_1 = add_sprite_blip_for_contact_point -2793.9351 {y} -2018.24 {z} 9.9345 {sprite} RadarSprite.GangN
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_34_346
 
 :Noname_34_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -2793.9351 {y} -2018.24 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} -2793.9351 {y} -2018.24 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_34_346
 remove_blip $RADAR_MISS_34_1
 $ONMISSION = 1
 load_and_launch_mission_internal 42
-terminate_this_script 
+terminate_this_script
 
 :START35
 script_name 'START35'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 43
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 43
 goto_if_false @START35
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START35_53
-
-:START35_53
-wait 0
-$ICON35 = add_sprite_blip_for_coord -2806.261 {y} -1964.9091 {z} 9.9345 {sprite} RadarSprite.SaveGame
-$SAV35 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -2806.261 {y} -1964.9091 {z} 9.9345
-goto @START35_110
-
-:START35_110
-wait 0
-if 
-  has_pickup_been_collected $SAV35
-goto_if_false @START35_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICON35
-remove_pickup $SAV35
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} -2493.876 {y} -1495.865 {z} 9.3059
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_35 
-terminate_this_script 
+start_new_script @Noname_35
+terminate_this_script
 
 :Noname_35
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_35_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_35_11
 set_player_model $PLAYER_CHAR {modelId} 155
 
@@ -4707,60 +4111,46 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_35_1 = add_sprite_blip_for_contact_point -2493.876 {y} -1495.865 {z} 9.3059 {sprite} RadarSprite.GangN
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_35_346
 
 :Noname_35_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -2493.876 {y} -1495.865 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} -2493.876 {y} -1495.865 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_35_346
 remove_blip $RADAR_MISS_35_1
 $ONMISSION = 1
 load_and_launch_mission_internal 43
-terminate_this_script 
+terminate_this_script
 
 :START36
 script_name 'START36'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 44
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 44
 goto_if_false @START36
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START36_53
-
-:START36_53
-wait 0
-$ICONSAVE36 = add_sprite_blip_for_coord -2150.488 {y} -1513.028 {z} 26.3792 {sprite} RadarSprite.SaveGame
-$SAVE36 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -2150.488 {y} -1513.028 {z} 26.3792
-goto @START36_110
-
-:START36_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE36
-goto_if_false @START36_110
 do_fade 500 {direction} Fade.Out
 remove_blip $ICONSAVE36
 remove_pickup $SAVE36
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} -2234.2271 {y} -1285.5 {z} 8.4228
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_36 
-terminate_this_script 
+start_new_script @Noname_36
+terminate_this_script
 
 :Noname_36
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_36_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_36_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart -2079.5029 {y} -1463.64 {z} 14.0 {heading} 55.0
@@ -4787,60 +4177,44 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_36_1 = add_sprite_blip_for_contact_point -2234.2271 {y} -1285.5 {z} 8.4228 {sprite} RadarSprite.GangN
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_36_346
 
 :Noname_36_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -2234.2271 {y} -1285.5 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} -2234.2271 {y} -1285.5 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_36_346
 remove_blip $RADAR_MISS_36_1
 $ONMISSION = 1
 load_and_launch_mission_internal 44
-terminate_this_script 
+terminate_this_script
 
 :START37
 script_name 'START37'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 45
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 45
 goto_if_false @START37
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START37_53
-
-:START37_53
-wait 0
-$ICONSAVE37 = add_sprite_blip_for_coord -1882.631 {y} 361.2268 {z} 35.0 {sprite} RadarSprite.SaveGame
-$SAVE37 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -1882.631 {y} 361.2268 {z} 35.0
-goto @START37_110
-
-:START37_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE37
-goto_if_false @START37_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE37
-remove_pickup $SAVE37
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} -1993.994 {y} 117.9712 {z} 4.76
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_37 
-terminate_this_script 
+start_new_script @Noname_37
+terminate_this_script
 
 :Noname_37
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_37_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_37_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
@@ -4867,60 +4241,44 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_37_1 = add_sprite_blip_for_contact_point -1993.994 {y} 117.9712 {z} 4.76 {sprite} RadarSprite.Airyard
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_37_346
 
 :Noname_37_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -1993.994 {y} 117.9712 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} -1993.994 {y} 117.9712 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_37_346
 remove_blip $RADAR_MISS_37_1
 $ONMISSION = 1
 load_and_launch_mission_internal 45
-terminate_this_script 
+terminate_this_script
 
 :START37_1
 script_name 'START37_1'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 46
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 46
 goto_if_false @START37_1
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START37_1_61
-
-:START37_1_61
-wait 0
-$ICONSAVE37_1 = add_sprite_blip_for_coord -1207.403 {y} -872.1083 {z} 12.8628 {sprite} RadarSprite.SaveGame
-$SAVE37_1 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -1207.403 {y} -872.1083 {z} 12.8628
-goto @START37_1_118
-
-:START37_1_118
-wait 0
-if 
-  has_pickup_been_collected $SAVE37_1
-goto_if_false @START37_1_118
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE37_1
-remove_pickup $SAVE37_1
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} -1207.293 {y} -859.9947 {z} 13.1042
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_38 
-terminate_this_script 
+start_new_script @Noname_38
+terminate_this_script
 
 :Noname_38
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_38_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_38_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
@@ -4947,60 +4305,44 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_37_1_1 = add_sprite_blip_for_contact_point -1207.293 {y} -859.9947 {z} 13.1042 {sprite} RadarSprite.Airyard
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_38_346
 
 :Noname_38_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -1207.293 {y} -859.9947 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} -1207.293 {y} -859.9947 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_38_346
 remove_blip $RADAR_MISS_37_1_1
 $ONMISSION = 1
 load_and_launch_mission_internal 46
-terminate_this_script 
+terminate_this_script
 
 :START38
 script_name 'START38'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 47
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 47
 goto_if_false @START38
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START38_53
-
-:START38_53
-wait 0
-$ICONSAVE38 = add_sprite_blip_for_coord -1207.403 {y} -872.1083 {z} 12.8628 {sprite} RadarSprite.SaveGame
-$SAVE38 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -1207.403 {y} -872.1083 {z} 12.8628
-goto @START38_110
-
-:START38_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE38
-goto_if_false @START38_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE38
-remove_pickup $SAVE38
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} -1207.293 {y} -859.9947 {z} 13.1042
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_39 
-terminate_this_script 
+start_new_script @Noname_39
+terminate_this_script
 
 :Noname_39
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_39_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_39_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
@@ -5027,60 +4369,44 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_38_1 = add_sprite_blip_for_contact_point -1207.293 {y} -859.9947 {z} 13.1042 {sprite} RadarSprite.Airyard
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_39_346
 
 :Noname_39_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -1207.293 {y} -859.9947 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} -1207.293 {y} -859.9947 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_39_346
 remove_blip $RADAR_MISS_38_1
 $ONMISSION = 1
 load_and_launch_mission_internal 47
-terminate_this_script 
+terminate_this_script
 
 :START39
 script_name 'START39'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 48
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 48
 goto_if_false @START39
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START39_53
-
-:START39_53
-wait 0
-$ICONSAVE39 = add_sprite_blip_for_coord -1207.403 {y} -872.1083 {z} 12.8628 {sprite} RadarSprite.SaveGame
-$SAVE39 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -1207.403 {y} -872.1083 {z} 12.8628
-goto @START39_110
-
-:START39_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE39
-goto_if_false @START39_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE39
-remove_pickup $SAVE39
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} -1207.293 {y} -859.9947 {z} 13.1042
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_40 
-terminate_this_script 
+start_new_script @Noname_40
+terminate_this_script
 
 :Noname_40
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_40_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_40_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
@@ -5107,60 +4433,44 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_39_1 = add_sprite_blip_for_contact_point -1207.293 {y} -859.9947 {z} 13.1042 {sprite} RadarSprite.Airyard
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_40_346
 
 :Noname_40_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -1207.293 {y} -859.9947 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} -1207.293 {y} -859.9947 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_40_346
 remove_blip $RADAR_MISS_39_1
 $ONMISSION = 1
 load_and_launch_mission_internal 48
-terminate_this_script 
+terminate_this_script
 
 :START40
 script_name 'START40'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 49
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 49
 goto_if_false @START40
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START40_53
-
-:START40_53
-wait 0
-$ICONSAVE40 = add_sprite_blip_for_coord -2150.488 {y} -1513.028 {z} 26.3792 {sprite} RadarSprite.SaveGame
-$SAVE40 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -2150.488 {y} -1513.028 {z} 26.3792
-goto @START40_110
-
-:START40_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE40
-goto_if_false @START40_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE40
-remove_pickup $SAVE40
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} -1875.969 {y} -1387.718 {z} 9.1802
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_41 
-terminate_this_script 
+start_new_script @Noname_41
+terminate_this_script
 
 :Noname_41
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_41_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_41_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
@@ -5187,60 +4497,44 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_40_1 = add_sprite_blip_for_contact_point -1875.969 {y} -1387.718 {z} 9.1802 {sprite} RadarSprite.GangN
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_41_346
 
 :Noname_41_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -1875.969 {y} -1387.718 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} -1875.969 {y} -1387.718 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_41_346
 remove_blip $RADAR_MISS_40_1
 $ONMISSION = 1
 load_and_launch_mission_internal 49
-terminate_this_script 
+terminate_this_script
 
 :START41
 script_name 'START41'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 50
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 50
 goto_if_false @START41
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START41_53
-
-:START41_53
-wait 0
-$ICONSAVE41 = add_sprite_blip_for_coord -2150.488 {y} -1513.028 {z} 26.3792 {sprite} RadarSprite.SaveGame
-$SAVE41 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -2150.488 {y} -1513.028 {z} 26.3792
-goto @START41_110
-
-:START41_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE41
-goto_if_false @START41_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE41
-remove_pickup $SAVE41
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} -1207.293 {y} -859.9947 {z} 13.1042
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_42 
-terminate_this_script 
+start_new_script @Noname_42
+terminate_this_script
 
 :Noname_42
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_42_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_42_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
@@ -5267,60 +4561,44 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_41_1 = add_sprite_blip_for_contact_point -1207.293 {y} -859.9947 {z} 13.1042 {sprite} RadarSprite.Airyard
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_42_346
 
 :Noname_42_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -1207.293 {y} -859.9947 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} -1207.293 {y} -859.9947 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_42_346
 remove_blip $RADAR_MISS_41_1
 $ONMISSION = 1
 load_and_launch_mission_internal 50
-terminate_this_script 
+terminate_this_script
 
 :START42
 script_name 'START42'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 51
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 51
 goto_if_false @START42
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START42_53
-
-:START42_53
-wait 0
-$ICONSAVE42 = add_sprite_blip_for_coord -1207.403 {y} -872.1083 {z} 12.8628 {sprite} RadarSprite.SaveGame
-$SAVE42 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -1207.403 {y} -872.1083 {z} 12.8628
-goto @START42_110
-
-:START42_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE42
-goto_if_false @START42_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE42
-remove_pickup $SAVE42
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} -1207.293 {y} -859.9947 {z} 13.1042
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_43 
-terminate_this_script 
+start_new_script @Noname_43
+terminate_this_script
 
 :Noname_43
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_43_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_43_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
@@ -5348,60 +4626,44 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_42_1 = add_sprite_blip_for_contact_point -1207.293 {y} -859.9947 {z} 13.1042 {sprite} RadarSprite.Airyard
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_43_370
 
 :Noname_43_370
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -1207.293 {y} -859.9947 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} -1207.293 {y} -859.9947 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_43_370
 remove_blip $RADAR_MISS_42_1
 $ONMISSION = 1
 load_and_launch_mission_internal 51
-terminate_this_script 
+terminate_this_script
 
 :START43
 script_name 'START43'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 52
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 52
 goto_if_false @START43
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START43_53
-
-:START43_53
-wait 0
-$ICONSAVE43 = add_sprite_blip_for_coord -1207.403 {y} -872.1083 {z} 12.8628 {sprite} RadarSprite.SaveGame
-$SAVE43 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -1207.403 {y} -872.1083 {z} 12.8628
-goto @START43_110
-
-:START43_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE43
-goto_if_false @START43_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE43
-remove_pickup $SAVE43
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} -1207.293 {y} -859.9947 {z} 13.1042
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_44 
-terminate_this_script 
+start_new_script @Noname_44
+terminate_this_script
 
 :Noname_44
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_44_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_44_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
@@ -5428,60 +4690,44 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_43_1 = add_sprite_blip_for_contact_point -1207.293 {y} -859.9947 {z} 13.1042 {sprite} RadarSprite.Airyard
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_44_346
 
 :Noname_44_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -1207.293 {y} -859.9947 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} -1207.293 {y} -859.9947 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_44_346
 remove_blip $RADAR_MISS_43_1
 $ONMISSION = 1
 load_and_launch_mission_internal 52
-terminate_this_script 
+terminate_this_script
 
 :START44
 script_name 'START44'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 53
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 53
 goto_if_false @START44
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START44_53
-
-:START44_53
-wait 0
-$ICONSAVE44 = add_sprite_blip_for_coord -1207.403 {y} -872.1083 {z} 12.8628 {sprite} RadarSprite.SaveGame
-$SAVE44 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -1207.403 {y} -872.1083 {z} 12.8628
-goto @START44_110
-
-:START44_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE44
-goto_if_false @START44_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE44
-remove_pickup $SAVE44
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} -1073.251 {y} 316.8466 {z} 4.985
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_45 
-terminate_this_script 
+start_new_script @Noname_45
+terminate_this_script
 
 :Noname_45
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_45_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_45_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
@@ -5508,60 +4754,44 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_44_1 = add_sprite_blip_for_contact_point -1073.251 {y} 316.8466 {z} 4.985 {sprite} RadarSprite.Airyard
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_45_346
 
 :Noname_45_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -1073.251 {y} 316.8466 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} -1073.251 {y} 316.8466 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_45_346
 remove_blip $RADAR_MISS_44_1
 $ONMISSION = 1
 load_and_launch_mission_internal 53
-terminate_this_script 
+terminate_this_script
 
 :START45
 script_name 'START45'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 54
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 54
 goto_if_false @START45
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START45_53
-
-:START45_53
-wait 0
-$ICON45 = add_sprite_blip_for_coord -1644.797 {y} -1986.9041 {z} 44.3945 {sprite} RadarSprite.SaveGame
-$SAV45 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -1644.797 {y} -1986.9041 {z} 44.3945
-goto @START45_110
-
-:START45_110
-wait 0
-if 
-  has_pickup_been_collected $SAV45
-goto_if_false @START45_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICON45
-remove_pickup $SAV45
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} -1676.079 {y} -1953.304 {z} 46.4712
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_46 
-terminate_this_script 
+start_new_script @Noname_46
+terminate_this_script
 
 :Noname_46
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_46_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_46_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
@@ -5588,60 +4818,44 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_45_1 = add_sprite_blip_for_contact_point -1676.079 {y} -1953.304 {z} 46.4712 {sprite} RadarSprite.Airyard
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_46_346
 
 :Noname_46_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -1676.079 {y} -1953.304 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} -1676.079 {y} -1953.304 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_46_346
 remove_blip $RADAR_MISS_45_1
 $ONMISSION = 1
 load_and_launch_mission_internal 54
-terminate_this_script 
+terminate_this_script
 
 :START45_1
 script_name 'START45_1'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 55
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 55
 goto_if_false @START45_1
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START45_1_61
-
-:START45_1_61
-wait 0
-$ICON45_1 = add_sprite_blip_for_coord -1644.797 {y} -1986.9041 {z} 44.3945 {sprite} RadarSprite.SaveGame
-$SAV45_1 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -1644.797 {y} -1986.9041 {z} 44.3945
-goto @START45_1_118
-
-:START45_1_118
-wait 0
-if 
-  has_pickup_been_collected $SAV45_1
-goto_if_false @START45_1_118
 do_fade 500 {direction} Fade.Out
-remove_blip $ICON45_1
-remove_pickup $SAV45_1
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} -2624.2759 {y} -1733.566 {z} 66.623
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_47 
-terminate_this_script 
+start_new_script @Noname_47
+terminate_this_script
 
 :Noname_47
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_47_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_47_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
@@ -5668,60 +4882,44 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_45_1_1 = add_sprite_blip_for_contact_point -2624.2759 {y} -1733.566 {z} 66.623 {sprite} RadarSprite.GangN
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_47_346
 
 :Noname_47_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -2624.2759 {y} -1733.566 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} -2624.2759 {y} -1733.566 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_47_346
 remove_blip $RADAR_MISS_45_1_1
 $ONMISSION = 1
 load_and_launch_mission_internal 55
-terminate_this_script 
+terminate_this_script
 
 :START46
 script_name 'START46'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 56
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 56
 goto_if_false @START46
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START46_53
-
-:START46_53
-wait 0
-$ICONSAVE46 = add_sprite_blip_for_coord -1207.403 {y} -872.1083 {z} 12.8628 {sprite} RadarSprite.SaveGame
-$SAVE46 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -1207.403 {y} -872.1083 {z} 12.8628
-goto @START46_110
-
-:START46_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE46
-goto_if_false @START46_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE46
-remove_pickup $SAVE46
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} -272.0787 {y} 130.4307 {z} 117.4908
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_48 
-terminate_this_script 
+start_new_script @Noname_48
+terminate_this_script
 
 :Noname_48
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_48_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_48_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
@@ -5748,60 +4946,44 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_46_1 = add_sprite_blip_for_contact_point -272.0787 {y} 130.4307 {z} 117.4908 {sprite} RadarSprite.Fire
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_48_346
 
 :Noname_48_346
 wait 0
-  locate_stopped_char_any_means_2d $PLAYER_ACTOR {x} -272.0787 {y} 130.4307 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_stopped_char_any_means_2d $PLAYER_ACTOR {x} -272.0787 {y} 130.4307 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_48_346
 remove_blip $RADAR_MISS_46_1
 $ONMISSION = 1
 load_and_launch_mission_internal 56
-terminate_this_script 
+terminate_this_script
 
 :START47
 script_name 'START47'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 57
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 57
 goto_if_false @START47
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START47_53
-
-:START47_53
-wait 0
-$ICONSAVE47 = add_sprite_blip_for_coord -1278.274 {y} 738.512 {z} 10.0 {sprite} RadarSprite.SaveGame
-$SAVE47 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -1278.274 {y} 738.512 {z} 10.0
-goto @START47_110
-
-:START47_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE47
-goto_if_false @START47_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE47
-remove_pickup $SAVE47
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} -1286.066 {y} 733.8021 {z} 10.0436
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_49 
-terminate_this_script 
+start_new_script @Noname_49
+terminate_this_script
 
 :Noname_49
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_49_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_49_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
@@ -5828,60 +5010,44 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_47_1 = add_sprite_blip_for_contact_point -1286.066 {y} 733.8021 {z} 10.0436 {sprite} RadarSprite.Fire
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_49_346
 
 :Noname_49_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -1286.066 {y} 733.8021 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} -1286.066 {y} 733.8021 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_49_346
 remove_blip $RADAR_MISS_47_1
 $ONMISSION = 1
 load_and_launch_mission_internal 57
-terminate_this_script 
+terminate_this_script
 
 :START48
 script_name 'START48'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 58
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 58
 goto_if_false @START48
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START48_53
-
-:START48_53
-wait 0
-$ICONSAVE48 = add_sprite_blip_for_coord -1278.274 {y} 738.512 {z} 10.0 {sprite} RadarSprite.SaveGame
-$SAVE48 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -1278.274 {y} 738.512 {z} 10.0
-goto @START48_110
-
-:START48_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE48
-goto_if_false @START48_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE48
-remove_pickup $SAVE48
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} -1206.9 {y} -862.939 {z} 13.6452
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_50 
-terminate_this_script 
+start_new_script @Noname_50
+terminate_this_script
 
 :Noname_50
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_50_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_50_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
@@ -5908,60 +5074,44 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_48_1 = add_sprite_blip_for_contact_point -1206.9 {y} -862.939 {z} 13.6452 {sprite} RadarSprite.Airyard
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_50_346
 
 :Noname_50_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -1206.9 {y} -862.939 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} -1206.9 {y} -862.939 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_50_346
 remove_blip $RADAR_MISS_48_1
 $ONMISSION = 1
 load_and_launch_mission_internal 58
-terminate_this_script 
+terminate_this_script
 
 :START49
 script_name 'START49'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 59
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 59
 goto_if_false @START49
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START49_53
-
-:START49_53
-wait 0
-$ICONSAVE49 = add_sprite_blip_for_coord -1207.403 {y} -872.1083 {z} 12.8628 {sprite} RadarSprite.SaveGame
-$SAVE49 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -1207.403 {y} -872.1083 {z} 12.8628
-goto @START49_110
-
-:START49_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE49
-goto_if_false @START49_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE49
-remove_pickup $SAVE49
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} -1079.246 {y} 228.8099 {z} 4.983
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_51 
-terminate_this_script 
+start_new_script @Noname_51
+terminate_this_script
 
 :Noname_51
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_51_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_51_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart -1210.344 {y} -862.0493 {z} 13.0 {heading} 259.0
@@ -5988,60 +5138,44 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_49_1 = add_sprite_blip_for_contact_point -1079.246 {y} 228.8099 {z} 4.983 {sprite} RadarSprite.Airyard
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_51_346
 
 :Noname_51_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -1079.246 {y} 228.8099 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} -1079.246 {y} 228.8099 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_51_346
 remove_blip $RADAR_MISS_49_1
 $ONMISSION = 1
 load_and_launch_mission_internal 59
-terminate_this_script 
+terminate_this_script
 
 :START50
 script_name 'START50'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 60
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 60
 goto_if_false @START50
-request_model #PICKUPSAVE
-load_all_models_now 
-goto @START50_53
-
-:START50_53
-wait 0
-$ICONSAVE50 = add_sprite_blip_for_coord -1647.421 {y} -1990.5229 {z} 44.7306 {sprite} RadarSprite.SaveGame
-$SAVE50 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -1647.421 {y} -1990.5229 {z} 44.7306
-goto @START50_110
-
-:START50_110
-wait 0
-if 
-  has_pickup_been_collected $SAVE50
-goto_if_false @START50_110
 do_fade 500 {direction} Fade.Out
-remove_blip $ICONSAVE50
-remove_pickup $SAVE50
 wait 500
-activate_save_menu 
+activate_save_menu
 $WIDE = 1
+set_char_coordinates $PLAYER_ACTOR {x} -1652.129 {y} -1957.609 {z} 46.679
 do_fade 2000 {direction} Fade.In
-start_new_script @Noname_52 
-terminate_this_script 
+start_new_script @Noname_52
+terminate_this_script
 
 :Noname_52
 wait 0
 request_model #WMYPIZZ
-load_all_models_now 
+load_all_models_now
 
 :Noname_52_11
 wait 0
-if 
-  has_model_loaded #WMYPIZZ
+if
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_52_11
 set_player_model $PLAYER_CHAR {modelId} 155
 
@@ -6070,25 +5204,25 @@ switch_audio_zone "BUSIN" {state} False
 switch_audio_zone "GOVERN" {state} False
 $WIDE = 0
 $RADAR_MISS_50_1 = add_sprite_blip_for_contact_point -1652.129 {y} -1957.609 {z} 46.679 {sprite} RadarSprite.Airyard
-restore_camera_jumpcut 
-set_camera_behind_player 
+restore_camera_jumpcut
+set_camera_behind_player
 goto @Noname_52_346
 
 :Noname_52_346
 wait 0
-  locate_char_any_means_2d $PLAYER_ACTOR {x} -1652.129 {y} -1957.609 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+locate_char_any_means_2d $PLAYER_ACTOR {x} -1652.129 {y} -1957.609 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @Noname_52_346
 remove_blip $RADAR_MISS_50_1
 $ONMISSION = 1
 load_and_launch_mission_internal 60
-terminate_this_script 
+terminate_this_script
 
 :START51
 script_name 'START51'
 wait 0
 if and
-  $ONMISSION == 0
-  $PASSED_MISSIONS == 61
+    $ONMISSION == 0
+    $PASSED_MISSIONS == 61
 goto_if_false @START51
 wait 100
 $RADAR_MISS_FAMILY = add_sprite_blip_for_contact_point -1218.944 {y} -859.7744 {z} 13.1042 {sprite} RadarSprite.Airyard
@@ -6099,20 +5233,20 @@ $RADAR_MISS_BOARD = add_sprite_blip_for_contact_point 2506.8149 {y} 2391.2661 {z
 
 :START51_154
 wait 0
-if 
-  not locate_char_any_means_2d $PLAYER_ACTOR {x} -1218.944 {y} -859.7744 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+if
+    not locate_char_any_means_2d $PLAYER_ACTOR {x} -1218.944 {y} -859.7744 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @START51_355
-if 
-  not locate_char_any_means_2d $PLAYER_ACTOR {x} -1401.432 {y} -63.9755 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+if
+    not locate_char_any_means_2d $PLAYER_ACTOR {x} -1401.432 {y} -63.9755 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @START51_397
-if 
-  not locate_char_any_means_2d $PLAYER_ACTOR {x} -120.0338 {y} -2306.384 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+if
+    not locate_char_any_means_2d $PLAYER_ACTOR {x} -120.0338 {y} -2306.384 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @START51_439
-if 
-  not locate_char_any_means_2d $PLAYER_ACTOR {x} 2263.3201 {y} -2787.564 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+if
+    not locate_char_any_means_2d $PLAYER_ACTOR {x} 2263.3201 {y} -2787.564 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @START51_481
-if 
-  not locate_char_any_means_2d $PLAYER_ACTOR {x} 2506.8149 {y} 2391.2661 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
+if
+    not locate_char_any_means_2d $PLAYER_ACTOR {x} 2506.8149 {y} 2391.2661 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
 goto_if_false @START51_523
 goto @START51_154
 
@@ -6125,7 +5259,7 @@ remove_blip $RADAR_MISS_MICRO
 remove_blip $RADAR_MISS_BOARD
 $ONMISSION = 1
 load_and_launch_mission_internal 61
-terminate_this_script 
+terminate_this_script
 
 :START51_397
 wait 0
@@ -6136,7 +5270,7 @@ remove_blip $RADAR_MISS_MICRO
 remove_blip $RADAR_MISS_BOARD
 $ONMISSION = 1
 load_and_launch_mission_internal 62
-terminate_this_script 
+terminate_this_script
 
 :START51_439
 wait 0
@@ -6147,7 +5281,7 @@ remove_blip $RADAR_MISS_MICRO
 remove_blip $RADAR_MISS_BOARD
 $ONMISSION = 1
 load_and_launch_mission_internal 63
-terminate_this_script 
+terminate_this_script
 
 :START51_481
 wait 0
@@ -6158,7 +5292,7 @@ remove_blip $RADAR_MISS_MICRO
 remove_blip $RADAR_MISS_BOARD
 $ONMISSION = 1
 load_and_launch_mission_internal 64
-terminate_this_script 
+terminate_this_script
 
 :START51_523
 wait 0
@@ -6169,7 +5303,7 @@ remove_blip $RADAR_MISS_MICRO
 remove_blip $RADAR_MISS_BOARD
 $ONMISSION = 1
 load_and_launch_mission_internal 65
-terminate_this_script 
+terminate_this_script
 
 :SAVE51
 script_name 'SAVE51'
