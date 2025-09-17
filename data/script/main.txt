@@ -19871,10 +19871,6 @@ print_with_number_big 'M_PASSD' {num} 0 {duration} 5000 {style} TextStyle.Middle
 register_mission_passed 'MIS_507' // ~b~Chepei
 set_player_duck_button $PLAYER_CHAR {enabled} True
 set_player_enter_car_button $PLAYER_CHAR {enabled} True
-delete_object $CHINA1
-mark_object_as_no_longer_needed $CHINA1
-delete_object $CHINA1LOD
-mark_object_as_no_longer_needed $CHINA1LOD
 wait 5000
 $PASSED_MISSIONS += 1
 $ONMISSION = 0
@@ -19905,10 +19901,6 @@ mark_char_as_no_longer_needed $MICRO_29_1
 delete_char $MICRO_29_1
 mark_char_as_no_longer_needed $MICRO_29_2
 delete_char $MICRO_29_2
-delete_object $CHINA1
-mark_object_as_no_longer_needed $CHINA1
-delete_object $CHINA1LOD
-mark_object_as_no_longer_needed $CHINA1LOD
 restore_camera_jumpcut 
 set_camera_behind_player 
 wait 1000

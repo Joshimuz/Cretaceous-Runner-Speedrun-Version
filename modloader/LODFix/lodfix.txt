@@ -1,0 +1,44 @@
+{$CLEO .cs}
+wait 1000
+
+Alloc($PASSED_MISSIONS, 5297)
+Alloc($CHINA1, 6146)
+Alloc($CHINA1LOD, 6147)
+// wait for destruction
+while true
+    wait 0
+    if and
+        Object.DoesExist($CHINA1LOD)
+        Object.DoesExist($CHINA1)
+        $PASSED_MISSIONS > 37
+    then
+        removeFromLodConnectedList($CHINA1, $CHINA1LOD)
+        delete_object $CHINA1
+        delete_object $CHINA1LOD
+    end
+end
+terminate_this_custom_script
+
+function removeFromLodConnectedList(base: Object, lod: Object)
+    const List_Address = 0xA44800; // TheScripts::ScriptConnectLodsObjects
+    const List_Size = 10 // MAX_NUM_SCRIPT_CONNECT_LODS_OBJECTS
+    const List_Entry_Size = 8 // sizeof(tScriptConnectLodsObject)
+
+    int i, lastIdx = List_Size - 1
+    for i = 0 to lastIdx
+        int ptr = i * List_Entry_Size
+        ptr += List_Address
+
+        int a = read_memory_with_offset {address} ptr {offset} 0 {size} 4
+        int b = read_memory_with_offset {address} ptr {offset} 4 {size} 4
+
+        if and
+            a == base
+            b == lod
+        then
+            write_memory_with_offset {address} ptr {offset} 0 {size} 4 {value} -1
+            write_memory_with_offset {address} ptr {offset} 4 {size} 4 {value} -1
+            break // done
+        end
+    end
+end
