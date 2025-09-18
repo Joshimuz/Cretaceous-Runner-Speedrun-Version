@@ -1,17 +1,35 @@
 {$CLEO .cs}
 wait 1000
 
+debug_on
+
 Alloc($PASSED_MISSIONS, 5297)
 Alloc($CHINA1, 6146)
 Alloc($CHINA1LOD, 6147)
-// wait for destruction
+
 while true
     wait 0
+    //Mission Passed
     if and
         Object.DoesExist($CHINA1LOD)
         Object.DoesExist($CHINA1)
         $PASSED_MISSIONS > 37
     then
+        //Remove the LOD and break from the loop
+        removeFromLodConnectedList($CHINA1, $CHINA1LOD)
+        delete_object $CHINA1
+        delete_object $CHINA1LOD
+        break
+    end
+    
+    //Mission Failed
+    if and
+        Object.DoesExist($CHINA1LOD)
+        Object.DoesExist($CHINA1)
+        $PASSED_MISSIONS == 37
+        $ONMISSION == 0
+    then
+        //Remove the LOD and continue looping
         removeFromLodConnectedList($CHINA1, $CHINA1LOD)
         delete_object $CHINA1
         delete_object $CHINA1LOD
