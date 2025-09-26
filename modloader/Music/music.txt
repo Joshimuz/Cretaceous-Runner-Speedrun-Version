@@ -1,0 +1,710 @@
+{$CLEO .cs}
+{$USE audio}
+
+Alloc($PLAY0, 5495)
+Alloc($PLAY1, 5496)
+Alloc($PLAY2, 5497)
+Alloc($PLAY4, 5498)
+Alloc($PLAY5, 5499)
+Alloc($PLAY8, 5500)
+Alloc($PLAY10, 5501)
+Alloc($PLAY11, 5502)
+Alloc($PLAY12, 5503)
+Alloc($PLAY14, 5504)
+Alloc($PLAY19, 5505)
+Alloc($PLAY20, 5506)
+Alloc($PLAY22, 5507)
+Alloc($PLAY24, 5508)
+Alloc($PLAY26, 5509)
+Alloc($PLAY27, 5510)
+Alloc($PLAY29, 5511)
+Alloc($PLAY30, 5512)
+Alloc($PLAY33, 5513)
+Alloc($PLAY34, 5514)
+Alloc($PLAY35, 5412)
+Alloc($PLAY39, 5515)
+Alloc($PLAY41, 5516)
+Alloc($PLAY43, 5517)
+Alloc($PLAY44, 5518)
+Alloc($PLAY46, 5519)
+Alloc($PLAY48, 5520)
+Alloc($PLAY49, 5521)
+Alloc($PLAY50, 5522)
+Alloc($PLAY51, 5523)
+Alloc($PLAY54, 5524)
+Alloc($PLAY11_1, 6530)
+
+:AUDIO
+script_name 'AUDIO'
+wait 0
+$PLAY0 = 0
+$PLAY1 = 0
+$PLAY2 = 0
+$PLAY4 = 0
+$PLAY5 = 0
+$PLAY8 = 0
+$PLAY10 = 0
+$PLAY11 = 0
+$PLAY11_1 = 0
+$PLAY12 = 0
+$PLAY14 = 0
+$PLAY19 = 0
+$PLAY20 = 0
+$PLAY22 = 0
+$PLAY24 = 0
+$PLAY26 = 0
+$PLAY27 = 0
+$PLAY29 = 0
+$PLAY30 = 0
+$PLAY33 = 0
+$PLAY34 = 0
+$PLAY35 = 0
+$PLAY39 = 0
+$PLAY41 = 0
+$PLAY43 = 0
+$PLAY44 = 0
+$PLAY46 = 0
+$PLAY48 = 0
+$PLAY49 = 0
+$PLAY50 = 0
+$PLAY51 = 0
+$PLAY54 = 0
+switch_audio_zone "CHILD" {state} False
+switch_audio_zone "OPORT" {state} False
+switch_audio_zone "SAVEL" {state} False
+switch_audio_zone "SIXWAR" {state} False
+switch_audio_zone "DREAM" {state} False
+switch_audio_zone "GHILLS" {state} False
+switch_audio_zone "BOARD" {state} False
+switch_audio_zone "BOAT" {state} False
+switch_audio_zone "DAYAR" {state} False
+switch_audio_zone "TARBO" {state} False
+switch_audio_zone "TERCLAW" {state} False
+switch_audio_zone "CRETRU" {state} False
+switch_audio_zone "DAYHEL" {state} False
+switch_audio_zone "CROCOS" {state} False
+switch_audio_zone "FRONT" {state} False
+switch_audio_zone "MATING" {state} False
+switch_audio_zone "DENSITY" {state} False
+switch_audio_zone "PROMEN" {state} False
+switch_audio_zone "EXPLOR" {state} False
+switch_audio_zone "BUSIN" {state} False
+switch_audio_zone "GOVERN" {state} False
+
+:AUDIO_475
+wait 0
+if
+    $PLAY0 <> 1
+goto_if_false @AUDIO_1044
+if
+    $PLAY1 <> 1
+goto_if_false @AUDIO_1088
+if
+    $PLAY2 <> 1
+goto_if_false @AUDIO_1142
+if
+    $PLAY4 <> 1
+goto_if_false @AUDIO_1186
+if
+    $PLAY5 <> 1
+goto_if_false @AUDIO_1240
+if
+    $PLAY8 <> 1
+goto_if_false @AUDIO_1294
+if
+    $PLAY10 <> 1
+goto_if_false @AUDIO_1350
+if
+    $PLAY11 <> 1
+goto_if_false @AUDIO_1394
+if
+    $PLAY11_1 <> 1
+goto_if_false @AUDIO_SRV
+if
+    $PLAY12 <> 1
+goto_if_false @AUDIO_1448
+if
+    $PLAY14 <> 1
+goto_if_false @AUDIO_1504
+if
+    $PLAY19 <> 1
+goto_if_false @AUDIO_1558
+if
+    $PLAY20 <> 1
+goto_if_false @AUDIO_1610
+if
+    $PLAY22 <> 1
+goto_if_false @AUDIO_1654
+if
+    $PLAY24 <> 1
+goto_if_false @AUDIO_1710
+if
+    $PLAY26 <> 1
+goto_if_false @AUDIO_1754
+if
+    $PLAY27 <> 1
+goto_if_false @AUDIO_1811
+if
+    $PLAY29 <> 1
+goto_if_false @AUDIO_1872
+if
+    $PLAY30 <> 1
+goto_if_false @AUDIO_1931
+if
+    $PLAY33 <> 1
+goto_if_false @AUDIO_1975
+if
+    $PLAY34 <> 1
+goto_if_false @AUDIO_2034
+if
+    $PLAY35 <> 1
+goto_if_false @AUDIO_2078
+if
+    $PLAY39 <> 1
+goto_if_false @AUDIO_2134
+if
+    $PLAY41 <> 1
+goto_if_false @AUDIO_2188
+if
+    $PLAY43 <> 1
+goto_if_false @AUDIO_2244
+if
+    $PLAY44 <> 1
+goto_if_false @AUDIO_2302
+if
+    $PLAY46 <> 1
+goto_if_false @AUDIO_2346
+if
+    $PLAY48 <> 1
+goto_if_false @AUDIO_2402
+if
+    $PLAY49 <> 1
+goto_if_false @AUDIO_2446
+if
+    $PLAY50 <> 1
+goto_if_false @AUDIO_2502
+if
+    $PLAY51 <> 1
+goto_if_false @AUDIO_2546
+if
+    $PLAY54 <> 1
+goto_if_false @AUDIO_2600
+goto @AUDIO_475
+
+:AUDIO_1044
+wait 0
+$music1 = load_audio_stream {audioFileName} "mp3_and_ogg/beat_4.ogg"
+set_audio_stream_type $music1 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music1 {action} AudioStreamAction.Play
+
+:AUDIO_1059
+wait 0
+$PLAY0 == 0
+goto_if_false @AUDIO_1059
+set_audio_stream_state $music1 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+:AUDIO_1088
+wait 1000
+$music2 = load_audio_stream {audioFileName} "mp3_and_ogg/child.ogg"
+set_audio_stream_type $music2 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music2 {action} AudioStreamAction.Play
+
+:AUDIO_1104
+wait 0
+$PLAY1 == 0
+goto_if_false @AUDIO_1104
+set_audio_stream_state $music2 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+:AUDIO_1142
+wait 0
+$music3 = load_audio_stream {audioFileName} "mp3_and_ogg/beat_10.ogg"
+set_audio_stream_type $music3 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music3 {action} AudioStreamAction.Play
+
+:AUDIO_1157
+wait 0
+$PLAY2 == 0
+goto_if_false @AUDIO_1157
+set_audio_stream_state $music3 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+:AUDIO_1186
+wait 1000
+$music4 = load_audio_stream {audioFileName} "mp3_and_ogg/oport.ogg"
+set_audio_stream_type $music4 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music4 {action} AudioStreamAction.Play
+
+:AUDIO_1202
+wait 0
+$PLAY4 == 0
+goto_if_false @AUDIO_1202
+set_audio_stream_state $music4 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+:AUDIO_1240
+wait 1000
+$music5 = load_audio_stream {audioFileName} "mp3_and_ogg/savel.ogg"
+set_audio_stream_type $music5 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music5 {action} AudioStreamAction.Play
+
+:AUDIO_1256
+wait 0
+$PLAY5 == 0
+goto_if_false @AUDIO_1256
+set_audio_stream_state $music5 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+:AUDIO_1294
+wait 1000
+$music6 = load_audio_stream {audioFileName} "mp3_and_ogg/sixwar.ogg"
+set_audio_stream_type $music6 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music6 {action} AudioStreamAction.Play
+
+:AUDIO_1311
+wait 0
+$PLAY8 == 0
+goto_if_false @AUDIO_1311
+set_audio_stream_state $music6 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+:AUDIO_1350
+wait 0
+$music7 = load_audio_stream {audioFileName} "mp3_and_ogg/beat_12.ogg"
+set_audio_stream_type $music7 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music7 {action} AudioStreamAction.Play
+
+:AUDIO_1365
+wait 0
+$PLAY10 == 0
+goto_if_false @AUDIO_1365
+set_audio_stream_state $music7 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+:AUDIO_1394
+wait 1000
+$music8 = load_audio_stream {audioFileName} "mp3_and_ogg/dream.ogg"
+set_audio_stream_type $music8 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music8 {action} AudioStreamAction.Play
+
+:AUDIO_1410
+wait 0
+$PLAY11 == 0
+goto_if_false @AUDIO_1410
+set_audio_stream_state $music8 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+:AUDIO_1448
+wait 1000
+$music9 = load_audio_stream {audioFileName} "mp3_and_ogg/ghills.ogg"
+set_audio_stream_type $music9 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music9 {action} AudioStreamAction.Play
+
+:AUDIO_1465
+wait 0
+$PLAY12 == 0
+goto_if_false @AUDIO_1465
+set_audio_stream_state $music9 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+:AUDIO_1504
+wait 1000
+$music10 = load_audio_stream {audioFileName} "mp3_and_ogg/board.ogg"
+set_audio_stream_type $music10 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music10 {action} AudioStreamAction.Play
+
+:AUDIO_1520
+wait 0
+$PLAY14 == 0
+goto_if_false @AUDIO_1520
+set_audio_stream_state $music10 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+:AUDIO_1558
+wait 1000
+$music11 = load_audio_stream {audioFileName} "mp3_and_ogg/boat.ogg"
+set_audio_stream_type $music11 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music11 {action} AudioStreamAction.Play
+
+:AUDIO_1573
+wait 0
+$PLAY19 == 0
+goto_if_false @AUDIO_1573
+set_audio_stream_state $music11 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+:AUDIO_1610
+wait 0
+$music12 = load_audio_stream {audioFileName} "mp3_and_ogg/beat_2.ogg"
+set_audio_stream_type $music12 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music12 {action} AudioStreamAction.Play
+
+:AUDIO_1625
+wait 0
+$PLAY20 == 0
+goto_if_false @AUDIO_1625
+set_audio_stream_state $music12 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+:AUDIO_1654
+wait 1000
+init_zone_population_settings
+$music13 = load_audio_stream {audioFileName} "mp3_and_ogg/dayar.ogg"
+set_audio_stream_type $music13 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music13 {action} AudioStreamAction.Play
+
+:AUDIO_1672
+wait 0
+$PLAY22 == 0
+goto_if_false @AUDIO_1672
+set_audio_stream_state $music13 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+:AUDIO_1710
+wait 0
+$music14 = load_audio_stream {audioFileName} "mp3_and_ogg/beat_13.ogg"
+set_audio_stream_type $music14 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music14 {action} AudioStreamAction.Play
+
+:AUDIO_1725
+wait 0
+$PLAY24 == 0
+goto_if_false @AUDIO_1725
+set_audio_stream_state $music14 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+:AUDIO_1754
+wait 0
+set_radio_channel RadioChannel.PlaybackFM
+$music15 = load_audio_stream {audioFileName} "mp3_and_ogg/tarbo.ogg"
+set_audio_stream_type $music15 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music15 {action} AudioStreamAction.Play
+
+:AUDIO_1773
+wait 0
+$PLAY26 == 0
+goto_if_false @AUDIO_1773
+set_audio_stream_state $music15 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+:AUDIO_1811
+wait 0
+set_radio_channel RadioChannel.PlaybackFM
+$music16 = load_audio_stream {audioFileName} "mp3_and_ogg/terclaw.ogg"
+set_audio_stream_type $music16 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music16 {action} AudioStreamAction.Play
+
+:AUDIO_1832
+wait 0
+$PLAY27 == 0
+goto_if_false @AUDIO_1832
+set_audio_stream_state $music16 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+:AUDIO_1872
+wait 0
+set_radio_channel RadioChannel.PlaybackFM
+$music17 = load_audio_stream {audioFileName} "mp3_and_ogg/cretru.ogg"
+set_audio_stream_type $music17 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music17 {action} AudioStreamAction.Play
+
+:AUDIO_1892
+wait 0
+$PLAY29 == 0
+goto_if_false @AUDIO_1892
+set_audio_stream_state $music17 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+:AUDIO_1931
+wait 0
+$music18 = load_audio_stream {audioFileName} "mp3_and_ogg/beat_0.ogg"
+set_audio_stream_type $music18 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music18 {action} AudioStreamAction.Play
+
+:AUDIO_1946
+wait 0
+$PLAY30 == 0
+goto_if_false @AUDIO_1946
+set_audio_stream_state $music18 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+:AUDIO_1975
+wait 0
+set_radio_channel RadioChannel.PlaybackFM
+$music19 = load_audio_stream {audioFileName} "mp3_and_ogg/dayhel.ogg"
+set_audio_stream_type $music19 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music19 {action} AudioStreamAction.Play
+
+:AUDIO_1995
+wait 0
+$PLAY33 == 0
+goto_if_false @AUDIO_1995
+set_audio_stream_state $music19 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+:AUDIO_2034
+wait 0
+$music20 = load_audio_stream {audioFileName} "mp3_and_ogg/beat_11.ogg"
+set_audio_stream_type $music20 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music20 {action} AudioStreamAction.Play
+
+:AUDIO_2049
+wait 0
+$PLAY34 == 0
+goto_if_false @AUDIO_2049
+set_audio_stream_state $music20 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+:AUDIO_2078
+wait 1000
+$music21 = load_audio_stream {audioFileName} "mp3_and_ogg/crocos.ogg"
+set_audio_stream_type $music21 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music21 {action} AudioStreamAction.Play
+
+:AUDIO_2095
+wait 0
+$PLAY35 == 0
+goto_if_false @AUDIO_2095
+set_audio_stream_state $music21 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+:AUDIO_2134
+wait 1000
+$music22 = load_audio_stream {audioFileName} "mp3_and_ogg/front.ogg"
+set_audio_stream_type $music22 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music22 {action} AudioStreamAction.Play
+
+:AUDIO_2150
+wait 0
+$PLAY39 == 0
+goto_if_false @AUDIO_2150
+set_audio_stream_state $music22 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+:AUDIO_2188
+wait 1000
+$music23 = load_audio_stream {audioFileName} "mp3_and_ogg/mating.ogg"
+set_audio_stream_type $music23 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music23 {action} AudioStreamAction.Play
+
+:AUDIO_2205
+wait 0
+$PLAY41 == 0
+goto_if_false @AUDIO_2205
+set_audio_stream_state $music23 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+:AUDIO_2244
+wait 1000
+$music24 = load_audio_stream {audioFileName} "mp3_and_ogg/density.ogg"
+set_audio_stream_type $music24 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music24 {action} AudioStreamAction.Play
+
+:AUDIO_2262
+wait 0
+$PLAY43 == 0
+goto_if_false @AUDIO_2262
+set_audio_stream_state $music24 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+:AUDIO_2302
+wait 0
+$music25 = load_audio_stream {audioFileName} "mp3_and_ogg/beat_1.ogg"
+set_audio_stream_type $music25 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music25 {action} AudioStreamAction.Play
+
+:AUDIO_2317
+wait 0
+$PLAY44 == 0
+goto_if_false @AUDIO_2317
+set_audio_stream_state $music25 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+:AUDIO_2346
+wait 1000
+$music26 = load_audio_stream {audioFileName} "mp3_and_ogg/promen.ogg"
+set_audio_stream_type $music26 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music26 {action} AudioStreamAction.Play
+
+:AUDIO_2363
+wait 0
+$PLAY46 == 0
+goto_if_false @AUDIO_2363
+set_audio_stream_state $music26 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+:AUDIO_2402
+wait 0
+$music27 = load_audio_stream {audioFileName} "mp3_and_ogg/beat_3.ogg"
+set_audio_stream_type $music27 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music27 {action} AudioStreamAction.Play
+
+:AUDIO_2417
+wait 0
+$PLAY48 == 0
+goto_if_false @AUDIO_2417
+set_audio_stream_state $music27 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+:AUDIO_2446
+wait 1000
+$music28 = load_audio_stream {audioFileName} "mp3_and_ogg/explor.ogg"
+set_audio_stream_type $music28 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music28 {action} AudioStreamAction.Play
+
+:AUDIO_2463
+wait 0
+$PLAY49 == 0
+goto_if_false @AUDIO_2463
+set_audio_stream_state $music28 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+:AUDIO_2502
+wait 0
+$music29 = load_audio_stream {audioFileName} "mp3_and_ogg/beat_9.ogg"
+set_audio_stream_type $music29 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music29 {action} AudioStreamAction.Play
+
+:AUDIO_2517
+wait 0
+$PLAY50 == 0
+goto_if_false @AUDIO_2517
+set_audio_stream_state $music29 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+:AUDIO_2546
+wait 1000
+$music30 = load_audio_stream {audioFileName} "mp3_and_ogg/busin.ogg"
+set_audio_stream_type $music30 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music30 {action} AudioStreamAction.Play
+
+:AUDIO_2562
+wait 0
+$PLAY51 == 0
+goto_if_false @AUDIO_2562
+set_audio_stream_state $music30 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+:AUDIO_2600
+wait 1000
+$music31 = load_audio_stream {audioFileName} "mp3_and_ogg/govern.ogg"
+set_audio_stream_type $music31 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music31 {action} AudioStreamAction.Play
+
+:AUDIO_2617
+wait 0
+$PLAY54 == 0
+goto_if_false @AUDIO_2617
+set_audio_stream_state $music31 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+:AUDIO_SRV
+wait 1000
+$music32 = load_audio_stream {audioFileName} "mp3_and_ogg/skilar-stealth.mp3"
+set_audio_stream_type $music32 {type} AudioStreamType.Music
+wait 1000
+set_audio_stream_state $music32 {action} AudioStreamAction.Play
+
+:AUDIO_SRV_LOOP
+wait 0
+if or
+    $PLAY11_1 == 2
+    $PLAY11_1 == 0
+goto_if_false @AUDIO_SRV_LOOP
+
+if
+    $PLAY11_1 == 2
+then
+    goto @AUDIO_SRV_CAUGHT
+end
+
+if
+    $PLAY11_1 == 0
+then
+    goto @AUDIO_SRV_STOPPED
+end
+
+:AUDIO_SRV_CAUGHT
+set_audio_stream_state $music32 {action} AudioStreamAction.Stop
+$music33 = load_audio_stream {audioFileName} "mp3_and_ogg/night-fight.mp3"
+set_audio_stream_type $music33 {type} AudioStreamType.Music
+set_audio_stream_state $music33 {action} AudioStreamAction.Play
+wait 1000
+goto @AUDIO_SRV_LOOP2
+
+:AUDIO_SRV_LOOP2
+wait 0
+$PLAY11_1 == 0
+goto_if_false @AUDIO_SRV_LOOP2
+goto @AUDIO_SRV_STOPPED
+
+:AUDIO_SRV_STOPPED
+set_audio_stream_state $music32 {action} AudioStreamAction.Stop
+set_audio_stream_state $music33 {action} AudioStreamAction.Stop
+goto @AUDIO_475
+terminate_this_script
+
+terminate_this_custom_script
