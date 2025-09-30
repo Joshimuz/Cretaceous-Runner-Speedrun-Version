@@ -16166,6 +16166,7 @@ set_fixed_camera_position 4091.76 {y} -135.115 {z} 1.5235 {upVecOffsetX} 0.0 {up
 point_camera_at_point 4083.4751 {y} -113.4883 {z} -0.5 {switchStyle} SwitchType.JumpCut
 force_weather_now WeatherType.SunnyVegas
 set_time_of_day 12 {minutes} 0
+skip_cutscene_start_internal @MISSION19_1_CSKIP
 print_with_number_big 'MIS_699' {num} 0 {duration} 5000 {style} TextStyle.Middle // ~b~Dangerous waters
 set_char_coordinates $PLAYER_ACTOR {x} 4083.4209 {y} -113.1413 {z} 0.5
 set_char_heading $PLAYER_ACTOR {heading} 260.356
@@ -16184,6 +16185,13 @@ set_fixed_camera_position 4052.1489 {y} -125.3762 {z} 3.2186 {upVecOffsetX} 0.0 
 point_camera_at_point 4042.5061 {y} -108.7817 {z} 0.1374 {switchStyle} SwitchType.JumpCut
 print_now 'MIS_710' {time} 5500 {flag} 1 // It's an ~r~Ichtyosaurus~s~! He easily can eat you, try to save yourself!
 wait 5000
+
+:MISSION19_1_CSKIP
+do_fade 1000 {direction} Fade.Out
+wait 1000
+clear_prints
+CLEAR_THIS_PRINT_BIG_NOW TextStyle.Middle
+do_fade 1000 {direction} Fade.In
 switch_widescreen False
 $WIDE = 0
 set_player_control $PLAYER_CHAR {state} True
@@ -16191,7 +16199,7 @@ restore_camera_jumpcut
 set_camera_behind_player
 wait 100
 set_camera_zoom 2
-$TIME19 = 160000
+$TIME19 = 60000
 display_onscreen_timer_with_string $TIME19 {direction} TimerDirection.Down {text} 'TIMER' // TIME
 set_timer_beep_countdown_time $TIME19 {timeInSec} 0
 wait 500
