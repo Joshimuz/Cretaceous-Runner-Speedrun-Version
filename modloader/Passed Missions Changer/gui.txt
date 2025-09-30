@@ -16,10 +16,7 @@ while true
     then
         string $changetozero = IniFile.ReadString("modloader/Passed Missions Changer/config.ini", "General", "Reset_passed_missions_to_0_each_game_restart")
         ImGui.SetNextWindowSize(700.0, 800.0, ImGuiCond.Once)
-        
-        float fSzX, fSzY
-        ImGui.GetScalingSize("S0", 2, 0, fSzX, fSzY)
-        
+
         iShowWindow = ImGui.Begin("Passed Missions Changer", iShowWindow, 0, 0, 0, 0)
 
         ImGui.Text("Select a mission from below and start a new game to skip to it.")
@@ -42,6 +39,9 @@ while true
         ImGui.Separator()
         ImGui.Spacing()
         ImGui.BeginChild("MissionChild")
+        
+        float fSzX, fSzY
+        ImGui.GetScalingSize("S0", 2, 0, fSzX, fSzY)
 
         if ImGui.Button("Introduction", fSzX, fSzY)
         then
