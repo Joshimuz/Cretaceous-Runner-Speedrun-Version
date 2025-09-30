@@ -1,0 +1,287 @@
+{$CLEO}
+{$USE CLEO}
+{$USE imgui}
+
+const TOGGLE_KEY = 118 // F7
+int iShowWindow = 0
+
+while true
+    wait 0
+
+    ImGui.BeginFrame("MISSION_STARTER")
+    ImGui.SetCursorVisible(iShowWindow)
+
+    if iShowWindow == 1
+    then
+        ImGui.SetNextWindowSize(700.0, 800.0, ImGuiCond.Once)
+
+        iShowWindow = ImGui.Begin("Passed Missions Changer", iShowWindow, 0, 0, 0, 0)
+
+        ImGui.Text("Select a mission from below and start a new game to skip to it.")
+        ImGui.Text("(Value gets reset to 0 every game restart.)")
+        ImGui.Separator()
+        ImGui.Spacing()
+        ImGui.BeginChild("MissionChild")
+
+        float fSzX, fSzY
+        ImGui.GetScalingSize("S0", 2, 0, fSzX, fSzY)
+
+        if ImGui.Button("Introduction", fSzX, fSzY)
+        then
+            IniFile.WriteInt(0, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Childhood", fSzX, fSzY)
+        then
+            IniFile.WriteInt(1, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Catch me who can", fSzX, fSzY)
+        then
+            IniFile.WriteInt(2, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Feathers is a sign of skill", fSzX, fSzY)
+        then
+            IniFile.WriteInt(3, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("New opportunities", fSzX, fSzY)
+        then
+            IniFile.WriteInt(4, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Save the Life", fSzX, fSzY)
+        then
+            IniFile.WriteInt(5, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Life's beach", fSzX, fSzY)
+        then
+            IniFile.WriteInt(6, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("The Prankster", fSzX, fSzY)
+        then
+            IniFile.WriteInt(7, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("6-year War", fSzX, fSzY)
+        then
+            IniFile.WriteInt(8, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Street Fighting", fSzX, fSzY)
+        then
+            IniFile.WriteInt(9, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Quieter than water", fSzX, fSzY)
+        then
+            IniFile.WriteInt(10, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("The Great Cause", fSzX, fSzY)
+        then
+            IniFile.WriteInt(11, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("The Big Brother", fSzX, fSzY)
+        then
+            IniFile.WriteInt(12, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("July 1st", fSzX, fSzY)
+        then
+            IniFile.WriteInt(13, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("In the dream", fSzX, fSzY)
+        then
+            IniFile.WriteInt(14, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Grey Hills", fSzX, fSzY)
+        then
+            IniFile.WriteInt(15, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Candyland", fSzX, fSzY)
+        then
+            IniFile.WriteInt(16, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Snowboarding", fSzX, fSzY)
+        then
+            IniFile.WriteInt(17, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("The Alchemist", fSzX, fSzY)
+        then
+            IniFile.WriteInt(18, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Hello, North!", fSzX, fSzY)
+        then
+            IniFile.WriteInt(19, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Cold wind", fSzX, fSzY)
+        then
+            IniFile.WriteInt(20, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Fishing", fSzX, fSzY)
+        then
+            IniFile.WriteInt(21, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("The Great Escape", fSzX, fSzY)
+        then
+            IniFile.WriteInt(22, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Nowhere to run", fSzX, fSzY)
+        then
+            IniFile.WriteInt(23, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Dangerous waters", fSzX, fSzY)
+        then
+            IniFile.WriteInt(24, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Dayargolia", fSzX, fSzY)
+        then
+            IniFile.WriteInt(25, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Oviciraptors", fSzX, fSzY)
+        then
+            IniFile.WriteInt(26, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Amarhaan", fSzX, fSzY)
+        then
+            IniFile.WriteInt(27, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Egg Stiffs", fSzX, fSzY)
+        then
+            IniFile.WriteInt(28, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("The Tarbos", fSzX, fSzY)
+        then
+            IniFile.WriteInt(29, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("The terrible claw", fSzX, fSzY)
+        then
+            IniFile.WriteInt(30, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Weaponwood", fSzX, fSzY)
+        then
+            IniFile.WriteInt(32, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Water patrol", fSzX, fSzY)
+        then
+            IniFile.WriteInt(33, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Cretaceous Running", fSzX, fSzY)
+        then
+            IniFile.WriteInt(34, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Dayarhell", fSzX, fSzY)
+        then
+            IniFile.WriteInt(35, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Flying school", fSzX, fSzY)
+        then
+            IniFile.WriteInt(36, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Chepei", fSzX, fSzY)
+        then
+            IniFile.WriteInt(37, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Other land", fSzX, fSzY)
+        then
+            IniFile.WriteInt(38, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Coming Home", fSzX, fSzY)
+        then
+            IniFile.WriteInt(39, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("The Crocodiles", fSzX, fSzY)
+        then
+            IniFile.WriteInt(40, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Welcome to the Ghetto", fSzX, fSzY)
+        then
+            IniFile.WriteInt(41, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Death from the Sky", fSzX, fSzY)
+        then
+            IniFile.WriteInt(42, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Revenge", fSzX, fSzY)
+        then
+            IniFile.WriteInt(43, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Frontier guard", fSzX, fSzY)
+        then
+            IniFile.WriteInt(44, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Back to Alfred", fSzX, fSzY)
+        then
+            IniFile.WriteInt(45, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Mating dance", fSzX, fSzY)
+        then
+            IniFile.WriteInt(46, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("I wanna bite", fSzX, fSzY)
+        then
+            IniFile.WriteInt(47, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Density Post", fSzX, fSzY)
+        then
+            IniFile.WriteInt(48, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Future depends on You", fSzX, fSzY)
+        then
+            IniFile.WriteInt(49, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Progenesis", fSzX, fSzY)
+        then
+            IniFile.WriteInt(50, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("The Promenade", fSzX, fSzY)
+        then
+            IniFile.WriteInt(51, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Like a First Time", fSzX, fSzY)
+        then
+            IniFile.WriteInt(52, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Evil Return", fSzX, fSzY)
+        then
+            IniFile.WriteInt(53, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Exploration", fSzX, fSzY)
+        then
+            IniFile.WriteInt(54, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("King of the Rock", fSzX, fSzY)
+        then
+            IniFile.WriteInt(55, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("More than Business", fSzX, fSzY)
+        then
+            IniFile.WriteInt(56, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Fireman", fSzX, fSzY)
+        then
+            IniFile.WriteInt(57, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Grilled Chicken", fSzX, fSzY)
+        then
+            IniFile.WriteInt(58, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("The new Government", fSzX, fSzY)
+        then
+            IniFile.WriteInt(59, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        if ImGui.Button("Freedom", fSzX, fSzY)
+        then
+            IniFile.WriteInt(60, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+        end
+        ImGui.EndChild()
+        ImGui.End()
+    end
+
+    ImGui.EndFrame()
+
+    if Pad.IsKeyPressed(TOGGLE_KEY)
+    then
+        while Pad.IsKeyPressed(TOGGLE_KEY)
+            wait 0
+        end
+        if iShowWindow == 1
+        then
+            iShowWindow = 0
+        else
+            iShowWindow = 1
+        end
+    end
+end
