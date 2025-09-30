@@ -16248,6 +16248,7 @@ do_fade 2000 {direction} Fade.Out
 wait 2000
 switch_widescreen True
 $WIDE = 1
+skip_cutscene_start_internal @MISSION19_1_CSKIP2
 set_player_control $PLAYER_CHAR {state} False
 mark_object_as_no_longer_needed $LOG1
 delete_object $LOG1
@@ -16286,6 +16287,15 @@ wait 5000
 print_with_number_big 'MIS_191' {num} 0 {duration} 5000 {style} TextStyle.Middle // ~b~Dayargolia
 register_mission_passed 'MIS_699' // ~b~Dangerous waters
 wait 10000
+
+:MISSION19_1_CSKIP2
+do_fade 1000 {direction} Fade.Out
+wait 1000
+set_char_coordinates $PLAYER_ACTOR {x} 2018.827 {y} -1115.787 {z} 0.4
+set_char_heading $PLAYER_ACTOR {heading} 251.356
+clear_prints
+CLEAR_THIS_PRINT_BIG_NOW TextStyle.Middle
+do_fade 1000 {direction} Fade.In
 switch_widescreen False
 $WIDE = 0
 set_player_control $PLAYER_CHAR {state} True
