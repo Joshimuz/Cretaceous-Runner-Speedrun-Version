@@ -17281,6 +17281,7 @@ wait 0
 if
     has_model_loaded #HFORI
 goto_if_false @MISSION24_83
+skip_cutscene_start_internal @MISSION24_CSKIP
 switch_widescreen True
 $WIDE = 1
 set_player_control $PLAYER_CHAR {state} False
@@ -17289,19 +17290,23 @@ point_camera_at_point 2519.499 {y} -2697.415 {z} 4.98 {switchStyle} SwitchType.J
 do_fade 2000 {direction} Fade.In
 print_with_number_big 'MIS_207' {num} 0 {duration} 5000 {style} TextStyle.Middle // ~b~The  Tarbos
 wait 5000
-set_char_coordinates $PLAYER_ACTOR {x} 2524.895 {y} -2391.687 {z} 19.0
-set_char_heading $PLAYER_ACTOR {heading} 188.356
-$TARBO_24 = create_char PedType.CivMale {modelId} #HFORI {x} 2539.0969 {y} -2474.6289 {z} 19.0
-set_char_heading $TARBO_24 {heading} 14.0
-do_fade 2000 {direction} Fade.Out
-wait 2000
+
+:MISSION24_CSKIP
+skip_cutscene_end
+set_char_coordinates $PLAYER_ACTOR {x} 2850.2314 {y} -2498.3599 {z} 19.0319
+set_char_heading $PLAYER_ACTOR {heading} 167.7252
+$TARBO_24 = create_char PedType.CivMale {modelId} #HFORI {x} 2839.3333 {y} -2552.3203 {z} 16.5244
+set_char_heading $TARBO_24 {heading} 358.1172
+do_fade 1000 {direction} Fade.Out
+wait 1000
+clear_this_print_big_now TextStyle.Middle
 restore_camera_jumpcut
 set_camera_behind_player
 switch_widescreen False
 $WIDE = 0
 set_player_control $PLAYER_CHAR {state} True
-do_fade 2000 {direction} Fade.In
-wait 2000
+do_fade 1000 {direction} Fade.In
+wait 1000
 print_now 'MIS_208' {time} 5000 {flag} 1 // It's a Tarbosaurus! Find a way to kill him!
 set_char_health $TARBO_24 {health} 3000
 task_kill_char_on_foot $TARBO_24 {target} $PLAYER_ACTOR
@@ -17317,6 +17322,10 @@ wait 0
 if
     not is_char_dead $PLAYER_ACTOR
 goto_if_false @MISSION24_660
+wait 0
+if
+    not is_char_dead $TARBO_24
+goto_if_false @MISSION24_509
 wait 0
 if
     locate_char_any_means_2d $PLAYER_ACTOR {x} 2923.7529 {y} -1705.184 {xRadius} 1.5 {yRadius} 1.5 {drawSphere} False
@@ -17337,6 +17346,8 @@ if
 goto_if_false @MISSION24_509
 wait 0
 remove_blip 1@
+remove_blip $RADAR_MISS_24_2
+remove_sphere $RADAR_SPHERE_24_2
 print_with_number_big 'M_PASSD' {num} 0 {duration} 5000 {style} TextStyle.Middle // ~g~MISSION  PASSED!
 register_mission_passed 'MIS_207' // ~b~The  Tarbos
 increment_int_stat_no_message StatId.RespectTotal {value} 20
@@ -20489,7 +20500,12 @@ wait 4000
 
 :MISSION35_628
 skip_cutscene_end
+do_fade 1000 Fade.Out
+wait 1000
+clear_char_tasks $PLAYER_ACTOR
+clear_this_print_big_now TextStyle.Middle
 clear_prints
+do_fade 1000 {direction} Fade.In
 switch_widescreen False
 $WIDE = 0
 set_player_control $PLAYER_CHAR {state} True
