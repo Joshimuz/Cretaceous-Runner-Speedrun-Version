@@ -16291,6 +16291,7 @@ wait 10000
 :MISSION19_1_CSKIP2
 do_fade 1000 {direction} Fade.Out
 wait 1000
+CAMERA_RESET_NEW_SCRIPTABLES
 set_char_coordinates $PLAYER_ACTOR {x} 2018.827 {y} -1115.787 {z} 0.4
 set_char_heading $PLAYER_ACTOR {heading} 251.356
 clear_prints
@@ -20542,34 +20543,60 @@ goto @MISSION35_1015
 :MISSION35_1015
 wait 0
 if and
-    IS_BUTTON_PRESSED 0 {padID} 15
-    not IS_CHAR_HOLDING_OBJECT $PLAYER_ACTOR {object} $EGG1
-goto_if_false @MISSION35_SRV_1
-TASK_COMPLEX_PICKUP_OBJECT $PLAYER_ACTOR {object} $EGG1
-wait 500
+    locate_char_any_means_object_2d $PLAYER_ACTOR {object} $EGG1 {xRadius} 3.0 {yRadius} 3.0 {drawSphere} False
+    not is_char_holding_object $PLAYER_ACTOR {object} $EGG1
+then
+    print_help 'SRV_350'
+    while true
+        wait 0
+        if or
+            not locate_char_any_means_object_2d $PLAYER_ACTOR {object} $EGG1 {xRadius} 3.0 {yRadius} 3.0 {drawSphere} False
+            is_char_holding_object $PLAYER_ACTOR {object} $EGG1
+        then
+            break
+        end
+        
+        if IS_BUTTON_PRESSED 0 {padID} 15
+        then
+            TASK_COMPLEX_PICKUP_OBJECT $PLAYER_ACTOR {object} $EGG1
+        end
+    end
+    
+    wait 500
+else
+    goto @MISSION35_SRV_1
+end
+
 :MISSION35_SRV_1
-if and
+if
+    is_char_holding_object $PLAYER_ACTOR {object} $EGG1
     IS_BUTTON_PRESSED 0 {padID} 15
-    IS_CHAR_HOLDING_OBJECT $PLAYER_ACTOR {object} $EGG1
 goto_if_false @MISSION35_SRV_2
 DROP_OBJECT $PLAYER_ACTOR 1
 wait 500
+
 :MISSION35_SRV_2
+// If nothing has been damaged
 if and
     not is_char_dead $PLAYER_ACTOR
     not is_char_dead $DROMEO_35_1
     not is_char_dead $DROMEO_35_2
     not has_object_been_damaged $EGG1
 goto_if_false @MISSION35_1338
+
+// If player has not been seen
 wait 0
 if
     not locate_char_any_means_2d $PLAYER_ACTOR {x} -1870.715 {y} -2208.366 {xRadius} 15.0 {yRadius} 15.0 {drawSphere} False
 goto_if_false @MISSION35_1443
+
+// If player is near the egg and the end point
 wait 0
 if and
     locate_char_any_means_object_2d $PLAYER_ACTOR {object} $EGG1 {xRadius} 3.0 {yRadius} 3.0 {drawSphere} False
     locate_char_any_means_2d $PLAYER_ACTOR {x} -2106.9309 {y} -1564.004 {xRadius} 2.0 {yRadius} 2.0 {drawSphere} False
 goto_if_false @MISSION35_1015
+
 wait 0
 DROP_OBJECT $PLAYER_ACTOR 1
 remove_blip $RADAR_MISS_35_2
