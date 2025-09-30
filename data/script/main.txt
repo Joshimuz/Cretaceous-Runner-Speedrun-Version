@@ -16345,6 +16345,8 @@ $PROTO_20_3 = create_char PedType.CivMale {modelId} #BMYPOL1 {x} 1935.403 {y} -2
 set_char_heading $PROTO_20_3 {heading} 62.0
 set_char_health $PROTO_20_3 {health} 200
 $PLAY22 = 1
+
+skip_cutscene_start_internal @MISSION20_CUTSCENE_SKIP_1
 do_fade 2000 {direction} Fade.Out
 wait 2000
 switch_widescreen True
@@ -16414,6 +16416,16 @@ do_fade 1000 {direction} Fade.In
 camera_set_vector_move 1939.715 {fromY} -2739.614 {fromZ} 4.0 {toX} 1939.715 {toY} -2739.614 {toZ} 4.0 {time} 3000 {ease} False
 camera_set_vector_track 1942.911 {fromY} -2744.1509 {fromZ} 4.0 {toX} 1942.911 {toY} -2744.1509 {toZ} 4.0 {time} 3000 {ease} False
 wait 3000
+
+:MISSION20_CUTSCENE_SKIP_1
+skip_cutscene_end
+clear_char_tasks $PLAYER_ACTOR
+do_fade 500 {direction} Fade.Out
+wait 500
+set_char_coordinates $PLAYER_ACTOR {x} 1942.968 {y} -2737.0 {z} 4.0
+set_char_heading $PLAYER_ACTOR {heading} 176.356
+CAMERA_RESET_NEW_SCRIPTABLES
+do_fade 500 {direction} Fade.In
 restore_camera_jumpcut
 set_camera_behind_player
 print_now 'MIS_192' {time} 5000 {flag} 1 // Eat the protoceratopses!
