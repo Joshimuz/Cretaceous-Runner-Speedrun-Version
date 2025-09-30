@@ -17495,7 +17495,7 @@ delete_char $OVI_24_1_2
 mark_char_as_no_longer_needed $OVI_24_1_3
 delete_char $OVI_24_1_3
 wait 1000
-$PASSED_MISSIONS += 1
+$PASSED_MISSIONS += 2
 $ONMISSION = 0
 mission_has_finished
 terminate_this_script
