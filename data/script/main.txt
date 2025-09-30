@@ -28200,6 +28200,7 @@ terminate_this_script
 :MISSION49
 script_name 'MISSION49'
 wait 0
+$FLAG_TNG = 0
 allow_pause_in_widescreen True
 set_police_ignore_player $PLAYER_CHAR {state} True
 do_fade 2000 {direction} Fade.Out
@@ -28254,6 +28255,9 @@ if and
 goto_if_false @MISSION49_202
 wait 0
 $DROMEO_49_1 = create_char PedType.CivMale {modelId} #BMOST {x} -1106.038 {y} 344.3696 {z} 4.985
+// Set char health to something huge so they don't die.
+set_char_health $DROMEO_49_1 {health} 10000
+
 set_char_heading $DROMEO_49_1 {heading} 211.0
 set_fixed_camera_position -1077.4919 {y} 283.8392 {z} -2.8936 {upVecOffsetX} 0.0 {upVecOffsetY} 0.0 {upVecOffsetZ} 0.0
 point_camera_at_point -1070.4919 {y} 283.8392 {z} -2.8936 {switchStyle} SwitchType.JumpCut
@@ -28283,10 +28287,11 @@ wait 0
 locate_char_any_means_2d $PLAYER_ACTOR {x} -1106.038 {y} 344.3696 {xRadius} 5.0 {yRadius} 5.0 {drawSphere} False
 goto_if_false @MISSION49_439
 wait 0
-set_group_member $PLAYER_GROUP {handle} $DROMEO_49_1
+$FLAG_TNG = 1
 set_char_drowns_in_water $DROMEO_49_1 {state} False
-set_group_separation_range $PLAYER_GROUP {range} 3000.0
 $DROMEO_49_2 = create_char PedType.CivMale {modelId} #WMYCON {x} -1135.559 {y} 534.8336 {z} 11.0626
+// Set char health to something huge so they don't die.
+set_char_health $DROMEO_49_2 {health} 10000
 set_char_heading $DROMEO_49_2 {heading} 182.0
 $MARK_DROMEO_49_2 = add_blip_for_char $DROMEO_49_2
 change_blip_colour $MARK_DROMEO_49_2 {color} BlipColor.Green
@@ -28303,9 +28308,11 @@ wait 0
 locate_char_any_means_2d $PLAYER_ACTOR {x} -1135.559 {y} 534.8336 {xRadius} 5.0 {yRadius} 5.0 {drawSphere} False
 goto_if_false @MISSION49_587
 wait 0
-set_group_member $PLAYER_GROUP {handle} $DROMEO_49_2
+$FLAG_TNG = 2
 set_char_drowns_in_water $DROMEO_49_2 {state} False
 $DROMEO_49_3 = create_char PedType.CivMale {modelId} #BMYDJ {x} -1313.399 {y} 432.5504 {z} 15.011
+// Set char health to something huge so they don't die.
+set_char_health $DROMEO_49_3 {health} 10000
 set_char_heading $DROMEO_49_3 {heading} 102.0
 $MARK_DROMEO_49_3 = add_blip_for_char $DROMEO_49_3
 change_blip_colour $MARK_DROMEO_49_3 {color} BlipColor.Green
@@ -28323,8 +28330,8 @@ wait 0
 locate_char_any_means_2d $PLAYER_ACTOR {x} -1313.399 {y} 432.5504 {xRadius} 5.0 {yRadius} 5.0 {drawSphere} False
 goto_if_false @MISSION49_730
 wait 0
-set_group_member $PLAYER_GROUP {handle} $DROMEO_49_3
 set_char_drowns_in_water $DROMEO_49_3 {state} False
+$FLAG_TNG = 3
 $DROMEO_49_4 = create_char PedType.CivMale {modelId} #BMYST {x} -1888.97 {y} 367.0864 {z} 35.0
 set_char_heading $DROMEO_49_4 {heading} 102.0
 $MARK_DROMEO_49_4 = add_blip_for_char $DROMEO_49_4
@@ -28345,6 +28352,12 @@ $DROMEO_49_8 = create_char PedType.CivMale {modelId} #WMYSGRD {x} -1888.97 {y} 3
 set_char_heading $DROMEO_49_8 {heading} 102.0
 $MARK_DROMEO_49_8 = add_blip_for_char $DROMEO_49_8
 change_blip_colour $MARK_DROMEO_49_8 {color} BlipColor.Green
+// Set char health to something huge so they don't die.
+set_char_health $DROMEO_49_4 {health} 10000
+set_char_health $DROMEO_49_5 {health} 10000
+set_char_health $DROMEO_49_6 {health} 10000
+set_char_health $DROMEO_49_7 {health} 10000
+set_char_health $DROMEO_49_8 {health} 10000
 goto @MISSION49_1074
 
 :MISSION49_1074
@@ -28385,22 +28398,20 @@ $DROMEO_49_8 = create_char PedType.CivMale {modelId} #WMYSGRD {x} -1892.636 {y} 
 set_char_heading $DROMEO_49_8 {heading} 91.0
 $MARK_DROMEO_49_8 = add_blip_for_char $DROMEO_49_8
 change_blip_colour $MARK_DROMEO_49_8 {color} BlipColor.Green
+$FLAG_TNG = 4
+// Set char health to something huge so they don't die.
+set_char_health $DROMEO_49_4 {health} 10000
+set_char_health $DROMEO_49_5 {health} 10000
+set_char_health $DROMEO_49_6 {health} 10000
+set_char_health $DROMEO_49_7 {health} 10000
+set_char_health $DROMEO_49_8 {health} 10000
 wait 1000
-$GROUP1 = create_group DefaultTaskAllocator.FollowAnyMeans
-set_group_separation_range $GROUP1 {range} 3000.0
-set_group_member $PLAYER_GROUP {handle} $DROMEO_49_4
-set_group_leader $GROUP1 {handle} $DROMEO_49_4
-set_group_member $PLAYER_GROUP {handle} $DROMEO_49_5
-set_group_member $PLAYER_GROUP {handle} $DROMEO_49_6
-set_group_member $PLAYER_GROUP {handle} $DROMEO_49_7
-set_group_member $GROUP1 {handle} $DROMEO_49_8
 set_char_drowns_in_water $DROMEO_49_4 {state} False
 set_char_drowns_in_water $DROMEO_49_5 {state} False
 set_char_drowns_in_water $DROMEO_49_6 {state} False
 set_char_drowns_in_water $DROMEO_49_7 {state} False
 set_char_drowns_in_water $DROMEO_49_8 {state} False
 wait 100
-set_group_member $PLAYER_GROUP {handle} $DROMEO_49_4
 $DROMEO_49_9 = create_char PedType.CivMale {modelId} #BMYBU {x} -1902.545 {y} 279.452 {z} 28.3799
 set_char_heading $DROMEO_49_9 {heading} 195.0
 $MARK_DROMEO_49_9 = add_blip_for_char $DROMEO_49_9
@@ -28409,6 +28420,10 @@ $DROMEO_49_10 = create_char PedType.CivMale {modelId} #BMYDRUG {x} -1905.433 {y}
 set_char_heading $DROMEO_49_10 {heading} 289.0
 $MARK_DROMEO_49_10 = add_blip_for_char $DROMEO_49_10
 change_blip_colour $MARK_DROMEO_49_10 {color} BlipColor.Green
+// Set char health to something huge so they don't die.
+set_char_health $DROMEO_49_9 {health} 10000
+set_char_health $DROMEO_49_10 {health} 10000
+
 goto @MISSION49_1647
 
 :MISSION49_1647
@@ -28433,8 +28448,7 @@ wait 0
 locate_char_any_means_2d $PLAYER_ACTOR {x} -1902.545 {y} 279.452 {xRadius} 5.0 {yRadius} 5.0 {drawSphere} False
 goto_if_false @MISSION49_1647
 wait 0
-set_group_member $GROUP1 {handle} $DROMEO_49_9
-set_group_member $GROUP1 {handle} $DROMEO_49_10
+$FLAG_TNG = 5
 set_char_drowns_in_water $DROMEO_49_9 {state} False
 set_char_drowns_in_water $DROMEO_49_10 {state} False
 $DROMEO_49_11 = create_char PedType.CivMale {modelId} #HMOGAR {x} -1902.573 {y} 129.7971 {z} 4.974
@@ -28445,6 +28459,9 @@ $DROMEO_49_12 = create_char PedType.CivMale {modelId} #BFYPRO {x} -1903.457 {y} 
 set_char_heading $DROMEO_49_12 {heading} 129.0
 $MARK_DROMEO_49_12 = add_blip_for_char $DROMEO_49_12
 change_blip_colour $MARK_DROMEO_49_12 {color} BlipColor.Green
+// Set char health to something huge so they don't die.
+set_char_health $DROMEO_49_11 {health} 10000
+set_char_health $DROMEO_49_12 {health} 10000
 goto @MISSION49_1909
 
 :MISSION49_1909
@@ -28470,9 +28487,8 @@ goto_if_false @MISSION49_3083
 wait 0
 locate_char_any_means_2d $PLAYER_ACTOR {x} -1902.573 {y} 129.7971 {xRadius} 5.0 {yRadius} 5.0 {drawSphere} False
 goto_if_false @MISSION49_1909
+$FLAG_TNG = 6
 wait 0
-set_group_member $GROUP1 {handle} $DROMEO_49_11
-set_group_member $GROUP1 {handle} $DROMEO_49_12
 set_char_drowns_in_water $DROMEO_49_11 {state} False
 set_char_drowns_in_water $DROMEO_49_12 {state} False
 $RADAR_MISS_49_2 = add_blip_for_coord -1664.839 {y} -1952.14 {z} 46.5252
@@ -28500,7 +28516,7 @@ if and
 goto_if_false @MISSION49_3083
 wait 0
 if
-    locate_char_any_means_2d $PLAYER_ACTOR {x} -1664.839 {y} -1952.14 {xRadius} 2.0 {yRadius} 2.0 {drawSphere} False
+    locate_char_any_means_2d $PLAYER_ACTOR {x} -1664.839 {y} -1952.14 {xRadius} 4.0 {yRadius} 4.0 {drawSphere} False
 goto_if_false @MISSION49_2121
 wait 0
 goto @MISSION49_2269
@@ -28508,13 +28524,13 @@ goto @MISSION49_2269
 :MISSION49_2269
 wait 0
 if and
-    locate_char_any_means_2d $DROMEO_49_1 {x} -1664.839 {y} -1952.14 {xRadius} 15.0 {yRadius} 15.0 {drawSphere} False
-    locate_char_any_means_2d $DROMEO_49_2 {x} -1664.839 {y} -1952.14 {xRadius} 15.0 {yRadius} 15.0 {drawSphere} False
-    locate_char_any_means_2d $DROMEO_49_3 {x} -1664.839 {y} -1952.14 {xRadius} 15.0 {yRadius} 15.0 {drawSphere} False
-    locate_char_any_means_2d $DROMEO_49_4 {x} -1664.839 {y} -1952.14 {xRadius} 15.0 {yRadius} 15.0 {drawSphere} False
-    locate_char_any_means_2d $DROMEO_49_5 {x} -1664.839 {y} -1952.14 {xRadius} 15.0 {yRadius} 15.0 {drawSphere} False
-    locate_char_any_means_2d $DROMEO_49_6 {x} -1664.839 {y} -1952.14 {xRadius} 15.0 {yRadius} 15.0 {drawSphere} False
-    locate_char_any_means_2d $DROMEO_49_7 {x} -1664.839 {y} -1952.14 {xRadius} 15.0 {yRadius} 15.0 {drawSphere} False
+    locate_char_any_means_2d $DROMEO_49_1 {x} -1664.839 {y} -1952.14 {xRadius} 25.0 {yRadius} 25.0 {drawSphere} False
+    locate_char_any_means_2d $DROMEO_49_2 {x} -1664.839 {y} -1952.14 {xRadius} 25.0 {yRadius} 25.0 {drawSphere} False
+    locate_char_any_means_2d $DROMEO_49_3 {x} -1664.839 {y} -1952.14 {xRadius} 25.0 {yRadius} 25.0 {drawSphere} False
+    locate_char_any_means_2d $DROMEO_49_4 {x} -1664.839 {y} -1952.14 {xRadius} 25.0 {yRadius} 25.0 {drawSphere} False
+    locate_char_any_means_2d $DROMEO_49_5 {x} -1664.839 {y} -1952.14 {xRadius} 25.0 {yRadius} 25.0 {drawSphere} False
+    locate_char_any_means_2d $DROMEO_49_6 {x} -1664.839 {y} -1952.14 {xRadius} 25.0 {yRadius} 25.0 {drawSphere} False
+    locate_char_any_means_2d $DROMEO_49_7 {x} -1664.839 {y} -1952.14 {xRadius} 25.0 {yRadius} 25.0 {drawSphere} False
 goto_if_false @MISSION49_2269
 wait 0
 goto @MISSION49_2484
@@ -28522,27 +28538,16 @@ goto @MISSION49_2484
 :MISSION49_2484
 wait 0
 if and
-    locate_char_any_means_2d $DROMEO_49_8 {x} -1664.839 {y} -1952.14 {xRadius} 15.0 {yRadius} 15.0 {drawSphere} False
-    locate_char_any_means_2d $DROMEO_49_9 {x} -1664.839 {y} -1952.14 {xRadius} 15.0 {yRadius} 15.0 {drawSphere} False
-    locate_char_any_means_2d $DROMEO_49_10 {x} -1664.839 {y} -1952.14 {xRadius} 15.0 {yRadius} 15.0 {drawSphere} False
-    locate_char_any_means_2d $DROMEO_49_11 {x} -1664.839 {y} -1952.14 {xRadius} 15.0 {yRadius} 15.0 {drawSphere} False
-    locate_char_any_means_2d $DROMEO_49_12 {x} -1664.839 {y} -1952.14 {xRadius} 15.0 {yRadius} 15.0 {drawSphere} False
+    locate_char_any_means_2d $DROMEO_49_8 {x} -1664.839 {y} -1952.14 {xRadius} 25.0 {yRadius} 25.0 {drawSphere} False
+    locate_char_any_means_2d $DROMEO_49_9 {x} -1664.839 {y} -1952.14 {xRadius} 25.0 {yRadius} 25.0 {drawSphere} False
+    locate_char_any_means_2d $DROMEO_49_10 {x} -1664.839 {y} -1952.14 {xRadius} 25.0 {yRadius} 25.0 {drawSphere} False
+    locate_char_any_means_2d $DROMEO_49_11 {x} -1664.839 {y} -1952.14 {xRadius} 25.0 {yRadius} 25.0 {drawSphere} False
+    locate_char_any_means_2d $DROMEO_49_12 {x} -1664.839 {y} -1952.14 {xRadius} 25.0 {yRadius} 25.0 {drawSphere} False
 goto_if_false @MISSION49_2484
 wait 0
+$FLAG_TNG = -1
 remove_blip $RADAR_MISS_49_2
 remove_sphere $RADAR_SPHERE_49_2
-remove_char_from_group $DROMEO_49_1
-remove_char_from_group $DROMEO_49_2
-remove_char_from_group $DROMEO_49_3
-remove_char_from_group $DROMEO_49_4
-remove_char_from_group $DROMEO_49_5
-remove_char_from_group $DROMEO_49_6
-remove_char_from_group $DROMEO_49_7
-remove_char_from_group $DROMEO_49_8
-remove_char_from_group $DROMEO_49_9
-remove_char_from_group $DROMEO_49_10
-remove_char_from_group $DROMEO_49_11
-remove_char_from_group $DROMEO_49_12
 do_fade 2000 {direction} Fade.Out
 wait 2000
 mark_model_as_no_longer_needed #BMYCON
@@ -28586,6 +28591,7 @@ if and
 goto_if_false @MISSION49_2850
 wait 0
 $PLAY54 = 0
+$FLAG_TNG = -1
 mark_char_as_no_longer_needed $DROMEO_49_1
 delete_char $DROMEO_49_1
 mark_char_as_no_longer_needed $DROMEO_49_2
@@ -28626,6 +28632,7 @@ wait 0
 remove_blip $RADAR_MISS_49_2
 remove_sphere $RADAR_SPHERE_49_2
 $PLAY54 = 0
+$FLAG_TNG = -1
 print_big 'M_FAIL' {time} 5000 {style} TextStyle.Middle // ~r~MISSION  FAILED!
 wait 1500
 print_now 'MIS_601' {time} 5000 {flag} 1 // ~r~The Dromies are dead!
