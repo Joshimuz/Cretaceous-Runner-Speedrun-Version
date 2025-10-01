@@ -19017,6 +19017,7 @@ goto @MISSION28_114
 wait 0
 force_weather_now WeatherType.ExtraSunnyLa
 release_weather
+skip_cutscene_start_internal @MISSION28_CSKIP
 switch_widescreen True
 $WIDE = 1
 set_fixed_camera_position 2332.085 {y} -2689.905 {z} 67.7278 {upVecOffsetX} 0.0 {upVecOffsetY} 0.0 {upVecOffsetZ} 0.0
@@ -19024,8 +19025,14 @@ point_camera_at_point 2332.085 {y} -2679.905 {z} 67.7278 {switchStyle} SwitchTyp
 print_with_number_big 'MIS_500' {num} 0 {duration} 5000 {style} TextStyle.Middle // ~b~Flying  school
 do_fade 2000 {direction} Fade.In
 wait 6000
-do_fade 2000 {direction} Fade.Out
-wait 2000
+do_fade 1000 {direction} Fade.Out
+wait 1000
+
+:MISSION28_CSKIP
+skip_cutscene_end
+do_fade 1000 {direction} Fade.Out
+wait 1000
+clear_this_print_big_now TextStyle.Middle
 switch_widescreen False
 $WIDE = 0
 restore_camera_jumpcut
@@ -19045,7 +19052,7 @@ attach_camera_to_vehicle_look_at_char $MICRO1 {xOffset} 0.0 {yOffset} -4.0 {zOff
 set_player_drunkenness $PLAYER_CHAR {intensity} 70
 set_player_enter_car_button $PLAYER_CHAR {enabled} False
 wait 100
-do_fade 2000 {direction} Fade.In
+do_fade 1000 {direction} Fade.In
 set_car_coordinates $MICRO1 {x} 2981.2029 {y} -2832.374 {z} 17.7927
 set_car_forward_speed $MICRO1 {forwardSpeed} 30.0
 apply_brakes_to_players_car $PLAYER_CHAR {state} True
@@ -19056,11 +19063,11 @@ if and
     not is_car_in_water $MICRO1
 goto_if_false @MISSION28_1427
 wait 1000
-print_now 'MIS_501' {time} 6000 {flag} 1 // This is flightable Microraptor. You can control him.
-wait 6500
-print_now 'MIS_502' {time} 6000 {flag} 1 // Use Up and Down arrows to reach corona.
-wait 6500
-print_now 'MIS_503' {time} 6000 {flag} 1 // At left side of radar you can see your height meter.
+print_now 'MIS_501' {time} 3000 {flag} 1 // This is flightable Microraptor. You can control him.
+wait 3500
+print_now 'MIS_502' {time} 3000 {flag} 1 // Use Up and Down arrows to reach corona.
+wait 3500
+print_now 'MIS_503' {time} 3000 {flag} 1 // At left side of radar you can see your height meter.
 goto @MISSION28_609
 
 :MISSION28_609
