@@ -14,13 +14,13 @@ while true
 
     if iShowWindow == 1
     then
-        string $changetozero = IniFile.ReadString("modloader/Passed Missions Changer/config.ini", "General", "Reset_passed_missions_to_0_each_game_restart")
+        string changetozero = IniFile.ReadString("modloader/Passed Missions Changer/config.ini", "General", "Reset_passed_missions_to_0_each_game_restart")
         ImGui.SetNextWindowSize(700.0, 800.0, ImGuiCond.Once)
 
         iShowWindow = ImGui.Begin("Passed Missions Changer", iShowWindow, 0, 0, 0, 0)
 
         ImGui.Text("Select a mission from below and start a new game to skip to it.")
-        if is_string_equal {string1} $changetozero {string2} "true" {maxSize} 5 {caseSensitive} true {ignoreCharacter} ""
+        if is_string_equal {string1} changetozero {string2} "true" {maxSize} 5 {caseSensitive} true {ignoreCharacter} ""
         then
             ImGui.Text("(Value gets reset to 0 every game restart.)")
         end
@@ -28,7 +28,7 @@ while true
         // Toggle button for Reset_passed_missions_to_0_each_game_restart
         if ImGui.Button("Toggle Auto-Reset", 300.0, 50.0)
         then
-            if is_string_equal {string1} $changetozero {string2} "true" {maxSize} 5 {caseSensitive} true {ignoreCharacter} ""
+            if is_string_equal {string1} changetozero {string2} "true" {maxSize} 5 {caseSensitive} true {ignoreCharacter} ""
             then
                 IniFile.WriteString("false", "modloader/Passed Missions Changer/config.ini", "General", "Reset_passed_missions_to_0_each_game_restart")
             else
