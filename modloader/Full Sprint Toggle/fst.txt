@@ -1,35 +1,67 @@
 {$CLEO .cs}
 {$USE CLEO}
+{$USE CLEO+}
+{$USE ini}
 
-int FSToggle = 1
-int result
+// ======================================================================
+// Full Sprint Toggle Script (CLEO+)
+// ======================================================================
 
-while true    
+// Constants
+const
+    MEM_ADDR = 0x60A68E   // Sprint memory address
+    TOGGLE_KEY = KeyCode.F8
+    INI_PATH = "modloader/Full Sprint Toggle/fst.ini"
+    SECTION = "Full Sprint Toggle"
+end
+
+// Variables
+int savedValue
+int toggleState = 1   // 1 = Enabled, 0 = Disabled
+
+// ======================================================================
+// Initialization
+// ======================================================================
+if Game.IsFirstStart()
+then
+    // Save original value + toggle state
+    savedValue = Memory.Read(MEM_ADDR, 4, true)
+    IniFile.WriteInt(savedValue, INI_PATH, SECTION, "FunctionValue")
+    IniFile.WriteInt(toggleState, INI_PATH, SECTION, "LastToggle")
+else
+    // Load from ini
+    savedValue = IniFile.ReadInt(INI_PATH, SECTION, "FunctionValue")
+    toggleState = IniFile.ReadInt(INI_PATH, SECTION, "LastToggle")
+end
+
+// ======================================================================
+// Main Loop
+// ======================================================================
+while true
     wait 0
 
-    if and
-        FSToggle == 1
-        Pad.IsKeyPressed(KeyCode.F8)
+    if Pad.IsKeyPressed(TOGGLE_KEY)
     then
-        while Pad.IsKeyPressed(KeyCode.F8)
+        // Wait until key is released (prevents spam toggling)
+        while Pad.IsKeyPressed(TOGGLE_KEY)
             wait 0
         end
-        result = Memory.Read(0x60A68E, 4, 1)
-        Memory.Write(0x60A68E, 4, 0xFFF3615E, 1)
-        FSToggle = 0
-        print_help 'FS_OFF'
-    end
-    
-    if and
-        FSToggle == 0
-        Pad.IsKeyPressed(KeyCode.F8)
-    then
-        while Pad.IsKeyPressed(KeyCode.F8)
-            wait 0
+
+        if toggleState == 1
+        then
+            // Disable full sprint
+            Memory.Write(MEM_ADDR, 4, 0xFFF3615E, true)
+            toggleState = 0
+            print_help "FS_OFF"
+        else
+            // Restore saved value
+            Memory.Write(MEM_ADDR, 4, savedValue, true)
+            toggleState = 1
+            print_help "FS_ON"
         end
-        Memory.Write(0x60A68E, 4, result, 1)
-        FSToggle = 1
-        print_help 'FS_ON'
+
+        // Save toggle state to ini
+        IniFile.WriteInt(toggleState, INI_PATH, SECTION, "LastToggle")
     end
 end
 
