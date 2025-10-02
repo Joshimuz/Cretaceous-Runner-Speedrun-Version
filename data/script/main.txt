@@ -1336,6 +1336,7 @@ Alloc($PAHI_5_3, 5702)
 Alloc($RADAR_MISS_40_6, 6270)
 Alloc($ICONSAVE51, 5473)
 Alloc($PLAY11_1, 6530)
+Alloc($FLAG_TNG, 6531)
 
 //-------------MAIN---------------
 script_name 'MAIN'
@@ -2274,13 +2275,13 @@ terminate_this_script
 
 :Noname_8
 wait 0
-request_model #WMYPIZZ
+request_model 155
 load_all_models_now
 
 :Noname_8_11
 wait 0
 if
-    has_model_loaded #WMYPIZZ
+    has_model_loaded 155
 goto_if_false @Noname_8_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart 709.0579 {y} 2658.5139 {z} 6.1637 {heading} 250.0
@@ -5512,9 +5513,13 @@ goto_if_false @DEAD1
 wait 0
 $ONMISSION = 0
 mission_has_finished
+attach_camera_to_char $PLAYER_ACTOR {xOffset} 2.0 {yOffset} -2.0 {zOffset} 2.0 {xRotation} 0.0 {yRotation} 0.0 {zRotation} 0.0 {tilt} 0.0 {switchStyle} SwitchType.JumpCut
+wait 0
+if
+    not is_char_model $PLAYER_ACTOR #BMYAP
+goto_if_false @DEAD1
 request_model #BMYAP
 load_all_models_now
-attach_camera_to_char $PLAYER_ACTOR {xOffset} 2.0 {yOffset} -2.0 {zOffset} 2.0 {xRotation} 0.0 {yRotation} 0.0 {zRotation} 0.0 {tilt} 0.0 {switchStyle} SwitchType.JumpCut
 set_fading_colour 255 {g} 9 {b} 9
 do_fade 4000 {direction} Fade.Out
 
@@ -5525,7 +5530,6 @@ if
 goto_if_false @DEAD1_115
 set_fading_colour 255 {g} 9 {b} 9
 do_fade 2000 {direction} Fade.In
-set_player_model $PLAYER_CHAR {modelId} 0
 wait 100
 
 :DEAD1_162
@@ -5552,6 +5556,10 @@ goto_if_false @DEAD2
 $ONMISSION = 0
 mission_has_finished
 attach_camera_to_char $PLAYER_ACTOR {xOffset} 2.0 {yOffset} -2.0 {zOffset} 2.0 {xRotation} 0.0 {yRotation} 0.0 {zRotation} 0.0 {tilt} 0.0 {switchStyle} SwitchType.JumpCut
+wait 0
+if
+    not is_char_model $PLAYER_ACTOR #BMYCR
+goto_if_false @DEAD2
 set_fading_colour 255 {g} 9 {b} 9
 do_fade 4000 {direction} Fade.Out
 
@@ -5565,7 +5573,6 @@ request_model #BMYCR
 load_all_models_now
 set_fading_colour 255 {g} 9 {b} 9
 do_fade 2000 {direction} Fade.In
-set_player_model $PLAYER_CHAR {modelId} 0
 wait 200
 
 :DEAD2_170
@@ -5591,13 +5598,17 @@ goto_if_false @DEAD3
 $ONMISSION = 0
 mission_has_finished
 attach_camera_to_char $PLAYER_ACTOR {xOffset} 2.0 {yOffset} -2.0 {zOffset} 2.0 {xRotation} 0.0 {yRotation} 0.0 {zRotation} 0.0 {tilt} 0.0 {switchStyle} SwitchType.JumpCut
+wait 0
+if
+    not is_char_model $PLAYER_ACTOR #WMYPIZZ
+goto_if_false @DEAD3
 set_fading_colour 255 {g} 9 {b} 9
 do_fade 4000 {direction} Fade.Out
 wait 4000
 
 :DEAD3_110
 wait 0
-if
+if and
     not is_char_dead $PLAYER_ACTOR
 goto_if_false @DEAD3_110
 wait 0
@@ -5605,7 +5616,6 @@ request_model #WMYPIZZ
 load_all_models_now
 set_fading_colour 255 {g} 9 {b} 9
 do_fade 2000 {direction} Fade.In
-set_player_model $PLAYER_CHAR {modelId} 0
 wait 100
 
 :DEAD3_168
@@ -5614,43 +5624,6 @@ if and
     has_model_loaded #WMYPIZZ
     is_char_stopped $PLAYER_ACTOR
 goto_if_false @DEAD3_168
-clear_char_tasks $PLAYER_ACTOR
-set_player_model $PLAYER_CHAR {modelId} 155
-wait 2400
-set_fading_colour 0 {g} 0 {b} 0
-wait 1000
-
-:DEAD3_224
-wait 0
-if
-    is_char_dead $PLAYER_ACTOR
-goto_if_false @DEAD3_224
-$ONMISSION = 0
-mission_has_finished
-attach_camera_to_char $PLAYER_ACTOR {xOffset} 1.0 {yOffset} 3.0 {zOffset} 2.0 {xRotation} 20.0 {yRotation} 20.0 {zRotation} 20.0 {tilt} 10.0 {switchStyle} SwitchType.JumpCut
-set_fading_colour 255 {g} 9 {b} 9
-do_fade 4000 {direction} Fade.Out
-wait 4000
-
-:DEAD3_316
-wait 0
-if
-    not is_char_dead $PLAYER_ACTOR
-goto_if_false @DEAD3_316
-wait 0
-request_model #WMYPIZZ
-load_all_models_now
-set_fading_colour 255 {g} 9 {b} 9
-do_fade 2000 {direction} Fade.In
-set_player_model $PLAYER_CHAR {modelId} 0
-wait 100
-
-:DEAD3_374
-wait 0
-if and
-    has_model_loaded #WMYPIZZ
-    is_char_stopped $PLAYER_ACTOR
-goto_if_false @DEAD3_374
 clear_char_tasks $PLAYER_ACTOR
 set_player_model $PLAYER_CHAR {modelId} 155
 wait 2400
@@ -13840,6 +13813,8 @@ kill_fx_system_now $FLASH4
 kill_fx_system_now $FLASH5
 set_fixed_camera_position 2566.373 {y} 2373.53 {z} -59.504 {upVecOffsetX} 0.0 {upVecOffsetY} 0.0 {upVecOffsetZ} 0.0
 point_camera_at_point 2564.175 {y} 2376.554 {z} -59.504 {switchStyle} SwitchType.JumpCut
+
+skip_cutscene_start_internal @MISSION12_1_CSKIP
 switch_widescreen True
 $WIDE = 1
 wait 500
@@ -13854,8 +13829,6 @@ set_char_heading $HODRY {heading} 241.0
 set_char_proofs $HODRY {bulletProof} True {fireProof} True {explosionProof} True {collisionProof} True {meleeProof} True
 $FLASH6 = create_fx_system "SHOOTLIGHT" {x} 2558.168 {y} 2377.4629 {z} -59.504 {ignoreBoundingChecks} True
 play_fx_system $FLASH6
-$FISH1 = create_object #DRUG_BLUE {x} 2125.6809 {y} 2383.1421 {z} -60.504
-set_object_heading $FISH1 {heading} 0.0
 wait 1000
 kill_fx_system_now $FLASH6
 set_fixed_camera_position 2559.696 {y} 2370.791 {z} -59.504 {upVecOffsetX} 0.0 {upVecOffsetY} 0.0 {upVecOffsetZ} 0.0
@@ -13866,6 +13839,19 @@ wait 3000
 print_now 'MIS_704' {time} 2500 {flag} 1 // "Now you need to get out of here, I'll help you!"
 task_play_anim $HODRY {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 3000
 wait 3000
+
+:MISSION12_1_CSKIP
+skip_cutscene_end
+do_fade 500 {direction} Fade.Out
+wait 500
+clear_prints
+if not does_char_exist $HODRY
+then
+    $HODRY = create_char PedType.CivMale {modelId} #SWMYHP1 {x} 2558.168 {y} 2377.4629 {z} -59.504
+    set_char_heading $HODRY {heading} 241.0
+    set_char_proofs $HODRY {bulletProof} True {fireProof} True {explosionProof} True {collisionProof} True {meleeProof} True
+end
+do_fade 500 {direction} Fade.In
 switch_widescreen False
 $WIDE = 0
 set_player_control $PLAYER_CHAR {state} True
@@ -13925,83 +13911,83 @@ terminate_this_script
 wait 0
 $HODRYMAR = add_blip_for_char $HODRY
 change_blip_colour $HODRYMAR {color} BlipColor.Green
-task_go_to_object $HODRY {object} $FISH1 {time} -1 {radius} 2.0
-wait 40000
+TASK_GO_STRAIGHT_TO_COORD $HODRY {x} 2125.6809 {y} 2383.1421 {z} -59.504 {speed} MoveState.Sprint {time} -1
+wait 10000
 print_now 'MIS_705' {time} 3000 {flag} 1 // "Swim to me, Skilar!"
-wait 6000
+wait 5000
 print_now 'MIS_706' {time} 3000 {flag} 1 // "Swim, swim to the coast!"
-wait 15000
-set_fading_colour 255 {g} 255 {b} 255
-do_fade 0 {direction} Fade.Out
-wait 50
-do_fade 0 {direction} Fade.In
-wait 100
-do_fade 0 {direction} Fade.Out
-wait 50
-do_fade 0 {direction} Fade.In
-wait 500
-do_fade 0 {direction} Fade.Out
-wait 50
-do_fade 0 {direction} Fade.In
-wait 10
-do_fade 0 {direction} Fade.Out
-wait 50
-do_fade 0 {direction} Fade.In
-wait 2000
-do_fade 0 {direction} Fade.Out
-wait 50
-do_fade 0 {direction} Fade.In
-wait 100
-do_fade 0 {direction} Fade.Out
-wait 50
-do_fade 100 {direction} Fade.In
-wait 600
-do_fade 0 {direction} Fade.Out
-wait 50
-do_fade 0 {direction} Fade.In
-wait 150
-do_fade 50 {direction} Fade.Out
-wait 70
-do_fade 100 {direction} Fade.In
-wait 200
-do_fade 0 {direction} Fade.Out
-wait 50
-do_fade 0 {direction} Fade.In
-do_fade 0 {direction} Fade.Out
-wait 50
-do_fade 0 {direction} Fade.In
-wait 100
-do_fade 0 {direction} Fade.Out
-wait 50
-do_fade 0 {direction} Fade.In
-wait 500
-do_fade 0 {direction} Fade.Out
-wait 50
-do_fade 0 {direction} Fade.In
-wait 10
-do_fade 0 {direction} Fade.Out
-wait 50
-do_fade 0 {direction} Fade.In
 wait 1000
-do_fade 0 {direction} Fade.Out
+set_fading_colour 0 {g} 0 {b} 0
+do_fade 10 {direction} Fade.Out
 wait 50
-do_fade 0 {direction} Fade.In
+do_fade 10 {direction} Fade.In
 wait 100
-do_fade 0 {direction} Fade.Out
+do_fade 10 {direction} Fade.Out
+wait 50
+do_fade 10 {direction} Fade.In
+wait 500
+do_fade 10 {direction} Fade.Out
+wait 50
+do_fade 10 {direction} Fade.In
+wait 10
+do_fade 10 {direction} Fade.Out
+wait 50
+do_fade 10 {direction} Fade.In
+wait 200
+do_fade 10 {direction} Fade.Out
+wait 50
+do_fade 10 {direction} Fade.In
+wait 100
+do_fade 10 {direction} Fade.Out
 wait 50
 do_fade 100 {direction} Fade.In
 wait 600
-do_fade 0 {direction} Fade.Out
+do_fade 10 {direction} Fade.Out
 wait 50
-do_fade 0 {direction} Fade.In
+do_fade 10 {direction} Fade.In
+wait 150
+do_fade 50 {direction} Fade.Out
+wait 70
+do_fade 10 {direction} Fade.In
+wait 200
+do_fade 10 {direction} Fade.Out
+wait 50
+do_fade 10 {direction} Fade.In
+do_fade 10 {direction} Fade.Out
+wait 50
+do_fade 10 {direction} Fade.In
+wait 100
+do_fade 10 {direction} Fade.Out
+wait 50
+do_fade 10 {direction} Fade.In
+wait 500
+do_fade 10 {direction} Fade.Out
+wait 50
+do_fade 10 {direction} Fade.In
+wait 10
+do_fade 10 {direction} Fade.Out
+wait 50
+do_fade 10 {direction} Fade.In
+wait 1000
+do_fade 10 {direction} Fade.Out
+wait 50
+do_fade 10 {direction} Fade.In
+wait 100
+do_fade 10 {direction} Fade.Out
+wait 50
+do_fade 100 {direction} Fade.In
+wait 600
+do_fade 10 {direction} Fade.Out
+wait 50
+do_fade 10 {direction} Fade.In
 wait 150
 do_fade 50 {direction} Fade.Out
 wait 70
 do_fade 100 {direction} Fade.In
 wait 200
-do_fade 0 {direction} Fade.Out
+do_fade 10 {direction} Fade.Out
 wait 50
-do_fade 0 {direction} Fade.In
+do_fade 10 {direction} Fade.In
 set_fading_colour 0 {g} 0 {b} 0
 
 :MISSION12_1_2518
@@ -14115,7 +14101,7 @@ do_fade 2000 {direction} Fade.Out
 $ONMISSION = 0
 mission_has_finished
 wait 1000
-goto @Noname_8_11
+goto @Noname_8
 terminate_this_script
 
 :MISSION12_1_3582
@@ -20578,13 +20564,13 @@ then
         then
             break
         end
-        
+
         if IS_BUTTON_PRESSED 0 {padID} 15
         then
             TASK_COMPLEX_PICKUP_OBJECT $PLAYER_ACTOR {object} $EGG1
         end
     end
-    
+
     wait 500
 else
     goto @MISSION35_SRV_1
