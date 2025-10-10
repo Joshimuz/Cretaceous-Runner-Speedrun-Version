@@ -2275,13 +2275,13 @@ terminate_this_script
 
 :Noname_8
 wait 0
-request_model 155
+request_model #WMYPIZZ
 load_all_models_now
 
 :Noname_8_11
 wait 0
 if
-    has_model_loaded 155
+    has_model_loaded #WMYPIZZ
 goto_if_false @Noname_8_11
 set_player_model $PLAYER_CHAR {modelId} 155
 override_next_restart 709.0579 {y} 2658.5139 {z} 6.1637 {heading} 250.0
@@ -20564,20 +20564,20 @@ then
         then
             break
         end
-
+        
         if IS_BUTTON_PRESSED 0 {padID} 15
         then
             TASK_COMPLEX_PICKUP_OBJECT $PLAYER_ACTOR {object} $EGG1
         end
     end
-
+    
     wait 500
 else
     goto @MISSION35_SRV_1
 end
 
 :MISSION35_SRV_1
-if
+if and
     is_char_holding_object $PLAYER_ACTOR {object} $EGG1
     IS_BUTTON_PRESSED 0 {padID} 15
 goto_if_false @MISSION35_SRV_2
@@ -24706,7 +24706,7 @@ if
 goto_if_false @MISSION40_9650
 wait 0
 if
-    is_char_touching_object $PLAYER_ACTOR {object} $DNA1
+    not is_char_touching_object $PLAYER_ACTOR {object} $DNA1
 goto_if_false @MISSION40_7287
 do_fade 1000 {direction} Fade.Out
 wait 1000
@@ -24744,6 +24744,7 @@ set_player_control $PLAYER_CHAR {state} True
 restore_camera_jumpcut
 set_camera_behind_player
 $MICRO1 = create_car #RCBARON {x} -2330.825 {y} -158.238 {z} 4300.8999
+set_car_proofs $MICRO1 true true true true true
 set_car_heading $MICRO1 {heading} 180.0
 $FLYTHING = create_object #TORONCITY22 {x} -2330.825 {y} -154.238 {z} 4310.8999
 set_object_heading $FLYTHING {heading} 180.0
@@ -24792,7 +24793,9 @@ goto_if_false @MISSION40_8131
 wait 0
 delete_checkpoint $CHECK2_2
 remove_blip $CHECK2_1
-task_leave_any_car $PLAYER_ACTOR
+$mission40x, $mission40y, $mission40z = get_char_coordinates $PLAYER_ACTOR
+$mission40x += 5.0
+warp_char_from_car_to_coord $PLAYER_ACTOR {x} $mission40x {y} $mission40y {z} $mission40z
 $CAR5 = create_car #SENTINEL {x} -2249.6731 {y} -559.785 {z} 3931.5249
 set_car_heading $CAR5 {heading} 90.3845
 print_now 'MIS_428' {time} 6000 {flag} 1 // Put the DNA into the car.
