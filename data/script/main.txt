@@ -24706,7 +24706,7 @@ if
 goto_if_false @MISSION40_9650
 wait 0
 if
-    not is_char_touching_object $PLAYER_ACTOR {object} $DNA1
+    is_char_touching_object $PLAYER_ACTOR {object} $DNA1
 goto_if_false @MISSION40_7287
 do_fade 1000 {direction} Fade.Out
 wait 1000
