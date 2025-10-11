@@ -24793,9 +24793,7 @@ goto_if_false @MISSION40_8131
 wait 0
 delete_checkpoint $CHECK2_2
 remove_blip $CHECK2_1
-$mission40x, $mission40y, $mission40z = get_char_coordinates $PLAYER_ACTOR
-$mission40x += 5.0
-warp_char_from_car_to_coord $PLAYER_ACTOR {x} $mission40x {y} $mission40y {z} $mission40z
+task_leave_any_car $PLAYER_ACTOR
 $CAR5 = create_car #SENTINEL {x} -2249.6731 {y} -559.785 {z} 3931.5249
 set_car_heading $CAR5 {heading} 90.3845
 print_now 'MIS_428' {time} 6000 {flag} 1 // Put the DNA into the car.
@@ -24807,6 +24805,11 @@ wait 500
 $X40, $Y40, $Z40 = get_car_coordinates $MICRO1
 wait 1500
 set_object_coordinates $FLYTHING {x} $X40 {y} $Y40 {z} $Z40
+
+while not is_char_on_foot $PLAYER_ACTOR
+    wait 0
+end
+
 delete_car $MICRO1
 
 :MISSION40_8350
