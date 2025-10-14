@@ -22,7 +22,40 @@ Alloc($DROMEO_49_12, 6451)
 
 while true
     wait 0
-
+    
+    // Make all group members run (Can apply to multiple missions)
+    if or
+        $PASSED_MISSIONS == 1 // Childhood
+        
+    then
+        wait 1000
+        
+        // Get member count
+        int leaders, members, memberCounter = 0
+        leaders, members = get_group_size $PLAYER_GROUP
+        
+        
+        // Loop through all the members
+        for memberCounter = 0 to members step 1
+            // Get the member handle and player coordinates
+            char memberHandle
+            memberHandle = get_group_member $PLAYER_GROUP memberCounter
+            
+            float x1, y1, z1
+            x1, y1, z1 = get_char_coordinates $PLAYER_ACTOR
+            
+            // Check if player is not on/in water before making the dinos sprint. 
+            float height1 = get_water_height_at_coords x1 y1 true
+            float groundz1 = get_ground_z_for_3d_coord x1 y1 z1
+            
+            if height1 < groundz1
+            then
+                // Make them sprint to player's last coords
+                TASK_GO_STRAIGHT_TO_COORD memberHandle x1 y1 z1 MoveState.Sprint 999999
+            end
+        end
+    end
+    
     // The New Government Fix
     if
         $PASSED_MISSIONS == 59
@@ -36,40 +69,40 @@ while true
             float height = get_water_height_at_coords x y true
             float groundz = get_ground_z_for_3d_coord x y z
 
-            // Check if player is not on/in water before making the dinos walk. 
+            // Check if player is not on/in water before making the dinos sprint. 
             // Dinos can swim. But if one of their route ends inside water, they won't move or accept any more commands.
             // To prevent this we need to make sure the coordinates are always on land.
             if height < groundz
             then
                 if $FLAG_TNG > 0
                 then
-                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_1 x y z MoveState.Sprint -1
+                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_1 x y z MoveState.Sprint 999999
                 end
                 if $FLAG_TNG > 1
                 then
-                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_2 x y z MoveState.Sprint -1
+                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_2 x y z MoveState.Sprint 999999
                 end
                 if $FLAG_TNG > 2
                 then
-                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_3 x y z MoveState.Sprint -1
+                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_3 x y z MoveState.Sprint 999999
                 end
                 if $FLAG_TNG > 3
                 then
-                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_4 x y z MoveState.Sprint -1
-                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_5 x y z MoveState.Sprint -1
-                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_6 x y z MoveState.Sprint -1
-                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_7 x y z MoveState.Sprint -1
-                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_8 x y z MoveState.Sprint -1
+                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_4 x y z MoveState.Sprint 999999
+                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_5 x y z MoveState.Sprint 999999
+                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_6 x y z MoveState.Sprint 999999
+                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_7 x y z MoveState.Sprint 999999
+                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_8 x y z MoveState.Sprint 999999
                 end
                 if $FLAG_TNG > 4
                 then
-                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_9 x y z MoveState.Sprint -1
-                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_10 x y z MoveState.Sprint -1
+                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_9 x y z MoveState.Sprint 999999
+                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_10 x y z MoveState.Sprint 999999
                 end
                 if $FLAG_TNG > 5
                 then
-                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_11 x y z MoveState.Sprint -1
-                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_12 x y z MoveState.Sprint -1
+                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_11 x y z MoveState.Sprint 999999
+                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_12 x y z MoveState.Sprint 999999
                 end
             end
         end

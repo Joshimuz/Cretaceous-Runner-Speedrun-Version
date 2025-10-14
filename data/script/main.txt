@@ -7527,11 +7527,12 @@ set_current_char_weapon $PLAYER_ACTOR {weaponType} WeaponType.Satchel
 set_player_cycle_weapon_button $PLAYER_CHAR {enabled} False
 disable_char_speech $PLAYER_ACTOR {stopNow} True
 clear_help
+// Cutscene Skip
+skip_cutscene_start_internal @MISSION_701
 camera_set_vector_move -1225.932 {fromY} -869.7169 {fromZ} 48.1042 {toX} -1212.1541 {toY} -863.3583 {toZ} 13.1271 {time} 13200 {ease} 2
 camera_set_vector_track -1225.932 {fromY} -869.7169 {fromZ} 48.1042 {toX} -1212.1541 {toY} -863.3583 {toZ} 13.1271 {time} 13200 {ease} 2
 print_with_number_big 'MISS_00' {num} 0 {duration} 5000 {style} TextStyle.Middle // ~b~Introduction
 wait 2000
-$PLAY0 = 1
 wait 6000
 print_now 'MISS_11' {time} 6000 {flag} 1 // Welcome to the Dromaeosaurus family! This is your home!
 wait 5200
@@ -7540,7 +7541,6 @@ $WIDE = 0
 set_player_control $PLAYER_CHAR {state} True
 set_player_duck_button $PLAYER_CHAR {enabled} False
 set_player_fire_button $PLAYER_CHAR {enabled} False
-skip_cutscene_start_internal @MISSION_701
 wait 1000
 print_now 'MISS_12' {time} 6000 {flag} 1 // You can sleep here and save your progress made in the game.
 wait 6100
@@ -7549,13 +7549,24 @@ wait 6100
 
 :MISSION_701
 skip_cutscene_end
+do_fade 1000 Fade.Out
+wait 1000
+$PLAY0 = 1
+set_player_control $PLAYER_CHAR {state} True
+set_player_duck_button $PLAYER_CHAR {enabled} False
+set_player_fire_button $PLAYER_CHAR {enabled} False
+camera_reset_new_scriptables
+switch_widescreen False
+$WIDE = 0
 clear_prints
+clear_this_print_big_now TextStyle.Middle
+do_fade 1000 Fade.In
 wait 1000
 print_now 'MISS_14' {time} 7000 {flag} 1 // Follow the checkpoint. It placed as the yellow mark in the radar at left-down corner of the screen
 wait 0
 $RADAR_MISS_1_1 = add_blip_for_coord -1251.5031 {y} -847.9368 {z} 14.306
 $RADAR_SPHERE_1_1 = add_sphere -1251.5031 {y} -847.9368 {z} 14.306 {radius} 1.5
-wait 4000
+wait 2000
 display_radar True
 wait 300
 display_radar False
@@ -7653,6 +7664,7 @@ set_player_control $PLAYER_CHAR {state} False
 wait 0
 switch_widescreen True
 $WIDE = 1
+skip_cutscene_start_internal @MISSION_SRV_CSSKIP_1
 wait 0
 camera_set_vector_move -1282.111 {fromY} -820.6552 {fromZ} 23.5195 {toX} -1212.1541 {toY} -863.3583 {toZ} 13.1271 {time} 13200 {ease} True
 camera_set_vector_track -1282.111 {fromY} -820.6552 {fromZ} 23.5195 {toX} -1212.1541 {toY} -863.3583 {toZ} 13.1271 {time} 13200 {ease} True
@@ -7661,8 +7673,17 @@ print_with_number_big 'MISS_01' {num} 0 {duration} 5000 {style} TextStyle.Middle
 wait 8000
 print_now 'MISS_18' {time} 6000 {flag} 1 // Now you need some food. Follow your parents all the way to the lake.
 wait 5400
+
+:MISSION_SRV_CSSKIP_1
+skip_cutscene_end
+do_fade 1000 Fade.Out
+wait 1000
 switch_widescreen False
 $WIDE = 0
+camera_reset_new_scriptables
+clear_prints
+clear_this_print_big_now TextStyle.Middle
+do_fade 1000 Fade.In
 set_player_control $PLAYER_CHAR {state} True
 wait 0
 $FISH1 = create_object #DRUG_BLUE {x} -933.8073 {y} -806.0117 {z} 9.445
@@ -7809,7 +7830,7 @@ goto @MISSION_2767
 
 :MISSION_2767
 force_weather_now WeatherType.ExtraSunnySf
-skip_cutscene_start_internal @MISSION_SRV_CSSKIP_1
+skip_cutscene_start_internal @MISSION_SRV_CSSKIP_2
 set_player_control $PLAYER_CHAR {state} False
 wait 0
 switch_widescreen True
@@ -7834,9 +7855,14 @@ wait 0
 print_now 'MISS_22' {time} 13000 {flag} 1 // But don't feel safety here. Your enemys are Troodons and Tyrannosaurus. Other dinosaurs of Cantera explore youself.
 wait 13300
 
-:MISSION_SRV_CSSKIP_1
+:MISSION_SRV_CSSKIP_2
 skip_cutscene_end
+do_fade 1000 Fade.Out
+wait 1000
 CAMERA_RESET_NEW_SCRIPTABLES
+clear_prints
+clear_this_print_big_now TextStyle.Middle
+do_fade 1000 Fade.In
 set_player_control $PLAYER_CHAR {state} True
 switch_widescreen False
 $WIDE = 0
@@ -7884,35 +7910,50 @@ $FMAR = add_blip_for_char $FATHER_1
 change_blip_colour $FMAR {color} BlipColor.Green
 print_now 'MISS_23' {time} 5000 {flag} 1 // Go to your parents.
 wait 3000
+clear_prints
 task_char_slide_to_coord $STEGO1 {x} -906.9263 {y} -489.9252 {z} 4.983 {angle} 270.0 {radius} 4.0
 task_char_slide_to_coord $STEGO2 {x} -906.9263 {y} -489.9252 {z} 4.983 {angle} 270.0 {radius} 4.0
-task_go_to_object $MOTHER_1 {object} 1@ {time} -1 {radius} 4.0
-task_go_to_object $FATHER_1 {object} 1@ {time} -1 {radius} 4.0
-task_go_to_object $BRO1_1 {object} 1@ {time} -1 {radius} 4.0
-task_go_to_object $BRO2_1 {object} 1@ {time} -1 {radius} 4.0
-task_go_to_object $BRO3_1 {object} 1@ {time} -1 {radius} 4.0
-wait 9000
-print_now 'MISS_24' {time} 6000 {flag} 1 // Green mark above dinosaur means about a good creature, you must save and don't kill it.
-wait 10000
+task_go_straight_to_coord $MOTHER_1 {x} -1100.224 {y} 272.0206 {z} 3.0 {speed} MoveState.Sprint {time} -1
+task_go_straight_to_coord $FATHER_1 {x} -1100.224 {y} 272.0206 {z} 3.0 {speed} MoveState.Sprint {time} -1
+task_go_straight_to_coord $BRO1_1 {x} -1100.224 {y} 272.0206 {z} 3.0 {speed} MoveState.Sprint {time} -1
+task_go_straight_to_coord $BRO2_1 {x} -1100.224 {y} 272.0206 {z} 3.0 {speed} MoveState.Sprint {time} -1
+task_go_straight_to_coord $BRO3_1 {x} -1100.224 {y} 272.0206 {z} 3.0 {speed} MoveState.Sprint {time} -1
+wait 2000
+print_now 'MISS_24' {time} 4000 {flag} 1 // Green mark above dinosaur means about a good creature, you must save and don't kill it.
+wait 4000
+clear_prints
+wait 500
 set_current_char_weapon $PLAYER_ACTOR {weaponType} WeaponType.Unarmed
 remove_weapon_from_char $PLAYER_ACTOR {weaponType} WeaponType.Satchel
 set_player_cycle_weapon_button $PLAYER_CHAR {enabled} True
-print_now 'MISS_25' {time} 10000 {flag} 1 // You can press RBM near a dinosaur and see it's health. Green triangle talks about good health. But if it red, the dinosaur can die or you can easily kill him.
-wait 15000
-print_now 'MISS_26' {time} 10000 {flag} 1 // Your health you can see at the top of the screen. If red line is long, your health is fine. If it short, you need something to eat to make your health better.
-wait 15000
-print_now 'MISS_27' {time} 10000 {flag} 1 // Don't forget about difference - green triangle - the health, and green mark, walking up-down - the dinosaur status. If it is red, this dinosaur is your enemy.
-wait 12000
-print_now 'MIS_TAB' {time} 5000 {flag} 1
+print_now 'MISS_25' {time} 5000 {flag} 1 // You can press RBM near a dinosaur and see it's health. Green triangle talks about good health. But if it red, the dinosaur can die or you can easily kill him.
+wait 5000
+clear_prints
+wait 500
+print_now 'MISS_26' {time} 5000 {flag} 1 // Your health you can see at the top of the screen. If red line is long, your health is fine. If it short, you need something to eat to make your health better.
+wait 5000
+clear_prints
+wait 500
+print_now 'MISS_27' {time} 5000 {flag} 1 // Don't forget about difference - green triangle - the health, and green mark, walking up-down - the dinosaur status. If it is red, this dinosaur is your enemy.
+wait 5000
+clear_prints
+wait 500
+print_now 'MIS_TAB' {time} 2000 {flag} 1
 task_turn_char_to_face_char $PAHI {target} $MOTHER_1
-wait 12000
-print_now 'MISS_28' {time} 5000 {flag} 1 // Let's take a little tour. You are at Antonio Field now.
-wait 6000
-print_now 'MISS_29' {time} 10000 {flag} 1 // Your home is at Alfred Forest. Left side you can see Terrene-Top mountain. Don't walk up that mountain - it's dangerous for your life.
-wait 11000
-print_now 'MISS_30' {time} 10000 {flag} 1 // Behind the mountain there are Beauty Condition, the west part of Cantera.
-wait 11000
-print_now 'MISS_31' {time} 10000 {flag} 1 // Right on your way - East Cantera Valley and Chalice River inside it.
+wait 2000
+print_now 'MISS_28' {time} 3000 {flag} 1 // Let's take a little tour. You are at Antonio Field now.
+wait 3000
+clear_prints
+wait 500
+print_now 'MISS_29' {time} 4000 {flag} 1 // Your home is at Alfred Forest. Left side you can see Terrene-Top mountain. Don't walk up that mountain - it's dangerous for your life.
+wait 4000
+clear_prints
+wait 500
+print_now 'MISS_30' {time} 4000 {flag} 1 // Behind the mountain there are Beauty Condition, the west part of Cantera.
+wait 4000
+clear_prints
+wait 500
+print_now 'MISS_31' {time} 4000 {flag} 1 // Right on your way - East Cantera Valley and Chalice River inside it.
 
 :MISSION_4112
 wait 0
@@ -7939,6 +7980,7 @@ $WIDE = 1
 set_player_control $PLAYER_CHAR {state} False
 do_fade 1000 {direction} Fade.Out
 wait 1000
+skip_cutscene_start_internal @MISSION_SRV_CSSKIP_3
 request_model #DWFOLC
 request_model #DRUG_BLUE
 load_all_models_now
@@ -7995,7 +8037,7 @@ task_char_slide_to_coord 8@ {x} -1053.785 {y} 339.312 {z} 4.985 {angle} 0.0 {rad
 task_char_slide_to_coord 9@ {x} -1053.785 {y} 339.312 {z} 4.985 {angle} 0.0 {radius} 0.0
 task_char_slide_to_coord 10@ {x} -1053.785 {y} 339.312 {z} 4.985 {angle} 0.0 {radius} 0.0
 do_fade 1000 {direction} Fade.In
-wait 9000
+wait 8000
 set_char_coordinates $MOTHER_1 {x} -1098.938 {y} 277.4802 {z} 2.0964
 set_char_heading $MOTHER_1 {heading} 339.3563
 set_char_coordinates $FATHER_1 {x} -1097.1801 {y} 276.8679 {z} 2.5031
@@ -8019,28 +8061,32 @@ task_play_anim $MOTHER_1 {animationName} "FIGHTA_G" {animationFile} "PED" {blend
 wait 100
 task_play_anim $FATHER_1 {animationName} "FIGHTA_G" {animationFile} "PED" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 2500
 wait 3000
+
+:MISSION_SRV_CSSKIP_3
 do_fade 1000 {direction} Fade.Out
 wait 1000
-do_fade 1000 {direction} Fade.In
 set_player_control $PLAYER_CHAR {state} True
+clear_char_tasks_immediately $MOTHER_1
+clear_char_tasks_immediately $FATHER_1
 switch_widescreen False
 $WIDE = 0
 restore_camera_jumpcut
 set_camera_behind_player
 force_weather_now WeatherType.RainySf
+do_fade 1000 {direction} Fade.In
 wait 500
 print_now 'MISS_32' {time} 8000 {flag} 1 // The storm is coming. Come back home to Alfred Forest.
 wait 0
 $HOME_MISS_3 = add_short_range_sprite_blip_for_coord -1206.9659 {y} -863.0861 {z} 13.6286 {sprite} RadarSprite.PropertyG
 $HOME_SPHERE_3 = add_sphere -1206.9659 {y} -863.0861 {z} 13.6286 {radius} 1.5
 wait 100
-task_go_to_object $MOTHER_1 {object} 11@ {time} -1 {radius} 4.0
+task_go_straight_to_coord $MOTHER_1 {x} -1206.9659 {y} -863.0861 {z} 13.6286 {speed} MoveState.Sprint {time} 999999
 wait 50
-task_go_to_object $FATHER_1 {object} 11@ {time} -1 {radius} 4.0
-wait 4000
-task_go_to_object $BRO1_1 {object} 11@ {time} -1 {radius} 4.0
-task_go_to_object $BRO2_1 {object} 11@ {time} -1 {radius} 4.0
-task_go_to_object $BRO3_1 {object} 11@ {time} -1 {radius} 4.0
+task_go_straight_to_coord $FATHER_1 {x} -1206.9659 {y} -863.0861 {z} 13.6286 {speed} MoveState.Sprint {time} 999999
+wait 1000
+task_go_straight_to_coord $BRO1_1 {x} -1206.9659 {y} -863.0861 {z} 13.6286 {speed} MoveState.Sprint {time} 999999
+task_go_straight_to_coord $BRO2_1 {x} -1206.9659 {y} -863.0861 {z} 13.6286 {speed} MoveState.Sprint {time} 999999
+task_go_straight_to_coord $BRO3_1 {x} -1206.9659 {y} -863.0861 {z} 13.6286 {speed} MoveState.Sprint {time} 999999
 goto @MISSION_5741
 
 :MISSION_5741
@@ -8090,20 +8136,6 @@ remove_sphere $HOME_SPHERE_3
 wait 0
 release_weather
 wait 5500
-print_now 'MISS_33' {time} 4000 {flag} 1 // Now you can save your game.
-request_model #PICKUPSAVE
-goto @MISSION_6132
-
-:MISSION_6132
-$ICONSAVE1 = add_short_range_sprite_blip_for_coord -1209.089 {y} -868.0202 {z} 13.1042 {sprite} RadarSprite.SaveGame
-$SAVE1 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -1209.089 {y} -868.0202 {z} 13.1042
-goto @MISSION_6185
-
-:MISSION_6185
-wait 0
-if
-    has_pickup_been_collected $SAVE1
-goto_if_false @MISSION_6185
 do_fade 500 {direction} Fade.Out
 wait 500
 disable_char_speech $PLAYER_ACTOR {stopNow} False
@@ -8226,6 +8258,7 @@ wait 0
 if
     has_model_loaded #BMYCR
 goto_if_false @MISSION4_73
+skip_cutscene_start_internal @MISSION4_SRV_CSSKIP_1
 do_fade 1000 {direction} Fade.In
 wait 0
 switch_widescreen True
@@ -8247,6 +8280,24 @@ set_char_coordinates $PLAYER_ACTOR {x} -82.1094 {y} -273.1567 {z} 3.23
 set_char_heading $PLAYER_ACTOR {heading} 100.7085
 set_player_model $PLAYER_CHAR {modelId} 21
 goto @MISSION4_318
+
+:MISSION4_SRV_CSSKIP_1
+skip_cutscene_end
+do_fade 1000 Fade.Out
+wait 1000
+$PLAY1 = 1
+set_time_of_day 5 {minutes} 15
+camera_reset_new_scriptables
+switch_widescreen False
+$WIDE = 0
+set_player_duck_button $PLAYER_CHAR {enabled} True
+set_player_fire_button $PLAYER_CHAR {enabled} True
+set_char_coordinates $PLAYER_ACTOR {x} -82.1094 {y} -273.1567 {z} 3.23
+set_char_heading $PLAYER_ACTOR {heading} 100.7085
+set_player_model $PLAYER_CHAR {modelId} 21
+clear_this_print_big_now TextStyle.Middle
+clear_prints
+do_fade 1000 Fade.In
 
 :MISSION4_318
 wait 0
@@ -8529,20 +8580,6 @@ if
     does_char_exist $STEG1
 goto_if_false @MISSION4_2489
 wait 5000
-print_now 'MISS_33' {time} 4000 {flag} 1 // Now you can save your game.
-request_model #PICKUPSAVE
-goto @MISSION4_2547
-
-:MISSION4_2547
-$ICONSAVE4 = add_sprite_blip_for_coord -1209.089 {y} -868.0202 {z} 13.1042 {sprite} RadarSprite.SaveGame
-$SAVE4 = create_pickup #PICKUPSAVE {pickupType} PickupType.Once {x} -1209.089 {y} -868.0202 {z} 13.1042
-goto @MISSION4_2600
-
-:MISSION4_2600
-wait 0
-if
-    has_pickup_been_collected $SAVE4
-goto_if_false @MISSION4_2600
 do_fade 500 {direction} Fade.Out
 wait 500
 $PLAY1 = 0
@@ -8694,6 +8731,7 @@ set_char_heading $DRIO4 {heading} 4.0
 $DRIO_MARKER_4 = add_blip_for_char $DRIO4
 11@ = create_object #DRUG_BLUE {x} -1303.49 {y} 535.4333 {z} 11.1752
 set_object_heading 11@ {heading} 0.0
+skip_cutscene_start_internal @MISSION5_SRV_CSSKIP_1
 set_fixed_camera_position -1231.556 {y} -509.1016 {z} 4.983 {upVecOffsetX} 0.0 {upVecOffsetY} 0.0 {upVecOffsetZ} 0.0
 point_camera_at_point -1239.011 {y} -505.5508 {z} 4.983 {switchStyle} SwitchType.JumpCut
 wait 1000
@@ -8710,6 +8748,20 @@ wait 5000
 set_player_control $PLAYER_CHAR {state} True
 switch_widescreen False
 $WIDE = 0
+goto @MISSION5_749
+
+:MISSION5_SRV_CSSKIP_1
+do_fade 1000 Fade.Out
+wait 1000
+restore_camera_jumpcut
+set_camera_behind_player
+clear_prints
+clear_this_print_big_now TextStyle.Middle
+print_now 'MISS_45' {time} 5000 {flag} 1 // Catch and kill one of driosaurus!
+set_player_control $PLAYER_CHAR {state} True
+switch_widescreen False
+$WIDE = 0
+do_fade 1000 Fade.In
 goto @MISSION5_749
 
 :MISSION5_749
@@ -8809,6 +8861,7 @@ set_char_heading $TROO1 {heading} 8.0
 $TROO2 = create_char PedType.CivMale {modelId} #OMORI {x} -1344.512 {y} -660.636 {z} 5.5058
 set_char_heading $TROO2 {heading} 278.0
 wait 0
+skip_cutscene_start_internal @MISSION5_SRV_CSSKIP_2
 set_fixed_camera_position -1336.452 {y} -659.6874 {z} 6.3571 {upVecOffsetX} 0.0 {upVecOffsetY} 0.0 {upVecOffsetZ} 0.0
 point_camera_at_point -1337.196 {y} -659.2426 {z} 6.3113 {switchStyle} SwitchType.JumpCut
 wait 1000
@@ -8820,6 +8873,22 @@ switch_widescreen False
 $WIDE = 0
 restore_camera_jumpcut
 set_camera_behind_player
+print_now 'MISS_48' {time} 5000 {flag} 1 // Kill the Troodons!
+1@ = add_blip_for_char $TROO1
+2@ = add_blip_for_char $TROO2
+goto @MISSION5_1504
+
+:MISSION5_SRV_CSSKIP_2
+skip_cutscene_end
+do_fade 1000 Fade.Out
+wait 1000
+task_kill_char_on_foot $TROO1 {target} $PLAYER_ACTOR
+task_kill_char_on_foot $TROO2 {target} $PLAYER_ACTOR
+switch_widescreen False
+$WIDE = 0
+restore_camera_jumpcut
+set_camera_behind_player
+do_fade 1000 Fade.In
 print_now 'MISS_48' {time} 5000 {flag} 1 // Kill the Troodons!
 1@ = add_blip_for_char $TROO1
 2@ = add_blip_for_char $TROO2
@@ -8896,6 +8965,7 @@ point_camera_at_point -1151.486 {y} -860.5923 {z} 47.718 {switchStyle} SwitchTyp
 force_weather_now WeatherType.RainySf
 do_fade 1000 {direction} Fade.In
 $PLAY2 = 1
+skip_cutscene_start_internal @MISSION5_SRV_CSSKIP_3
 print_with_number_big 'MISS_49' {num} 0 {duration} 5000 {style} TextStyle.Middle // ~b~NAFTA  rewriting...
 wait 0
 goto @MISSION5_1989
@@ -9035,6 +9105,41 @@ delete_char $DROMEO_5_FATHER
 mark_object_as_no_longer_needed 12@
 delete_object 12@
 wait 1000
+print_now 'MISS_50' {time} 4000 {flag} 1 // Run away!
+wait 10000
+release_weather
+print_now 'MISS_51' {time} 6000 {flag} 1 // There are a cave... You can cover there.
+$RADAR_MISS_7_HOME = add_sprite_blip_for_coord -2322.2939 {y} -716.7685 {z} 6.4786 {sprite} RadarSprite.PropertyR
+$RADAR_SPHERE_7_HOME = add_sphere -2322.2939 {y} -716.7685 {z} 6.4786 {radius} 1.5
+goto @MISSION5_3067
+
+:MISSION5_SRV_CSSKIP_3
+skip_cutscene_end
+do_fade 1000 Fade.Out
+wait 1000
+clear_char_tasks $PLAYER_ACTOR
+clear_prints
+clear_this_print_big_now TextStyle.Middle
+mark_char_as_no_longer_needed $TREX1
+delete_char $TREX1
+mark_char_as_no_longer_needed $TREX2
+delete_char $TREX2
+mark_char_as_no_longer_needed $DROMEO_5_1
+delete_char $DROMEO_5_1
+mark_char_as_no_longer_needed $DROMEO_5_2
+delete_char $DROMEO_5_2
+mark_char_as_no_longer_needed $DROMEO_5_3
+delete_char $DROMEO_5_3
+mark_char_as_no_longer_needed $DROMEO_5_MOTHER
+delete_char $DROMEO_5_MOTHER
+mark_char_as_no_longer_needed $DROMEO_5_FATHER
+delete_char $DROMEO_5_FATHER
+mark_object_as_no_longer_needed 12@
+restore_camera_jumpcut
+set_camera_behind_player
+switch_widescreen False
+$WIDE = 0
+do_fade 1000 Fade.In
 print_now 'MISS_50' {time} 4000 {flag} 1 // Run away!
 wait 10000
 release_weather
@@ -20564,13 +20669,13 @@ then
         then
             break
         end
-        
+
         if IS_BUTTON_PRESSED 0 {padID} 15
         then
             TASK_COMPLEX_PICKUP_OBJECT $PLAYER_ACTOR {object} $EGG1
         end
     end
-    
+
     wait 500
 else
     goto @MISSION35_SRV_1
