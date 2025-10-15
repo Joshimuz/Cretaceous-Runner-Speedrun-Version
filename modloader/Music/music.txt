@@ -530,6 +530,7 @@ terminate_this_script
 wait 1000
 $music23 = load_audio_stream {audioFileName} "mp3_and_ogg/mating.ogg"
 set_audio_stream_type $music23 {type} AudioStreamType.Music
+set_audio_stream_progress_seconds $music23 147.5
 wait 1000
 set_audio_stream_state $music23 {action} AudioStreamAction.Play
 

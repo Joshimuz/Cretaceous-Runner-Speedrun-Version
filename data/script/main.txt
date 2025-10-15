@@ -18461,10 +18461,17 @@ wait 6000
 
 :MISSION27_754
 skip_cutscene_end
+do_fade 1000 Fade.Out
+wait 1000
+clear_this_print_big_now TextStyle.Middle
 clear_prints
+clear_char_tasks $PLAYER_ACTOR
+clear_char_tasks $DROMEO_27_1
+clear_char_tasks $DROMEO_27_2
 switch_widescreen False
 $WIDE = 0
 set_player_control $PLAYER_CHAR {state} True
+do_fade 1000 Fade.In
 restore_camera_jumpcut
 set_camera_behind_player
 $DROMEO_27_3 = create_char PedType.CivMale {modelId} #BFOST {x} 2413.353 {y} -2274.927 {z} 19.39
@@ -19340,6 +19347,7 @@ wait 0
 force_weather_now WeatherType.ExtraSunnyCountryside
 switch_widescreen True
 $WIDE = 1
+skip_cutscene_start_internal @MISSION29_SRV_CSSKIP_1
 camera_set_vector_move 208.8409 {fromY} -9.0598 {fromZ} 2999.8611 {toX} 209.4453 {toY} -5.0598 {toZ} 3005.6541 {time} 10000 {ease} 2
 camera_set_vector_track 204.6302 {fromY} -9.8614 {fromZ} 2998.4761 {toX} 214.2622 {toY} -11.4517 {toZ} 3005.6541 {time} 10000 {ease} 2
 print_with_number_big 'MIS_507' {num} 0 {duration} 5000 {style} TextStyle.Middle // ~b~Chepei
@@ -19348,6 +19356,20 @@ do_fade 2000 {direction} Fade.In
 wait 6000
 do_fade 2000 {direction} Fade.Out
 wait 4000
+goto @MISSION29_AFTER_CSSKIP_1
+
+:MISSION29_SRV_CSSKIP_1
+skip_cutscene_end
+do_fade 1000 Fade.Out
+wait 1000
+camera_reset_new_scriptables
+clear_prints
+clear_this_print_big_now TextStyle.Middle
+set_time_of_day 4 {minutes} 50
+goto @MISSION29_AFTER_CSSKIP_1
+
+:MISSION29_AFTER_CSSKIP_1
+skip_cutscene_end
 switch_widescreen False
 $WIDE = 0
 set_player_model $PLAYER_CHAR {modelId} 45
@@ -19369,7 +19391,7 @@ $CHINA1LOD = create_object #CHFAR {x} 2412.4299 {y} -2998.3999 {z} 3.98
 set_object_heading $CHINA1LOD {heading} 0.0
 connect_lods $CHINA1 {lodObject} $CHINA1LOD
 wait 100
-do_fade 2000 {direction} Fade.In
+do_fade 1000 {direction} Fade.In
 set_car_coordinates $MICRO2 {x} 2541.771 {y} -1592.689 {z} 50.497
 set_car_forward_speed $MICRO2 {forwardSpeed} 30.0
 wait 1000
@@ -19396,6 +19418,7 @@ set_char_coordinates $PLAYER_ACTOR {x} 300.227 {y} -100.285 {z} 3001.271
 set_char_heading $PLAYER_ACTOR {heading} 143.9178
 force_weather_now WeatherType.ExtraColours1
 do_fade 2000 {direction} Fade.In
+skip_cutscene_start_internal @MISSION29_SRV_CSSKIP_2
 switch_widescreen True
 $WIDE = 1
 set_player_drunkenness $PLAYER_CHAR {intensity} 0
@@ -19407,11 +19430,15 @@ set_car_forward_speed $MICRO2 {forwardSpeed} 20.0
 set_player_control $PLAYER_CHAR {state} False
 task_play_anim $PLAYER_ACTOR {animationName} "BOMBER" {animationFile} "PED" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 6000
 wait 6000
+
+:MISSION29_SRV_CSSKIP_2
+skip_cutscene_end
 do_fade 2000 {direction} Fade.Out
 set_player_model $PLAYER_CHAR {modelId} 45
 set_char_coordinates $PLAYER_ACTOR {x} 204.2421 {y} 9.536 {z} 2999.27
 task_leave_any_car $PLAYER_ACTOR
 wait 2000
+camera_reset_new_scriptables
 set_player_is_in_stadium True
 set_char_heading $PLAYER_ACTOR {heading} 87.9178
 mark_model_as_no_longer_needed #RCBARON
@@ -19453,15 +19480,21 @@ wait 1000
 set_player_control $PLAYER_CHAR {state} False
 switch_widescreen True
 $WIDE = 1
-do_fade 2000 {direction} Fade.In
+do_fade 1000 {direction} Fade.In
+skip_cutscene_start_internal @MISSION29_SRV_CSSKIP_3
 task_turn_char_to_face_char $PLAYER_ACTOR {target} $MICRO_29_2
 camera_set_vector_move 609.064 {fromY} -162.3615 {fromZ} 3009.1819 {toX} 601.2968 {toY} -168.0032 {toZ} 3009.1819 {time} 8000 {ease} False
 camera_set_vector_track 606.4328 {fromY} -168.1925 {fromZ} 3009.1819 {toX} 606.4328 {toY} -168.1925 {toZ} 3009.1819 {time} 8000 {ease} False
-wait 2000
+wait 1000
 print_now 'MIS_620' {time} 4000 {flag} 1 // "Comrades, can you help me to find a way?"
 wait 4000
+
+:MISSION29_SRV_CSSKIP_3
+skip_cutscene_end
 do_fade 2000 {direction} Fade.Out
 wait 2000
+camera_reset_new_scriptables
+clear_prints
 force_weather_now WeatherType.ExtraSunnyLa
 release_weather
 set_player_is_in_stadium False
@@ -19597,8 +19630,11 @@ wait 2000
 
 :MISSION30_595
 skip_cutscene_end
+do_fade 1000 {direction} Fade.Out
+wait 1000
+clear_this_print_big_now TextStyle.Middle
 clear_prints
-do_fade 2000 {direction} Fade.In
+do_fade 1000 {direction} Fade.In
 set_player_control $PLAYER_CHAR {state} True
 switch_widescreen False
 $WIDE = 0
@@ -19776,6 +19812,7 @@ set_fixed_camera_position 1826.385 {y} -2773.7949 {z} 1.6844 {upVecOffsetX} 0.0 
 point_camera_at_point 1822.897 {y} -2774.2839 {z} 1.0904 {switchStyle} SwitchType.JumpCut
 print_with_number_big 'MIS_350' {num} 0 {duration} 5000 {style} TextStyle.Middle // ~b~Coming  Home
 do_fade 2000 {direction} Fade.In
+skip_cutscene_start_internal @MISSION31_SRV_CSSKIP_1
 wait 5000
 do_fade 2000 {direction} Fade.Out
 wait 2000
@@ -19842,6 +19879,71 @@ switch_widescreen False
 $WIDE = 0
 set_player_control $PLAYER_CHAR {state} True
 do_fade 2000 {direction} Fade.In
+goto @MISSION31_AFTER_CSSKIP_1
+
+:MISSION31_SRV_CSSKIP_1
+skip_cutscene_end
+request_model #JETMAX
+request_model #BMOTR1
+load_all_models_now
+
+:MISSION31_SRV_CSSKIP_1_2
+wait 0
+if and
+    has_model_loaded #JETMAX
+    has_model_loaded #BMOTR1
+goto_if_false @MISSION31_SRV_CSSKIP_1_2
+wait 0
+do_fade 1000 {direction} Fade.Out
+$PLAY34 = 1
+wait 1000
+
+if not does_vehicle_exist $CAR
+then
+    $CAR = create_car #JETMAX {x} 1793.936 {y} -2696.3789 {z} -0.5756
+    set_car_heading $CAR {heading} 90.3845
+end
+
+if not does_vehicle_exist $SHARK_31_1
+then
+    $SHARK_31_1 = create_car #JETMAX {x} 1147.91 {y} -2577.4871 {z} 0.0
+    set_car_heading $SHARK_31_1 {heading} 270.3845
+end
+
+if not does_vehicle_exist $SHARK_31_2
+then
+    $SHARK_31_2 = create_car #JETMAX {x} 1023.924 {y} -2515.8889 {z} 0.0
+    set_car_heading $SHARK_31_2 {heading} 270.3845
+end
+
+if not does_vehicle_exist $SHARK_31_3
+then
+    $SHARK_31_3 = create_car #JETMAX {x} 1097.516 {y} -2530.853 {z} 0.0
+    set_car_heading $SHARK_31_3 {heading} 270.3845
+end
+if not does_char_exist $DROMEO_31_1
+then
+    $DROMEO_31_1 = create_char PedType.CivMale {modelId} #BMOTR1 {x} 1807.866 {y} -2693.0259 {z} 0.3
+    set_char_heading $DROMEO_31_1 {heading} 187.0
+end
+
+set_time_of_day 18 {minutes} 15
+set_player_model $PLAYER_CHAR {modelId} 155
+set_char_coordinates $PLAYER_ACTOR {x} 1808.547 {y} -2698.447 {z} 0.5
+set_char_heading $PLAYER_ACTOR {heading} 2.9178
+
+restore_camera_jumpcut
+set_camera_behind_player
+switch_widescreen False
+$WIDE = 0
+set_player_control $PLAYER_CHAR {state} True
+clear_prints
+clear_this_print_big_now TextStyle.Middle
+clear_char_tasks $PLAYER_ACTOR
+do_fade 1000 {direction} Fade.In
+
+:MISSION31_AFTER_CSSKIP_1
+skip_cutscene_end
 wait 0
 $RADAR_MISS_31_2 = add_blip_for_coord 1793.936 {y} -2696.3789 {z} 0.5756
 $RADAR_SPHERE_31_2 = add_sphere 1793.936 {y} -2696.3789 {z} 0.5756 {radius} 1.5
@@ -19955,7 +20057,7 @@ set_police_ignore_player $PLAYER_CHAR {state} True
 force_weather_now WeatherType.ExtraSunnyLa
 release_weather
 set_time_of_day 7 {minutes} 0
-do_fade 2000 {direction} Fade.In
+do_fade 1000 {direction} Fade.In
 skip_cutscene_start_internal @MISSION32_SRV_CSSKIP_1
 switch_widescreen True
 $WIDE = 1
@@ -20040,11 +20142,13 @@ do_fade 1000 {direction} Fade.In
 camera_set_vector_move -2129.926 {fromY} -1580.543 {fromZ} 8.2533 {toX} -2113.425 {toY} -1592.896 {toZ} 8.8263 {time} 8000 {ease} False
 camera_set_vector_track -2133.7639 {fromY} -1578.092 {fromZ} 7.6 {toX} -2133.7639 {toY} -1578.092 {toZ} 7.6 {time} 8000 {ease} False
 wait 6000
-do_fade 2000 {direction} Fade.Out
-wait 2000
-wait 0
+
 :MISSION32_SRV_CSSKIP_1
 skip_cutscene_end
+$PLAY35 = 1
+do_fade 1000 Fade.Out
+wait 1000
+clear_char_tasks $PLAYER_ACTOR
 CAMERA_RESET_NEW_SCRIPTABLES
 request_animation "GANGS"
 request_animation "BF_INJECTION"
@@ -20064,7 +20168,7 @@ if and
 goto_if_false @MISSION32_1445
 wait 0
 wait 0
-do_fade 2000 {direction} Fade.In
+do_fade 1000 {direction} Fade.In
 set_char_coordinates $PLAYER_ACTOR {x} -2249.3169 {y} -1588.316 {z} 4.1
 set_char_heading $PLAYER_ACTOR {heading} 89.9178
 $DROMEO_32_1 = create_char PedType.CivMale {modelId} #HMYCR {x} -2254.2781 {y} -1588.391 {z} 4.1
@@ -20118,12 +20222,17 @@ wait 6000
 
 :MISSION32_2458
 skip_cutscene_end
+do_fade 1000 Fade.Out
+wait 1000
+clear_char_tasks $PLAYER_ACTOR
 clear_prints
+clear_this_print_big_now TextStyle.Middle
 switch_widescreen False
 $WIDE = 0
 set_player_control $PLAYER_CHAR {state} True
 restore_camera_jumpcut
 set_camera_behind_player
+do_fade 1000 Fade.In
 $ANKILO_MARK_32_1 = add_blip_for_char $ANKILO_32_1
 goto @MISSION32_2499
 
@@ -20277,6 +20386,7 @@ $DROMEO_33_2 = create_char PedType.CivMale {modelId} #OMOST {x} -2797.155 {y} -2
 set_char_heading $DROMEO_33_2 {heading} 352.0
 $HADRO_33_1 = create_char PedType.CivMale {modelId} #DWFOLC {x} -2752.9851 {y} -1993.905 {z} 9.9345
 set_char_heading $HADRO_33_1 {heading} 336.0
+skip_cutscene_start_internal @MISSION33_SRV_CSSKIP_1
 set_fixed_camera_position -2728.593 {y} -2111.582 {z} 14.9345 {upVecOffsetX} 0.0 {upVecOffsetY} 0.0 {upVecOffsetZ} 0.0
 point_camera_at_point -2725.9519 {y} -2111.873 {z} 15.2345 {switchStyle} SwitchType.JumpCut
 print_with_number_big 'MIS_370' {num} 0 {duration} 5000 {style} TextStyle.Middle // ~b~Welcome  to  the  Ghetto
@@ -20293,11 +20403,20 @@ wait 3500
 print_now 'MIS_372' {time} 5000 {flag} 1 // "Use this stones to kill a Hadrosaurus. It's very easy as throw trash to the rubbish bin."
 task_play_anim $DROMEO_33_1 {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 5000
 wait 5000
+
+:MISSION33_SRV_CSSKIP_1
+skip_cutscene_end
+do_fade 1000 Fade.Out
+wait 1000
+clear_char_tasks $PLAYER_ACTOR
+clear_prints
+clear_this_print_big_now TextStyle.Middle
 switch_widescreen False
 $WIDE = 0
 set_player_control $PLAYER_CHAR {state} True
 restore_camera_jumpcut
 set_camera_behind_player
+do_fade 1000 Fade.In
 $HADRO_MARK_33_1 = add_blip_for_char $HADRO_33_1
 wait 1000
 
@@ -20436,6 +20555,7 @@ $DROMEO_34_2 = create_char PedType.CivMale {modelId} #OMOST {x} -2797.155 {y} -2
 set_char_heading $DROMEO_34_2 {heading} 352.0
 $HADRO_34_1 = create_char PedType.CivMale {modelId} #DWFOLC {x} -2799.4971 {y} -2294.949 {z} 9.4
 set_char_heading $HADRO_34_1 {heading} 20.9178
+skip_cutscene_start_internal @MISSION34_SRV_CSSKIP_1
 set_fixed_camera_position -2728.593 {y} -2111.582 {z} 14.9345 {upVecOffsetX} 0.0 {upVecOffsetY} 0.0 {upVecOffsetZ} 0.0
 point_camera_at_point -2725.9519 {y} -2111.873 {z} 15.2345 {switchStyle} SwitchType.JumpCut
 print_with_number_big 'MIS_373' {num} 0 {duration} 5000 {style} TextStyle.Middle // ~b~Death  from  the  Sky
@@ -20449,11 +20569,19 @@ wait 1000
 print_now 'MIS_374' {time} 6000 {flag} 1 // "Take position on a palm. We will bring a Hardosaurus, you'll jump down and kill it."
 task_play_anim $DROMEO_34_1 {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 6000
 wait 6000
+
+:MISSION34_SRV_CSSKIP_1
+skip_cutscene_end
+do_fade 1000 Fade.Out
+wait 1000
+clear_prints
+clear_this_print_big_now TextStyle.Middle
 switch_widescreen False
 $WIDE = 0
 set_player_control $PLAYER_CHAR {state} True
 restore_camera_jumpcut
 set_camera_behind_player
+do_fade 1000 Fade.In
 $RADAR_MISS_34_2 = add_blip_for_coord -2811.3 {y} -2266.3081 {z} 22.7921
 $RADAR_SPHERE_34_2 = add_sphere -2811.3 {y} -2266.3081 {z} 22.7921 {radius} 1.5
 goto @MISSION34_560
@@ -20600,6 +20728,7 @@ wait 4000
 skip_cutscene_end
 do_fade 1000 Fade.Out
 wait 1000
+$PLAY35 = 1
 clear_char_tasks $PLAYER_ACTOR
 clear_this_print_big_now TextStyle.Middle
 clear_prints
@@ -20822,6 +20951,7 @@ set_char_coordinates $PLAYER_ACTOR {x} -2002.444 {y} -1192.3979 {z} 5.0
 set_char_heading $PLAYER_ACTOR {heading} 4.9178
 $DROMEO_36_1 = create_char PedType.CivMale {modelId} #HMYCR {x} -2001.151 {y} -1192.683 {z} 5.2275
 set_char_heading $DROMEO_36_1 {heading} 17.0
+skip_cutscene_start_internal @MISSION36_SRV_CSSKIP_1
 set_fixed_camera_position -1988.907 {y} -1171.7371 {z} 6.974 {upVecOffsetX} 0.0 {upVecOffsetY} 0.0 {upVecOffsetZ} 0.0
 point_camera_at_point -1989.907 {y} -1171.7371 {z} 6.574 {switchStyle} SwitchType.JumpCut
 print_with_number_big 'MIS_382' {num} 0 {duration} 5000 {style} TextStyle.Middle // ~b~Frontier  guard
@@ -20861,8 +20991,15 @@ do_fade 1000 {direction} Fade.In
 wait 1000
 print_now 'MIS_387' {time} 3000 {flag} 1 // "It's Cantera..."
 wait 3000
+
+:MISSION36_SRV_CSSKIP_1
+skip_cutscene_end
+$PLAY39 = 1
 do_fade 1000 {direction} Fade.Out
 wait 1000
+clear_prints
+clear_this_print_big_now TextStyle.Middle
+clear_char_tasks $PLAYER_ACTOR
 switch_widescreen False
 $WIDE = 0
 set_player_control $PLAYER_CHAR {state} True
@@ -21038,6 +21175,7 @@ $DROMEO_37_1 = create_char PedType.CivMale {modelId} #BMYCON {x} -1208.123 {y} -
 set_char_heading $DROMEO_37_1 {heading} 224.0
 set_char_coordinates $PLAYER_ACTOR {x} -1205.4919 {y} -863.9603 {z} 13.308
 set_char_heading $PLAYER_ACTOR {heading} 51.9178
+skip_cutscene_start_internal @MISSION37_SRV_CSSKIP_1
 set_fixed_camera_position -1206.822 {y} -863.0794 {z} 224.6353 {upVecOffsetX} 0.0 {upVecOffsetY} 0.0 {upVecOffsetZ} 0.0
 point_camera_at_point -1556.7469 {y} -752.0731 {z} 224.5907 {switchStyle} SwitchType.JumpCut
 print_now 'MIS_391' {time} 4000 {flag} 1 // ...a year later...
@@ -21059,11 +21197,20 @@ wait 4000
 print_now 'MIS_395' {time} 6000 {flag} 1 // "To use it again, we need to repair it. I'll bring some branches."
 task_play_anim $PLAYER_ACTOR {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 4000
 wait 7000
+
+:MISSION37_SRV_CSSKIP_1
+skip_cutscene_end
+do_fade 1000 Fade.Out
+wait 1000
+clear_prints
+clear_this_print_big_now TextStyle.Middle
+clear_char_tasks $PLAYER_ACTOR
 switch_widescreen False
 $WIDE = 0
 set_player_control $PLAYER_CHAR {state} True
 restore_camera_jumpcut
 set_camera_behind_player
+do_fade 1000 Fade.In
 wait 1000
 print_now 'MIS_396' {time} 4000 {flag} 1 // Collect materials and bring to the nest.
 $BUSH1 = create_pickup #PICKBUSH1 {pickupType} PickupType.Once {x} -1398.099 {y} -981.3794 {z} 38.1043
@@ -21181,10 +21328,11 @@ terminate_this_script
 script_name 'MISSION37_1'
 wait 0
 do_fade 2000 {direction} Fade.Out
-wait 2000
+wait 1000
+$PLAY41 = 1
+wait 1000
 allow_pause_in_widescreen True
 set_police_ignore_player $PLAYER_CHAR {state} True
-$PLAY41 = 1
 request_animation "GANGS"
 request_animation "DANCING"
 request_model #BMYCON
