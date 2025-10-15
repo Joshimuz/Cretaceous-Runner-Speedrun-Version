@@ -9270,14 +9270,21 @@ $PAHI_5_2 = create_char PedType.CivMale {modelId} #MALE01 {x} -2395.887 {y} -909
 set_char_heading $PAHI_5_2 {heading} 34.0
 $PAHI_5_3 = create_char PedType.CivMale {modelId} #MALE01 {x} -2346.24 {y} -911.1122 {z} 4.975
 set_char_heading $PAHI_5_3 {heading} 94.0
+skip_cutscene_start_internal @MISSION5_1_SRV_CSSKIP_1
 camera_set_vector_move -2394.6499 {fromY} -754.4083 {fromZ} 24.5 {toX} -2402.9231 {toY} -751.4825 {toZ} 25.3131 {time} 10000 {ease} 2
 camera_set_vector_track -2402.6421 {fromY} -757.3998 {fromZ} 24.5 {toX} -2402.6421 {toY} -757.3998 {toZ} 24.5 {time} 10000 {ease} 2
 print_with_number_big 'MIS_683' {num} 0 {duration} 5000 {style} TextStyle.Middle // ~b~Feathers is a sign of skill
 wait 6000
 print_now 'MIS_684' {time} 4000 {flag} 1 // You're an adult Dromaeosaurus now.
 wait 3000
+
+:MISSION5_1_SRV_CSSKIP_1
+skip_cutscene_end
 do_fade 1000 {direction} Fade.Out
 wait 1000
+camera_reset_new_scriptables
+clear_prints
+clear_this_print_big_now TextStyle.Middle
 switch_widescreen False
 $WIDE = 0
 set_player_control $PLAYER_CHAR {state} True
@@ -9380,6 +9387,7 @@ request_animation "GANGS"
 set_char_coordinates $PLAYER_ACTOR {x} -2321.2729 {y} -732.8608 {z} 25.3475
 set_char_heading $PLAYER_ACTOR {heading} 290.356
 $PLAY4 = 1
+skip_cutscene_start_internal @MISSION7_SRV_CSSKIP_1
 print_with_number_big 'MIS_686' {num} 0 {duration} 5000 {style} TextStyle.Middle // ~b~New opportunities
 task_play_anim $PLAYER_ACTOR {animationName} "XPRESSSCRATCH" {animationFile} "PED" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 7000
 camera_set_vector_move -2319.6831 {fromY} -723.0309 {fromZ} 29.0454 {toX} -2312.5811 {toY} -736.3522 {toZ} 29.2847 {time} 31000 {ease} 3
@@ -9441,7 +9449,56 @@ change_blip_colour $FLAME_MAR1 {color} BlipColor.Green
 task_go_to_object $DROMEO_7_1 {object} $MARK_7_2 {time} -1 {radius} 3.0
 goto @MISSION7_1085
 
+:MISSION7_SRV_CSSKIP_1
+skip_cutscene_end
+
+if and
+    has_model_loaded #DRUG_BLUE
+    has_model_loaded #BMOST
+goto_if_false @MISSION7_SRV_CSSKIP_1
+
+do_fade 1000 Fade.Out
+wait 1000
+
+wait 0
+if not does_object_exist $MARK_7_1
+then
+    $MARK_7_1 = create_object #DRUG_BLUE {x} -2170.2371 {y} 171.1823 {z} 5.363
+    set_object_heading $MARK_7_1 {heading} 317.0184
+end
+
+if not does_object_exist $MARK_7_2
+then
+    $MARK_7_2 = create_object #DRUG_BLUE {x} -2456.446 {y} -680.8248 {z} 20.0
+    set_object_heading $MARK_7_2 {heading} 317.0184
+end
+
+if not does_char_exist $DROMEO_7_1
+then
+    $DROMEO_7_1 = create_char PedType.CivMale {modelId} #BMOST {x} -2336.9141 {y} -719.2264 {z} 26.2677
+    set_char_heading $DROMEO_7_1 {heading} 226.0
+end
+set_char_coordinates $DROMEO_7_1 {x} -2325.5029 {y} -729.6351 {z} 26.1991 
+set_char_heading $DROMEO_7_1 {angle} 194.0
+camera_reset_new_scriptables
+clear_char_tasks $DROMEO_7_1
+clear_char_tasks $PLAYER_ACTOR
+clear_prints
+clear_this_print_big_now TextStyle.Middle
+set_player_control $PLAYER_CHAR {state} True
+switch_widescreen False
+$WIDE = 0
+restore_camera_jumpcut
+set_camera_behind_player
+do_fade 1000 Fade.In
+wait 0
+$FLAME_MAR1 = add_blip_for_char $DROMEO_7_1
+change_blip_colour $FLAME_MAR1 {color} BlipColor.Green
+task_go_straight_to_coord $DROMEO_7_1 {x} -2456.446 {y} -680.8248 {z} 20.0 {speed} MoveState.Sprint {time} 9999999
+goto @MISSION7_1085
+
 :MISSION7_1085
+skip_cutscene_end
 wait 0
 if and
     not is_char_dead $PLAYER_ACTOR
@@ -9452,16 +9509,15 @@ wait 0
 locate_char_any_means_2d $DROMEO_7_1 {x} -2456.446 {y} -680.8248 {xRadius} 3.0 {yRadius} 3.0 {drawSphere} False
 goto_if_false @MISSION7_1085
 wait 1000
-task_go_to_object $DROMEO_7_1 {object} $MARK_7_1 {time} -1 {radius} 3.0
-wait 10000
+task_go_straight_to_coord $DROMEO_7_1 {x} -2170.2371 {y} 171.1823 {z} 5.363 {speed} MoveState.Sprint {time} 9999999
 print_now 'MISS_62' {time} 5000 {flag} 1 // "By the way, my name is Flame!"
 task_play_anim $DROMEO_7_1 {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 3000
-wait 3000
-task_go_to_object $DROMEO_7_1 {object} $MARK_7_1 {time} -1 {radius} 3.0
-wait 3000
+wait 2000
+task_go_straight_to_coord $DROMEO_7_1 {x} -2170.2371 {y} 171.1823 {z} 5.363 {speed} MoveState.Sprint {time} 9999999
+wait 2000
 print_now 'MISS_63' {time} 5000 {flag} 1 // "I-i-i'm... Hawkins. I'm Skilar Hawkins..."
-start_char_facial_talk $PLAYER_ACTOR {duration} 5000
-wait 6000
+start_char_facial_talk $PLAYER_ACTOR {duration} 3000
+wait 2000
 stop_char_facial_talk $PLAYER_ACTOR
 
 :MISSION7_1312
@@ -9476,12 +9532,12 @@ locate_char_any_means_char_2d $PLAYER_ACTOR {target} $DROMEO_7_1 {xRadius} 30.0 
 goto_if_false @MISSION7_1312
 print_now 'MISS_64' {time} 6000 {flag} 1 // "Hey, sorry, but I don't know Hawk family. Where are you from?"
 task_play_anim $DROMEO_7_1 {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 3000
-wait 3000
-task_go_to_object $DROMEO_7_1 {object} $MARK_7_1 {time} -1 {radius} 3.0
-wait 4000
+wait 2000
+task_go_straight_to_coord $DROMEO_7_1 {x} -2170.2371 {y} 171.1823 {z} 5.363 {speed} MoveState.Sprint {time} 9999999
+wait 2000
 print_now 'MISS_65' {time} 5000 {flag} 1 // "I'm... I'm canterian... from Alfred Forest."
 start_char_facial_talk $PLAYER_ACTOR {duration} 5000
-wait 6000
+wait 2000
 stop_char_facial_talk $PLAYER_ACTOR
 
 :MISSION7_1507
@@ -9497,18 +9553,18 @@ goto_if_false @MISSION7_1507
 wait 0
 print_now 'MISS_66' {time} 6000 {flag} 1 // "Alfred Forest? I live in Lostland, did you heard about it?"
 task_play_anim $DROMEO_7_1 {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 3000
-wait 3000
-task_go_to_object $DROMEO_7_1 {object} $MARK_7_1 {time} -1 {radius} 3.0
-wait 4000
+wait 2000
+task_go_straight_to_coord $DROMEO_7_1 {x} -2170.2371 {y} 171.1823 {z} 5.363 {speed} MoveState.Sprint {time} 9999999
+wait 1000
 print_now 'MISS_67' {time} 8000 {flag} 1 // "N-no... Lostlsnd? What did you lose there? A-a-a mobile phone, when you leave a subway train?"
 start_char_facial_talk $PLAYER_ACTOR {duration} 8000
-wait 9000
+wait 3000
 stop_char_facial_talk $PLAYER_ACTOR
 print_now 'MISS_68' {time} 5000 {flag} 1 // "Hey, take your jokes some place else!"
 task_play_anim $DROMEO_7_1 {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 3000
-wait 3000
-task_go_to_object $DROMEO_7_1 {object} $MARK_7_1 {time} -1 {radius} 3.0
-wait 7000
+wait 1000
+task_go_straight_to_coord $DROMEO_7_1 {x} -2170.2371 {y} 171.1823 {z} 5.363 {speed} MoveState.Sprint {time} 9999999
+wait 1000
 
 :MISSION7_1791
 wait 0
@@ -9522,12 +9578,12 @@ locate_char_any_means_char_2d $PLAYER_ACTOR {target} $DROMEO_7_1 {xRadius} 30.0 
 goto_if_false @MISSION7_1791
 print_now 'MISS_72' {time} 6000 {flag} 1 // "So, what about yourself? How did you get here?"
 task_play_anim $DROMEO_7_1 {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 3000
-wait 3000
-task_go_to_object $DROMEO_7_1 {object} $MARK_7_1 {time} -1 {radius} 3.0
-wait 3000
+wait 2000
+task_go_straight_to_coord $DROMEO_7_1 {x} -2170.2371 {y} 171.1823 {z} 5.363 {speed} MoveState.Sprint {time} 9999999
+wait 1000
 print_now 'MISS_73' {time} 5000 {flag} 1 // "W-well... my family was killed..."
 start_char_facial_talk $PLAYER_ACTOR {duration} 5000
-wait 6000
+wait 2000
 stop_char_facial_talk $PLAYER_ACTOR
 
 :MISSION7_1986
@@ -9542,12 +9598,12 @@ locate_char_any_means_char_2d $PLAYER_ACTOR {target} $DROMEO_7_1 {xRadius} 30.0 
 goto_if_false @MISSION7_1986
 print_now 'MISS_74' {time} 3000 {flag} 1 // "Oh, sorry..."
 task_play_anim $DROMEO_7_1 {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 3000
-wait 3000
-task_go_to_object $DROMEO_7_1 {object} $MARK_7_1 {time} -1 {radius} 3.0
+wait 1000
+task_go_straight_to_coord $DROMEO_7_1 {x} -2170.2371 {y} 171.1823 {z} 5.363 {speed} MoveState.Sprint {time} 9999999
 wait 1000
 print_now 'MISS_75' {time} 5000 {flag} 1 // "The Tyrannosaurus! I've run away and..."
 start_char_facial_talk $PLAYER_ACTOR {duration} 5000
-wait 6000
+wait 3000
 stop_char_facial_talk $PLAYER_ACTOR
 
 :MISSION7_2181
@@ -9562,12 +9618,12 @@ locate_char_any_means_char_2d $PLAYER_ACTOR {target} $DROMEO_7_1 {xRadius} 30.0 
 goto_if_false @MISSION7_2181
 print_now 'MISS_76' {time} 3000 {flag} 1 // "Oh gosh..."
 task_play_anim $DROMEO_7_1 {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 3000
-wait 3000
-task_go_to_object $DROMEO_7_1 {object} $MARK_7_1 {time} -1 {radius} 3.0
 wait 1000
-print_now 'MISS_77' {time} 3000 {flag} 1 // "Yea..."
+task_go_straight_to_coord $DROMEO_7_1 {x} -2170.2371 {y} 171.1823 {z} 5.363 {speed} MoveState.Sprint {time} 9999999
+wait 1000
+print_now 'MISS_77' {time} 1000 {flag} 1 // "Yea..."
 start_char_facial_talk $PLAYER_ACTOR {duration} 3000
-wait 5000
+wait 2000
 stop_char_facial_talk $PLAYER_ACTOR
 
 :MISSION7_2376
@@ -9582,12 +9638,12 @@ locate_char_any_means_char_2d $PLAYER_ACTOR {target} $DROMEO_7_1 {xRadius} 30.0 
 goto_if_false @MISSION7_2376
 print_now 'MISS_78' {time} 6000 {flag} 1 // "Hey, keep up! Is not the worst place in the world!"
 task_play_anim $DROMEO_7_1 {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 3000
-wait 3000
-task_go_to_object $DROMEO_7_1 {object} $MARK_7_1 {time} -1 {radius} 3.0
-wait 4000
+wait 2000
+task_go_straight_to_coord $DROMEO_7_1 {x} -2170.2371 {y} 171.1823 {z} 5.363 {speed} MoveState.Sprint {time} 9999999
+wait 1000
 print_now 'MISS_86' {time} 5000 {flag} 1 // "What are you talking about?"
 start_char_facial_talk $PLAYER_ACTOR {duration} 5000
-wait 6000
+wait 3000
 stop_char_facial_talk $PLAYER_ACTOR
 
 :MISSION7_2571
@@ -9602,21 +9658,21 @@ locate_char_any_means_char_2d $PLAYER_ACTOR {target} $DROMEO_7_1 {xRadius} 30.0 
 goto_if_false @MISSION7_2571
 print_now 'MISS_79' {time} 6000 {flag} 1 // "Other Dromaeo family will help you! They lives in that forest!"
 task_play_anim $DROMEO_7_1 {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 3000
-wait 3000
-task_go_to_object $DROMEO_7_1 {object} $MARK_7_1 {time} -1 {radius} 3.0
-wait 4000
+wait 2000
+task_go_straight_to_coord $DROMEO_7_1 {x} -2170.2371 {y} 171.1823 {z} 5.363 {speed} MoveState.Sprint {time} 9999999
+wait 1000
 print_now 'MISS_80' {time} 5000 {flag} 1 // "Will help... with my home task for school?"
 start_char_facial_talk $PLAYER_ACTOR {duration} 5000
-wait 6000
+wait 3000
 stop_char_facial_talk $PLAYER_ACTOR
 print_now 'MISS_81' {time} 3000 {flag} 1 // "Hey, I've told you!"
 task_play_anim $DROMEO_7_1 {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 3000
-wait 3000
-task_go_to_object $DROMEO_7_1 {object} $MARK_7_1 {time} -1 {radius} 3.0
+wait 2000
+task_go_straight_to_coord $DROMEO_7_1 {x} -2170.2371 {y} 171.1823 {z} 5.363 {speed} MoveState.Sprint {time} 9999999
 wait 1000
 print_now 'MISS_82' {time} 5000 {flag} 1 // "Excuse me. I've never been at school."
 start_char_facial_talk $PLAYER_ACTOR {duration} 5000
-wait 6000
+wait 2000
 stop_char_facial_talk $PLAYER_ACTOR
 
 :MISSION7_2885
@@ -9631,18 +9687,18 @@ locate_char_any_means_char_2d $PLAYER_ACTOR {target} $DROMEO_7_1 {xRadius} 30.0 
 goto_if_false @MISSION7_2885
 print_now 'MISS_83' {time} 8000 {flag} 1 // "And?.. You'll better come to Cungun lake. A beautiful place. You can meet a Kamarasaurus there."
 task_play_anim $DROMEO_7_1 {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 3000
-wait 3000
-task_go_to_object $DROMEO_7_1 {object} $MARK_7_1 {time} -1 {radius} 3.0
-wait 6000
+wait 2000
+task_go_straight_to_coord $DROMEO_7_1 {x} -2170.2371 {y} 171.1823 {z} 5.363 {speed} MoveState.Sprint {time} 9999999
+wait 2000
 print_now 'MISS_84' {time} 3000 {flag} 1 // "Are they dangerous?"
 start_char_facial_talk $PLAYER_ACTOR {duration} 3000
-wait 4000
+wait 3000
 stop_char_facial_talk $PLAYER_ACTOR
 print_now 'MISS_85' {time} 4000 {flag} 1 // "Hey, not much like you."
 task_play_anim $DROMEO_7_1 {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 3000
-wait 3000
-task_go_to_object $DROMEO_7_1 {object} $MARK_7_1 {time} -1 {radius} 3.0
-wait 5000
+wait 2000
+task_go_straight_to_coord $DROMEO_7_1 {x} -2170.2371 {y} 171.1823 {z} 5.363 {speed} MoveState.Sprint {time} 9999999
+wait 1000
 
 :MISSION7_3165
 wait 0
@@ -9656,12 +9712,12 @@ locate_char_any_means_char_2d $PLAYER_ACTOR {target} $DROMEO_7_1 {xRadius} 30.0 
 goto_if_false @MISSION7_3165
 print_now 'MISS_87' {time} 4000 {flag} 1 // "Hey, my name is not Hey!"
 start_char_facial_talk $PLAYER_ACTOR {duration} 4000
-wait 5000
+wait 2000
 stop_char_facial_talk $PLAYER_ACTOR
 print_now 'MISS_88' {time} 4000 {flag} 1 // "Okay, Hawk! Skilar."
 task_play_anim $DROMEO_7_1 {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 3000
-wait 3000
-task_go_to_object $DROMEO_7_1 {object} $MARK_7_1 {time} -1 {radius} 3.0
+wait 2000
+task_go_straight_to_coord $DROMEO_7_1 {x} -2170.2371 {y} 171.1823 {z} 5.363 {speed} MoveState.Sprint {time} 9999999
 goto @MISSION7_3362
 
 :MISSION7_3362
@@ -9681,12 +9737,13 @@ goto @MISSION7_3480
 
 :MISSION7_3480
 wait 0
-print_now 'MISS_69' {time} 8000 {flag} 1 // "Okay, here's Monewort. Members of Fraughton family are somewhere in this forest."
+print_now 'MISS_69' {time} 4000 {flag} 1 // "Okay, here's Monewort. Members of Fraughton family are somewhere in this forest."
 wait 1000
 task_play_anim $DROMEO_7_1 {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 3000
-wait 8000
+wait 4000
 do_fade 2000 {direction} Fade.Out
 wait 2100
+skip_cutscene_start_internal @MISSION7_SRV_CSSKIP_2
 set_player_control $PLAYER_CHAR {state} False
 switch_widescreen True
 $WIDE = 1
@@ -9706,8 +9763,13 @@ task_play_anim $DROMEO_7_1 {animationName} "PRTIAL_GNGTLKA" {animationFile} "GAN
 wait 6000
 task_char_slide_to_coord $DROMEO_7_1 {x} -2123.908 {y} 219.3097 {z} 16.0978 {angle} 194.0 {radius} 0.0
 wait 5000
-do_fade 2000 {direction} Fade.Out
-wait 2100
+
+:MISSION7_SRV_CSSKIP_2
+skip_cutscene_end
+clear_prints
+clear_char_tasks $PLAYER_ACTOR
+do_fade 1000 {direction} Fade.Out
+wait 1100
 set_player_control $PLAYER_CHAR {state} True
 switch_widescreen False
 $WIDE = 0
@@ -9759,19 +9821,14 @@ script_name 'MISSION8'
 wait 0
 allow_pause_in_widescreen True
 set_police_ignore_player $PLAYER_CHAR {state} True
+set_fixed_camera_position -1877.264 {y} 312.6457 {z} 49.0427 {upVecOffsetX} 0.0 {upVecOffsetY} 0.0 {upVecOffsetZ} 0.0
+point_camera_at_point -1876.0439 {y} 306.9156 {z} 48.3113 {switchStyle} SwitchType.JumpCut
+switch_widescreen True
+set_player_control $PLAYER_CHAR {state} False
+$WIDE = 1
 do_fade 2000 {direction} Fade.Out
 wait 2000
 $PLAY5 = 1
-switch_widescreen True
-$WIDE = 1
-set_player_control $PLAYER_CHAR {state} False
-set_fixed_camera_position -1877.264 {y} 312.6457 {z} 49.0427 {upVecOffsetX} 0.0 {upVecOffsetY} 0.0 {upVecOffsetZ} 0.0
-point_camera_at_point -1876.0439 {y} 306.9156 {z} 48.3113 {switchStyle} SwitchType.JumpCut
-do_fade 2000 {direction} Fade.In
-print_with_number_big 'MISS_89' {num} 0 {duration} 5000 {style} TextStyle.Middle // ~b~Save  the  Life
-wait 6000
-do_fade 2000 {direction} Fade.Out
-wait 2500
 request_animation "GANGS"
 request_model #WMYPLT
 request_model #BMYST
@@ -9807,6 +9864,12 @@ $EGG4 = create_object #TAR_GUN2 {x} -1886.941 {y} 360.8559 {z} 34.7
 set_object_heading $EGG4 {heading} 200.0
 $OBJ = create_object #TAR_GUN2 {x} -2448.4299 {y} 542.1716 {z} 4.0161
 set_object_heading $OBJ {heading} 200.0
+do_fade 2000 {direction} Fade.In
+skip_cutscene_start_internal @MISSION_8_SRV_CSSKIP_1
+print_with_number_big 'MISS_89' {num} 0 {duration} 5000 {style} TextStyle.Middle // ~b~Save  the  Life
+wait 6000
+do_fade 2000 {direction} Fade.Out
+wait 2500
 set_char_coordinates $PLAYER_ACTOR {x} -1883.989 {y} 328.7958 {z} 35.1315
 set_char_heading $PLAYER_ACTOR {heading} 8.856
 task_char_slide_to_coord $DROMEO_8_2 {x} -1885.7791 {y} 358.3992 {z} 35.0 {angle} 9.0 {radius} 1.0
@@ -9845,8 +9908,14 @@ wait 5000
 print_now 'MISS_95' {time} 4000 {flag} 1 // "Thanks to you..."
 task_play_anim $PLAYER_ACTOR {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 4000
 wait 8000
-do_fade 2000 {direction} Fade.Out
-wait 2000
+
+:MISSION_8_SRV_CSSKIP_1
+skip_cutscene_end
+do_fade 1000 {direction} Fade.Out
+wait 1000
+camera_reset_new_scriptables
+clear_prints
+clear_this_print_big_now TextStyle.Middle
 restore_camera_jumpcut
 set_camera_behind_player
 switch_widescreen False
@@ -9884,6 +9953,8 @@ if and
     is_char_dead $TROO_8_2
 goto_if_false @MISSION8_1488
 wait 2000
+
+skip_cutscene_start_internal @MISSION8_SRV_CSSKIP_2
 switch_widescreen True
 $WIDE = 1
 set_player_control $PLAYER_CHAR {state} False
@@ -9904,11 +9975,27 @@ delete_object $EGG2
 wait 500
 task_go_to_object $TROO_8_3 {object} $OBJ {time} -1 {radius} 4.0
 wait 2000
+
+:MISSION8_SRV_CSSKIP_2
+skip_cutscene_end
+do_fade 1000 Fade.Out
+wait 1000
+if not does_char_exist $TROO_8_3
+then
+    $TROO_8_3 = create_char PedType.CivMale {modelId} #OFYRI {x} -1887.605 {y} 359.8109 {z} 35.3584
+    set_char_heading $TROO_8_3 {angle} 325.0
+    task_go_to_object $TROO_8_3 {object} $OBJ {time} -1 {radius} 4.0
+else
+    set_char_coordinates $TROO_8_3 {x} -1887.605 {y} 359.8109 {z} 35.3584
+    set_char_heading $TROO_8_3 {angle} 325.0
+    task_go_to_object $TROO_8_3 {object} $OBJ {time} -1 {radius} 4.0
+end
 set_player_control $PLAYER_CHAR {state} True
 restore_camera_jumpcut
 set_camera_behind_player
 switch_widescreen False
 $WIDE = 0
+do_fade 1000 Fade.In
 print_now 'MISS_96' {time} 4000 {flag} 1 // Troodon stole an egg. Catch him!
 3@ = add_blip_for_char $TROO_8_3
 goto @MISSION8_1872
@@ -9937,7 +10024,6 @@ print_now 'MISS_97' {time} 4000 {flag} 1 // Bring egg back to the nest.
 give_weapon_to_char $PLAYER_ACTOR {weaponType} WeaponType.BaseballBat {ammo} 6000
 $RADAR_MISS_8_2 = add_blip_for_coord -1889.6639 {y} 360.7754 {z} 35.0
 $RADAR_SPHERE_8_2 = add_sphere -1889.6639 {y} 360.7754 {z} 35.0 {radius} 1.5
-wait 10000
 mark_model_as_no_longer_needed #OFYRI
 mark_model_as_no_longer_needed #OMORI
 wait 0
@@ -10099,6 +10185,7 @@ set_char_heading $DROMEO_9_6 {heading} 213.0
 set_char_coordinates $PLAYER_ACTOR {x} -2168.3069 {y} 79.9993 {z} 0.9231
 set_char_heading $PLAYER_ACTOR {heading} 216.356
 set_time_of_day 8 {minutes} 0
+skip_cutscene_start_internal @MISSION9_SRV_CSSKIP_1
 camera_set_vector_move -2171.3679 {fromY} 89.5139 {fromZ} 3.2159 {toX} -2162.7339 {toY} 77.2236 {toZ} 0.3144 {time} 45000 {ease} 3
 camera_set_vector_track -2170.658 {fromY} 87.1859 {fromZ} 2.8657 {toX} -2164.3391 {toY} 77.9355 {toZ} 0.6154 {time} 45000 {ease} 3
 switch_widescreen True
@@ -10126,12 +10213,18 @@ wait 7000
 print_now 'MIS_104' {time} 6000 {flag} 1 // "Yes, of course! But the colors are strange a bit..."
 task_play_anim $PLAYER_ACTOR {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 6000
 wait 6000
-do_fade 2000 {direction} Fade.Out
-wait 2000
+
+:MISSION9_SRV_CSSKIP_1
+skip_cutscene_end
+do_fade 1000 {direction} Fade.Out
+wait 1000
+camera_reset_new_scriptables
+clear_prints
+clear_this_print_big_now TextStyle.Middle
 switch_widescreen False
 $WIDE = 0
 set_player_control $PLAYER_CHAR {state} True
-do_fade 2000 {direction} Fade.In
+do_fade 1000 {direction} Fade.In
 goto @MISSION9_950
 
 :MISSION9_950
@@ -10534,12 +10627,13 @@ switch_widescreen True
 $WIDE = 1
 set_player_control $PLAYER_CHAR {state} False
 $PLAY8 = 1
-do_fade 2000 {direction} Fade.In
-print_with_number_big 'MIS_109' {num} 0 {duration} 5000 {style} TextStyle.Middle // ~b~6-year  War
 $DROMEO_10_1 = create_char PedType.CivMale {modelId} #WMYPLT {x} -1917.885 {y} 429.3593 {z} 34.4
 set_char_heading $DROMEO_10_1 {heading} 108.0
 set_char_coordinates $PLAYER_ACTOR {x} -1921.4871 {y} 428.0232 {z} 34.4
 set_char_heading $PLAYER_ACTOR {heading} 290.356
+do_fade 2000 {direction} Fade.In
+skip_cutscene_start_internal @MISSION10_753
+print_with_number_big 'MIS_109' {num} 0 {duration} 5000 {style} TextStyle.Middle // ~b~6-year  War
 wait 5000
 do_fade 2000 {direction} Fade.Out
 wait 2000
@@ -10547,7 +10641,6 @@ set_fixed_camera_position -1917.86 {y} 423.8785 {z} 35.0 {upVecOffsetX} 0.0 {upV
 point_camera_at_point -1918.373 {y} 424.8902 {z} 35.0 {switchStyle} SwitchType.JumpCut
 wait 100
 do_fade 2000 {direction} Fade.In
-skip_cutscene_start_internal @MISSION10_753
 wait 0
 print_now 'MIS_110' {time} 3000 {flag} 1 // "...she's gone!"
 task_play_anim $DROMEO_10_1 {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 3000
@@ -10569,12 +10662,16 @@ goto @MISSION10_753
 :MISSION10_753
 wait 0
 skip_cutscene_end
+do_fade 1000 Fade.Out
+wait 1000
+clear_this_print_big_now TextStyle.Middle
 clear_prints
 restore_camera_jumpcut
 set_camera_behind_player
 switch_widescreen False
 $WIDE = 0
 set_player_control $PLAYER_CHAR {state} True
+do_fade 1000 Fade.In
 wait 1000
 print_now 'MIS_115' {time} 8000 {flag} 1 // Go to Lostland. Maybe Flame knows anything.
 $RADAR_MISS_10_2 = add_sprite_blip_for_coord -1285.953 {y} 728.2432 {z} 7.5 {sprite} RadarSprite.Fire
@@ -10636,18 +10733,19 @@ wait 7500
 print_now 'MIS_119' {time} 11000 {flag} 1 // "Well... I don't know... But I've heart once, that Troodons take dinosaurs at Alarm Volcano. It's the norhtest island of Cantera. And there are only one way - water."
 task_play_anim $DROMEO_10_2 {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 9000
 wait 11000
-do_fade 2000 {direction} Fade.Out
-wait 2000
 
 :MISSION10_1575
 skip_cutscene_end
+do_fade 1000 {direction} Fade.Out
+wait 1000
 clear_prints
+clear_char_tasks $PLAYER_ACTOR
 restore_camera_jumpcut
 set_camera_behind_player
 switch_widescreen False
 $WIDE = 0
 set_player_control $PLAYER_CHAR {state} True
-do_fade 2000 {direction} Fade.In
+do_fade 1000 {direction} Fade.In
 print_now 'MIS_122' {time} 6000 {flag} 1 // Swim to Alarm Volcano.
 wait 1000
 $RADAR_MISS_10_3 = add_sprite_blip_for_coord -2258.7019 {y} 2752.1899 {z} 0.7955 {sprite} RadarSprite.Airyard
@@ -10841,11 +10939,11 @@ wait 7000
 print_now 'MIS_126' {time} 4000 {flag} 1 // "Thanks again!"
 task_play_anim $DROMEO_10_3 {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 4000
 wait 4000
-do_fade 2000 {direction} Fade.Out
-wait 2000
 
 :MISSION10_3375
 skip_cutscene_end
+do_fade 1000 {direction} Fade.Out
+wait 1000
 clear_prints
 switch_widescreen False
 $WIDE = 0
@@ -11041,13 +11139,22 @@ switch_widescreen True
 $WIDE = 1
 set_player_control $PLAYER_CHAR {state} False
 do_fade 2000 {direction} Fade.In
+skip_cutscene_start_internal @MISSION11_SRV_CSSKIP_1
 print_with_number_big 'MIS_127' {num} 0 {duration} 5000 {style} TextStyle.Middle // ~b~Street  Fighting
 wait 6000
 print_now 'MIS_128' {time} 4000 {flag} 1 // "And now is our move, raptors! Kill 'em all!"
 task_play_anim $PLAYER_ACTOR {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 4000
 wait 4000
+
+:MISSION11_SRV_CSSKIP_1
+skip_cutscene_end
+do_fade 1000 Fade.Out
+wait 1000
+clear_prints
+clear_this_print_big_now TextStyle.Middle
 switch_widescreen False
 $WIDE = 0
+do_fade 1000 Fade.In
 wait 0
 set_group_member $PLAYER_GROUP {handle} $DROMEO_11_1
 set_group_member $PLAYER_GROUP {handle} $DROMEO_11_2
@@ -11249,7 +11356,7 @@ wait 3000
 $RADAR_MISS_11_HOME = add_sprite_blip_for_coord -1889.6639 {y} 360.7754 {z} 35.0 {sprite} RadarSprite.PropertyG
 $RADAR_SPHERE_11_HOME = add_sphere -1889.6639 {y} 360.7754 {z} 35.0 {radius} 1.5
 print_now 'MIS_131' {time} 5000 {flag} 1 // Come back to Monewort.
-wait 10000
+wait 5000
 print_now 'MIS_132' {time} 10000 {flag} 1 // You can press G to call raptors, or H to stop them.
 goto @MISSION11_2268
 
@@ -11481,9 +11588,6 @@ wait 0
 do_fade 2000 {direction} Fade.In
 force_weather_now WeatherType.ExtraSunnySf
 set_time_of_day 7 {minutes} 0
-print_with_number_big 'MI_1040' {num} 0 {duration} 5000 {style} TextStyle.Middle // ~b~Quieter than water
-camera_set_vector_move -1877.839 {fromY} 250.3246 {fromZ} 69.1002 {toX} -1870.348 {toY} 255.3448 {toZ} 24.7 {time} 7000 {ease} True
-camera_set_vector_track -1859.0341 {fromY} 241.9179 {fromZ} 69.894 {toX} -1869.5439 {toY} 252.2582 {toZ} 23.8709 {time} 7000 {ease} True
 $DROMEO_11_0_1 = create_char PedType.CivMale {modelId} #BMOST {x} -1867.941 {y} 248.992 {z} 23.0
 set_char_heading $DROMEO_11_0_1 {heading} 55.0
 $DROMEO_11_0_2 = create_char PedType.CivMale {modelId} #SWMYHP1 {x} -1867.157 {y} 251.4829 {z} 23.1
@@ -11492,8 +11596,10 @@ $DRIO_11_0_1 = create_char PedType.CivMale {modelId} #BMORI {x} -1767.201 {y} 19
 set_char_heading $DRIO_11_0_1 {heading} 261.0
 set_char_coordinates $PLAYER_ACTOR {x} -1871.5179 {y} 250.1862 {z} 23.0
 set_char_heading $PLAYER_ACTOR {heading} 264.356
-wait 2000
 skip_cutscene_start_internal @MISSION11_0_676
+print_with_number_big 'MI_1040' {num} 0 {duration} 5000 {style} TextStyle.Middle // ~b~Quieter than water
+camera_set_vector_move -1877.839 {fromY} 250.3246 {fromZ} 69.1002 {toX} -1870.348 {toY} 255.3448 {toZ} 24.7 {time} 7000 {ease} True
+camera_set_vector_track -1859.0341 {fromY} 241.9179 {fromZ} 69.894 {toX} -1869.5439 {toY} 252.2582 {toZ} 23.8709 {time} 7000 {ease} True
 wait 5000
 set_fixed_camera_position -1870.348 {y} 255.3448 {z} 24.7 {upVecOffsetX} 0.0 {upVecOffsetY} 0.0 {upVecOffsetZ} 0.0
 point_camera_at_point -1869.5439 {y} 252.2582 {z} 23.8709 {switchStyle} SwitchType.JumpCut
@@ -11508,16 +11614,20 @@ print_now 'MI_1042' {time} 4000 {flag} 1 // "And little Hodry will watch, she mu
 wait 2000
 task_play_anim $DROMEO_11_0_2 {animationName} "SMKCIG_PRTL_F" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 4000
 wait 2000
-do_fade 2000 {direction} Fade.Out
-wait 2000
 
 :MISSION11_0_676
 skip_cutscene_end
-do_fade 2000 {direction} Fade.In
+do_fade 1000 {direction} Fade.Out
+wait 1000
+camera_reset_new_scriptables
+clear_prints
+clear_this_print_big_now TextStyle.Middle
+clear_char_tasks $PLAYER_ACTOR
 restore_camera_jumpcut
 set_camera_behind_player
 switch_widescreen False
 $WIDE = 0
+do_fade 1000 {direction} Fade.In
 give_weapon_to_char $PLAYER_ACTOR {weaponType} WeaponType.Knife {ammo} 600
 set_current_char_weapon $PLAYER_ACTOR {weaponType} WeaponType.Unarmed
 set_char_coordinates $PLAYER_ACTOR {x} -1826.353 {y} 210.9675 {z} 17.5
@@ -11526,7 +11636,6 @@ set_char_coordinates $DROMEO_11_0_1 {x} -1826.478 {y} 208.7507 {z} 17.1
 set_char_heading $DROMEO_11_0_1 {heading} 256.356
 set_char_coordinates $DROMEO_11_0_2 {x} -1826.55 {y} 212.1619 {z} 17.8
 set_char_heading $DROMEO_11_0_2 {heading} 255.356
-wait 2000
 task_play_anim $DROMEO_11_0_1 {animationName} "PRTIAL_HNDSHK_01" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 1600
 print_now 'MI_1043' {time} 2500 {flag} 1 // "See that Drio? Kill him silently!"
 $DRIO_11_0_1_MARK = add_blip_for_char $DRIO_11_0_1
@@ -11611,6 +11720,7 @@ wait 4000
 do_fade 2000 {direction} Fade.Out
 wait 2000
 do_fade 2000 {direction} Fade.In
+skip_cutscene_start_internal @MISSION_11_0_CSSKIP_1
 switch_widescreen True
 $WIDE = 1
 set_player_control $PLAYER_CHAR {state} False
@@ -11634,14 +11744,19 @@ task_play_anim $DROMEO_11_0_2 {animationName} "HNDSHKDA" {animationFile} "GANGS"
 wait 2000
 task_char_slide_to_coord $DROMEO_11_0_2 {x} -1810.365 {y} 225.3753 {z} 20.6806 {angle} 109.0 {radius} 4.0
 wait 1000
-do_fade 2000 {direction} Fade.Out
-wait 2000
-do_fade 2000 {direction} Fade.In
+
+:MISSION_11_0_CSSKIP_1
+skip_cutscene_end
+do_fade 1000 {direction} Fade.Out
+wait 1000
+clear_prints
+clear_char_tasks $PLAYER_ACTOR
 restore_camera_jumpcut
 set_camera_behind_player
 set_player_control $PLAYER_CHAR {state} True
 switch_widescreen False
 $WIDE = 0
+do_fade 1000 {direction} Fade.In
 goto @MISSION11_0_2151
 terminate_this_script
 
@@ -11932,6 +12047,8 @@ skip_cutscene_end
 $PLAY11_1 = 1
 do_fade 2000 {direction} Fade.Out
 wait 2000
+clear_prints
+clear_this_print_big_now TextStyle.Middle
 do_fade 2000 {direction} Fade.In
 set_char_coordinates $PLAYER_ACTOR {x} -2269.98 {y} 193.136 {z} 7.0
 set_char_heading $PLAYER_ACTOR {heading} 109.356
@@ -13067,6 +13184,7 @@ set_char_heading $TROO_11_2_1 {heading} 91.0
 $TROO_11_2_2 = create_char PedType.CivMale {modelId} #OMORI {x} -1593.202 {y} 649.4057 {z} 55.659
 set_char_heading $TROO_11_2_2 {heading} 182.0
 task_play_anim $PLAYER_ACTOR {animationName} "XPRESSSCRATCH" {animationFile} "PED" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 3700
+skip_cutscene_start_internal @MISSION11_2_1206
 camera_set_vector_move -1600.923 {fromY} 621.4747 {fromZ} 56.9 {toX} -1587.153 {toY} 627.5929 {toZ} 56.1533 {time} 7000 {ease} 3
 camera_set_vector_track -1588.875 {fromY} 621.377 {fromZ} 54.9 {toX} -1589.875 {toY} 621.377 {toZ} 54.9 {time} 7000 {ease} 3
 print_with_number_big 'MI_1049' {num} 0 {duration} 5000 {style} TextStyle.Middle // ~b~The Big Brother
@@ -13074,7 +13192,6 @@ wait 5000
 do_fade 2000 {direction} Fade.Out
 wait 2000
 do_fade 2000 {direction} Fade.In
-skip_cutscene_start_internal @MISSION11_2_1206
 set_fixed_camera_position -1553.798 {y} 514.4976 {z} 74.2432 {upVecOffsetX} 0.0 {upVecOffsetY} 0.0 {upVecOffsetZ} 0.0
 point_camera_at_point -1540.426 {y} 507.0586 {z} 74.1498 {switchStyle} SwitchType.JumpCut
 wait 1000
@@ -13117,12 +13234,18 @@ task_play_anim $TROO_11_2_2 {animationName} "PRTIAL_GNGTLKA" {animationFile} "GA
 wait 4000
 
 :MISSION11_2_1206
-wait 0
+do_fade 1000 Fade.Out
+wait 1000
+camera_reset_new_scriptables
 set_fixed_camera_position -1588.316 {y} 616.8239 {z} 56.0 {upVecOffsetX} 0.0 {upVecOffsetY} 0.0 {upVecOffsetZ} 0.0
 point_camera_at_point -1589.875 {y} 621.377 {z} 54.8 {switchStyle} SwitchType.JumpCut
 set_char_heading $PLAYER_ACTOR {heading} 5.0
 skip_cutscene_end
 clear_prints
+clear_this_print_big_now TextStyle.Middle
+clear_char_tasks $PLAYER_ACTOR
+clear_char_tasks $TROO_11_2_2
+do_fade 1000 Fade.In
 wait 1000
 print_now 'MI_1055' {time} 6000 {flag} 1 // Use arrow keys to fight one-on-one. Press the desired button when the arrow will be in the circle.
 wait 2000

@@ -26,6 +26,8 @@ while true
     // Make all group members run (Can apply to multiple missions)
     if or
         $PASSED_MISSIONS == 1 // Childhood
+        $PASSED_MISSIONS == 9 // Street Fighting
+        $PASSED_MISSIONS == 21 // Fishing
         
     then
         wait 1000
@@ -33,7 +35,6 @@ while true
         // Get member count
         int leaders, members, memberCounter = 0
         leaders, members = get_group_size $PLAYER_GROUP
-        
         
         // Loop through all the members
         for memberCounter = 0 to members step 1
