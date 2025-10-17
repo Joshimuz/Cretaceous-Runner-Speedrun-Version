@@ -20789,6 +20789,8 @@ if
     is_char_dead $HADRO_33_1
 goto_if_false @MISSION33_656
 wait 0
+
+:MISSIOIN33_PASSED
 increment_int_stat_no_message StatId.RespectTotal {value} 30
 remove_blip $HADRO_MARK_33_1
 print_with_number_big 'M_PASSD' {num} 0 {duration} 5000 {style} TextStyle.Middle // ~g~MISSION  PASSED!
@@ -20826,8 +20828,11 @@ $RADAR_SPHERE_33_2 = add_sphere -2797.2991 {y} -1998.403 {z} 9.9345 {radius} 1.5
 
 :MISSION33_975
 wait 0
-if and
+if
     not is_char_dead $HADRO_33_1
+goto_if_false @MISSIOIN33_PASSED
+wait 0
+if and
     not is_char_dead $PLAYER_ACTOR
     not is_char_dead $DROMEO_33_1
     not is_char_dead $DROMEO_33_2
