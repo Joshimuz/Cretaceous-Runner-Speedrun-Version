@@ -21346,6 +21346,8 @@ skip_cutscene_end
 $PLAY39 = 1
 do_fade 1000 {direction} Fade.Out
 wait 1000
+set_char_coordinates $PLAYER_ACTOR {x} -1999.353 {y} -1179.828 {z} 5.0395
+set_char_heading $PLAYER_ACTOR {angle} 345.4546
 clear_prints
 clear_this_print_big_now TextStyle.Middle
 clear_char_tasks $PLAYER_ACTOR
@@ -21402,14 +21404,20 @@ set_group_member $PLAYER_GROUP {handle} $DROMEO_36_5
 set_group_member $PLAYER_GROUP {handle} $DROMEO_36_6
 set_group_member $PLAYER_GROUP {handle} $DROMEO_36_7
 do_fade 2000 {direction} Fade.In
+skip_cutscene_start_internal @MISSION36_SRV_CSSKIP_2
 wait 2000
 print_now 'MIS_389' {time} 3000 {flag} 1 // "Oh, Skilar, is it you?"
 wait 3500
 print_now 'MIS_390' {time} 5000 {flag} 1 // "Yes, I'm at home! Hodry, how're you? What's new in Cantera?"
 task_play_anim $PLAYER_ACTOR {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 4000
 wait 5000
-do_fade 2000 {direction} Fade.Out
-wait 2000
+
+:MISSION36_SRV_CSSKIP_2
+skip_cutscene_end
+do_fade 1000 {direction} Fade.Out
+wait 1000
+clear_prints
+clear_char_tasks $PLAYER_ACTOR
 switch_widescreen False
 $WIDE = 0
 $PLAY39 = 0
@@ -30423,7 +30431,6 @@ task_go_to_object $DROMEO_50_15 {object} $OBJ6 {time} -1 {radius} 9.0
 task_go_to_object $DROMEO_50_16 {object} $OBJ6 {time} -1 {radius} 9.0
 wait 4000
 
-
 :MISSION50_SRV_CSSKIP_2
 skip_cutscene_end
 do_fade 1000 Fade.Out
@@ -30435,130 +30442,130 @@ camera_reset_new_scriptables
 
 if does_char_exist $DROMEO_50_1
 then
-mark_char_as_no_longer_needed $DROMEO_50_1
-delete_char $DROMEO_50_1
+    mark_char_as_no_longer_needed $DROMEO_50_1
+    delete_char $DROMEO_50_1
 end
 
 if does_char_exist $DROMEO_50_2
 then
-mark_char_as_no_longer_needed $DROMEO_50_2
-delete_char $DROMEO_50_2
+    mark_char_as_no_longer_needed $DROMEO_50_2
+    delete_char $DROMEO_50_2
 end
 
 if does_char_exist $DROMEO_50_3
 then
-mark_char_as_no_longer_needed $DROMEO_50_3
-delete_char $DROMEO_50_3
+    mark_char_as_no_longer_needed $DROMEO_50_3
+    delete_char $DROMEO_50_3
 end
 
 if does_char_exist $DROMEO_50_4
 then
-mark_char_as_no_longer_needed $DROMEO_50_4
-delete_char $DROMEO_50_4
+    mark_char_as_no_longer_needed $DROMEO_50_4
+    delete_char $DROMEO_50_4
 end
 
 if does_char_exist $DROMEO_50_5
 then
-mark_char_as_no_longer_needed $DROMEO_50_5
-delete_char $DROMEO_50_5
+    mark_char_as_no_longer_needed $DROMEO_50_5
+    delete_char $DROMEO_50_5
 end
 
 if does_char_exist $DROMEO_50_6
 then
-mark_char_as_no_longer_needed $DROMEO_50_6
-delete_char $DROMEO_50_6
+    mark_char_as_no_longer_needed $DROMEO_50_6
+    delete_char $DROMEO_50_6
 end
 
 if does_char_exist $DROMEO_50_7
 then
-mark_char_as_no_longer_needed $DROMEO_50_7
-delete_char $DROMEO_50_7
+    mark_char_as_no_longer_needed $DROMEO_50_7
+    delete_char $DROMEO_50_7
 end
 
 if does_char_exist $DROMEO_50_8
 then
-mark_char_as_no_longer_needed $DROMEO_50_8
-delete_char $DROMEO_50_8
+    mark_char_as_no_longer_needed $DROMEO_50_8
+    delete_char $DROMEO_50_8
 end
 
 if does_char_exist $DROMEO_50_9
 then
-mark_char_as_no_longer_needed $DROMEO_50_9
-delete_char $DROMEO_50_9
+    mark_char_as_no_longer_needed $DROMEO_50_9
+    delete_char $DROMEO_50_9
 end
 
 if does_char_exist $DROMEO_50_10
 then
-mark_char_as_no_longer_needed $DROMEO_50_10
-delete_char $DROMEO_50_10
+    mark_char_as_no_longer_needed $DROMEO_50_10
+    delete_char $DROMEO_50_10
 end
 
 if does_char_exist $DROMEO_50_11
 then
-mark_char_as_no_longer_needed $DROMEO_50_11
-delete_char $DROMEO_50_11
+    mark_char_as_no_longer_needed $DROMEO_50_11
+    delete_char $DROMEO_50_11
 end
 
 if does_char_exist $DROMEO_50_12
 then
-mark_char_as_no_longer_needed $DROMEO_50_12
-delete_char $DROMEO_50_12
+    mark_char_as_no_longer_needed $DROMEO_50_12
+    delete_char $DROMEO_50_12
 end
 
 if does_char_exist $DROMEO_50_13
 then
-mark_char_as_no_longer_needed $DROMEO_50_13
-delete_char $DROMEO_50_13
+    mark_char_as_no_longer_needed $DROMEO_50_13
+    delete_char $DROMEO_50_13
 end
 
 if does_char_exist $DROMEO_50_14
 then
-mark_char_as_no_longer_needed $DROMEO_50_14
-delete_char $DROMEO_50_14
+    mark_char_as_no_longer_needed $DROMEO_50_14
+    delete_char $DROMEO_50_14
 end
 
 if does_char_exist $DROMEO_50_15
 then
-mark_char_as_no_longer_needed $DROMEO_50_15
-delete_char $DROMEO_50_15
+    mark_char_as_no_longer_needed $DROMEO_50_15
+    delete_char $DROMEO_50_15
 end
 
 if does_char_exist $DROMEO_50_16
 then
-mark_char_as_no_longer_needed $DROMEO_50_16
-delete_char $DROMEO_50_16
+    mark_char_as_no_longer_needed $DROMEO_50_16
+    delete_char $DROMEO_50_16
 end
 
 if not does_char_exist $TREX_50_3
 then
-$TREX_50_3 = create_char PedType.CivMale {modelId} #VWMYBOX {x} -2096.8501 {y} -2152.0249 {z} 48.5
-set_char_heading $TREX_50_3 {heading} 17.0
-set_char_health $TREX_50_3 {health} 5000
-task_kill_char_on_foot $TREX_50_3 {target} $PLAYER_ACTOR
+    $TREX_50_3 = create_char PedType.CivMale {modelId} #VWMYBOX {x} -2096.8501 {y} -2152.0249 {z} 48.5
+    set_char_heading $TREX_50_3 {heading} 17.0
+    set_char_health $TREX_50_3 {health} 5000
+    task_kill_char_on_foot $TREX_50_3 {target} $PLAYER_ACTOR
 end
 
 if not does_char_exist $TREX_50_4
 then
-$TREX_50_4 = create_char PedType.CivMale {modelId} #VWMYBOX {x} -2098.8501 {y} -2152.0249 {z} 48.5
-set_char_heading $TREX_50_4 {heading} 20.0
-set_char_health $TREX_50_4 {health} 5000
-task_kill_char_on_foot $TREX_50_4 {target} $PLAYER_ACTOR
+    $TREX_50_4 = create_char PedType.CivMale {modelId} #VWMYBOX {x} -2098.8501 {y} -2152.0249 {z} 48.5
+    set_char_heading $TREX_50_4 {heading} 20.0
+    set_char_health $TREX_50_4 {health} 5000
+    task_kill_char_on_foot $TREX_50_4 {target} $PLAYER_ACTOR
 end
 
 if not does_char_exist $TREX_50_5
 then
-$TREX_50_5 = create_char PedType.CivMale {modelId} #VWMYBOX {x} -2091.8501 {y} -2155.0249 {z} 48.5
-set_char_heading $TREX_50_5 {heading} 30.0
-set_char_health $TREX_50_5 {health} 5000
-task_kill_char_on_foot $TREX_50_5 {target} $PLAYER_ACTOR
+    $TREX_50_5 = create_char PedType.CivMale {modelId} #VWMYBOX {x} -2091.8501 {y} -2155.0249 {z} 48.5
+    set_char_heading $TREX_50_5 {heading} 30.0
+    set_char_health $TREX_50_5 {health} 5000
+    task_kill_char_on_foot $TREX_50_5 {target} $PLAYER_ACTOR
 end
 
 if not does_char_exist $TREX_50_6
 then
-$TREX_50_6 = create_char PedType.CivMale {modelId} #VWMYBOX {x} -2102.8501 {y} -2150.0249 {z} 48.5
-set_char_heading $TREX_50_6 {heading} 10.0
-set_char_health $TREX_50_6 {health} 5000
-task_kill_char_on_foot $TREX_50_6 {target} $PLAYER_ACTOR
+    $TREX_50_6 = create_char PedType.CivMale {modelId} #VWMYBOX {x} -2102.8501 {y} -2150.0249 {z} 48.5
+    set_char_heading $TREX_50_6 {heading} 10.0
+    set_char_health $TREX_50_6 {health} 5000
+    task_kill_char_on_foot $TREX_50_6 {target} $PLAYER_ACTOR
 end
 
 wait 100
