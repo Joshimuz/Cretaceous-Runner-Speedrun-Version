@@ -14509,7 +14509,7 @@ wait 4000
 $ONMISSION = 0
 mission_has_finished
 wait 1000
-goto @Noname_8_11
+goto @Noname_9
 
 //-------------Mission 16---------------
 
