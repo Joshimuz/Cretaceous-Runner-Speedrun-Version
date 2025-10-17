@@ -10459,13 +10459,14 @@ point_camera_at_point -1617.809 {y} 605.9733 {z} 51.6448 {switchStyle} SwitchTyp
 switch_widescreen True
 $WIDE = 1
 set_player_control $PLAYER_CHAR {state} False
-do_fade 2000 {direction} Fade.In
-print_with_number_big 'MIS_602' {num} 0 {duration} 4500 {style} TextStyle.Middle // ~b~The Prankster
-wait 1000
 $TROO101_1 = create_char PedType.CivMale {modelId} #OMORI {x} -1615.788 {y} 620.3065 {z} 55.2814
 set_char_heading $TROO101_1 {heading} 181.0
 set_char_health $TROO101_1 {health} 200
 set_char_proofs $TROO101_1 {bulletProof} True {fireProof} True {explosionProof} True {collisionProof} True {meleeProof} True
+do_fade 2000 {direction} Fade.In
+skip_cutscene_start_internal @MISSION9_1_SRV_CSSKIP_1
+print_with_number_big 'MIS_602' {num} 0 {duration} 4500 {style} TextStyle.Middle // ~b~The Prankster
+wait 1000
 task_char_slide_to_coord $TROO101_1 {x} -1617.511 {y} 606.4651 {z} 51.4366 {angle} 180.0 {radius} 5.0
 wait 5000
 task_turn_char_to_face_char $PLAYER_ACTOR {target} $TROO101_1
@@ -10475,6 +10476,13 @@ set_char_health $PLAYER_ACTOR {health} 50
 task_play_anim $TROO101_1 {animationName} "FIGHTA_3" {animationFile} "PED" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 800
 task_play_anim $PLAYER_ACTOR {animationName} "BIKE_FALLR" {animationFile} "PED" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 800
 wait 800
+
+:MISSION9_1_SRV_CSSKIP_1
+do_fade 1000 Fade.Out
+wait 1000
+clear_this_print_big_now TextStyle.Middle
+clear_char_tasks $TROO101_1
+clear_char_tasks $PLAYER_ACTOR
 set_time_scale 1.0
 restore_camera_jumpcut
 set_camera_behind_player
@@ -10483,6 +10491,7 @@ $WIDE = 0
 set_player_control $PLAYER_CHAR {state} True
 set_char_coordinates $PLAYER_ACTOR {x} -1617.511 {y} 585.4651 {z} 51.9
 set_char_heading $PLAYER_ACTOR {heading} 0.356
+do_fade 1000 Fade.In
 wait 4000
 print_now 'MIS_603' {time} 3000 {flag} 1 // Catch the prankster!
 6@ = create_object #DRUG_BLUE {x} -1627.011 {y} 821.9644 {z} 51.0
