@@ -13404,15 +13404,15 @@ $DROMEO_12_2 = create_char PedType.CivMale {modelId} #BMYST {x} -1887.8719 {y} 3
 set_char_heading $DROMEO_12_2 {heading} 84.0
 switch_widescreen True
 $WIDE = 1
+$TROO_12_1 = create_char PedType.CivMale {modelId} #OFYRI {x} -1899.3361 {y} 360.5662 {z} 35.0
+set_char_heading $TROO_12_1 {heading} 270.0
 set_player_control $PLAYER_CHAR {state} False
 do_fade 2000 {direction} Fade.In
+skip_cutscene_start_internal @MISSION12_1051
 camera_set_vector_move -1891.256 {fromY} 361.5208 {fromZ} 45.0 {toX} -1891.256 {toY} 361.5208 {toZ} 34.5 {time} 6000 {ease} 3
 camera_set_vector_track -1889.9301 {fromY} 361.3743 {fromZ} 35.0 {toX} -1889.9301 {toY} 361.3743 {toZ} 35.0 {time} 6000 {ease} 3
 print_with_number_big 'MIS_133' {num} 0 {duration} 5000 {style} TextStyle.Middle // ~b~July  1st
 wait 6000
-$TROO_12_1 = create_char PedType.CivMale {modelId} #OFYRI {x} -1899.3361 {y} 360.5662 {z} 35.0
-set_char_heading $TROO_12_1 {heading} 270.0
-skip_cutscene_start_internal @MISSION12_1051
 set_fixed_camera_position -1891.256 {y} 361.5208 {z} 34.5 {upVecOffsetX} 0.0 {upVecOffsetY} 0.0 {upVecOffsetZ} 0.0
 point_camera_at_point -1889.9301 {y} 361.3743 {z} 35.0 {switchStyle} SwitchType.JumpCut
 print_now 'MIS_134' {time} 5000 {flag} 1 // Remember the difference between Dromaeosaurus.
@@ -13447,19 +13447,26 @@ wait 7000
 
 :MISSION12_1051
 skip_cutscene_end
+do_fade 1000 Fade.Out
+wait 1000
+clear_char_tasks $PLAYER_ACTOR
+clear_char_tasks $DROMEO_12_1
+clear_char_tasks $DROMEO_12_2
+clear_char_tasks $TROO_12_1
+camera_reset_new_scriptables
+clear_this_print_big_now TextStyle.Middle
 clear_prints
 restore_camera_jumpcut
 set_camera_behind_player
 set_player_control $PLAYER_CHAR {state} True
 switch_widescreen False
 $WIDE = 0
-wait 1000
 $FISH1 = create_object #DRUG_BLUE {x} -1444.667 {y} 536.0278 {z} 6.0
 set_object_heading $FISH1 {heading} 317.0184
 $RADAR_MISS_12_2 = add_sprite_blip_for_coord -1444.667 {y} 536.0278 {z} 7.7184 {sprite} RadarSprite.LogoSyndicate
 $RADAR_SPHERE_12_2 = add_sphere -1444.667 {y} 536.0278 {z} 7.7184 {radius} 1.5
 print_now 'MIS_140' {time} 7000 {flag} 1 // Go to the meeting.
-do_fade 2000 {direction} Fade.In
+do_fade 1000 {direction} Fade.In
 wait 0
 goto @MISSION12_1196
 
@@ -13617,6 +13624,7 @@ wait 10
 $WATER_SPEED = create_fx_system "WATER_FNT_TME" {x} -2964.082 {y} 378.5606 {z} -5.0632 {ignoreBoundingChecks} True
 play_fx_system $WATER_SPEED
 do_fade 2000 {direction} Fade.In
+skip_cutscene_start_internal @MISSION12_4836
 wait 4000
 shake_cam 500
 add_explosion -1444.667 {y} 536.0278 {z} 65.7184 {type} ExplosionType.Grenade
@@ -13831,6 +13839,11 @@ mark_model_as_no_longer_needed #BMOST
 goto @MISSION12_4836
 
 :MISSION12_4836
+skip_cutscene_end
+do_fade 1000 Fade.Out
+wait 1000
+clear_prints
+clear_char_tasks $PLAYER_ACTOR
 wait 0
 if and
     does_char_exist $DROMEO_12_1
@@ -13969,7 +13982,7 @@ restore_camera_jumpcut
 set_camera_behind_player
 wait 1000
 print_with_number_big 'MIS_700' {num} 0 {duration} 3000 {style} TextStyle.Middle // ~b~In the dream
-wait 4000
+wait 3000
 $WIDE = 1
 camera_set_shake_simulation_simple 1 {timeInMs} 180000.0 {intensity} 3.0
 $FLASH1 = create_fx_system "SHOOTLIGHT" {x} 2331.6169 {y} 1945.9301 {z} -20.35 {ignoreBoundingChecks} True
