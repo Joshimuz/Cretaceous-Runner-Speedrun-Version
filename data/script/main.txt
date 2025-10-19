@@ -16493,9 +16493,15 @@ release_weather
 camera_set_vector_move 1988.129 {fromY} 1260.439 {fromZ} 0.8717 {toX} 1988.129 {toY} 1260.439 {toZ} 0.8717 {time} 27000 {ease} 3
 camera_set_vector_track 1989.101 {fromY} 1263.36 {fromZ} 1.1148 {toX} 1987.406 {toY} 1259.2271 {toZ} 0.7395 {time} 27000 {ease} 3
 do_fade 4000 {direction} Fade.In
+skip_cutscene_start_internal @MISSION19_SRV_CSSKIP_2
 wait 20000
 do_fade 6000 {direction} Fade.Out
 wait 7000
+
+:MISSION19_SRV_CSSKIP_2
+do_fade 1000 Fade.Out
+wait 1000
+camera_reset_new_scriptables
 set_time_scale 1.0
 register_mission_passed 'MIS_189' // ~b~Nowhere  to  run
 $PLAY20 = 0
@@ -16660,6 +16666,7 @@ skip_cutscene_end
 do_fade 1000 {direction} Fade.Out
 wait 1000
 CAMERA_RESET_NEW_SCRIPTABLES
+register_mission_passed 'MIS_699' // ~b~Dangerous waters
 set_char_coordinates $PLAYER_ACTOR {x} 2018.827 {y} -1115.787 {z} 0.4
 set_char_heading $PLAYER_ACTOR {heading} 251.356
 clear_prints
