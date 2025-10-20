@@ -11128,20 +11128,29 @@ if and
     has_model_loaded #OMORI
 goto_if_false @MISSION11_100
 wait 0
-$DROMEO_11_1 = create_char PedType.CivMale {modelId} #WMYPLT {x} -1997.807 {y} 624.0338 {z} 12.9577
-set_char_heading $DROMEO_11_1 {heading} 11.0
-$DROMEO_11_2 = create_char PedType.CivMale {modelId} #BMYST {x} -1999.064 {y} 624.1641 {z} 12.9624
-set_char_heading $DROMEO_11_2 {heading} 9.0
-$DROMEO_11_3 = create_char PedType.CivMale {modelId} #BMOST {x} -2000.611 {y} 624.0569 {z} 12.9585
-set_char_heading $DROMEO_11_3 {heading} 344.0
-$DROMEO_11_4 = create_char PedType.CivMale {modelId} #SWMYHP1 {x} -2000.374 {y} 622.1314 {z} 12.8889
-set_char_heading $DROMEO_11_4 {heading} 358.0
-$DROMEO_11_5 = create_char PedType.CivMale {modelId} #SWMYHP2 {x} -1999.041 {y} 622.0256 {z} 12.8851
-set_char_heading $DROMEO_11_5 {heading} 0.0
-$DROMEO_11_6 = create_char PedType.CivMale {modelId} #SWMYHP2 {x} -1997.96 {y} 622.5441 {z} 12.9038
-set_char_heading $DROMEO_11_6 {heading} 9.0
-$DROMEO_11_7 = create_char PedType.CivMale {modelId} #SWMYHP2 {x} -1996.632 {y} 622.7908 {z} 12.9127
-set_char_heading $DROMEO_11_7 {heading} 347.0
+
+int dromeoarray[7]
+int dromeobliparray[7]
+int trooarray[8]
+int troobliparray[8]
+int trooarray2[9]
+int troobliparray2[9]
+
+dromeoarray[0] = create_char PedType.CivMale {modelId} #WMYPLT {x} -1997.807 {y} 624.0338 {z} 12.9577
+set_char_heading dromeoarray[0] {heading} 11.0
+dromeoarray[1] = create_char PedType.CivMale {modelId} #BMYST {x} -1999.064 {y} 624.1641 {z} 12.9624
+set_char_heading dromeoarray[1] {heading} 9.0
+dromeoarray[2] = create_char PedType.CivMale {modelId} #BMOST {x} -2000.611 {y} 624.0569 {z} 12.9585
+set_char_heading dromeoarray[2] {heading} 344.0
+dromeoarray[3] = create_char PedType.CivMale {modelId} #SWMYHP1 {x} -2000.374 {y} 622.1314 {z} 12.8889
+set_char_heading dromeoarray[3] {heading} 358.0
+dromeoarray[4] = create_char PedType.CivMale {modelId} #SWMYHP2 {x} -1999.041 {y} 622.0256 {z} 12.8851
+set_char_heading dromeoarray[4] {heading} 0.0
+dromeoarray[5] = create_char PedType.CivMale {modelId} #SWMYHP2 {x} -1997.96 {y} 622.5441 {z} 12.9038
+set_char_heading dromeoarray[5] {heading} 9.0
+dromeoarray[6] = create_char PedType.CivMale {modelId} #SWMYHP2 {x} -1996.632 {y} 622.7908 {z} 12.9127
+set_char_heading dromeoarray[6] {heading} 347.0
+
 set_char_coordinates $PLAYER_ACTOR {x} -1996.71 {y} 625.2332 {z} 12.9011
 set_char_heading $PLAYER_ACTOR {heading} 6.356
 set_fixed_camera_position -1992.541 {y} 628.033 {z} 13.6023 {upVecOffsetX} 0.0 {upVecOffsetY} 0.0 {upVecOffsetZ} 0.0
@@ -11167,202 +11176,193 @@ switch_widescreen False
 $WIDE = 0
 do_fade 1000 Fade.In
 wait 0
-set_group_member $PLAYER_GROUP {handle} $DROMEO_11_1
-set_group_member $PLAYER_GROUP {handle} $DROMEO_11_2
-set_group_member $PLAYER_GROUP {handle} $DROMEO_11_3
-set_group_member $PLAYER_GROUP {handle} $DROMEO_11_4
-set_group_member $PLAYER_GROUP {handle} $DROMEO_11_5
-set_group_member $PLAYER_GROUP {handle} $DROMEO_11_6
-set_group_member $PLAYER_GROUP {handle} $DROMEO_11_7
+
+int i = 0
+while i < 7
+    wait 0
+    set_group_member $PLAYER_GROUP {handle} dromeoarray[i]
+    dromeobliparray[i] = add_blip_for_char dromeoarray[i]
+    change_blip_colour dromeobliparray[i] {color} BlipColor.Green
+    set_char_health dromeoarray[i] {health} 120
+    i += 1
+end
+
 set_group_separation_range $PLAYER_GROUP {range} 3000.0
 set_player_control $PLAYER_CHAR {state} True
 restore_camera_jumpcut
 set_camera_behind_player
-1@ = add_blip_for_char $DROMEO_11_1
-change_blip_colour 1@ {color} BlipColor.Green
-2@ = add_blip_for_char $DROMEO_11_2
-change_blip_colour 2@ {color} BlipColor.Green
-3@ = add_blip_for_char $DROMEO_11_3
-change_blip_colour 3@ {color} BlipColor.Green
-4@ = add_blip_for_char $DROMEO_11_4
-change_blip_colour 4@ {color} BlipColor.Green
-5@ = add_blip_for_char $DROMEO_11_5
-change_blip_colour 5@ {color} BlipColor.Green
-6@ = add_blip_for_char $DROMEO_11_6
-change_blip_colour 6@ {color} BlipColor.Green
-7@ = add_blip_for_char $DROMEO_11_7
-change_blip_colour 7@ {color} BlipColor.Green
 wait 0
-$TROO_11_1 = create_char PedType.CivMale {modelId} #OFYRI {x} -2018.248 {y} 819.9418 {z} 29.648
-set_char_heading $TROO_11_1 {heading} 170.0
-$TROO_11_2 = create_char PedType.CivMale {modelId} #OMORI {x} -2019.248 {y} 819.9418 {z} 29.648
-set_char_heading $TROO_11_2 {heading} 9.0
-$TROO_11_3 = create_char PedType.CivMale {modelId} #OFYRI {x} -2020.248 {y} 819.9418 {z} 29.648
-set_char_heading $TROO_11_3 {heading} 344.0
-$TROO_11_4 = create_char PedType.CivMale {modelId} #OMORI {x} -2021.248 {y} 819.9418 {z} 29.648
-set_char_heading $TROO_11_4 {heading} 358.0
-$TROO_11_5 = create_char PedType.CivMale {modelId} #OFYRI {x} -2022.248 {y} 819.9418 {z} 29.648
-set_char_heading $TROO_11_5 {heading} 0.0
-$TROO_11_6 = create_char PedType.CivMale {modelId} #OMORI {x} -2023.248 {y} 819.9418 {z} 29.648
-set_char_heading $TROO_11_6 {heading} 9.0
-$TROO_11_7 = create_char PedType.CivMale {modelId} #OFYRI {x} -2024.248 {y} 819.9418 {z} 29.648
-set_char_heading $TROO_11_7 {heading} 347.0
-$TROO_11_8 = create_char PedType.CivMale {modelId} #OFYRI {x} -2025.248 {y} 819.9418 {z} 29.648
-set_char_heading $TROO_11_8 {heading} 347.0
-8@ = add_blip_for_char $TROO_11_1
-9@ = add_blip_for_char $TROO_11_2
-10@ = add_blip_for_char $TROO_11_3
-11@ = add_blip_for_char $TROO_11_4
-12@ = add_blip_for_char $TROO_11_5
-13@ = add_blip_for_char $TROO_11_6
-14@ = add_blip_for_char $TROO_11_7
-15@ = add_blip_for_char $TROO_11_8
-set_char_health $DROMEO_11_1 {health} 120
-set_char_health $DROMEO_11_2 {health} 120
-set_char_health $DROMEO_11_3 {health} 120
-set_char_health $DROMEO_11_4 {health} 120
-set_char_health $DROMEO_11_5 {health} 120
-set_char_health $DROMEO_11_6 {health} 120
-set_char_health $DROMEO_11_7 {health} 120
-wait 500
-task_kill_char_on_foot $TROO_11_1 {target} $DROMEO_11_1
-task_kill_char_on_foot $TROO_11_2 {target} $DROMEO_11_2
-task_kill_char_on_foot $TROO_11_3 {target} $DROMEO_11_3
-task_kill_char_on_foot $TROO_11_4 {target} $DROMEO_11_4
-task_kill_char_on_foot $TROO_11_5 {target} $DROMEO_11_5
-task_kill_char_on_foot $TROO_11_6 {target} $DROMEO_11_6
-task_kill_char_on_foot $TROO_11_7 {target} $DROMEO_11_7
-task_kill_char_on_foot $TROO_11_8 {target} $PLAYER_ACTOR
-task_kill_char_on_foot $DROMEO_11_1 {target} $TROO_11_1
-task_kill_char_on_foot $DROMEO_11_2 {target} $TROO_11_2
-task_kill_char_on_foot $DROMEO_11_3 {target} $TROO_11_3
-task_kill_char_on_foot $DROMEO_11_4 {target} $TROO_11_4
-task_kill_char_on_foot $DROMEO_11_5 {target} $TROO_11_5
-task_kill_char_on_foot $DROMEO_11_6 {target} $TROO_11_6
-task_kill_char_on_foot $DROMEO_11_7 {target} $TROO_11_7
+
+
+trooarray[0] = create_char PedType.CivMale {modelId} #OFYRI {x} -2018.248 {y} 819.9418 {z} 29.648
+set_char_heading trooarray[0] {heading} 170.0
+trooarray[1] = create_char PedType.CivMale {modelId} #OMORI {x} -2019.248 {y} 819.9418 {z} 29.648
+set_char_heading trooarray[1] {heading} 9.0
+trooarray[2] = create_char PedType.CivMale {modelId} #OFYRI {x} -2020.248 {y} 819.9418 {z} 29.648
+set_char_heading trooarray[2] {heading} 344.0
+trooarray[3] = create_char PedType.CivMale {modelId} #OMORI {x} -2021.248 {y} 819.9418 {z} 29.648
+set_char_heading trooarray[3] {heading} 358.0
+trooarray[4] = create_char PedType.CivMale {modelId} #OFYRI {x} -2022.248 {y} 819.9418 {z} 29.648
+set_char_heading trooarray[4] {heading} 0.0
+trooarray[5] = create_char PedType.CivMale {modelId} #OMORI {x} -2023.248 {y} 819.9418 {z} 29.648
+set_char_heading trooarray[5] {heading} 9.0
+trooarray[6] = create_char PedType.CivMale {modelId} #OFYRI {x} -2024.248 {y} 819.9418 {z} 29.648
+set_char_heading trooarray[6] {heading} 347.0
+trooarray[7] = create_char PedType.CivMale {modelId} #OFYRI {x} -2025.248 {y} 819.9418 {z} 29.648
+set_char_heading trooarray[7] {heading} 347.0
+
+i = 0
+while i < 8
+    wait 0
+    troobliparray[i] = add_blip_for_char trooarray[i]
+    if i < 7
+    then
+        task_kill_char_on_foot trooarray[i] dromeoarray[i]
+        task_kill_char_on_foot dromeoarray[i] trooarray[i]
+    end
+    i += 1
+end
+
+task_kill_char_on_foot trooarray[7] {target} $PLAYER_ACTOR
 goto @MISSION11_1297
 
 :MISSION11_1297
 wait 0
-if and
-    not is_char_dead $DROMEO_11_1
-    not is_char_dead $DROMEO_11_2
-    not is_char_dead $DROMEO_11_3
-    not is_char_dead $DROMEO_11_4
-    not is_char_dead $DROMEO_11_5
-    not is_char_dead $DROMEO_11_6
-    not is_char_dead $DROMEO_11_7
-    not is_char_dead $PLAYER_ACTOR
-goto_if_false @MISSION11_3118
-if and
-    is_char_dead $TROO_11_1
-    is_char_dead $TROO_11_2
-    is_char_dead $TROO_11_3
-    is_char_dead $TROO_11_4
-    is_char_dead $TROO_11_5
-    is_char_dead $TROO_11_6
-    is_char_dead $TROO_11_7
-    is_char_dead $TROO_11_8
-goto_if_false @MISSION11_1297
+
+int troodeadarray[9]
+int is_everyone_dead = 0
+i = 0
+
+while true
+    wait 0
+    is_everyone_dead = 0
+    
+    i = 0
+    
+    // Check if any ally or player died
+    while i < 7
+        wait 0
+        if or
+            is_char_dead dromeoarray[i]
+            is_char_dead $PLAYER_ACTOR
+        then
+            // Fail the mission
+            goto @MISSION11_3118
+        end
+        
+        i += 1
+    end
+    
+    i = 0
+    // Check if any troodon died
+    while i < 8
+        wait 0
+        if is_char_dead trooarray[i]
+        then
+            troodeadarray[i] = 1
+            remove_blip troobliparray[i]
+        end
+        
+        is_everyone_dead += troodeadarray[i]
+        
+        i += 1
+    end
+    
+    if is_everyone_dead == 8
+    then
+        break
+    end
+end
+
 wait 0
 increment_int_stat_no_message StatId.Fat {value} 20
-remove_blip 8@
-remove_blip 9@
-remove_blip 10@
-remove_blip 11@
-remove_blip 12@
-remove_blip 13@
-remove_blip 14@
-remove_blip 15@
+
 wait 1000
-$TROO_11_9 = create_char PedType.CivMale {modelId} #OFYRI {x} -1892.543 {y} 708.3621 {z} 19.5095
-set_char_heading $TROO_11_9 {heading} 170.0
-$TROO_11_10 = create_char PedType.CivMale {modelId} #OMORI {x} -1892.543 {y} 707.3621 {z} 19.5095
-set_char_heading $TROO_11_10 {heading} 170.0
-$TROO_11_11 = create_char PedType.CivMale {modelId} #OFYRI {x} -1892.543 {y} 706.3621 {z} 19.5095
-set_char_heading $TROO_11_11 {heading} 170.0
-$TROO_11_12 = create_char PedType.CivMale {modelId} #OMORI {x} -1892.543 {y} 705.3621 {z} 19.5095
-set_char_heading $TROO_11_12 {heading} 170.0
-$TROO_11_13 = create_char PedType.CivMale {modelId} #OFYRI {x} -1892.543 {y} 704.3621 {z} 19.5095
-set_char_heading $TROO_11_13 {heading} 170.0
-$TROO_11_14 = create_char PedType.CivMale {modelId} #OMORI {x} -1892.543 {y} 703.3621 {z} 19.5095
-set_char_heading $TROO_11_14 {heading} 170.0
-$TROO_11_15 = create_char PedType.CivMale {modelId} #OFYRI {x} -1892.543 {y} 702.3621 {z} 19.5095
-set_char_heading $TROO_11_15 {heading} 170.0
-$TROO_11_16 = create_char PedType.CivMale {modelId} #OMORI {x} -1892.543 {y} 701.3621 {z} 19.5095
-set_char_heading $TROO_11_16 {heading} 170.0
-$TROO_11_17 = create_char PedType.CivMale {modelId} #OFYRI {x} -1892.543 {y} 700.3621 {z} 19.5095
-set_char_heading $TROO_11_17 {heading} 170.0
-16@ = add_blip_for_char $TROO_11_9
-17@ = add_blip_for_char $TROO_11_10
-18@ = add_blip_for_char $TROO_11_11
-19@ = add_blip_for_char $TROO_11_12
-20@ = add_blip_for_char $TROO_11_13
-21@ = add_blip_for_char $TROO_11_14
-22@ = add_blip_for_char $TROO_11_15
-23@ = add_blip_for_char $TROO_11_16
-24@ = add_blip_for_char $TROO_11_17
+trooarray2[0] = create_char PedType.CivMale {modelId} #OFYRI {x} -1892.543 {y} 708.3621 {z} 19.5095
+set_char_heading trooarray2[0] {heading} 170.0
+trooarray2[1] = create_char PedType.CivMale {modelId} #OMORI {x} -1892.543 {y} 707.3621 {z} 19.5095
+set_char_heading trooarray2[1] {heading} 170.0
+trooarray2[2] = create_char PedType.CivMale {modelId} #OFYRI {x} -1892.543 {y} 706.3621 {z} 19.5095
+set_char_heading trooarray2[2] {heading} 170.0
+trooarray2[3] = create_char PedType.CivMale {modelId} #OMORI {x} -1892.543 {y} 705.3621 {z} 19.5095
+set_char_heading trooarray2[3] {heading} 170.0
+trooarray2[4] = create_char PedType.CivMale {modelId} #OFYRI {x} -1892.543 {y} 704.3621 {z} 19.5095
+set_char_heading trooarray2[4] {heading} 170.0
+trooarray2[5] = create_char PedType.CivMale {modelId} #OMORI {x} -1892.543 {y} 703.3621 {z} 19.5095
+set_char_heading trooarray2[5] {heading} 170.0
+trooarray2[6] = create_char PedType.CivMale {modelId} #OFYRI {x} -1892.543 {y} 702.3621 {z} 19.5095
+set_char_heading trooarray2[6] {heading} 170.0
+trooarray2[7] = create_char PedType.CivMale {modelId} #OMORI {x} -1892.543 {y} 701.3621 {z} 19.5095
+set_char_heading trooarray2[7] {heading} 170.0
+trooarray2[8] = create_char PedType.CivMale {modelId} #OFYRI {x} -1892.543 {y} 700.3621 {z} 19.5095
+set_char_heading trooarray2[8] {heading} 170.0
+
+
+i = 0
+while i < 9
+    wait 0
+    troobliparray2[i] = add_blip_for_char trooarray2[i]
+    if i < 7
+    then
+        task_kill_char_on_foot trooarray2[i] dromeoarray[i]
+        task_kill_char_on_foot dromeoarray[i] trooarray2[i]
+    end
+    i += 1
+end
+
+task_kill_char_on_foot trooarray2[7] {target} $PLAYER_ACTOR
+task_kill_char_on_foot trooarray2[8] {target} $PLAYER_ACTOR
 wait 1000
-task_kill_char_on_foot $TROO_11_9 {target} $DROMEO_11_1
-task_kill_char_on_foot $TROO_11_10 {target} $DROMEO_11_2
-task_kill_char_on_foot $TROO_11_11 {target} $DROMEO_11_3
-task_kill_char_on_foot $TROO_11_12 {target} $DROMEO_11_4
-task_kill_char_on_foot $TROO_11_13 {target} $DROMEO_11_5
-task_kill_char_on_foot $TROO_11_14 {target} $DROMEO_11_6
-task_kill_char_on_foot $TROO_11_15 {target} $DROMEO_11_7
-task_kill_char_on_foot $TROO_11_16 {target} $PLAYER_ACTOR
-task_kill_char_on_foot $TROO_11_17 {target} $PLAYER_ACTOR
-task_kill_char_on_foot $DROMEO_11_1 {target} $TROO_11_9
-task_kill_char_on_foot $DROMEO_11_2 {target} $TROO_11_10
-task_kill_char_on_foot $DROMEO_11_3 {target} $TROO_11_11
-task_kill_char_on_foot $DROMEO_11_4 {target} $TROO_11_12
-task_kill_char_on_foot $DROMEO_11_5 {target} $TROO_11_13
-task_kill_char_on_foot $DROMEO_11_6 {target} $TROO_11_14
-task_kill_char_on_foot $DROMEO_11_7 {target} $TROO_11_15
 goto @MISSION11_1976
 
 :MISSION11_1976
 wait 0
-if and
-    not is_char_dead $DROMEO_11_1
-    not is_char_dead $DROMEO_11_2
-    not is_char_dead $DROMEO_11_3
-    not is_char_dead $DROMEO_11_4
-    not is_char_dead $DROMEO_11_5
-    not is_char_dead $DROMEO_11_6
-    not is_char_dead $DROMEO_11_7
-    not is_char_dead $PLAYER_ACTOR
-goto_if_false @MISSION11_3118
-wait 0
-if and
-    is_char_dead $TROO_11_9
-    is_char_dead $TROO_11_10
-    is_char_dead $TROO_11_11
-    is_char_dead $TROO_11_12
-    is_char_dead $TROO_11_13
-    is_char_dead $TROO_11_14
-    is_char_dead $TROO_11_15
-    is_char_dead $TROO_11_16
-goto_if_false @MISSION11_1976
-wait 0
-goto @MISSION11_2097
 
-:MISSION11_2097
-wait 0
-if
-    is_char_dead $TROO_11_17
-goto_if_false @MISSION11_2097
-wait 0
-increment_int_stat_no_message StatId.Fat {value} 50
-remove_blip 16@
-remove_blip 17@
-remove_blip 18@
-remove_blip 19@
-remove_blip 20@
-remove_blip 21@
-remove_blip 22@
-remove_blip 23@
-remove_blip 24@
+int troodeadarray2[9]
+int is_everyone_dead2 = 0
+i = 0
+
+while true
+    wait 0
+    is_everyone_dead2 = 0
+    
+    i = 0
+    
+    // Check if any ally or player died
+    while i < 7
+        wait 0
+        if or
+            is_char_dead dromeoarray[i]
+            is_char_dead $PLAYER_ACTOR
+        then
+            // Fail the mission
+            goto @MISSION11_3118
+        end
+        
+        i += 1
+    end
+    
+    i = 0
+    // Check if any troodon died
+    while i < 9
+        wait 0
+        if is_char_dead trooarray2[i]
+        then
+            troodeadarray2[i] = 1
+            remove_blip troobliparray2[i]
+        end
+        
+        is_everyone_dead2 += troodeadarray2[i]
+        
+        i += 1
+    end
+    
+    if is_everyone_dead2 == 9
+    then
+        break
+    end
+end
+
 wait 3000
 $RADAR_MISS_11_HOME = add_sprite_blip_for_coord -1889.6639 {y} 360.7754 {z} 35.0 {sprite} RadarSprite.PropertyG
 $RADAR_SPHERE_11_HOME = add_sphere -1889.6639 {y} 360.7754 {z} 35.0 {radius} 1.5
@@ -11374,25 +11374,25 @@ goto @MISSION11_2268
 :MISSION11_2268
 wait 0
 if and
-    not is_char_dead $DROMEO_11_1
-    not is_char_dead $DROMEO_11_2
-    not is_char_dead $DROMEO_11_3
-    not is_char_dead $DROMEO_11_4
-    not is_char_dead $DROMEO_11_5
-    not is_char_dead $DROMEO_11_6
-    not is_char_dead $DROMEO_11_7
+    not is_char_dead dromeoarray[0]
+    not is_char_dead dromeoarray[1]
+    not is_char_dead dromeoarray[2]
+    not is_char_dead dromeoarray[3]
+    not is_char_dead dromeoarray[4]
+    not is_char_dead dromeoarray[5]
+    not is_char_dead dromeoarray[6]
     not is_char_dead $PLAYER_ACTOR
 goto_if_false @MISSION11_3118
 wait 0
 if and
     locate_char_any_means_2d $PLAYER_ACTOR {x} -1889.6639 {y} 360.7754 {xRadius} 1.0 {yRadius} 1.0 {drawSphere} False
-    locate_char_any_means_2d $DROMEO_11_1 {x} -1889.6639 {y} 360.7754 {xRadius} 3.0 {yRadius} 3.0 {drawSphere} False
-    locate_char_any_means_2d $DROMEO_11_2 {x} -1889.6639 {y} 360.7754 {xRadius} 3.0 {yRadius} 3.0 {drawSphere} False
-    locate_char_any_means_2d $DROMEO_11_3 {x} -1889.6639 {y} 360.7754 {xRadius} 3.0 {yRadius} 3.0 {drawSphere} False
-    locate_char_any_means_2d $DROMEO_11_4 {x} -1889.6639 {y} 360.7754 {xRadius} 3.0 {yRadius} 3.0 {drawSphere} False
-    locate_char_any_means_2d $DROMEO_11_5 {x} -1889.6639 {y} 360.7754 {xRadius} 3.0 {yRadius} 3.0 {drawSphere} False
-    locate_char_any_means_2d $DROMEO_11_6 {x} -1889.6639 {y} 360.7754 {xRadius} 3.0 {yRadius} 3.0 {drawSphere} False
-    locate_char_any_means_2d $DROMEO_11_7 {x} -1889.6639 {y} 360.7754 {xRadius} 3.0 {yRadius} 3.0 {drawSphere} False
+    locate_char_any_means_2d dromeoarray[0] {x} -1889.6639 {y} 360.7754 {xRadius} 3.0 {yRadius} 3.0 {drawSphere} False
+    locate_char_any_means_2d dromeoarray[1] {x} -1889.6639 {y} 360.7754 {xRadius} 3.0 {yRadius} 3.0 {drawSphere} False
+    locate_char_any_means_2d dromeoarray[2] {x} -1889.6639 {y} 360.7754 {xRadius} 3.0 {yRadius} 3.0 {drawSphere} False
+    locate_char_any_means_2d dromeoarray[3] {x} -1889.6639 {y} 360.7754 {xRadius} 3.0 {yRadius} 3.0 {drawSphere} False
+    locate_char_any_means_2d dromeoarray[4] {x} -1889.6639 {y} 360.7754 {xRadius} 3.0 {yRadius} 3.0 {drawSphere} False
+    locate_char_any_means_2d dromeoarray[5] {x} -1889.6639 {y} 360.7754 {xRadius} 3.0 {yRadius} 3.0 {drawSphere} False
+    locate_char_any_means_2d dromeoarray[6] {x} -1889.6639 {y} 360.7754 {xRadius} 3.0 {yRadius} 3.0 {drawSphere} False
 goto_if_false @MISSION11_2268
 wait 0
 remove_blip $RADAR_MISS_11_HOME
@@ -11411,13 +11411,13 @@ goto @MISSION11_2615
 :MISSION11_2615
 wait 0
 if and
-    does_char_exist $DROMEO_11_1
-    does_char_exist $DROMEO_11_2
-    does_char_exist $DROMEO_11_3
-    does_char_exist $DROMEO_11_4
-    does_char_exist $DROMEO_11_5
-    does_char_exist $DROMEO_11_6
-    does_char_exist $DROMEO_11_7
+    does_char_exist dromeoarray[0]
+    does_char_exist dromeoarray[1]
+    does_char_exist dromeoarray[2]
+    does_char_exist dromeoarray[3]
+    does_char_exist dromeoarray[4]
+    does_char_exist dromeoarray[5]
+    does_char_exist dromeoarray[6]
 goto_if_false @MISSION11_2615
 wait 0
 goto @MISSION11_2676
@@ -11425,14 +11425,14 @@ goto @MISSION11_2676
 :MISSION11_2676
 wait 0
 if and
-    does_char_exist $TROO_11_1
-    does_char_exist $TROO_11_2
-    does_char_exist $TROO_11_3
-    does_char_exist $TROO_11_4
-    does_char_exist $TROO_11_5
-    does_char_exist $TROO_11_6
-    does_char_exist $TROO_11_7
-    does_char_exist $TROO_11_8
+    does_char_exist trooarray[0]
+    does_char_exist trooarray[1]
+    does_char_exist trooarray[2]
+    does_char_exist trooarray[3]
+    does_char_exist trooarray[4]
+    does_char_exist trooarray[5]
+    does_char_exist trooarray[6]
+    does_char_exist trooarray[7]
 goto_if_false @MISSION11_2676
 wait 0
 goto @MISSION11_2742
@@ -11440,64 +11440,39 @@ goto @MISSION11_2742
 :MISSION11_2742
 wait 0
 if and
-    does_char_exist $TROO_11_9
-    does_char_exist $TROO_11_10
-    does_char_exist $TROO_11_11
-    does_char_exist $TROO_11_12
-    does_char_exist $TROO_11_13
-    does_char_exist $TROO_11_14
-    does_char_exist $TROO_11_15
-    does_char_exist $TROO_11_16
+    does_char_exist trooarray2[0]
+    does_char_exist trooarray2[1]
+    does_char_exist trooarray2[2]
+    does_char_exist trooarray2[3]
+    does_char_exist trooarray2[4]
+    does_char_exist trooarray2[5]
+    does_char_exist trooarray2[6]
+    does_char_exist trooarray2[7]
 goto_if_false @MISSION11_2742
-wait 0
-mark_char_as_no_longer_needed $DROMEO_11_1
-delete_char $DROMEO_11_1
-mark_char_as_no_longer_needed $DROMEO_11_2
-delete_char $DROMEO_11_2
-mark_char_as_no_longer_needed $DROMEO_11_3
-delete_char $DROMEO_11_3
-mark_char_as_no_longer_needed $DROMEO_11_4
-delete_char $DROMEO_11_4
-mark_char_as_no_longer_needed $DROMEO_11_5
-delete_char $DROMEO_11_5
-mark_char_as_no_longer_needed $DROMEO_11_6
-delete_char $DROMEO_11_6
-mark_char_as_no_longer_needed $DROMEO_11_7
-delete_char $DROMEO_11_7
-mark_char_as_no_longer_needed $TROO_11_1
-delete_char $TROO_11_1
-mark_char_as_no_longer_needed $TROO_11_2
-delete_char $TROO_11_2
-mark_char_as_no_longer_needed $TROO_11_3
-delete_char $TROO_11_3
-mark_char_as_no_longer_needed $TROO_11_4
-delete_char $TROO_11_4
-mark_char_as_no_longer_needed $TROO_11_5
-delete_char $TROO_11_5
-mark_char_as_no_longer_needed $TROO_11_6
-delete_char $TROO_11_6
-mark_char_as_no_longer_needed $TROO_11_7
-delete_char $TROO_11_7
-mark_char_as_no_longer_needed $TROO_11_8
-delete_char $TROO_11_8
-mark_char_as_no_longer_needed $TROO_11_9
-delete_char $TROO_11_9
-mark_char_as_no_longer_needed $TROO_11_10
-delete_char $TROO_11_10
-mark_char_as_no_longer_needed $TROO_11_11
-delete_char $TROO_11_11
-mark_char_as_no_longer_needed $TROO_11_12
-delete_char $TROO_11_12
-mark_char_as_no_longer_needed $TROO_11_13
-delete_char $TROO_11_13
-mark_char_as_no_longer_needed $TROO_11_14
-delete_char $TROO_11_14
-mark_char_as_no_longer_needed $TROO_11_15
-delete_char $TROO_11_15
-mark_char_as_no_longer_needed $TROO_11_16
-delete_char $TROO_11_16
-mark_char_as_no_longer_needed $TROO_11_17
-delete_char $TROO_11_17
+
+i = 0
+while i < 9
+    wait 0
+    
+    if i < 7
+    then
+        mark_char_as_no_longer_needed dromeoarray[i]
+        delete_char dromeoarray[i]
+    end
+        
+    if i < 8
+    then
+        mark_char_as_no_longer_needed trooarray[i]
+        delete_char trooarray[i]
+        remove_blip troobliparray[i]
+    end
+    
+    mark_char_as_no_longer_needed trooarray2[i]
+    delete_char trooarray2[i]
+    remove_blip troobliparray2[i]
+    i++
+end
+
 wait 0
 do_fade 2000 {direction} Fade.In
 wait 2000
@@ -11516,54 +11491,30 @@ print_now 'MIS_601' {time} 5000 {flag} 1 // ~r~The Dromies are dead!
 wait 1000
 print_big 'M_FAIL' {time} 5000 {style} TextStyle.Middle // ~r~MISSION  FAILED!
 wait 4000
-mark_char_as_no_longer_needed $DROMEO_11_1
-delete_char $DROMEO_11_1
-mark_char_as_no_longer_needed $DROMEO_11_2
-delete_char $DROMEO_11_2
-mark_char_as_no_longer_needed $DROMEO_11_3
-delete_char $DROMEO_11_3
-mark_char_as_no_longer_needed $DROMEO_11_4
-delete_char $DROMEO_11_4
-mark_char_as_no_longer_needed $DROMEO_11_5
-delete_char $DROMEO_11_5
-mark_char_as_no_longer_needed $DROMEO_11_6
-delete_char $DROMEO_11_6
-mark_char_as_no_longer_needed $DROMEO_11_7
-delete_char $DROMEO_11_7
-mark_char_as_no_longer_needed $TROO_11_1
-delete_char $TROO_11_1
-mark_char_as_no_longer_needed $TROO_11_2
-delete_char $TROO_11_2
-mark_char_as_no_longer_needed $TROO_11_3
-delete_char $TROO_11_3
-mark_char_as_no_longer_needed $TROO_11_4
-delete_char $TROO_11_4
-mark_char_as_no_longer_needed $TROO_11_5
-delete_char $TROO_11_5
-mark_char_as_no_longer_needed $TROO_11_6
-delete_char $TROO_11_6
-mark_char_as_no_longer_needed $TROO_11_7
-delete_char $TROO_11_7
-mark_char_as_no_longer_needed $TROO_11_8
-delete_char $TROO_11_8
-mark_char_as_no_longer_needed $TROO_11_9
-delete_char $TROO_11_9
-mark_char_as_no_longer_needed $TROO_11_10
-delete_char $TROO_11_10
-mark_char_as_no_longer_needed $TROO_11_11
-delete_char $TROO_11_11
-mark_char_as_no_longer_needed $TROO_11_12
-delete_char $TROO_11_12
-mark_char_as_no_longer_needed $TROO_11_13
-delete_char $TROO_11_13
-mark_char_as_no_longer_needed $TROO_11_14
-delete_char $TROO_11_14
-mark_char_as_no_longer_needed $TROO_11_15
-delete_char $TROO_11_15
-mark_char_as_no_longer_needed $TROO_11_16
-delete_char $TROO_11_16
-mark_char_as_no_longer_needed $TROO_11_17
-delete_char $TROO_11_17
+
+i = 0
+while i < 9
+    wait 0
+    
+    if i < 7
+    then
+        mark_char_as_no_longer_needed dromeoarray[i]
+        delete_char dromeoarray[i]
+    end
+        
+    if i < 8
+    then
+        mark_char_as_no_longer_needed trooarray[i]
+        delete_char trooarray[i]
+        remove_blip troobliparray[i]
+    end
+    
+    mark_char_as_no_longer_needed trooarray2[i]
+    delete_char trooarray2[i]
+    remove_blip troobliparray2[i]
+    i++
+end
+
 $ONMISSION = 0
 mission_has_finished
 wait 1000
