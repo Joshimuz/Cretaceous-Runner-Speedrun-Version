@@ -9059,6 +9059,7 @@ wait 7000
 goto @MISSION5_2748
 
 :MISSION5_2748
+skip_cutscene_end
 do_fade 1000 {direction} Fade.Out
 set_time_of_day 22 {minutes} 0
 wait 900
