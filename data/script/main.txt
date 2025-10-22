@@ -18726,15 +18726,20 @@ if and
     has_model_loaded #WMOTR1
 goto_if_false @MISSION27_96
 wait 0
+
+int droArray[14]
+int ovioArray[20]
+int ovioBlipArray[20]
+
 switch_widescreen True
 $WIDE = 1
 set_player_control $PLAYER_CHAR {state} False
 set_char_coordinates $PLAYER_ACTOR {x} 2533.6741 {y} -2392.417 {z} 18.7
 set_char_heading $PLAYER_ACTOR {heading} 33.356
-$DROMEO_27_1 = create_char PedType.CivMale {modelId} #BMOTR1 {x} 2532.4319 {y} -2392.783 {z} 18.7
-set_char_heading $DROMEO_27_1 {heading} 34.0
-$DROMEO_27_2 = create_char PedType.CivMale {modelId} #BFOST {x} 2510.2681 {y} -2378.385 {z} 19.389
-set_char_heading $DROMEO_27_2 {heading} 243.0
+droArray[0] = create_char PedType.CivMale {modelId} #BMOTR1 {x} 2532.4319 {y} -2392.783 {z} 18.7
+set_char_heading droArray[0] {heading} 34.0
+droArray[1] = create_char PedType.CivMale {modelId} #BFOST {x} 2510.2681 {y} -2378.385 {z} 19.389
+set_char_heading droArray[1] {heading} 243.0
 set_fixed_camera_position 2527.446 {y} -2391.134 {z} 19.389 {upVecOffsetX} 0.0 {upVecOffsetY} 0.0 {upVecOffsetZ} 0.0
 point_camera_at_point 2533.6741 {y} -2392.417 {z} 18.7 {switchStyle} SwitchType.JumpCut
 do_fade 2000 {direction} Fade.In
@@ -18745,21 +18750,21 @@ wait 6000
 print_now 'MIS_219' {time} 6000 {flag} 1 // "...and I swim here on the log. I'm from Cantera and I need to come back!"
 wait 6500
 print_now 'MIS_220' {time} 3000 {flag} 1 // "Cantera? Where is it?"
-task_play_anim $DROMEO_27_1 {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 3000
+task_play_anim droArray[0] {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 3000
 wait 3500
 print_now 'MIS_221' {time} 4000 {flag} 1 // "Where the grass is green, the sky is blue..."
 task_play_anim $PLAYER_ACTOR {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 4000
 wait 4500
 print_now 'MIS_222' {time} 6000 {flag} 1 // "I know Microraptors from Chepei, they can fly and see everything. You need to ask them."
-task_play_anim $DROMEO_27_1 {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 6000
+task_play_anim droArray[0] {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 6000
 wait 3000
-task_goto_char $DROMEO_27_2 {target} $DROMEO_27_1 {time} 5000 {radius} 3.0
+task_goto_char droArray[1] {target} droArray[0] {time} 5000 {radius} 3.0
 wait 5500
 print_now 'MIS_223' {time} 6000 {flag} 1 // "Amarhaan! Oviraptors coming here! A lot of velociraptors!"
-task_play_anim $DROMEO_27_2 {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 6000
+task_play_anim droArray[1] {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 6000
 wait 6500
 print_now 'MIS_224' {time} 6000 {flag} 1 // "Okay, gather all raptors you know and come back to me! The show will be here soon!"
-task_play_anim $DROMEO_27_1 {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 6000
+task_play_anim droArray[0] {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 6000
 wait 6000
 
 :MISSION27_754
@@ -18769,33 +18774,33 @@ wait 1000
 clear_this_print_big_now TextStyle.Middle
 clear_prints
 clear_char_tasks $PLAYER_ACTOR
-clear_char_tasks $DROMEO_27_1
-clear_char_tasks $DROMEO_27_2
+clear_char_tasks droArray[0]
+clear_char_tasks droArray[1]
 switch_widescreen False
 $WIDE = 0
 set_player_control $PLAYER_CHAR {state} True
 do_fade 1000 Fade.In
 restore_camera_jumpcut
 set_camera_behind_player
-$DROMEO_27_3 = create_char PedType.CivMale {modelId} #BFOST {x} 2413.353 {y} -2274.927 {z} 19.39
-set_char_heading $DROMEO_27_3 {heading} 34.0
-$DROMEO_27_4 = create_char PedType.CivMale {modelId} #HMOST {x} 2342.7339 {y} -2168.1721 {z} 24.2752
-set_char_heading $DROMEO_27_4 {heading} 9.0
-$DROMEO_27_5 = create_char PedType.CivMale {modelId} #HMYST {x} 2251.6721 {y} -2277.7141 {z} 19.3464
-set_char_heading $DROMEO_27_5 {heading} 217.0
-$DROMEO_27_6 = create_char PedType.CivMale {modelId} #HMOST {x} 2312.8621 {y} -2367.9109 {z} 19.3122
-set_char_heading $DROMEO_27_6 {heading} 221.0
-$DROMEO_27_7 = create_char PedType.CivMale {modelId} #BFOST {x} 2490.3621 {y} -2182.938 {z} 22.6305
-set_char_heading $DROMEO_27_7 {heading} 271.0
-1@ = add_blip_for_char $DROMEO_27_3
+droArray[2] = create_char PedType.CivMale {modelId} #BFOST {x} 2413.353 {y} -2274.927 {z} 19.39
+set_char_heading droArray[2] {heading} 34.0
+droArray[3] = create_char PedType.CivMale {modelId} #HMOST {x} 2342.7339 {y} -2168.1721 {z} 24.2752
+set_char_heading droArray[3] {heading} 9.0
+droArray[4] = create_char PedType.CivMale {modelId} #HMYST {x} 2251.6721 {y} -2277.7141 {z} 19.3464
+set_char_heading droArray[4] {heading} 217.0
+droArray[5] = create_char PedType.CivMale {modelId} #HMOST {x} 2312.8621 {y} -2367.9109 {z} 19.3122
+set_char_heading droArray[5] {heading} 221.0
+droArray[6] = create_char PedType.CivMale {modelId} #BFOST {x} 2490.3621 {y} -2182.938 {z} 22.6305
+set_char_heading droArray[6] {heading} 271.0
+1@ = add_blip_for_char droArray[2]
 change_blip_colour 1@ {color} BlipColor.Green
-2@ = add_blip_for_char $DROMEO_27_4
+2@ = add_blip_for_char droArray[3]
 change_blip_colour 2@ {color} BlipColor.Green
-3@ = add_blip_for_char $DROMEO_27_5
+3@ = add_blip_for_char droArray[4]
 change_blip_colour 3@ {color} BlipColor.Green
-4@ = add_blip_for_char $DROMEO_27_6
+4@ = add_blip_for_char droArray[5]
 change_blip_colour 4@ {color} BlipColor.Green
-5@ = add_blip_for_char $DROMEO_27_7
+5@ = add_blip_for_char droArray[6]
 change_blip_colour 5@ {color} BlipColor.Green
 goto @MISSION27_1032
 
@@ -18803,7 +18808,7 @@ goto @MISSION27_1032
 wait 0
 if and
     not is_char_dead $PLAYER_ACTOR
-    not is_char_dead $DROMEO_27_1
+    not is_char_dead droArray[0]
 goto_if_false @MISSION27_4657
 wait 0
 if or
@@ -18815,42 +18820,42 @@ if or
 goto_if_false @MISSION27_1032
 wait 0
 set_group_separation_range $PLAYER_GROUP {range} 3000.0
-set_group_member $PLAYER_GROUP {handle} $DROMEO_27_4
-set_group_member $PLAYER_GROUP {handle} $DROMEO_27_5
-set_group_member $PLAYER_GROUP {handle} $DROMEO_27_6
-set_group_member $PLAYER_GROUP {handle} $DROMEO_27_7
-set_group_member $PLAYER_GROUP {handle} $DROMEO_27_3
-$DROMEO_27_8 = create_char PedType.CivMale {modelId} #BFOST {x} 2533.113 {y} -2392.3899 {z} 19.389
-set_char_heading $DROMEO_27_8 {heading} 38.0
-$DROMEO_27_9 = create_char PedType.CivMale {modelId} #HMOST {x} 2531.3411 {y} -2393.4409 {z} 19.389
-set_char_heading $DROMEO_27_9 {heading} 9.0
-$DROMEO_27_10 = create_char PedType.CivMale {modelId} #HMYST {x} 2530.6531 {y} -2393.0891 {z} 19.389
-set_char_heading $DROMEO_27_10 {heading} 48.0
-$DROMEO_27_11 = create_char PedType.CivMale {modelId} #HMOST {x} 2528.844 {y} -2393.375 {z} 19.389
-set_char_heading $DROMEO_27_11 {heading} 319.0
-$DROMEO_27_12 = create_char PedType.CivMale {modelId} #BFOST {x} 2533.2561 {y} -2392.782 {z} 19.389
-set_char_heading $DROMEO_27_12 {heading} 44.0
-$DROMEO_27_13 = create_char PedType.CivMale {modelId} #HMYST {x} 2533.969 {y} -2388.9829 {z} 19.389
-set_char_heading $DROMEO_27_13 {heading} 106.0
-$DROMEO_27_14 = create_char PedType.CivMale {modelId} #HMOST {x} 2533.6589 {y} -2391.8379 {z} 19.389
-set_char_heading $DROMEO_27_14 {heading} 51.0
-6@ = add_blip_for_char $DROMEO_27_8
+set_group_member $PLAYER_GROUP {handle} droArray[3]
+set_group_member $PLAYER_GROUP {handle} droArray[4]
+set_group_member $PLAYER_GROUP {handle} droArray[5]
+set_group_member $PLAYER_GROUP {handle} droArray[6]
+set_group_member $PLAYER_GROUP {handle} droArray[2]
+droArray[7] = create_char PedType.CivMale {modelId} #BFOST {x} 2533.113 {y} -2392.3899 {z} 19.389
+set_char_heading droArray[7] {heading} 38.0
+droArray[8] = create_char PedType.CivMale {modelId} #HMOST {x} 2531.3411 {y} -2393.4409 {z} 19.389
+set_char_heading droArray[8] {heading} 9.0
+droArray[9] = create_char PedType.CivMale {modelId} #HMYST {x} 2530.6531 {y} -2393.0891 {z} 19.389
+set_char_heading droArray[9] {heading} 48.0
+droArray[10] = create_char PedType.CivMale {modelId} #HMOST {x} 2528.844 {y} -2393.375 {z} 19.389
+set_char_heading droArray[10] {heading} 319.0
+droArray[11] = create_char PedType.CivMale {modelId} #BFOST {x} 2533.2561 {y} -2392.782 {z} 19.389
+set_char_heading droArray[11] {heading} 44.0
+droArray[12] = create_char PedType.CivMale {modelId} #HMYST {x} 2533.969 {y} -2388.9829 {z} 19.389
+set_char_heading droArray[12] {heading} 106.0
+droArray[13] = create_char PedType.CivMale {modelId} #HMOST {x} 2533.6589 {y} -2391.8379 {z} 19.389
+set_char_heading droArray[13] {heading} 51.0
+6@ = add_blip_for_char droArray[7]
 change_blip_colour 6@ {color} BlipColor.Green
-7@ = add_blip_for_char $DROMEO_27_9
+7@ = add_blip_for_char droArray[8]
 change_blip_colour 7@ {color} BlipColor.Green
-8@ = add_blip_for_char $DROMEO_27_10
+8@ = add_blip_for_char droArray[9]
 change_blip_colour 8@ {color} BlipColor.Green
-9@ = add_blip_for_char $DROMEO_27_11
+9@ = add_blip_for_char droArray[10]
 change_blip_colour 9@ {color} BlipColor.Green
-10@ = add_blip_for_char $DROMEO_27_12
+10@ = add_blip_for_char droArray[11]
 change_blip_colour 10@ {color} BlipColor.Green
-11@ = add_blip_for_char $DROMEO_27_13
+11@ = add_blip_for_char droArray[12]
 change_blip_colour 11@ {color} BlipColor.Green
-12@ = add_blip_for_char $DROMEO_27_14
+12@ = add_blip_for_char droArray[13]
 change_blip_colour 12@ {color} BlipColor.Green
-13@ = add_blip_for_char $DROMEO_27_1
+13@ = add_blip_for_char droArray[0]
 change_blip_colour 13@ {color} BlipColor.Green
-14@ = add_blip_for_char $DROMEO_27_2
+14@ = add_blip_for_char droArray[1]
 change_blip_colour 14@ {color} BlipColor.Green
 goto @MISSION27_1641
 
@@ -18858,7 +18863,7 @@ goto @MISSION27_1641
 wait 0
 if and
     not is_char_dead $PLAYER_ACTOR
-    not is_char_dead $DROMEO_27_1
+    not is_char_dead droArray[0]
 goto_if_false @MISSION27_4657
 wait 0
 if
@@ -18869,186 +18874,132 @@ print_now 'MIS_611' {time} 5000 {flag} 1 // Don't lose Amarhaan!
 $PLAY30 = 1
 wait 0
 $GROUP1 = create_group DefaultTaskAllocator.FollowAnyMeans
-set_group_separation_range $GRUOUP1 {range} 3000.0
-set_group_leader $GROUP1 {handle} $DROMEO_27_1
-set_group_member $GROUP1 {handle} $DROMEO_27_8
-set_group_member $GROUP1 {handle} $DROMEO_27_9
-set_group_member $GROUP1 {handle} $DROMEO_27_10
-set_group_member $GROUP1 {handle} $DROMEO_27_11
-set_group_member $GROUP1 {handle} $DROMEO_27_12
-set_group_member $GROUP1 {handle} $DROMEO_27_13
-set_group_member $GROUP1 {handle} $DROMEO_27_14
-set_group_member $PLAYER_GROUP {handle} $DROMEO_27_1
-set_group_member $PLAYER_GROUP {handle} $DROMEO_27_2
-set_char_health $DROMEO_27_1 {health} 200
-set_char_health $DROMEO_27_2 {health} 200
-set_char_health $DROMEO_27_3 {health} 200
-set_char_health $DROMEO_27_4 {health} 200
-set_char_health $DROMEO_27_5 {health} 200
-set_char_health $DROMEO_27_6 {health} 200
-set_char_health $DROMEO_27_7 {health} 200
-set_char_health $DROMEO_27_8 {health} 200
-set_char_health $DROMEO_27_9 {health} 200
-set_char_health $DROMEO_27_10 {health} 200
-set_char_health $DROMEO_27_11 {health} 200
-set_char_health $DROMEO_27_12 {health} 200
-set_char_health $DROMEO_27_13 {health} 200
-set_char_health $DROMEO_27_14 {health} 200
+set_group_separation_range $GROUP1 {range} 3000.0
+set_group_leader $GROUP1 {handle} droArray[0]
+set_group_member $GROUP1 {handle} droArray[7]
+set_group_member $GROUP1 {handle} droArray[8]
+set_group_member $GROUP1 {handle} droArray[9]
+set_group_member $GROUP1 {handle} droArray[10]
+set_group_member $GROUP1 {handle} droArray[11]
+set_group_member $GROUP1 {handle} droArray[12]
+set_group_member $GROUP1 {handle} droArray[13]
+set_group_member $PLAYER_GROUP {handle} droArray[0]
+set_group_member $PLAYER_GROUP {handle} droArray[1]
+set_char_health droArray[0] {health} 200
+set_char_health droArray[1] {health} 200
+set_char_health droArray[2] {health} 200
+set_char_health droArray[3] {health} 200
+set_char_health droArray[4] {health} 200
+set_char_health droArray[5] {health} 200
+set_char_health droArray[6] {health} 200
+set_char_health droArray[7] {health} 200
+set_char_health droArray[8] {health} 200
+set_char_health droArray[9] {health} 200
+set_char_health droArray[10] {health} 200
+set_char_health droArray[11] {health} 200
+set_char_health droArray[12] {health} 200
+set_char_health droArray[13] {health} 200
+
 wait 5000
-$OVI_27_1 = create_char PedType.CivMale {modelId} #SWMOTR1 {x} 2609.531 {y} -2117.3301 {z} 36.8594
-set_char_heading $OVI_27_1 {heading} 38.0
-$OVI_27_2 = create_char PedType.CivMale {modelId} #WMOTR1 {x} 2597.5811 {y} -2124.5779 {z} 36.6125
-set_char_heading $OVI_27_2 {heading} 38.0
-$OVI_27_3 = create_char PedType.CivMale {modelId} #SWMOTR1 {x} 2583.2319 {y} -2122.2971 {z} 36.6387
-set_char_heading $OVI_27_3 {heading} 38.0
-$OVI_27_4 = create_char PedType.CivMale {modelId} #WMOTR1 {x} 2575.8889 {y} -2121.46 {z} 36.7092
-set_char_heading $OVI_27_4 {heading} 38.0
-$OVI_27_5 = create_char PedType.CivMale {modelId} #SWMOTR1 {x} 2565.5449 {y} -2132.4099 {z} 36.378
-set_char_heading $OVI_27_5 {heading} 38.0
-$OVI_27_6 = create_char PedType.CivMale {modelId} #WMOTR1 {x} 2559.365 {y} -2132.512 {z} 36.3564
-set_char_heading $OVI_27_6 {heading} 38.0
-$OVI_27_7 = create_char PedType.CivMale {modelId} #SWMOTR1 {x} 2540.2271 {y} -2137.0339 {z} 35.1945
-set_char_heading $OVI_27_7 {heading} 38.0
-$OVI_27_8 = create_char PedType.CivMale {modelId} #WMOTR1 {x} 2541.594 {y} -2143.8049 {z} 34.4138
-set_char_heading $OVI_27_8 {heading} 38.0
-$OVI_27_9 = create_char PedType.CivMale {modelId} #SWMOTR1 {x} 2546.4189 {y} -2143.5879 {z} 34.8196
-set_char_heading $OVI_27_9 {heading} 38.0
-$OVI_27_10 = create_char PedType.CivMale {modelId} #WMOTR1 {x} 2561.5459 {y} -2140.7939 {z} 35.4038
-set_char_heading $OVI_27_10 {heading} 38.0
-$OVI_27_11 = create_char PedType.CivMale {modelId} #SWMOTR1 {x} 2567.438 {y} -2141.905 {z} 35.2347
-set_char_heading $OVI_27_11 {heading} 38.0
-$OVI_27_12 = create_char PedType.CivMale {modelId} #WMOTR1 {x} 2572.9189 {y} -2138.3301 {z} 35.693
-set_char_heading $OVI_27_12 {heading} 38.0
-$OVI_27_13 = create_char PedType.CivMale {modelId} #SWMOTR1 {x} 2586.647 {y} -2132.875 {z} 36.3368
-set_char_heading $OVI_27_13 {heading} 38.0
-$OVI_27_14 = create_char PedType.CivMale {modelId} #WMOTR1 {x} 2590.7629 {y} -2133.4529 {z} 36.3248
-set_char_heading $OVI_27_14 {heading} 38.0
-$OVI_27_15 = create_char PedType.CivMale {modelId} #SWMOTR1 {x} 2594.854 {y} -2135.7981 {z} 36.0816
-set_char_heading $OVI_27_15 {heading} 38.0
-$OVI_27_16 = create_char PedType.CivMale {modelId} #WMOTR1 {x} 2592.7129 {y} -2140.8999 {z} 35.3763
-set_char_heading $OVI_27_16 {heading} 38.0
-$OVI_27_17 = create_char PedType.CivMale {modelId} #SWMOTR1 {x} 2585.739 {y} -2149.0859 {z} 33.859
-set_char_heading $OVI_27_17 {heading} 38.0
-$OVI_27_18 = create_char PedType.CivMale {modelId} #WMOTR1 {x} 2577.7749 {y} -2149.1721 {z} 33.7918
-set_char_heading $OVI_27_18 {heading} 38.0
-$OVI_27_19 = create_char PedType.CivMale {modelId} #SWMOTR1 {x} 2570.1819 {y} -2143.321 {z} 35.0276
-set_char_heading $OVI_27_19 {heading} 38.0
-$OVI_27_20 = create_char PedType.CivMale {modelId} #WMOTR1 {x} 2573.071 {y} -2130.9331 {z} 36.3971
-set_char_heading $OVI_27_20 {heading} 38.0
-15@ = add_blip_for_char $OVI_27_1
-16@ = add_blip_for_char $OVI_27_2
-17@ = add_blip_for_char $OVI_27_3
-18@ = add_blip_for_char $OVI_27_4
-19@ = add_blip_for_char $OVI_27_5
-20@ = add_blip_for_char $OVI_27_6
-21@ = add_blip_for_char $OVI_27_7
-22@ = add_blip_for_char $OVI_27_8
-23@ = add_blip_for_char $OVI_27_9
-24@ = add_blip_for_char $OVI_27_10
-25@ = add_blip_for_char $OVI_27_11
-26@ = add_blip_for_char $OVI_27_12
-27@ = add_blip_for_char $OVI_27_13
-28@ = add_blip_for_char $OVI_27_14
-29@ = add_blip_for_char $OVI_27_15
-30@ = add_blip_for_char $OVI_27_16
-31@ = add_blip_for_char $OVI_27_17
-add_blip_for_char $OVI_27_18 {var_handle} TIMERA
-$OVI33 = add_blip_for_char $OVI_27_19
-$OVI34 = add_blip_for_char $OVI_27_20
-wait 5000
-task_kill_char_on_foot $OVI_27_1 {target} $PLAYER_ACTOR
-task_kill_char_on_foot $OVI_27_2 {target} $PLAYER_ACTOR
-task_kill_char_on_foot $OVI_27_3 {target} $PLAYER_ACTOR
-task_kill_char_on_foot $OVI_27_4 {target} $PLAYER_ACTOR
-task_kill_char_on_foot $OVI_27_5 {target} $PLAYER_ACTOR
-task_kill_char_on_foot $OVI_27_6 {target} $DROMEO_27_1
-task_kill_char_on_foot $OVI_27_7 {target} $DROMEO_27_1
-task_kill_char_on_foot $OVI_27_8 {target} $DROMEO_27_2
-task_kill_char_on_foot $OVI_27_9 {target} $DROMEO_27_3
-task_kill_char_on_foot $OVI_27_10 {target} $DROMEO_27_4
-task_kill_char_on_foot $OVI_27_11 {target} $DROMEO_27_5
-task_kill_char_on_foot $OVI_27_12 {target} $DROMEO_27_6
-task_kill_char_on_foot $OVI_27_13 {target} $DROMEO_27_7
-task_kill_char_on_foot $OVI_27_14 {target} $DROMEO_27_8
-task_kill_char_on_foot $OVI_27_15 {target} $DROMEO_27_9
-task_kill_char_on_foot $OVI_27_16 {target} $DROMEO_27_10
-task_kill_char_on_foot $OVI_27_17 {target} $DROMEO_27_11
-task_kill_char_on_foot $OVI_27_18 {target} $DROMEO_27_12
-task_kill_char_on_foot $OVI_27_19 {target} $DROMEO_27_13
-task_kill_char_on_foot $OVI_27_20 {target} $DROMEO_27_14
-task_kill_char_on_foot $DROMEO_27_1 {target} $OVI_27_6
-task_kill_char_on_foot $DROMEO_27_1 {target} $OVI_27_7
-task_kill_char_on_foot $DROMEO_27_2 {target} $OVI_27_8
-task_kill_char_on_foot $DROMEO_27_3 {target} $OVI_27_9
-task_kill_char_on_foot $DROMEO_27_4 {target} $OVI_27_10
-task_kill_char_on_foot $DROMEO_27_5 {target} $OVI_27_11
-task_kill_char_on_foot $DROMEO_27_6 {target} $OVI_27_12
-task_kill_char_on_foot $DROMEO_27_7 {target} $OVI_27_13
-task_kill_char_on_foot $DROMEO_27_8 {target} $OVI_27_14
-task_kill_char_on_foot $DROMEO_27_9 {target} $OVI_27_15
-task_kill_char_on_foot $DROMEO_27_10 {target} $OVI_27_16
-task_kill_char_on_foot $DROMEO_27_11 {target} $OVI_27_17
-task_kill_char_on_foot $DROMEO_27_12 {target} $OVI_27_18
-task_kill_char_on_foot $DROMEO_27_13 {target} $OVI_27_19
-task_kill_char_on_foot $DROMEO_27_14 {target} $OVI_27_20
-give_melee_attack_to_char $DROMEO_27_1 {style} FightStyle.KungFu {move} FightMoves.All
+ovioArray[0] = create_char PedType.CivMale {modelId} #SWMOTR1 {x} 2609.531 {y} -2117.3301 {z} 36.8594
+set_char_heading ovioArray[0] {heading} 38.0
+ovioArray[1] = create_char PedType.CivMale {modelId} #WMOTR1 {x} 2597.5811 {y} -2124.5779 {z} 36.6125
+set_char_heading ovioArray[1] {heading} 38.0
+ovioArray[2] = create_char PedType.CivMale {modelId} #SWMOTR1 {x} 2583.2319 {y} -2122.2971 {z} 36.6387
+set_char_heading ovioArray[2] {heading} 38.0
+ovioArray[3] = create_char PedType.CivMale {modelId} #WMOTR1 {x} 2575.8889 {y} -2121.46 {z} 36.7092
+set_char_heading ovioArray[3] {heading} 38.0
+ovioArray[4] = create_char PedType.CivMale {modelId} #SWMOTR1 {x} 2565.5449 {y} -2132.4099 {z} 36.378
+set_char_heading ovioArray[4] {heading} 38.0
+ovioArray[5] = create_char PedType.CivMale {modelId} #WMOTR1 {x} 2559.365 {y} -2132.512 {z} 36.3564
+set_char_heading ovioArray[5] {heading} 38.0
+ovioArray[6] = create_char PedType.CivMale {modelId} #SWMOTR1 {x} 2540.2271 {y} -2137.0339 {z} 35.1945
+set_char_heading ovioArray[6] {heading} 38.0
+ovioArray[7] = create_char PedType.CivMale {modelId} #WMOTR1 {x} 2541.594 {y} -2143.8049 {z} 34.4138
+set_char_heading ovioArray[7] {heading} 38.0
+ovioArray[8] = create_char PedType.CivMale {modelId} #SWMOTR1 {x} 2546.4189 {y} -2143.5879 {z} 34.8196
+set_char_heading ovioArray[8] {heading} 38.0
+ovioArray[9] = create_char PedType.CivMale {modelId} #WMOTR1 {x} 2561.5459 {y} -2140.7939 {z} 35.4038
+set_char_heading ovioArray[9] {heading} 38.0
+ovioArray[10] = create_char PedType.CivMale {modelId} #SWMOTR1 {x} 2567.438 {y} -2141.905 {z} 35.2347
+set_char_heading ovioArray[10] {heading} 38.0
+ovioArray[11] = create_char PedType.CivMale {modelId} #WMOTR1 {x} 2572.9189 {y} -2138.3301 {z} 35.693
+set_char_heading ovioArray[11] {heading} 38.0
+ovioArray[12] = create_char PedType.CivMale {modelId} #SWMOTR1 {x} 2586.647 {y} -2132.875 {z} 36.3368
+set_char_heading ovioArray[12] {heading} 38.0
+ovioArray[13] = create_char PedType.CivMale {modelId} #WMOTR1 {x} 2590.7629 {y} -2133.4529 {z} 36.3248
+set_char_heading ovioArray[13] {heading} 38.0
+ovioArray[14] = create_char PedType.CivMale {modelId} #SWMOTR1 {x} 2594.854 {y} -2135.7981 {z} 36.0816
+set_char_heading ovioArray[14] {heading} 38.0
+ovioArray[15] = create_char PedType.CivMale {modelId} #WMOTR1 {x} 2592.7129 {y} -2140.8999 {z} 35.3763
+set_char_heading ovioArray[15] {heading} 38.0
+ovioArray[16] = create_char PedType.CivMale {modelId} #SWMOTR1 {x} 2585.739 {y} -2149.0859 {z} 33.859
+set_char_heading ovioArray[16] {heading} 38.0
+ovioArray[17] = create_char PedType.CivMale {modelId} #WMOTR1 {x} 2577.7749 {y} -2149.1721 {z} 33.7918
+set_char_heading ovioArray[17] {heading} 38.0
+ovioArray[18] = create_char PedType.CivMale {modelId} #SWMOTR1 {x} 2570.1819 {y} -2143.321 {z} 35.0276
+set_char_heading ovioArray[18] {heading} 38.0
+ovioArray[19] = create_char PedType.CivMale {modelId} #WMOTR1 {x} 2573.071 {y} -2130.9331 {z} 36.3971
+set_char_heading ovioArray[19] {heading} 38.0
+
+int i
+
+for i = 0 to 19 step 1
+    ovioBlipArray[i] = add_blip_for_char ovioArray[i]
+    
+    if i < 6
+    then
+        task_kill_char_on_foot ovioArray[i] {target} $PLAYER_ACTOR
+    else
+        int j = i
+        j -= 6
+        task_kill_char_on_foot ovioArray[i] {target} droArray[j]
+        task_kill_char_on_foot droArray[j] {target} ovioArray[i]
+    end
+end
+
+give_melee_attack_to_char droArray[0] {style} FightStyle.KungFu {move} FightMoves.All
 goto @MISSION27_3094
 
 :MISSION27_3094
 wait 0
-if and
-    not is_char_dead $PLAYER_ACTOR
-    not is_char_dead $DROMEO_27_1
-goto_if_false @MISSION27_4657
-wait 0
-if and
-    is_char_dead $OVI_27_1
-    is_char_dead $OVI_27_2
-    is_char_dead $OVI_27_3
-    is_char_dead $OVI_27_4
-    is_char_dead $OVI_27_5
-    is_char_dead $OVI_27_6
-    is_char_dead $OVI_27_7
-goto_if_false @MISSION27_3094
-wait 0
-goto @MISSION27_3180
+int is_all_dead = 0
+int ovioDeadArray[20]
 
-:MISSION27_3180
-wait 0
-if and
-    not is_char_dead $PLAYER_ACTOR
-    not is_char_dead $DROMEO_27_1
-goto_if_false @MISSION27_4657
-wait 0
-if and
-    is_char_dead $OVI_27_8
-    is_char_dead $OVI_27_9
-    is_char_dead $OVI_27_10
-    is_char_dead $OVI_27_11
-    is_char_dead $OVI_27_12
-    is_char_dead $OVI_27_13
-    is_char_dead $OVI_27_14
-goto_if_false @MISSION27_3180
-wait 0
-goto @MISSION27_3266
+while true
+    wait 0
+    is_all_dead = 0
 
-:MISSION27_3266
-wait 0
-if and
-    not is_char_dead $PLAYER_ACTOR
-    not is_char_dead $DROMEO_27_1
-goto_if_false @MISSION27_4657
-wait 0
-if and
-    is_char_dead $OVI_27_15
-    is_char_dead $OVI_27_16
-    is_char_dead $OVI_27_17
-    is_char_dead $OVI_27_18
-    is_char_dead $OVI_27_19
-    is_char_dead $OVI_27_20
-    not is_char_dead $DROMEO_27_1
-goto_if_false @MISSION27_3266
-wait 0
+    // Check if amarhaan or player died
+    if or
+        is_char_dead droArray[0]
+        is_char_dead $PLAYER_ACTOR
+    then
+        // Fail the mission
+        goto @MISSION27_4657
+    end
+
+    i = 0
+    // Check if any troodon died
+    while i < 20
+        wait 0
+        if is_char_dead ovioArray[i]
+        then
+            ovioDeadArray[i] = 1
+            remove_blip ovioBlipArray[i]
+        end
+
+        is_all_dead += ovioDeadArray[i]
+
+        i += 1
+    end
+
+    if is_all_dead == 20
+    then
+        break
+    end
+end
+    
 increment_int_stat_no_message StatId.Fat {value} 100
 remove_blip 1@
 remove_blip 2@
@@ -19064,33 +19015,13 @@ remove_blip 11@
 remove_blip 12@
 remove_blip 13@
 remove_blip 14@
-remove_blip 15@
-remove_blip 16@
-remove_blip 17@
-remove_blip 18@
-remove_blip 19@
-remove_blip 20@
-remove_blip 21@
-remove_blip 22@
-remove_blip 23@
-remove_blip 24@
-remove_blip 25@
-remove_blip 26@
-remove_blip 27@
-remove_blip 28@
-remove_blip 29@
-remove_blip 30@
-remove_blip 31@
-remove_blip TIMERA
-remove_blip $OVI33
-remove_blip $OVI34
 do_fade 2000 {direction} Fade.Out
 wait 2000
-remove_char_from_group $DROMEO_27_1
+remove_char_from_group droArray[0]
 set_char_coordinates $PLAYER_ACTOR {x} 2535.584 {y} -2187.5691 {z} 24.5
 set_char_heading $PLAYER_ACTOR {heading} 340.356
-set_char_coordinates $DROMEO_27_1 {x} 2537.4839 {y} -2183.0549 {z} 25.3
-set_char_heading $DROMEO_27_1 {heading} 153.356
+set_char_coordinates droArray[0] {x} 2537.4839 {y} -2183.0549 {z} 25.3
+set_char_heading droArray[0] {heading} 153.356
 switch_widescreen True
 $WIDE = 1
 set_player_control $PLAYER_CHAR {state} False
@@ -19100,13 +19031,13 @@ do_fade 2000 {direction} Fade.In
 wait 2000
 skip_cutscene_start_internal @MISSION27_3881
 print_now 'MIS_225' {time} 4000 {flag} 1 // "Yea, a good fight! The win is mine!"
-task_play_anim $DROMEO_27_1 {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 4000
+task_play_anim droArray[0] {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 4000
 wait 4500
 print_now 'MIS_226' {time} 5000 {flag} 1 // "Eh?.. Aa, oh, of course! An what's about that... Microraptors?"
 task_play_anim $PLAYER_ACTOR {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 5000
 wait 5500
 print_now 'MIS_227' {time} 6000 {flag} 1 // "You can find them in south from Veil-Gol, closer to Chepei."
-task_play_anim $DROMEO_27_1 {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 6000
+task_play_anim droArray[0] {animationName} "PRTIAL_GNGTLKA" {animationFile} "GANGS" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 6000
 wait 6000
 
 :MISSION27_3881
@@ -19131,14 +19062,14 @@ goto @MISSION27_3957
 :MISSION27_3957
 wait 0
 if and
-    does_char_exist $DROMEO_27_1
-    does_char_exist $DROMEO_27_2
-    does_char_exist $DROMEO_27_3
-    does_char_exist $DROMEO_27_4
-    does_char_exist $DROMEO_27_5
-    does_char_exist $DROMEO_27_6
-    does_char_exist $DROMEO_27_7
-    does_char_exist $DROMEO_27_8
+    does_char_exist droArray[0]
+    does_char_exist droArray[1]
+    does_char_exist droArray[2]
+    does_char_exist droArray[3]
+    does_char_exist droArray[4]
+    does_char_exist droArray[5]
+    does_char_exist droArray[6]
+    does_char_exist droArray[7]
 goto_if_false @MISSION27_3957
 wait 0
 goto @MISSION27_4023
@@ -19146,14 +19077,14 @@ goto @MISSION27_4023
 :MISSION27_4023
 wait 0
 if and
-    does_char_exist $DROMEO_27_9
-    does_char_exist $DROMEO_27_10
-    does_char_exist $DROMEO_27_11
-    does_char_exist $DROMEO_27_12
-    does_char_exist $DROMEO_27_13
-    does_char_exist $DROMEO_27_14
-    does_char_exist $OVI_27_1
-    does_char_exist $OVI_27_2
+    does_char_exist droArray[8]
+    does_char_exist droArray[9]
+    does_char_exist droArray[10]
+    does_char_exist droArray[11]
+    does_char_exist droArray[12]
+    does_char_exist droArray[13]
+    does_char_exist ovioArray[0]
+    does_char_exist ovioArray[1]
 goto_if_false @MISSION27_4023
 wait 0
 goto @MISSION27_4089
@@ -19161,14 +19092,14 @@ goto @MISSION27_4089
 :MISSION27_4089
 wait 0
 if and
-    does_char_exist $OVI_27_3
-    does_char_exist $OVI_27_4
-    does_char_exist $OVI_27_5
-    does_char_exist $OVI_27_6
-    does_char_exist $OVI_27_7
-    does_char_exist $OVI_27_8
-    does_char_exist $OVI_27_9
-    does_char_exist $OVI_27_10
+    does_char_exist ovioArray[2]
+    does_char_exist ovioArray[3]
+    does_char_exist ovioArray[4]
+    does_char_exist ovioArray[5]
+    does_char_exist ovioArray[6]
+    does_char_exist ovioArray[7]
+    does_char_exist ovioArray[8]
+    does_char_exist ovioArray[9]
 goto_if_false @MISSION27_4089
 wait 0
 goto @MISSION27_4155
@@ -19176,11 +19107,11 @@ goto @MISSION27_4155
 :MISSION27_4155
 wait 0
 if and
-    does_char_exist $OVI_27_11
-    does_char_exist $OVI_27_12
-    does_char_exist $OVI_27_13
-    does_char_exist $OVI_27_14
-    does_char_exist $OVI_27_15
+    does_char_exist ovioArray[10]
+    does_char_exist ovioArray[11]
+    does_char_exist ovioArray[12]
+    does_char_exist ovioArray[13]
+    does_char_exist ovioArray[14]
 goto_if_false @MISSION27_4155
 wait 0
 goto @MISSION27_4206
@@ -19188,81 +19119,81 @@ goto @MISSION27_4206
 :MISSION27_4206
 wait 0
 if and
-    does_char_exist $OVI_27_16
-    does_char_exist $OVI_27_17
-    does_char_exist $OVI_27_18
-    does_char_exist $OVI_27_19
-    does_char_exist $OVI_27_20
+    does_char_exist ovioArray[15]
+    does_char_exist ovioArray[16]
+    does_char_exist ovioArray[17]
+    does_char_exist ovioArray[18]
+    does_char_exist ovioArray[19]
 goto_if_false @MISSION27_4206
 wait 0
-mark_char_as_no_longer_needed $DROMEO_27_1
-delete_char $DROMEO_27_1
-mark_char_as_no_longer_needed $DROMEO_27_2
-delete_char $DROMEO_27_2
-mark_char_as_no_longer_needed $DROMEO_27_3
-delete_char $DROMEO_27_3
-mark_char_as_no_longer_needed $DROMEO_27_4
-delete_char $DROMEO_27_4
-mark_char_as_no_longer_needed $DROMEO_27_5
-delete_char $DROMEO_27_5
-mark_char_as_no_longer_needed $DROMEO_27_6
-delete_char $DROMEO_27_6
-mark_char_as_no_longer_needed $DROMEO_27_7
-delete_char $DROMEO_27_7
-mark_char_as_no_longer_needed $DROMEO_27_8
-delete_char $DROMEO_27_8
-mark_char_as_no_longer_needed $DROMEO_27_9
-delete_char $DROMEO_27_9
-mark_char_as_no_longer_needed $DROMEO_27_10
-delete_char $DROMEO_27_10
-mark_char_as_no_longer_needed $DROMEO_27_11
-delete_char $DROMEO_27_11
-mark_char_as_no_longer_needed $DROMEO_27_12
-delete_char $DROMEO_27_12
-mark_char_as_no_longer_needed $DROMEO_27_13
-delete_char $DROMEO_27_13
-mark_char_as_no_longer_needed $DROMEO_27_14
-delete_char $DROMEO_27_14
-mark_char_as_no_longer_needed $OVI_27_1
-delete_char $OVI_27_1
-mark_char_as_no_longer_needed $OVI_27_2
-delete_char $OVI_27_2
-mark_char_as_no_longer_needed $OVI_27_3
-delete_char $OVI_27_3
-mark_char_as_no_longer_needed $OVI_27_4
-delete_char $OVI_27_4
-mark_char_as_no_longer_needed $OVI_27_5
-delete_char $OVI_27_5
-mark_char_as_no_longer_needed $OVI_27_6
-delete_char $OVI_27_6
-mark_char_as_no_longer_needed $OVI_27_7
-delete_char $OVI_27_7
-mark_char_as_no_longer_needed $OVI_27_8
-delete_char $OVI_27_8
-mark_char_as_no_longer_needed $OVI_27_9
-delete_char $OVI_27_9
-mark_char_as_no_longer_needed $OVI_27_10
-delete_char $OVI_27_10
-mark_char_as_no_longer_needed $OVI_27_11
-delete_char $OVI_27_11
-mark_char_as_no_longer_needed $OVI_27_12
-delete_char $OVI_27_12
-mark_char_as_no_longer_needed $OVI_27_13
-delete_char $OVI_27_13
-mark_char_as_no_longer_needed $OVI_27_14
-delete_char $OVI_27_14
-mark_char_as_no_longer_needed $OVI_27_15
-delete_char $OVI_27_15
-mark_char_as_no_longer_needed $OVI_27_16
-delete_char $OVI_27_16
-mark_char_as_no_longer_needed $OVI_27_17
-delete_char $OVI_27_17
-mark_char_as_no_longer_needed $OVI_27_18
-delete_char $OVI_27_18
-mark_char_as_no_longer_needed $OVI_27_19
-delete_char $OVI_27_19
-mark_char_as_no_longer_needed $OVI_27_20
-delete_char $OVI_27_20
+mark_char_as_no_longer_needed droArray[0]
+delete_char droArray[0]
+mark_char_as_no_longer_needed droArray[1]
+delete_char droArray[1]
+mark_char_as_no_longer_needed droArray[2]
+delete_char droArray[2]
+mark_char_as_no_longer_needed droArray[3]
+delete_char droArray[3]
+mark_char_as_no_longer_needed droArray[4]
+delete_char droArray[4]
+mark_char_as_no_longer_needed droArray[5]
+delete_char droArray[5]
+mark_char_as_no_longer_needed droArray[6]
+delete_char droArray[6]
+mark_char_as_no_longer_needed droArray[7]
+delete_char droArray[7]
+mark_char_as_no_longer_needed droArray[8]
+delete_char droArray[8]
+mark_char_as_no_longer_needed droArray[9]
+delete_char droArray[9]
+mark_char_as_no_longer_needed droArray[10]
+delete_char droArray[10]
+mark_char_as_no_longer_needed droArray[11]
+delete_char droArray[11]
+mark_char_as_no_longer_needed droArray[12]
+delete_char droArray[12]
+mark_char_as_no_longer_needed droArray[13]
+delete_char droArray[13]
+mark_char_as_no_longer_needed ovioArray[0]
+delete_char ovioArray[0]
+mark_char_as_no_longer_needed ovioArray[1]
+delete_char ovioArray[1]
+mark_char_as_no_longer_needed ovioArray[2]
+delete_char ovioArray[2]
+mark_char_as_no_longer_needed ovioArray[3]
+delete_char ovioArray[3]
+mark_char_as_no_longer_needed ovioArray[4]
+delete_char ovioArray[4]
+mark_char_as_no_longer_needed ovioArray[5]
+delete_char ovioArray[5]
+mark_char_as_no_longer_needed ovioArray[6]
+delete_char ovioArray[6]
+mark_char_as_no_longer_needed ovioArray[7]
+delete_char ovioArray[7]
+mark_char_as_no_longer_needed ovioArray[8]
+delete_char ovioArray[8]
+mark_char_as_no_longer_needed ovioArray[9]
+delete_char ovioArray[9]
+mark_char_as_no_longer_needed ovioArray[10]
+delete_char ovioArray[10]
+mark_char_as_no_longer_needed ovioArray[11]
+delete_char ovioArray[11]
+mark_char_as_no_longer_needed ovioArray[12]
+delete_char ovioArray[12]
+mark_char_as_no_longer_needed ovioArray[13]
+delete_char ovioArray[13]
+mark_char_as_no_longer_needed ovioArray[14]
+delete_char ovioArray[14]
+mark_char_as_no_longer_needed ovioArray[15]
+delete_char ovioArray[15]
+mark_char_as_no_longer_needed ovioArray[16]
+delete_char ovioArray[16]
+mark_char_as_no_longer_needed ovioArray[17]
+delete_char ovioArray[17]
+mark_char_as_no_longer_needed ovioArray[18]
+delete_char ovioArray[18]
+mark_char_as_no_longer_needed ovioArray[19]
+delete_char ovioArray[19]
 do_fade 2000 {direction} Fade.In
 print_with_number_big 'M_PASSD' {num} 0 {duration} 5000 {style} TextStyle.Middle // ~g~MISSION  PASSED!
 register_mission_passed 'MIS_218' // ~b~Dayarhell
@@ -19292,97 +19223,82 @@ remove_blip 11@
 remove_blip 12@
 remove_blip 13@
 remove_blip 14@
-remove_blip 15@
-remove_blip 16@
-remove_blip 17@
-remove_blip 18@
-remove_blip 19@
-remove_blip 20@
-remove_blip 21@
-remove_blip 22@
-remove_blip 23@
-remove_blip 24@
-remove_blip 25@
-remove_blip 26@
-remove_blip 27@
-remove_blip 28@
-remove_blip 29@
-remove_blip 30@
-remove_blip 31@
-remove_blip TIMERA
-remove_blip $OVI33
-remove_blip $OVI34
+
+for i = 0 to 19 step 1
+    remove_blip ovioBlipArray[i]
+end
+
 wait 1500
 print_now 'MIS_618' {time} 5000 {flag} 1 // ~r~Amarhaan is dead! We didn't agree on this!
 wait 3000
-mark_char_as_no_longer_needed $DROMEO_27_1
-delete_char $DROMEO_27_1
-mark_char_as_no_longer_needed $DROMEO_27_2
-delete_char $DROMEO_27_2
-mark_char_as_no_longer_needed $DROMEO_27_3
-delete_char $DROMEO_27_3
-mark_char_as_no_longer_needed $DROMEO_27_4
-delete_char $DROMEO_27_4
-mark_char_as_no_longer_needed $DROMEO_27_5
-delete_char $DROMEO_27_5
-mark_char_as_no_longer_needed $DROMEO_27_6
-delete_char $DROMEO_27_6
-mark_char_as_no_longer_needed $DROMEO_27_7
-delete_char $DROMEO_27_7
-mark_char_as_no_longer_needed $DROMEO_27_8
-delete_char $DROMEO_27_8
-mark_char_as_no_longer_needed $DROMEO_27_9
-delete_char $DROMEO_27_9
-mark_char_as_no_longer_needed $DROMEO_27_10
-delete_char $DROMEO_27_10
-mark_char_as_no_longer_needed $DROMEO_27_11
-delete_char $DROMEO_27_11
-mark_char_as_no_longer_needed $DROMEO_27_12
-delete_char $DROMEO_27_12
-mark_char_as_no_longer_needed $DROMEO_27_13
-delete_char $DROMEO_27_13
-mark_char_as_no_longer_needed $DROMEO_27_14
-delete_char $DROMEO_27_14
-mark_char_as_no_longer_needed $OVI_27_1
-delete_char $OVI_27_1
-mark_char_as_no_longer_needed $OVI_27_2
-delete_char $OVI_27_2
-mark_char_as_no_longer_needed $OVI_27_3
-delete_char $OVI_27_3
-mark_char_as_no_longer_needed $OVI_27_4
-delete_char $OVI_27_4
-mark_char_as_no_longer_needed $OVI_27_5
-delete_char $OVI_27_5
-mark_char_as_no_longer_needed $OVI_27_6
-delete_char $OVI_27_6
-mark_char_as_no_longer_needed $OVI_27_7
-delete_char $OVI_27_7
-mark_char_as_no_longer_needed $OVI_27_8
-delete_char $OVI_27_8
-mark_char_as_no_longer_needed $OVI_27_9
-delete_char $OVI_27_9
-mark_char_as_no_longer_needed $OVI_27_10
-delete_char $OVI_27_10
-mark_char_as_no_longer_needed $OVI_27_11
-delete_char $OVI_27_11
-mark_char_as_no_longer_needed $OVI_27_12
-delete_char $OVI_27_12
-mark_char_as_no_longer_needed $OVI_27_13
-delete_char $OVI_27_13
-mark_char_as_no_longer_needed $OVI_27_14
-delete_char $OVI_27_14
-mark_char_as_no_longer_needed $OVI_27_15
-delete_char $OVI_27_15
-mark_char_as_no_longer_needed $OVI_27_16
-delete_char $OVI_27_16
-mark_char_as_no_longer_needed $OVI_27_17
-delete_char $OVI_27_17
-mark_char_as_no_longer_needed $OVI_27_18
-delete_char $OVI_27_18
-mark_char_as_no_longer_needed $OVI_27_19
-delete_char $OVI_27_19
-mark_char_as_no_longer_needed $OVI_27_20
-delete_char $OVI_27_20
+mark_char_as_no_longer_needed droArray[0]
+delete_char droArray[0]
+mark_char_as_no_longer_needed droArray[1]
+delete_char droArray[1]
+mark_char_as_no_longer_needed droArray[2]
+delete_char droArray[2]
+mark_char_as_no_longer_needed droArray[3]
+delete_char droArray[3]
+mark_char_as_no_longer_needed droArray[4]
+delete_char droArray[4]
+mark_char_as_no_longer_needed droArray[5]
+delete_char droArray[5]
+mark_char_as_no_longer_needed droArray[6]
+delete_char droArray[6]
+mark_char_as_no_longer_needed droArray[7]
+delete_char droArray[7]
+mark_char_as_no_longer_needed droArray[8]
+delete_char droArray[8]
+mark_char_as_no_longer_needed droArray[9]
+delete_char droArray[9]
+mark_char_as_no_longer_needed droArray[10]
+delete_char droArray[10]
+mark_char_as_no_longer_needed droArray[11]
+delete_char droArray[11]
+mark_char_as_no_longer_needed droArray[12]
+delete_char droArray[12]
+mark_char_as_no_longer_needed droArray[13]
+delete_char droArray[13]
+mark_char_as_no_longer_needed ovioArray[0]
+delete_char ovioArray[0]
+mark_char_as_no_longer_needed ovioArray[1]
+delete_char ovioArray[1]
+mark_char_as_no_longer_needed ovioArray[2]
+delete_char ovioArray[2]
+mark_char_as_no_longer_needed ovioArray[3]
+delete_char ovioArray[3]
+mark_char_as_no_longer_needed ovioArray[4]
+delete_char ovioArray[4]
+mark_char_as_no_longer_needed ovioArray[5]
+delete_char ovioArray[5]
+mark_char_as_no_longer_needed ovioArray[6]
+delete_char ovioArray[6]
+mark_char_as_no_longer_needed ovioArray[7]
+delete_char ovioArray[7]
+mark_char_as_no_longer_needed ovioArray[8]
+delete_char ovioArray[8]
+mark_char_as_no_longer_needed ovioArray[9]
+delete_char ovioArray[9]
+mark_char_as_no_longer_needed ovioArray[10]
+delete_char ovioArray[10]
+mark_char_as_no_longer_needed ovioArray[11]
+delete_char ovioArray[11]
+mark_char_as_no_longer_needed ovioArray[12]
+delete_char ovioArray[12]
+mark_char_as_no_longer_needed ovioArray[13]
+delete_char ovioArray[13]
+mark_char_as_no_longer_needed ovioArray[14]
+delete_char ovioArray[14]
+mark_char_as_no_longer_needed ovioArray[15]
+delete_char ovioArray[15]
+mark_char_as_no_longer_needed ovioArray[16]
+delete_char ovioArray[16]
+mark_char_as_no_longer_needed ovioArray[17]
+delete_char ovioArray[17]
+mark_char_as_no_longer_needed ovioArray[18]
+delete_char ovioArray[18]
+mark_char_as_no_longer_needed ovioArray[19]
+delete_char ovioArray[19]
 $ONMISSION = 0
 mission_has_finished
 wait 1000
