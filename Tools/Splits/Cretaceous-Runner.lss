@@ -8,11 +8,6 @@
   <Metadata>
     <Run id="" />
     <Platform usesEmulator="False">PC</Platform>
-    <Region>
-    </Region>
-    <Variables>
-      <Variable name="Modded Content">Yes</Variable>
-    </Variables>
     <CustomVariables />
   </Metadata>
   <Offset>00:00:00</Offset>
