@@ -8301,6 +8301,7 @@ clear_prints
 do_fade 1000 Fade.In
 
 :MISSION4_318
+skip_cutscene_end
 wait 0
 switch_widescreen False
 $WIDE = 0
@@ -8767,6 +8768,7 @@ do_fade 1000 Fade.In
 goto @MISSION5_749
 
 :MISSION5_749
+skip_cutscene_end
 wait 0
 if and
     not is_char_dead $PLAYER_ACTOR
@@ -8897,6 +8899,7 @@ print_now 'MISS_48' {time} 5000 {flag} 1 // Kill the Troodons!
 goto @MISSION5_1504
 
 :MISSION5_1504
+skip_cutscene_end
 wait 0
 if and
     not is_char_dead $PLAYER_ACTOR
@@ -10479,6 +10482,7 @@ task_play_anim $PLAYER_ACTOR {animationName} "BIKE_FALLR" {animationFile} "PED" 
 wait 800
 
 :MISSION9_1_SRV_CSSKIP_1
+skip_cutscene_end
 do_fade 1000 Fade.Out
 wait 1000
 clear_this_print_big_now TextStyle.Middle
@@ -16451,6 +16455,7 @@ do_fade 6000 {direction} Fade.Out
 wait 7000
 
 :MISSION19_SRV_CSSKIP_2
+skip_cutscene_end
 do_fade 1000 Fade.Out
 wait 1000
 camera_reset_new_scriptables
@@ -18414,6 +18419,7 @@ print_with_number_big 'MIS_215' {num} 0 {duration} 5000 {style} TextStyle.Middle
 wait 5000
 
 :MISSION26_SRV_CSSKIP_1
+skip_cutscene_end
 do_fade 1000 {direction} Fade.Out
 wait 1000
 clear_this_print_big_now TextStyle.Middle
@@ -28941,6 +28947,7 @@ print_with_number_big 'MIS_457' {num} 0 {duration} 5000 {style} TextStyle.Middle
 wait 5000
 
 :MISSION49_SRV_CSSKIP_1
+skip_cutscene_end
 do_fade 1000 {direction} Fade.Out
 wait 1000
 clear_this_print_big_now TextStyle.Middle
