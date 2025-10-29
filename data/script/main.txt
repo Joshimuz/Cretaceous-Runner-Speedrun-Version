@@ -7478,6 +7478,7 @@ force_weather_now WeatherType.ExtraSunnySf
 release_weather
 switch_widescreen True
 $WIDE = 1
+$PLAY0 = 1
 display_radar False
 set_player_control $PLAYER_CHAR {state} False
 set_player_jump_button $PLAYER_CHAR {enabled} False
@@ -7538,6 +7539,7 @@ print_now 'MISS_11' {time} 6000 {flag} 1 // Welcome to the Dromaeosaurus family!
 wait 5200
 switch_widescreen False
 $WIDE = 0
+skip_cutscene_end
 set_player_control $PLAYER_CHAR {state} True
 set_player_duck_button $PLAYER_CHAR {enabled} False
 set_player_fire_button $PLAYER_CHAR {enabled} False
@@ -7546,12 +7548,11 @@ print_now 'MISS_12' {time} 6000 {flag} 1 // You can sleep here and save your pro
 wait 6100
 print_now 'MISS_13' {time} 6000 {flag} 1 // Now look out the land. Use mouse to turn view and press W to walk.
 wait 6100
+goto @MISSION701_2
 
 :MISSION_701
-skip_cutscene_end
 do_fade 1000 Fade.Out
 wait 1000
-$PLAY0 = 1
 set_player_control $PLAYER_CHAR {state} True
 set_player_duck_button $PLAYER_CHAR {enabled} False
 set_player_fire_button $PLAYER_CHAR {enabled} False
@@ -7562,6 +7563,8 @@ clear_prints
 clear_this_print_big_now TextStyle.Middle
 do_fade 1000 Fade.In
 wait 1000
+
+:MISSION701_2
 print_now 'MISS_14' {time} 7000 {flag} 1 // Follow the checkpoint. It placed as the yellow mark in the radar at left-down corner of the screen
 wait 0
 $RADAR_MISS_1_1 = add_blip_for_coord -1251.5031 {y} -847.9368 {z} 14.306
@@ -7672,7 +7675,7 @@ wait 0
 print_with_number_big 'MISS_01' {num} 0 {duration} 5000 {style} TextStyle.Middle // ~b~Home  and  Native  land
 wait 8000
 print_now 'MISS_18' {time} 6000 {flag} 1 // Now you need some food. Follow your parents all the way to the lake.
-wait 5400
+wait 4000
 
 :MISSION_SRV_CSSKIP_1
 skip_cutscene_end
@@ -7853,7 +7856,7 @@ camera_set_vector_move -1142.929 {fromY} 290.6795 {fromZ} 0.4 {toX} -773.7137 {t
 camera_set_vector_track -1131.043 {fromY} 289.054 {fromZ} 0.4 {toX} -765.3524 {toY} 238.5689 {toZ} 4.6432 {time} 13400 {ease} 2
 wait 0
 print_now 'MISS_22' {time} 13000 {flag} 1 // But don't feel safety here. Your enemys are Troodons and Tyrannosaurus. Other dinosaurs of Cantera explore youself.
-wait 13300
+wait 12400
 
 :MISSION_SRV_CSSKIP_2
 skip_cutscene_end

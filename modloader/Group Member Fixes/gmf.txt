@@ -1,11 +1,15 @@
 {$CLEO .cs}
+{$USE CLEO+}
+
 wait 1000
 debug_on
 
 Alloc($PLAYER_CHAR, 2)
 Alloc($PLAYER_ACTOR, 3)
+Alloc($PLAYER_GROUP, 11)
 Alloc($PASSED_MISSIONS, 5297)
 Alloc($FLAG_TNG, 6531)
+
 
 Alloc($DROMEO_49_1, 6429)
 Alloc($DROMEO_49_2, 6431)
@@ -22,37 +26,35 @@ Alloc($DROMEO_49_12, 6451)
 
 while true
     wait 0
-    
+
     // Make all group members run (Can apply to multiple missions)
     if or
         $PASSED_MISSIONS == 1 // Childhood
         $PASSED_MISSIONS == 9 // Street Fighting
         $PASSED_MISSIONS == 21 // Fishing
-        
+        $PASSED_MISSIONS == 51 // The Promenade
+
     then
-        wait 1000
-        
+        wait 500
+
         // Get member count
         int leaders, members, memberCounter = 0
         leaders, members = get_group_size $PLAYER_GROUP
         
-        // Loop through all the members
-        for memberCounter = 0 to members step 1
-            // Get the member handle and player coordinates
-            char memberHandle
-            memberHandle = get_group_member $PLAYER_GROUP memberCounter
+        if members > 0
+        then
+            members -= 1
             
             float x1, y1, z1
             x1, y1, z1 = get_char_coordinates $PLAYER_ACTOR
             
-            // Check if player is not on/in water before making the dinos sprint. 
             float height1 = get_water_height_at_coords x1 y1 true
             float groundz1 = get_ground_z_for_3d_coord x1 y1 z1
             
-            if height1 < groundz1
-            then
-                // Make them sprint to player's last coords
-                TASK_GO_STRAIGHT_TO_COORD memberHandle x1 y1 z1 MoveState.Sprint 999999
+            // Add all members to the array
+            for memberCounter = 0 to members step 1
+                char groupMember = get_group_member $PLAYER_GROUP memberCounter
+                TASK_GO_STRAIGHT_TO_COORD groupMember x1 y1 z1 MoveState.Sprint 999999
             end
         end
     end
