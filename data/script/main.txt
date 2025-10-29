@@ -10483,6 +10483,8 @@ set_char_health $PLAYER_ACTOR {health} 50
 task_play_anim $TROO101_1 {animationName} "FIGHTA_3" {animationFile} "PED" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 800
 task_play_anim $PLAYER_ACTOR {animationName} "BIKE_FALLR" {animationFile} "PED" {blendSpeed} 4.0 {loop} False {lockX} False {lockY} False {keepLastFrame} False {time} 800
 wait 800
+skip_cutscene_end
+goto @MISSION9_1_AFTER_CSSKIP_1
 
 :MISSION9_1_SRV_CSSKIP_1
 skip_cutscene_end
@@ -10491,6 +10493,8 @@ wait 1000
 clear_this_print_big_now TextStyle.Middle
 clear_char_tasks $TROO101_1
 clear_char_tasks $PLAYER_ACTOR
+
+:MISSION9_1_AFTER_CSSKIP_1
 set_time_scale 1.0
 restore_camera_jumpcut
 set_camera_behind_player
@@ -27311,13 +27315,30 @@ wait 300
 :MISSION45_1_CUTSCENESKIP_2
 skip_cutscene_end
 CAMERA_RESET_NEW_SCRIPTABLES
-$PTERO_45_1_1 = create_char PedType.CivMale {modelId} #WFYPRO {x} -2729.0129 {y} -1610.738 {z} 138.3
-set_char_heading $PTERO_45_1_1 {heading} 352.0
-$PTERO_45_1_2 = create_char PedType.CivMale {modelId} #WFYPRO {x} -2714.592 {y} -1615.61 {z} 138.3
-set_char_heading $PTERO_45_1_2 {heading} 362.0
-$HMYCR45 = create_object #TRASHCAN {x} 0.0 {y} 0.0 {z} 0.0
-$PTERO45_1 = create_car #SKIMMER {x} -2724.353 {y} -1613.724 {z} 138.9518
-set_car_heading $PTERO45_1 {heading} 350.3845
+
+if not does_char_exist $PTERO_45_1_1
+then
+    $PTERO_45_1_1 = create_char PedType.CivMale {modelId} #WFYPRO {x} -2729.0129 {y} -1610.738 {z} 138.3
+    set_char_heading $PTERO_45_1_1 {heading} 352.0
+end
+
+if not does_char_exist $PTERO_45_1_2
+then
+    $PTERO_45_1_2 = create_char PedType.CivMale {modelId} #WFYPRO {x} -2714.592 {y} -1615.61 {z} 138.3
+    set_char_heading $PTERO_45_1_2 {heading} 362.0
+end
+
+if not does_object_exist $HMYCR45
+then
+    $HMYCR45 = create_object #TRASHCAN {x} 0.0 {y} 0.0 {z} 0.0
+end
+
+if not does_vehicle_exist $PTERO45_1
+then
+    $PTERO45_1 = create_car #SKIMMER {x} -2724.353 {y} -1613.724 {z} 138.9518
+    set_car_heading $PTERO45_1 {heading} 350.3845
+end
+
 attach_object_to_car $HMYCR45 {handle} $PTERO45_1 {xOffset} 0.0 {yOffset} 0.0 {zOffset} 0.0 {xRotation} 0.0 {yRotation} 0.0 {zRotation} 0.0
 mark_char_as_no_longer_needed $DROMEO_45_1_2
 delete_char $DROMEO_45_1_2
@@ -30320,7 +30341,12 @@ wait 4000
 skip_cutscene_end
 do_fade 1000 Fade.Out
 wait 1000
-task_die $TREX_50_2
+
+if not is_char_dead $TREX_50_2
+then
+    task_die $TREX_50_2
+end
+
 clear_prints
 clear_char_tasks $PLAYER_ACTOR
 camera_reset_new_scriptables
