@@ -74,20 +74,29 @@ public:
                         continue;
 
                     for (CAnimBlendAssociation* a = assoc; a; a = RpAnimBlendGetNextAssociation(a)) {
+                        
+                        if (ped->bIsInTheAir)
+                        {
+                            ped->m_fHealth = 1000.0f;
+                        }
+                        
                         if (dist > 50.0f) {
-                            if (a->m_fSpeed < 2.9f)
+                            if (a->m_fSpeed < 2.9f) {
                                 a->m_fSpeed = 3.0f;
+                            }
                         }
                         else if (dist < 20.0f) {
                             if (a->m_fSpeed > 1.1f)
+                            {
                                 a->m_fSpeed = 1.0f;
+                            }
                         }
                     }
                 }
                 else if (gMode == ERubberbandMode::Teleport) {
                     // TELEPORT MODE: Move ped behind player if far
                     if (dist > 50.0f) {
-						// playerHeading is between -π and π radians. So negating it gives the opposite direction.
+                        // playerHeading is between -π and π radians. So negating it gives the opposite direction.
                         float randomBehindAngle = ((float)rand() / RAND_MAX) * (3.14159f * 1.0f / 3.0f) - playerHeading;
 
                         float radius = 10.0f + ((float)rand() / RAND_MAX) * 5.0f; // 10–15 units away
@@ -100,7 +109,7 @@ public:
 
                         newPos.z = CWorld::FindGroundZForCoord(newPos.x, newPos.y);
 
-						newPos.z += 0.5f; // Slightly above the ground Z to avoid getting stuck
+                        newPos.z += 0.5f; // Slightly above the ground Z to avoid getting stuck
 
                         ped->Teleport(newPos, false);
                         ped->SetHeading(playerHeading);
