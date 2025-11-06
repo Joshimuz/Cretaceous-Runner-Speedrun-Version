@@ -1436,13 +1436,7 @@ start_new_script @INTERFACE
 start_new_script @DEAD1
 start_new_script @DEAD2
 start_new_script @DEAD3
-start_new_script @FIST
-start_new_script @UZI
-start_new_script @MOLOTOV
-start_new_script @STICK
-start_new_script @GAS
-start_new_script @EGG
-start_new_script @HANDCLAW
+start_new_script @WEAPON_ICONS_START
 start_new_script @WATER
 start_new_script @FADE
 start_new_script @FEATHER
@@ -5640,212 +5634,170 @@ wait 2000
 do_fade 5000 {direction} Fade.In
 terminate_this_script
 
-:FIST
-script_name 'FIST'
+:WEAPON_ICONS_START
 wait 0
+
+// Initialize weapon tracking variable
+int $PREV_WEAPON = -1
+int $CURRENT_WEAPON = -1
+
+:WEAPON_ICON_AFTER_INITIALIZE
+wait 0
+// Load texture dictionary and all sprites at the beginning
+load_texture_dictionary 'LD_DUAL'
+load_sprite 1 {spriteName} "FIST"
+load_sprite 2 {spriteName} "MICRO_UZIICON"
+load_sprite 3 {spriteName} "MOLOTOVICON"
+load_sprite 4 {spriteName} "NITESTICKICON"
+load_sprite 5 {spriteName} "TEARGASICON"
+load_sprite 5 {spriteName} "BATICON"  // Overwrites previous sprite 5 (TEARGASICON)
+load_sprite 6 {spriteName} "CLAWICON"
+
+// Main drawing loop
+:WEAPON_ICONS_DRAW_LOOP
+wait 0
+
+// Check if we need to clean up due to wide screen
+if $WIDE == 1
+then
+    goto @WEAPON_ICONS_CLEANUP
+end
+
+// This huge if/else statement is required to check if the player doesn't 
+// have any of the recognized weapons
 if and
     $PASSED_MISSIONS > 0
     $WIDE == 0
     is_current_char_weapon $PLAYER_ACTOR {weaponType} WeaponType.Unarmed
-goto_if_false @FIST
-wait 200
-load_texture_dictionary 'LD_DUAL'
-load_sprite 1 {spriteName} "FIST"
+then
+    $CURRENT_WEAPON = 0
+else
 
-:FIST_73
-wait 0
-use_text_commands True
-set_sprites_draw_before_fade True
-draw_sprite 1 {offsetLeft} 65.0 {offsetTop} 300.0 {width} 55.0 {height} 50.0 {r} 255 {g} 255 {b} 255 {a} 255
-set_sprites_draw_before_fade True
-if or
-    $WIDE == 1
-    not is_current_char_weapon $PLAYER_ACTOR {weaponType} WeaponType.Unarmed
-goto_if_false @FIST_73
-wait 0
-goto @FIST_161
+    if and
+        $WIDE == 0
+        is_current_char_weapon $PLAYER_ACTOR {weaponType} WeaponType.MicroUzi
+    then
+        $CURRENT_WEAPON = 1
+    else
 
-:FIST_161
+        if and
+            $WIDE == 0
+            is_current_char_weapon $PLAYER_ACTOR {weaponType} WeaponType.Molotov
+        then
+            $CURRENT_WEAPON = 2
+        else
+
+            if and
+                $WIDE == 0
+                is_current_char_weapon $PLAYER_ACTOR {weaponType} WeaponType.NightStick
+            then
+                $CURRENT_WEAPON = 3
+            else
+
+                if and
+                    $WIDE == 0
+                    is_current_char_weapon $PLAYER_ACTOR {weaponType} WeaponType.Teargas
+                then
+                    $CURRENT_WEAPON = 4
+                else
+
+                    if and
+                        $WIDE == 0
+                        is_current_char_weapon $PLAYER_ACTOR {weaponType} WeaponType.BaseballBat
+                    then
+                        $CURRENT_WEAPON = 5
+                    else
+
+                        if and
+                            $WIDE == 0
+                            is_current_char_weapon $PLAYER_ACTOR {weaponType} WeaponType.Knife
+                        then
+                            $CURRENT_WEAPON = 6
+                        else
+							//Only reason this huge if/else statement exists
+                            $CURRENT_WEAPON = -1
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+
+// Check if weapon changed
+if not $CURRENT_WEAPON == $PREV_WEAPON
+then
+    goto @WEAPON_ICONS_CLEANUP
+end
+
+// Draw appropriate weapon icon based on current weapon
+if $CURRENT_WEAPON == 0
+then
+    // Draw FIST sprite
+    use_text_commands True
+    set_sprites_draw_before_fade True
+    draw_sprite 1 {offsetLeft} 65.0 {offsetTop} 300.0 {width} 55.0 {height} 50.0 {r} 255 {g} 255 {b} 255 {a} 255
+end
+
+if $CURRENT_WEAPON == 1
+then
+    // Draw UZI sprite
+    use_text_commands True
+    set_sprites_draw_before_fade True
+    draw_sprite 2 {offsetLeft} 65.0 {offsetTop} 300.0 {width} 55.0 {height} 50.0 {r} 255 {g} 255 {b} 255 {a} 255
+end
+
+if $CURRENT_WEAPON == 2
+then
+    // Draw MOLOTOV sprite
+    use_text_commands True
+    set_sprites_draw_before_fade True
+    draw_sprite 3 {offsetLeft} 65.0 {offsetTop} 300.0 {width} 55.0 {height} 50.0 {r} 255 {g} 255 {b} 255 {a} 255
+end
+
+if $CURRENT_WEAPON == 3
+then
+    // Draw STICK sprite
+    use_text_commands True
+    set_sprites_draw_before_fade True
+    draw_sprite 4 {offsetLeft} 65.0 {offsetTop} 300.0 {width} 55.0 {height} 50.0 {r} 255 {g} 255 {b} 255 {a} 255
+end
+
+if $CURRENT_WEAPON == 4
+then
+    // Draw GAS sprite
+    use_text_commands True
+    set_sprites_draw_before_fade True
+    draw_sprite 5 {offsetLeft} 65.0 {offsetTop} 300.0 {width} 55.0 {height} 50.0 {r} 255 {g} 255 {b} 255 {a} 255
+end
+
+if $CURRENT_WEAPON == 5
+then
+    // Draw EGG (BAT) sprite
+    use_text_commands True
+    set_sprites_draw_before_fade True
+    draw_sprite 5 {offsetLeft} 65.0 {offsetTop} 300.0 {width} 55.0 {height} 50.0 {r} 255 {g} 255 {b} 255 {a} 255
+end
+
+if $CURRENT_WEAPON == 6
+then
+    // Draw HANDCLAW (CLAW) sprite
+    use_text_commands True
+    set_sprites_draw_before_fade True
+    draw_sprite 6 {offsetLeft} 65.0 {offsetTop} 300.0 {width} 55.0 {height} 50.0 {r} 255 {g} 255 {b} 255 {a} 255
+end
+
+// Update previous weapon type
+$PREV_WEAPON = $CURRENT_WEAPON
+
+goto @WEAPON_ICONS_DRAW_LOOP
+
+:WEAPON_ICONS_CLEANUP
 wait 0
 remove_texture_dictionary
-wait 0
-goto @FIST
-terminate_this_script
-
-:UZI
-script_name 'UZI'
-wait 0
-if and
-    $WIDE == 0
-    is_current_char_weapon $PLAYER_ACTOR {weaponType} WeaponType.MicroUzi
-goto_if_false @UZI
-wait 200
-load_texture_dictionary 'LD_DUAL'
-load_sprite 2 {spriteName} "MICRO_UZIICON"
-
-:UZI_75
-wait 0
-use_text_commands True
-set_sprites_draw_before_fade True
-draw_sprite 2 {offsetLeft} 65.0 {offsetTop} 300.0 {width} 55.0 {height} 50.0 {r} 255 {g} 255 {b} 255 {a} 255
-if or
-    $WIDE == 1
-    not is_current_char_weapon $PLAYER_ACTOR {weaponType} WeaponType.MicroUzi
-goto_if_false @UZI_75
-wait 0
-goto @UZI_159
-
-:UZI_159
-wait 0
-remove_texture_dictionary
-wait 0
-goto @UZI
-terminate_this_script
-
-:MOLOTOV
-script_name 'MOLOTOV'
-wait 0
-if and
-    $WIDE == 0
-    is_current_char_weapon $PLAYER_ACTOR {weaponType} WeaponType.Molotov
-goto_if_false @MOLOTOV
-wait 300
-load_texture_dictionary 'LD_DUAL'
-load_sprite 3 {spriteName} "MOLOTOVICON"
-
-:MOLOTOV_73
-wait 0
-use_text_commands True
-set_sprites_draw_before_fade True
-draw_sprite 3 {offsetLeft} 65.0 {offsetTop} 300.0 {width} 55.0 {height} 50.0 {r} 255 {g} 255 {b} 255 {a} 255
-if or
-    $WIDE == 1
-    not is_current_char_weapon $PLAYER_ACTOR {weaponType} WeaponType.Molotov
-goto_if_false @MOLOTOV_73
-wait 0
-goto @MOLOTOV_157
-
-:MOLOTOV_157
-wait 0
-remove_texture_dictionary
-wait 0
-goto @MOLOTOV
-terminate_this_script
-
-:STICK
-script_name 'STICK'
-wait 0
-if and
-    $WIDE == 0
-    is_current_char_weapon $PLAYER_ACTOR {weaponType} WeaponType.NightStick
-goto_if_false @STICK
-wait 200
-load_texture_dictionary 'LD_DUAL'
-load_sprite 4 {spriteName} "NITESTICKICON"
-
-:STICK_75
-wait 0
-use_text_commands True
-set_sprites_draw_before_fade True
-draw_sprite 4 {offsetLeft} 65.0 {offsetTop} 300.0 {width} 55.0 {height} 50.0 {r} 255 {g} 255 {b} 255 {a} 255
-if or
-    $WIDE == 1
-    not is_current_char_weapon $PLAYER_ACTOR {weaponType} WeaponType.NightStick
-goto_if_false @STICK_75
-wait 0
-goto @STICK_159
-
-:STICK_159
-wait 0
-remove_texture_dictionary
-wait 0
-goto @STICK
-terminate_this_script
-
-:GAS
-script_name 'GAS'
-wait 0
-if and
-    $WIDE == 0
-    is_current_char_weapon $PLAYER_ACTOR {weaponType} WeaponType.Teargas
-goto_if_false @GAS
-wait 200
-load_texture_dictionary 'LD_DUAL'
-load_sprite 5 {spriteName} "TEARGASICON"
-
-:GAS_73
-wait 0
-use_text_commands True
-set_sprites_draw_before_fade True
-draw_sprite 5 {offsetLeft} 65.0 {offsetTop} 300.0 {width} 55.0 {height} 50.0 {r} 255 {g} 255 {b} 255 {a} 255
-if or
-    $WIDE == 1
-    not is_current_char_weapon $PLAYER_ACTOR {weaponType} WeaponType.Teargas
-goto_if_false @GAS_73
-wait 0
-goto @GAS_157
-
-:GAS_157
-wait 0
-remove_texture_dictionary
-wait 0
-goto @GAS
-terminate_this_script
-
-:EGG
-script_name 'EGG'
-wait 0
-if and
-    $WIDE == 0
-    is_current_char_weapon $PLAYER_ACTOR {weaponType} WeaponType.BaseballBat
-goto_if_false @EGG
-wait 200
-load_texture_dictionary 'LD_DUAL'
-load_sprite 5 {spriteName} "BATICON"
-
-:EGG_69
-wait 0
-use_text_commands True
-set_sprites_draw_before_fade True
-draw_sprite 5 {offsetLeft} 65.0 {offsetTop} 300.0 {width} 55.0 {height} 50.0 {r} 255 {g} 255 {b} 255 {a} 255
-if or
-    $WIDE == 1
-    not is_current_char_weapon $PLAYER_ACTOR {weaponType} WeaponType.BaseballBat
-goto_if_false @EGG_155
-remove_texture_dictionary
-wait 0
-goto @EGG
-
-:EGG_155
-goto @EGG_69
-terminate_this_script
-
-:HANDCLAW
-script_name 'HANDCLAW'
-wait 0
-if and
-    $WIDE == 0
-    is_current_char_weapon $PLAYER_ACTOR {weaponType} WeaponType.Knife
-goto_if_false @HANDCLAW
-wait 200
-load_texture_dictionary 'LD_DUAL'
-load_sprite 6 {spriteName} "CLAWICON"
-
-:HANDCLAW_78
-wait 0
-use_text_commands True
-set_sprites_draw_before_fade True
-draw_sprite 6 {offsetLeft} 65.0 {offsetTop} 300.0 {width} 55.0 {height} 50.0 {r} 255 {g} 255 {b} 255 {a} 255
-if or
-    $WIDE == 1
-    not is_current_char_weapon $PLAYER_ACTOR {weaponType} WeaponType.Knife
-goto_if_false @HANDCLAW_164
-remove_texture_dictionary
-wait 0
-goto @HANDCLAW
-
-:HANDCLAW_164
-goto @HANDCLAW_78
+// Update previous weapon type
+$PREV_WEAPON = $CURRENT_WEAPON
+goto @WEAPON_ICON_AFTER_INITIALIZE
 terminate_this_script
 
 :WATER
@@ -11205,7 +11157,6 @@ restore_camera_jumpcut
 set_camera_behind_player
 wait 0
 
-
 trooarray[0] = create_char PedType.CivMale {modelId} #OFYRI {x} -2018.248 {y} 819.9418 {z} 29.648
 set_char_heading trooarray[0] {heading} 170.0
 trooarray[1] = create_char PedType.CivMale {modelId} #OMORI {x} -2019.248 {y} 819.9418 {z} 29.648
@@ -11248,9 +11199,9 @@ i = 0
 while true
     wait 0
     is_everyone_dead = 0
-    
+
     i = 0
-    
+
     // Check if any ally or player died
     while i < 7
         wait 0
@@ -11261,10 +11212,10 @@ while true
             // Fail the mission
             goto @MISSION11_3118
         end
-        
+
         i += 1
     end
-    
+
     i = 0
     // Check if any troodon died
     while i < 8
@@ -11274,12 +11225,12 @@ while true
             troodeadarray[i] = 1
             remove_blip troobliparray[i]
         end
-        
+
         is_everyone_dead += troodeadarray[i]
-        
+
         i += 1
     end
-    
+
     if is_everyone_dead == 8
     then
         break
@@ -11309,7 +11260,6 @@ set_char_heading trooarray2[7] {heading} 170.0
 trooarray2[8] = create_char PedType.CivMale {modelId} #OFYRI {x} -1892.543 {y} 700.3621 {z} 19.5095
 set_char_heading trooarray2[8] {heading} 170.0
 
-
 i = 0
 while i < 9
     wait 0
@@ -11337,9 +11287,9 @@ i = 0
 while true
     wait 0
     is_everyone_dead2 = 0
-    
+
     i = 0
-    
+
     // Check if any ally or player died
     while i < 7
         wait 0
@@ -11350,10 +11300,10 @@ while true
             // Fail the mission
             goto @MISSION11_3118
         end
-        
+
         i += 1
     end
-    
+
     i = 0
     // Check if any troodon died
     while i < 9
@@ -11363,12 +11313,12 @@ while true
             troodeadarray2[i] = 1
             remove_blip troobliparray2[i]
         end
-        
+
         is_everyone_dead2 += troodeadarray2[i]
-        
+
         i += 1
     end
-    
+
     if is_everyone_dead2 == 9
     then
         break
@@ -11465,20 +11415,20 @@ goto_if_false @MISSION11_2742
 i = 0
 while i < 9
     wait 0
-    
+
     if i < 7
     then
         mark_char_as_no_longer_needed dromeoarray[i]
         delete_char dromeoarray[i]
     end
-        
+
     if i < 8
     then
         mark_char_as_no_longer_needed trooarray[i]
         delete_char trooarray[i]
         remove_blip troobliparray[i]
     end
-    
+
     mark_char_as_no_longer_needed trooarray2[i]
     delete_char trooarray2[i]
     remove_blip troobliparray2[i]
@@ -11507,20 +11457,20 @@ wait 4000
 i = 0
 while i < 9
     wait 0
-    
+
     if i < 7
     then
         mark_char_as_no_longer_needed dromeoarray[i]
         delete_char dromeoarray[i]
     end
-        
+
     if i < 8
     then
         mark_char_as_no_longer_needed trooarray[i]
         delete_char trooarray[i]
         remove_blip troobliparray[i]
     end
-    
+
     mark_char_as_no_longer_needed trooarray2[i]
     delete_char trooarray2[i]
     remove_blip troobliparray2[i]
@@ -18959,7 +18909,7 @@ int i
 
 for i = 0 to 19 step 1
     ovioBlipArray[i] = add_blip_for_char ovioArray[i]
-    
+
     if i < 6
     then
         task_kill_char_on_foot ovioArray[i] {target} $PLAYER_ACTOR
@@ -19012,7 +18962,7 @@ while true
         break
     end
 end
-    
+
 increment_int_stat_no_message StatId.Fat {value} 100
 remove_blip 1@
 remove_blip 2@
@@ -30512,6 +30462,7 @@ set_char_coordinates $PLAYER_ACTOR {x} -2132.6421 {y} -2040.405 {z} 48.6
 set_char_heading $PLAYER_ACTOR {heading} 341.9178
 switch_widescreen False
 $WIDE = 0
+set_player_control $PLAYER_CHAR {state} True
 restore_camera_jumpcut
 set_camera_behind_player
 do_fade 1000 Fade.In
