@@ -34,6 +34,8 @@ Alloc($PLAY51, 5523)
 Alloc($PLAY54, 5524)
 Alloc($PLAY11_1, 6530)
 
+int $music[35]
+
 :AUDIO
 script_name 'AUDIO'
 wait 0
@@ -93,6 +95,10 @@ switch_audio_zone "GOVERN" {state} False
 
 :AUDIO_475
 wait 0
+
+float seconds
+seconds = generate_random_float_in_range {min} 0.0 {max} 60.0
+
 if
     $PLAY0 <> 1
 goto_if_false @AUDIO_1044
@@ -193,480 +199,594 @@ goto @AUDIO_475
 
 :AUDIO_1044
 wait 0
-$music1 = load_audio_stream {audioFileName} "mp3_and_ogg/beat_4.ogg"
-set_audio_stream_type $music1 {type} AudioStreamType.Music
+$music[1] = load_audio_stream {audioFileName} "mp3_and_ogg/beat_4.ogg"
+set_audio_stream_type $music[1] {type} AudioStreamType.Music
 wait 1000
-set_audio_stream_state $music1 {action} AudioStreamAction.Play
+set_audio_stream_state $music[1] {action} AudioStreamAction.Play
+set_audio_stream_volume $music[1] {volume} 0.0
+set_audio_stream_volume_with_transition $music[1] {volume} 1.0 {time_ms} 3000
+set_audio_stream_looped $music[1] true 
 
 :AUDIO_1059
 wait 0
 $PLAY0 == 0
 goto_if_false @AUDIO_1059
-set_audio_stream_state $music1 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[1] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 
 :AUDIO_1088
 wait 1000
-$music2 = load_audio_stream {audioFileName} "mp3_and_ogg/child.ogg"
-set_audio_stream_type $music2 {type} AudioStreamType.Music
+$music[2] = load_audio_stream {audioFileName} "mp3_and_ogg/child.ogg"
+set_audio_stream_type $music[2] {type} AudioStreamType.Music
+set_audio_stream_progress_seconds $music[2] {progress} seconds
 wait 1000
-set_audio_stream_state $music2 {action} AudioStreamAction.Play
+set_audio_stream_state $music[2] {action} AudioStreamAction.Play
+set_audio_stream_volume $music[2] {volume} 0.0
+set_audio_stream_volume_with_transition $music[2] {volume} 1.0 {time_ms} 3000
+set_audio_stream_looped $music[2] true 
 
 :AUDIO_1104
 wait 0
 $PLAY1 == 0
 goto_if_false @AUDIO_1104
-set_audio_stream_state $music2 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[2] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 
 :AUDIO_1142
 wait 0
-$music3 = load_audio_stream {audioFileName} "mp3_and_ogg/beat_10.ogg"
-set_audio_stream_type $music3 {type} AudioStreamType.Music
+$music[3] = load_audio_stream {audioFileName} "mp3_and_ogg/beat_10.ogg"
+set_audio_stream_type $music[3] {type} AudioStreamType.Music
 wait 1000
-set_audio_stream_state $music3 {action} AudioStreamAction.Play
+set_audio_stream_state $music[3] {action} AudioStreamAction.Play
+set_audio_stream_volume $music[3] {volume} 0.0
+set_audio_stream_volume_with_transition $music[3] {volume} 1.0 {time_ms} 3000
+set_audio_stream_looped $music[3] true 
 
 :AUDIO_1157
 wait 0
 $PLAY2 == 0
 goto_if_false @AUDIO_1157
-set_audio_stream_state $music3 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[3] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 
 :AUDIO_1186
 wait 1000
-$music4 = load_audio_stream {audioFileName} "mp3_and_ogg/oport.ogg"
-set_audio_stream_type $music4 {type} AudioStreamType.Music
+$music[4] = load_audio_stream {audioFileName} "mp3_and_ogg/oport.ogg"
+set_audio_stream_type $music[4] {type} AudioStreamType.Music
+set_audio_stream_progress_seconds $music[4] {progress} seconds
 wait 1000
-set_audio_stream_state $music4 {action} AudioStreamAction.Play
+set_audio_stream_state $music[4] {action} AudioStreamAction.Play
+set_audio_stream_volume $music[4] {volume} 0.0
+set_audio_stream_volume_with_transition $music[4] {volume} 1.0 {time_ms} 3000
+set_audio_stream_looped $music[4] true 
 
 :AUDIO_1202
 wait 0
 $PLAY4 == 0
 goto_if_false @AUDIO_1202
-set_audio_stream_state $music4 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[4] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 
 :AUDIO_1240
 wait 1000
-$music5 = load_audio_stream {audioFileName} "mp3_and_ogg/savel.ogg"
-set_audio_stream_type $music5 {type} AudioStreamType.Music
+$music[5] = load_audio_stream {audioFileName} "mp3_and_ogg/savel.ogg"
+set_audio_stream_type $music[5] {type} AudioStreamType.Music
+set_audio_stream_progress_seconds $music[5] {progress} seconds
 wait 1000
-set_audio_stream_state $music5 {action} AudioStreamAction.Play
+set_audio_stream_state $music[5] {action} AudioStreamAction.Play
+set_audio_stream_volume $music[5] {volume} 0.0
+set_audio_stream_volume_with_transition $music[5] {volume} 1.0 {time_ms} 3000
+set_audio_stream_looped $music[5] true 
 
 :AUDIO_1256
 wait 0
 $PLAY5 == 0
 goto_if_false @AUDIO_1256
-set_audio_stream_state $music5 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[5] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 
 :AUDIO_1294
 wait 1000
-$music6 = load_audio_stream {audioFileName} "mp3_and_ogg/sixwar.ogg"
-set_audio_stream_type $music6 {type} AudioStreamType.Music
+$music[6] = load_audio_stream {audioFileName} "mp3_and_ogg/sixwar.ogg"
+set_audio_stream_type $music[6] {type} AudioStreamType.Music
+set_audio_stream_progress_seconds $music[6] {progress} seconds
 wait 1000
-set_audio_stream_state $music6 {action} AudioStreamAction.Play
+set_audio_stream_state $music[6] {action} AudioStreamAction.Play
+set_audio_stream_volume $music[6] {volume} 0.0
+set_audio_stream_volume_with_transition $music[6] {volume} 1.0 {time_ms} 3000
+set_audio_stream_looped $music[6] true 
 
 :AUDIO_1311
 wait 0
 $PLAY8 == 0
 goto_if_false @AUDIO_1311
-set_audio_stream_state $music6 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[6] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 
 :AUDIO_1350
 wait 0
-$music7 = load_audio_stream {audioFileName} "mp3_and_ogg/beat_12.ogg"
-set_audio_stream_type $music7 {type} AudioStreamType.Music
+$music[7] = load_audio_stream {audioFileName} "mp3_and_ogg/beat_12.ogg"
+set_audio_stream_type $music[7] {type} AudioStreamType.Music
 wait 1000
-set_audio_stream_state $music7 {action} AudioStreamAction.Play
+set_audio_stream_state $music[7] {action} AudioStreamAction.Play
+set_audio_stream_volume $music[7] {volume} 0.0
+set_audio_stream_volume_with_transition $music[7] {volume} 1.0 {time_ms} 3000
+set_audio_stream_looped $music[7] true 
 
 :AUDIO_1365
 wait 0
 $PLAY10 == 0
 goto_if_false @AUDIO_1365
-set_audio_stream_state $music7 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[7] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 
 :AUDIO_1394
 wait 1000
-$music8 = load_audio_stream {audioFileName} "mp3_and_ogg/dream.ogg"
-set_audio_stream_type $music8 {type} AudioStreamType.Music
+$music[8] = load_audio_stream {audioFileName} "mp3_and_ogg/dream.ogg"
+set_audio_stream_type $music[8] {type} AudioStreamType.Music
+set_audio_stream_progress_seconds $music[8] {progress} seconds
 wait 1000
-set_audio_stream_state $music8 {action} AudioStreamAction.Play
+set_audio_stream_state $music[8] {action} AudioStreamAction.Play
+set_audio_stream_volume $music[8] {volume} 0.0
+set_audio_stream_volume_with_transition $music[8] {volume} 1.0 {time_ms} 3000
+set_audio_stream_looped $music[8] true 
 
 :AUDIO_1410
 wait 0
 $PLAY11 == 0
 goto_if_false @AUDIO_1410
-set_audio_stream_state $music8 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[8] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 
 :AUDIO_1448
 wait 1000
-$music9 = load_audio_stream {audioFileName} "mp3_and_ogg/ghills.ogg"
-set_audio_stream_type $music9 {type} AudioStreamType.Music
+$music[9] = load_audio_stream {audioFileName} "mp3_and_ogg/ghills.ogg"
+set_audio_stream_type $music[9] {type} AudioStreamType.Music
+set_audio_stream_progress_seconds $music[9] {progress} seconds
 wait 1000
-set_audio_stream_state $music9 {action} AudioStreamAction.Play
+set_audio_stream_state $music[9] {action} AudioStreamAction.Play
+set_audio_stream_volume $music[9] {volume} 0.0
+set_audio_stream_volume_with_transition $music[9] {volume} 1.0 {time_ms} 3000
+set_audio_stream_looped $music[9] true 
 
 :AUDIO_1465
 wait 0
 $PLAY12 == 0
 goto_if_false @AUDIO_1465
-set_audio_stream_state $music9 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[9] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 
 :AUDIO_1504
 wait 1000
-$music10 = load_audio_stream {audioFileName} "mp3_and_ogg/board.ogg"
-set_audio_stream_type $music10 {type} AudioStreamType.Music
+$music[10] = load_audio_stream {audioFileName} "mp3_and_ogg/board.ogg"
+set_audio_stream_type $music[10] {type} AudioStreamType.Music
+set_audio_stream_progress_seconds $music[10] {progress} seconds
 wait 1000
-set_audio_stream_state $music10 {action} AudioStreamAction.Play
+set_audio_stream_state $music[10] {action} AudioStreamAction.Play
+set_audio_stream_volume $music[10] {volume} 0.0
+set_audio_stream_volume_with_transition $music[10] {volume} 1.0 {time_ms} 3000
+set_audio_stream_looped $music[10] true 
 
 :AUDIO_1520
 wait 0
 $PLAY14 == 0
 goto_if_false @AUDIO_1520
-set_audio_stream_state $music10 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[10] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 
 :AUDIO_1558
 wait 1000
-$music11 = load_audio_stream {audioFileName} "mp3_and_ogg/boat.ogg"
-set_audio_stream_type $music11 {type} AudioStreamType.Music
+$music[11] = load_audio_stream {audioFileName} "mp3_and_ogg/boat.ogg"
+set_audio_stream_type $music[11] {type} AudioStreamType.Music
+set_audio_stream_progress_seconds $music[11] {progress} seconds
 wait 1000
-set_audio_stream_state $music11 {action} AudioStreamAction.Play
+set_audio_stream_state $music[11] {action} AudioStreamAction.Play
+set_audio_stream_volume $music[11] {volume} 0.0
+set_audio_stream_volume_with_transition $music[11] {volume} 1.0 {time_ms} 3000
+set_audio_stream_looped $music[11] true 
 
 :AUDIO_1573
 wait 0
 $PLAY19 == 0
 goto_if_false @AUDIO_1573
-set_audio_stream_state $music11 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[11] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 
 :AUDIO_1610
 wait 0
-$music12 = load_audio_stream {audioFileName} "mp3_and_ogg/beat_2.ogg"
-set_audio_stream_type $music12 {type} AudioStreamType.Music
+$music[12] = load_audio_stream {audioFileName} "mp3_and_ogg/beat_2.ogg"
+set_audio_stream_type $music[12] {type} AudioStreamType.Music
 wait 1000
-set_audio_stream_state $music12 {action} AudioStreamAction.Play
+set_audio_stream_state $music[12] {action} AudioStreamAction.Play
+set_audio_stream_volume $music[12] {volume} 0.0
+set_audio_stream_volume_with_transition $music[12] {volume} 1.0 {time_ms} 3000
+set_audio_stream_looped $music[12] true 
 
 :AUDIO_1625
 wait 0
 $PLAY20 == 0
 goto_if_false @AUDIO_1625
-set_audio_stream_state $music12 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[12] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 
 :AUDIO_1654
 wait 1000
 init_zone_population_settings
-$music13 = load_audio_stream {audioFileName} "mp3_and_ogg/dayar.ogg"
-set_audio_stream_type $music13 {type} AudioStreamType.Music
+$music[13] = load_audio_stream {audioFileName} "mp3_and_ogg/dayar.ogg"
+set_audio_stream_type $music[13] {type} AudioStreamType.Music
+set_audio_stream_progress_seconds $music[13] {progress} seconds
 wait 1000
-set_audio_stream_state $music13 {action} AudioStreamAction.Play
+set_audio_stream_state $music[13] {action} AudioStreamAction.Play
+set_audio_stream_volume $music[13] {volume} 0.0
+set_audio_stream_volume_with_transition $music[13] {volume} 1.0 {time_ms} 3000
+set_audio_stream_looped $music[13] true 
 
 :AUDIO_1672
 wait 0
 $PLAY22 == 0
 goto_if_false @AUDIO_1672
-set_audio_stream_state $music13 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[13] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 
 :AUDIO_1710
 wait 0
-$music14 = load_audio_stream {audioFileName} "mp3_and_ogg/beat_13.ogg"
-set_audio_stream_type $music14 {type} AudioStreamType.Music
+$music[14] = load_audio_stream {audioFileName} "mp3_and_ogg/beat_13.ogg"
+set_audio_stream_type $music[14] {type} AudioStreamType.Music
 wait 1000
-set_audio_stream_state $music14 {action} AudioStreamAction.Play
+set_audio_stream_state $music[14] {action} AudioStreamAction.Play
+set_audio_stream_volume $music[14] {volume} 0.0
+set_audio_stream_volume_with_transition $music[14] {volume} 1.0 {time_ms} 3000
+set_audio_stream_looped $music[14] true 
 
 :AUDIO_1725
 wait 0
 $PLAY24 == 0
 goto_if_false @AUDIO_1725
-set_audio_stream_state $music14 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[14] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 
 :AUDIO_1754
 wait 0
 set_radio_channel RadioChannel.PlaybackFM
-$music15 = load_audio_stream {audioFileName} "mp3_and_ogg/tarbo.ogg"
-set_audio_stream_type $music15 {type} AudioStreamType.Music
+$music[15] = load_audio_stream {audioFileName} "mp3_and_ogg/tarbo.ogg"
+set_audio_stream_type $music[15] {type} AudioStreamType.Music
+set_audio_stream_progress_seconds $music[15] {progress} seconds
 wait 1000
-set_audio_stream_state $music15 {action} AudioStreamAction.Play
+set_audio_stream_state $music[15] {action} AudioStreamAction.Play
+set_audio_stream_volume $music[15] {volume} 0.0
+set_audio_stream_volume_with_transition $music[15] {volume} 1.0 {time_ms} 3000
+set_audio_stream_looped $music[15] true 
 
 :AUDIO_1773
 wait 0
 $PLAY26 == 0
 goto_if_false @AUDIO_1773
-set_audio_stream_state $music15 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[15] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 
 :AUDIO_1811
 wait 0
 set_radio_channel RadioChannel.PlaybackFM
-$music16 = load_audio_stream {audioFileName} "mp3_and_ogg/terclaw.ogg"
-set_audio_stream_type $music16 {type} AudioStreamType.Music
+$music[16] = load_audio_stream {audioFileName} "mp3_and_ogg/terclaw.ogg"
+set_audio_stream_type $music[16] {type} AudioStreamType.Music
+set_audio_stream_progress_seconds $music[16] {progress} seconds
 wait 1000
-set_audio_stream_state $music16 {action} AudioStreamAction.Play
+set_audio_stream_state $music[16] {action} AudioStreamAction.Play
+set_audio_stream_volume $music[16] {volume} 0.0
+set_audio_stream_volume_with_transition $music[16] {volume} 1.0 {time_ms} 3000
+set_audio_stream_looped $music[16] true 
 
 :AUDIO_1832
 wait 0
 $PLAY27 == 0
 goto_if_false @AUDIO_1832
-set_audio_stream_state $music16 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[16] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 
 :AUDIO_1872
 wait 0
 set_radio_channel RadioChannel.PlaybackFM
-$music17 = load_audio_stream {audioFileName} "mp3_and_ogg/cretru.ogg"
-set_audio_stream_type $music17 {type} AudioStreamType.Music
+$music[17] = load_audio_stream {audioFileName} "mp3_and_ogg/cretru.ogg"
+set_audio_stream_type $music[17] {type} AudioStreamType.Music
+set_audio_stream_progress_seconds $music[17] {progress} seconds
 wait 1000
-set_audio_stream_state $music17 {action} AudioStreamAction.Play
+set_audio_stream_state $music[17] {action} AudioStreamAction.Play
+set_audio_stream_volume $music[17] {volume} 0.0
+set_audio_stream_volume_with_transition $music[17] {volume} 1.0 {time_ms} 3000
+set_audio_stream_looped $music[17] true 
 
 :AUDIO_1892
 wait 0
 $PLAY29 == 0
 goto_if_false @AUDIO_1892
-set_audio_stream_state $music17 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[17] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 
 :AUDIO_1931
 wait 0
-$music18 = load_audio_stream {audioFileName} "mp3_and_ogg/beat_0.ogg"
-set_audio_stream_type $music18 {type} AudioStreamType.Music
+$music[18] = load_audio_stream {audioFileName} "mp3_and_ogg/beat_0.ogg"
+set_audio_stream_type $music[18] {type} AudioStreamType.Music
 wait 1000
-set_audio_stream_state $music18 {action} AudioStreamAction.Play
+set_audio_stream_state $music[18] {action} AudioStreamAction.Play
+set_audio_stream_volume $music[18] {volume} 0.0
+set_audio_stream_volume_with_transition $music[18] {volume} 1.0 {time_ms} 3000
+set_audio_stream_looped $music[18] true 
 
 :AUDIO_1946
 wait 0
 $PLAY30 == 0
 goto_if_false @AUDIO_1946
-set_audio_stream_state $music18 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[18] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 
 :AUDIO_1975
 wait 0
 set_radio_channel RadioChannel.PlaybackFM
-$music19 = load_audio_stream {audioFileName} "mp3_and_ogg/dayhel.ogg"
-set_audio_stream_type $music19 {type} AudioStreamType.Music
+$music[19] = load_audio_stream {audioFileName} "mp3_and_ogg/dayhel.ogg"
+set_audio_stream_type $music[19] {type} AudioStreamType.Music
+set_audio_stream_progress_seconds $music[19] {progress} seconds
 wait 1000
-set_audio_stream_state $music19 {action} AudioStreamAction.Play
+set_audio_stream_state $music[19] {action} AudioStreamAction.Play
+set_audio_stream_volume $music[19] {volume} 0.0
+set_audio_stream_volume_with_transition $music[19] {volume} 1.0 {time_ms} 3000
+set_audio_stream_looped $music[19] true 
 
 :AUDIO_1995
 wait 0
 $PLAY33 == 0
 goto_if_false @AUDIO_1995
-set_audio_stream_state $music19 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[19] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 
 :AUDIO_2034
 wait 0
-$music20 = load_audio_stream {audioFileName} "mp3_and_ogg/beat_11.ogg"
-set_audio_stream_type $music20 {type} AudioStreamType.Music
+$music[20] = load_audio_stream {audioFileName} "mp3_and_ogg/beat_11.ogg"
+set_audio_stream_type $music[20] {type} AudioStreamType.Music
 wait 1000
-set_audio_stream_state $music20 {action} AudioStreamAction.Play
+set_audio_stream_state $music[20] {action} AudioStreamAction.Play
+set_audio_stream_volume $music[20] {volume} 0.0
+set_audio_stream_volume_with_transition $music[20] {volume} 1.0 {time_ms} 3000
+set_audio_stream_looped $music[20] true 
 
 :AUDIO_2049
 wait 0
 $PLAY34 == 0
 goto_if_false @AUDIO_2049
-set_audio_stream_state $music20 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[20] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 
 :AUDIO_2078
 wait 1000
-$music21 = load_audio_stream {audioFileName} "mp3_and_ogg/crocos.ogg"
-set_audio_stream_type $music21 {type} AudioStreamType.Music
+$music[21] = load_audio_stream {audioFileName} "mp3_and_ogg/crocos.ogg"
+set_audio_stream_type $music[21] {type} AudioStreamType.Music
+set_audio_stream_progress_seconds $music[21] {progress} seconds
 wait 1000
-set_audio_stream_state $music21 {action} AudioStreamAction.Play
+set_audio_stream_state $music[21] {action} AudioStreamAction.Play
+set_audio_stream_volume $music[21] {volume} 0.0
+set_audio_stream_volume_with_transition $music[21] {volume} 1.0 {time_ms} 3000
+set_audio_stream_looped $music[21] true 
 
 :AUDIO_2095
 wait 0
 $PLAY35 == 0
 goto_if_false @AUDIO_2095
-set_audio_stream_state $music21 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[21] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 
 :AUDIO_2134
 wait 1000
-$music22 = load_audio_stream {audioFileName} "mp3_and_ogg/front.ogg"
-set_audio_stream_type $music22 {type} AudioStreamType.Music
+$music[22] = load_audio_stream {audioFileName} "mp3_and_ogg/front.ogg"
+set_audio_stream_type $music[22] {type} AudioStreamType.Music
+set_audio_stream_progress_seconds $music[22] {progress} seconds
 wait 1000
-set_audio_stream_state $music22 {action} AudioStreamAction.Play
+set_audio_stream_state $music[22] {action} AudioStreamAction.Play
+set_audio_stream_volume $music[22] {volume} 0.0
+set_audio_stream_volume_with_transition $music[22] {volume} 1.0 {time_ms} 3000
+set_audio_stream_looped $music[22] true 
 
 :AUDIO_2150
 wait 0
 $PLAY39 == 0
 goto_if_false @AUDIO_2150
-set_audio_stream_state $music22 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[22] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 
 :AUDIO_2188
 wait 1000
-$music23 = load_audio_stream {audioFileName} "mp3_and_ogg/mating.ogg"
-set_audio_stream_type $music23 {type} AudioStreamType.Music
+$music[23] = load_audio_stream {audioFileName} "mp3_and_ogg/mating.ogg"
+set_audio_stream_type $music[23] {type} AudioStreamType.Music
+set_audio_stream_progress_seconds $music[23] {progress} seconds
 wait 1000
-set_audio_stream_state $music23 {action} AudioStreamAction.Play
+set_audio_stream_state $music[23] {action} AudioStreamAction.Play
+set_audio_stream_volume $music[23] {volume} 0.0
+set_audio_stream_volume_with_transition $music[23] {volume} 1.0 {time_ms} 3000
+set_audio_stream_looped $music[23] true 
 
 :AUDIO_2205
 wait 0
 $PLAY41 == 0
 goto_if_false @AUDIO_2205
-set_audio_stream_state $music23 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[23] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 
 :AUDIO_2244
 wait 1000
-$music24 = load_audio_stream {audioFileName} "mp3_and_ogg/density.ogg"
-set_audio_stream_type $music24 {type} AudioStreamType.Music
+$music[24] = load_audio_stream {audioFileName} "mp3_and_ogg/density.ogg"
+set_audio_stream_type $music[24] {type} AudioStreamType.Music
+set_audio_stream_progress_seconds $music[24] {progress} seconds
 wait 1000
-set_audio_stream_state $music24 {action} AudioStreamAction.Play
+set_audio_stream_state $music[24] {action} AudioStreamAction.Play
+set_audio_stream_volume $music[24] {volume} 0.0
+set_audio_stream_volume_with_transition $music[24] {volume} 1.0 {time_ms} 3000
+set_audio_stream_looped $music[24] true 
 
 :AUDIO_2262
 wait 0
 $PLAY43 == 0
 goto_if_false @AUDIO_2262
-set_audio_stream_state $music24 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[24] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 
 :AUDIO_2302
 wait 0
-$music25 = load_audio_stream {audioFileName} "mp3_and_ogg/beat_1.ogg"
-set_audio_stream_type $music25 {type} AudioStreamType.Music
+$music[25] = load_audio_stream {audioFileName} "mp3_and_ogg/beat_1.ogg"
+set_audio_stream_type $music[25] {type} AudioStreamType.Music
 wait 1000
-set_audio_stream_state $music25 {action} AudioStreamAction.Play
+set_audio_stream_state $music[25] {action} AudioStreamAction.Play
+set_audio_stream_volume $music[25] {volume} 0.0
+set_audio_stream_volume_with_transition $music[25] {volume} 1.0 {time_ms} 3000
+set_audio_stream_looped $music[25] true 
 
 :AUDIO_2317
 wait 0
 $PLAY44 == 0
 goto_if_false @AUDIO_2317
-set_audio_stream_state $music25 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[25] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 
 :AUDIO_2346
 wait 1000
-$music26 = load_audio_stream {audioFileName} "mp3_and_ogg/promen.ogg"
-set_audio_stream_type $music26 {type} AudioStreamType.Music
+$music[26] = load_audio_stream {audioFileName} "mp3_and_ogg/promen.ogg"
+set_audio_stream_type $music[26] {type} AudioStreamType.Music
+set_audio_stream_progress_seconds $music[26] {progress} seconds
 wait 1000
-set_audio_stream_state $music26 {action} AudioStreamAction.Play
+set_audio_stream_state $music[26] {action} AudioStreamAction.Play
+set_audio_stream_volume $music[26] {volume} 0.0
+set_audio_stream_volume_with_transition $music[26] {volume} 1.0 {time_ms} 3000
+set_audio_stream_looped $music[26] true 
 
 :AUDIO_2363
 wait 0
 $PLAY46 == 0
 goto_if_false @AUDIO_2363
-set_audio_stream_state $music26 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[26] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 
 :AUDIO_2402
 wait 0
-$music27 = load_audio_stream {audioFileName} "mp3_and_ogg/beat_3.ogg"
-set_audio_stream_type $music27 {type} AudioStreamType.Music
+$music[27] = load_audio_stream {audioFileName} "mp3_and_ogg/beat_3.ogg"
+set_audio_stream_type $music[27] {type} AudioStreamType.Music
 wait 1000
-set_audio_stream_state $music27 {action} AudioStreamAction.Play
+set_audio_stream_state $music[27] {action} AudioStreamAction.Play
+set_audio_stream_volume $music[27] {volume} 0.0
+set_audio_stream_volume_with_transition $music[27] {volume} 1.0 {time_ms} 3000
+set_audio_stream_looped $music[27] true 
 
 :AUDIO_2417
 wait 0
 $PLAY48 == 0
 goto_if_false @AUDIO_2417
-set_audio_stream_state $music27 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[27] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 
 :AUDIO_2446
 wait 1000
-$music28 = load_audio_stream {audioFileName} "mp3_and_ogg/explor.ogg"
-set_audio_stream_type $music28 {type} AudioStreamType.Music
+$music[28] = load_audio_stream {audioFileName} "mp3_and_ogg/explor.ogg"
+set_audio_stream_type $music[28] {type} AudioStreamType.Music
+set_audio_stream_progress_seconds $music[28] {progress} seconds
 wait 1000
-set_audio_stream_state $music28 {action} AudioStreamAction.Play
+set_audio_stream_state $music[28] {action} AudioStreamAction.Play
+set_audio_stream_volume $music[28] {volume} 0.0
+set_audio_stream_volume_with_transition $music[28] {volume} 1.0 {time_ms} 3000
+set_audio_stream_looped $music[28] true 
 
 :AUDIO_2463
 wait 0
 $PLAY49 == 0
 goto_if_false @AUDIO_2463
-set_audio_stream_state $music28 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[28] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 
 :AUDIO_2502
 wait 0
-$music29 = load_audio_stream {audioFileName} "mp3_and_ogg/beat_9.ogg"
-set_audio_stream_type $music29 {type} AudioStreamType.Music
+$music[29] = load_audio_stream {audioFileName} "mp3_and_ogg/beat_9.ogg"
+set_audio_stream_type $music[29] {type} AudioStreamType.Music
 wait 1000
-set_audio_stream_state $music29 {action} AudioStreamAction.Play
+set_audio_stream_state $music[29] {action} AudioStreamAction.Play
+set_audio_stream_volume $music[29] {volume} 0.0
+set_audio_stream_volume_with_transition $music[29] {volume} 1.0 {time_ms} 3000
+set_audio_stream_looped $music[29] true 
 
 :AUDIO_2517
 wait 0
 $PLAY50 == 0
 goto_if_false @AUDIO_2517
-set_audio_stream_state $music29 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[29] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 
 :AUDIO_2546
 wait 1000
-$music30 = load_audio_stream {audioFileName} "mp3_and_ogg/busin.ogg"
-set_audio_stream_type $music30 {type} AudioStreamType.Music
+$music[30] = load_audio_stream {audioFileName} "mp3_and_ogg/busin.ogg"
+set_audio_stream_type $music[30] {type} AudioStreamType.Music
+set_audio_stream_progress_seconds $music[30] {progress} seconds
 wait 1000
-set_audio_stream_state $music30 {action} AudioStreamAction.Play
+set_audio_stream_state $music[30] {action} AudioStreamAction.Play
+set_audio_stream_volume $music[30] {volume} 0.0
+set_audio_stream_volume_with_transition $music[30] {volume} 1.0 {time_ms} 3000
+set_audio_stream_looped $music[30] true 
 
 :AUDIO_2562
 wait 0
 $PLAY51 == 0
 goto_if_false @AUDIO_2562
-set_audio_stream_state $music30 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[30] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 
 :AUDIO_2600
 wait 1000
-$music31 = load_audio_stream {audioFileName} "mp3_and_ogg/govern.ogg"
-set_audio_stream_type $music31 {type} AudioStreamType.Music
+$music[31] = load_audio_stream {audioFileName} "mp3_and_ogg/govern.ogg"
+set_audio_stream_type $music[31] {type} AudioStreamType.Music
+set_audio_stream_progress_seconds $music[31] {progress} seconds
 wait 1000
-set_audio_stream_state $music31 {action} AudioStreamAction.Play
+set_audio_stream_state $music[31] {action} AudioStreamAction.Play
+set_audio_stream_volume $music[31] {volume} 0.0
+set_audio_stream_volume_with_transition $music[31] {volume} 1.0 {time_ms} 3000
+set_audio_stream_looped $music[31] true 
 
 :AUDIO_2617
 wait 0
 $PLAY54 == 0
 goto_if_false @AUDIO_2617
-set_audio_stream_state $music31 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[31] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 
 :AUDIO_SRV
 wait 1000
-$music32 = load_audio_stream {audioFileName} "mp3_and_ogg/skilar-stealth.mp3"
-set_audio_stream_type $music32 {type} AudioStreamType.Music
+$music[32] = load_audio_stream {audioFileName} "mp3_and_ogg/skilar-stealth.mp3"
+set_audio_stream_type $music[32] {type} AudioStreamType.Music
 wait 1000
-set_audio_stream_state $music32 {action} AudioStreamAction.Play
+set_audio_stream_state $music[32] {action} AudioStreamAction.Play
 
 :AUDIO_SRV_LOOP
 wait 0
@@ -688,10 +808,10 @@ then
 end
 
 :AUDIO_SRV_CAUGHT
-set_audio_stream_state $music32 {action} AudioStreamAction.Stop
-$music33 = load_audio_stream {audioFileName} "mp3_and_ogg/night-fight.mp3"
-set_audio_stream_type $music33 {type} AudioStreamType.Music
-set_audio_stream_state $music33 {action} AudioStreamAction.Play
+set_audio_stream_state $music[32] {action} AudioStreamAction.Stop
+$music[33] = load_audio_stream {audioFileName} "mp3_and_ogg/night-fight.mp3"
+set_audio_stream_type $music[33] {type} AudioStreamType.Music
+set_audio_stream_state $music[33] {action} AudioStreamAction.Play
 wait 1000
 goto @AUDIO_SRV_LOOP2
 
@@ -702,8 +822,8 @@ goto_if_false @AUDIO_SRV_LOOP2
 goto @AUDIO_SRV_STOPPED
 
 :AUDIO_SRV_STOPPED
-set_audio_stream_state $music32 {action} AudioStreamAction.Stop
-set_audio_stream_state $music33 {action} AudioStreamAction.Stop
+set_audio_stream_state $music[32] {action} AudioStreamAction.Stop
+set_audio_stream_state $music[33] {action} AudioStreamAction.Stop
 goto @AUDIO_475
 terminate_this_script
 

@@ -49,7 +49,7 @@ startup {
         {28, "Amarhaan"},
         {29, "Egg Stiffs"},
         {30, "The Tarbos"},
-        {31, "The terrible claw"},
+        {32, "The terrible claw"},
         {33, "Weaponwood"},
         {34, "Water patrol"},
         {35, "Cretaceous Running"},
@@ -170,8 +170,6 @@ split {
 
     // Only forward movement matters
     if (curr <= prev) return false;
-
-    if (curr == 32) return false; // Weird 32nd mission which is just a cutscene without a name
 
     if (vars.seenSplits.Contains(curr)) return false; // Already split for this mission, don't split again
 

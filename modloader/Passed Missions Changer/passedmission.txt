@@ -1,19 +1,32 @@
 {$CLEO}
 {$USE CLEO}
+{$USE ini}
+{$USE CLEO+}
 
+debug_on
 int $PASSED_MISSIONS
 Alloc($PASSED_MISSIONS, 5297)
 
 if not Fs.DoesFileExist("modloader/Passed Missions Changer/config.ini")
 then
-    IniFile.WriteInt(0, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed Missions")
+    IniFile.WriteInt(0, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+    IniFile.WriteString("false", "modloader/Passed Missions Changer/config.ini", "General", "Reset_passed_missions_to_0_each_game_restart")
 else
-    int missionValue = IniFile.ReadInt("modloader/Passed Missions Changer/config.ini", "Missions", "Passed Missions")
+    string $changetozero = IniFile.ReadString("modloader/Passed Missions Changer/config.ini", "General", "Reset_passed_missions_to_0_each_game_restart")
     
-    if not missionValue == 0
+    if and 
+        is_string_equal {string1} $changetozero {string2} "true" {maxSize} 5 {caseSensitive} true {ignoreCharacter} ""
+        is_game_first_start
+    then
+        IniFile.WriteInt(0, "modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+    end
+        
+    int $missionValue = IniFile.ReadInt("modloader/Passed Missions Changer/config.ini", "Missions", "Passed_Missions")
+
+    if not $missionValue == 0
     then
         while $PASSED_MISSIONS == 0
-            $PASSED_MISSIONS = missionValue
+            $PASSED_MISSIONS = $missionValue
         end
     end
 end

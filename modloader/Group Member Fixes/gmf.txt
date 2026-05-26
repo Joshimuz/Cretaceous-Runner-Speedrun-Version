@@ -1,0 +1,82 @@
+{$CLEO .cs}
+{$USE CLEO+}
+
+wait 1000
+debug_on
+
+Alloc($PLAYER_CHAR, 2)
+Alloc($PLAYER_ACTOR, 3)
+Alloc($PLAYER_GROUP, 11)
+Alloc($PASSED_MISSIONS, 5297)
+Alloc($FLAG_TNG, 6531)
+
+
+Alloc($DROMEO_49_1, 6429)
+Alloc($DROMEO_49_2, 6431)
+Alloc($DROMEO_49_3, 6433)
+Alloc($DROMEO_49_4, 6435)
+Alloc($DROMEO_49_5, 6437)
+Alloc($DROMEO_49_6, 6439)
+Alloc($DROMEO_49_7, 6441)
+Alloc($DROMEO_49_8, 6443)
+Alloc($DROMEO_49_9, 6445)
+Alloc($DROMEO_49_10, 6447)
+Alloc($DROMEO_49_11, 6449)
+Alloc($DROMEO_49_12, 6451)
+
+while true
+    wait 0
+    
+    // The New Government Fix
+    if
+        $PASSED_MISSIONS == 59
+    then
+        // Loop if player is not at the end point.
+        while not locate_char_any_means_2d $PLAYER_ACTOR {x} -1664.839 {y} -1952.14 {xRadius} 4.0 {yRadius} 4.0 {drawSphere} False
+            wait 1000
+            float x, y, z
+            x, y, z = get_char_coordinates $PLAYER_ACTOR
+            
+            float height = get_water_height_at_coords x y true
+            float groundz = get_ground_z_for_3d_coord x y z
+
+            // Check if player is not on/in water before making the dinos sprint. 
+            // Dinos can swim. But if one of their route ends inside water, they won't move or accept any more commands.
+            // To prevent this we need to make sure the coordinates are always on land.
+            if height < groundz
+            then
+                if $FLAG_TNG > 0
+                then
+                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_1 x y z MoveState.Sprint 999999
+                end
+                if $FLAG_TNG > 1
+                then
+                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_2 x y z MoveState.Sprint 999999
+                end
+                if $FLAG_TNG > 2
+                then
+                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_3 x y z MoveState.Sprint 999999
+                end
+                if $FLAG_TNG > 3
+                then
+                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_4 x y z MoveState.Sprint 999999
+                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_5 x y z MoveState.Sprint 999999
+                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_6 x y z MoveState.Sprint 999999
+                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_7 x y z MoveState.Sprint 999999
+                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_8 x y z MoveState.Sprint 999999
+                end
+                if $FLAG_TNG > 4
+                then
+                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_9 x y z MoveState.Sprint 999999
+                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_10 x y z MoveState.Sprint 999999
+                end
+                if $FLAG_TNG > 5
+                then
+                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_11 x y z MoveState.Sprint 999999
+                    TASK_GO_STRAIGHT_TO_COORD $DROMEO_49_12 x y z MoveState.Sprint 999999
+                end
+            end
+        end
+    end
+end
+terminate_this_custom_script
